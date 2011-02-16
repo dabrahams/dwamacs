@@ -1,0 +1,4 @@
+# DWAmacs
+
+This is the personal emacs configuration of Dave Abrahams.  It depends
+on the use of [elhome](http://github.com/dabrahams/elhome).

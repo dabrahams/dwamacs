@@ -1,0 +1,2 @@
+This is where I put elisp that I want on the load-path, but can't
+install with el-get
