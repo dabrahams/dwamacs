@@ -14,9 +14,6 @@
       "Redefine to insert a signature file directly, not as a tag."
       (interactive "P")
       (insert-signature arg))
-
-    ;; Keep track of recently used Email addresses
-    (recent-addresses-mode 1)
     ))
 
 (add-hook
