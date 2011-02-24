@@ -73,6 +73,8 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
 Requires wget, which isn't on the Mac by default.  Someday should
 figure out how to use curl instead, but for now I just installed wget
 from macports.")
+ '(ido-everywhere t)
+ '(ido-mode (quote buffer) nil (ido))
  '(ido-use-filename-at-point (quote guess))
  '(ido-use-url-at-point t)
  '(imap-shell-program (quote ("dovecot --exec-mail imap")))
