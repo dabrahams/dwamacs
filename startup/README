@@ -1,2 +1,3 @@
 This directory contains files that are loaded at the *very beginning*
-of the startup process.
+of the startup process.  They are interspersed alphabetically with the
+startup/ files from elhome.
