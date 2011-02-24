@@ -22,7 +22,7 @@ If you don't do this, all the nice navigation stuff is disabled by default.  Who
  '(diff-switches "-du")
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
- '(dwa/el-get-standard-packages (quote ("magit" "semi" "flim" "apel" "wanderlust" "el-get" "initsplit")))
+ '(dwa/el-get-standard-packages (quote ("browse-kill-ring" "magit" "semi" "flim" "apel" "wanderlust" "el-get" "initsplit")))
  '(elmo-imap4-default-authenticate-type (quote clear))
  '(elmo-imap4-default-port 993)
  '(elmo-imap4-default-server "imap.gmail.com")
