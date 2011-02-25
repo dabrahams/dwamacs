@@ -199,6 +199,15 @@ when we need it."
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(mime-edit-split-message nil nil nil "
+This should really be the default.  Most MUAs can't decode the split messages!")
+ '(mime-play-delete-file-immediately nil)
+ '(mime-save-directory "/tmp")
+ '(mm-attachment-override-types (quote ("text/x-vcard" "application/pkcs7-mime" "application/x-pkcs7-mime" "application/pkcs7-signature" "application/x-pkcs7-signature" "image/*")) nil nil "
+Added image/* to display attached images inline")
+ '(mm-discouraged-alternatives (quote ("text/html" "text/richtext" "image/.*")) nil nil "
+The documentation for this variable says it all")
+ '(mm-inline-text-html-with-images t)
  '(wl-ask-range nil nil nil "
 The range thing slows me down.  However, I'd still like to know how to force the question.")
  '(wl-auto-check-folder-list (quote ("Inbox")))
@@ -222,9 +231,9 @@ Keep more sent messages around for quick/easy access
 This has to be on if I want the 'sendlog folder to contain anything
 ")
  '(wl-fldmgr-add-complete-with-current-folder-list t)
- '(wl-folder-desktop-name #("Messages" 0 8 (wl-folder-is-group is-group wl-folder-entity-id 0)))
+ '(wl-folder-desktop-name #("Messages" 0 8 (wl-folder-entity-id 0 wl-folder-is-group is-group)))
  '(wl-folder-notify-deleted t)
- '(wl-folder-petname-alist (quote (("%INBOX" . "Inbox") ("+drafts" . "Drafts") (#("%[Gmail]/Sent" 0 13 (wl-folder-entity-id 3 wl-folder-is-group nil)) . "Sent") (#("%inbox:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 58 (wl-folder-entity-id 72 wl-folder-is-group nil)) . "Inbox") (#("%[Gmail]/Trash:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66 (wl-folder-entity-id 74 wl-folder-is-group nil)) . "Trash") (#("%[Gmail]/Star:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65 (wl-folder-entity-id 75 wl-folder-is-group nil)) . "With a Star") (#("%[Gmail]/Sent:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65 (wl-folder-entity-id 76 wl-folder-is-group nil)) . "Sent") (#("%[Gmail]/Draft:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66 (wl-folder-entity-id 77 wl-folder-is-group nil)) . "Draft") (#("%[Gmail]/All E-Mails:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 72 (wl-folder-entity-id 78 wl-folder-is-group nil)) . "All E-Mails") (#("%Org-Mode:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 61 (wl-folder-entity-id 79 wl-folder-is-group nil)) . "Org-Mode") (#("%[Gmail]/Draft" 0 14 (wl-folder-entity-id 4 wl-folder-is-group nil)) . "Drafts") (#("%[Gmail]/Star" 0 13 (wl-folder-entity-id 2 wl-folder-is-group nil)) . "Flagged") ("%Trash" . "Trash") (#("%INBOX" 0 6 (wl-folder-entity-id 1 wl-folder-is-group nil)) . "Inbox") (#("%[Gmail]/Starred" 0 16 (wl-folder-entity-id 2 wl-folder-is-group nil)) . "Important") (#("%[Gmail]/Sent Mail" 0 18 (wl-folder-entity-id 3 wl-folder-is-group nil)) . "Sent") (#("%[Gmail]/Drafts" 0 15 (wl-folder-entity-id 4 wl-folder-is-group nil)) . "Drafts") (#("%[Gmail]/All Mail" 0 17 (wl-folder-entity-id 5 wl-folder-is-group nil)) . "Archive") (#("%[Gmail]/Trash" 0 14 (wl-folder-entity-id 6 wl-folder-is-group nil)) . "Trash") (#("%[Gmail]/Spam" 0 13 (wl-folder-entity-id 8 wl-folder-is-group nil)) . "Spam") (#("+draft" 0 6 (wl-folder-entity-id 9 wl-folder-is-group nil)) . "Drafts"))))
+ '(wl-folder-petname-alist (quote (("%INBOX" . "Inbox") ("+drafts" . "Drafts") (#("%[Gmail]/Sent" 0 13 (wl-folder-is-group nil wl-folder-entity-id 3)) . "Sent") (#("%inbox:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 58 (wl-folder-is-group nil wl-folder-entity-id 72)) . "Inbox") (#("%[Gmail]/Trash:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66 (wl-folder-is-group nil wl-folder-entity-id 74)) . "Trash") (#("%[Gmail]/Star:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65 (wl-folder-is-group nil wl-folder-entity-id 75)) . "With a Star") (#("%[Gmail]/Sent:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65 (wl-folder-is-group nil wl-folder-entity-id 76)) . "Sent") (#("%[Gmail]/Draft:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66 (wl-folder-is-group nil wl-folder-entity-id 77)) . "Draft") (#("%[Gmail]/All E-Mails:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 72 (wl-folder-is-group nil wl-folder-entity-id 78)) . "All E-Mails") (#("%Org-Mode:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 61 (wl-folder-is-group nil wl-folder-entity-id 79)) . "Org-Mode") (#("%[Gmail]/Draft" 0 14 (wl-folder-is-group nil wl-folder-entity-id 4)) . "Drafts") (#("%[Gmail]/Star" 0 13 (wl-folder-is-group nil wl-folder-entity-id 2)) . "Flagged") ("%Trash" . "Trash") (#("%INBOX" 0 6 (wl-folder-is-group nil wl-folder-entity-id 1)) . "Inbox") (#("%[Gmail]/Starred" 0 16 (wl-folder-is-group nil wl-folder-entity-id 2)) . "Important") (#("%[Gmail]/Sent Mail" 0 18 (wl-folder-is-group nil wl-folder-entity-id 3)) . "Sent") (#("%[Gmail]/Drafts" 0 15 (wl-folder-is-group nil wl-folder-entity-id 4)) . "Drafts") (#("%[Gmail]/All Mail" 0 17 (wl-folder-is-group nil wl-folder-entity-id 5)) . "Archive") (#("%[Gmail]/Trash" 0 14 (wl-folder-is-group nil wl-folder-entity-id 6)) . "Trash") (#("%[Gmail]/Spam" 0 13 (wl-folder-is-group nil wl-folder-entity-id 8)) . "Spam") (#("+draft" 0 6 (wl-folder-is-group nil wl-folder-entity-id 9)) . "Drafts"))))
  '(wl-folder-process-duplicates-alist (quote (("^.*" . hide))) nil nil "
 Don't show me any duplicate messages")
  '(wl-folder-window-width 60)

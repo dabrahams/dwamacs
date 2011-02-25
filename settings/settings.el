@@ -80,7 +80,7 @@ from macports.")
  '(imap-shell-program (quote ("dovecot --exec-mail imap")))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(initsplit-customizations-alist (quote (("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil) ("\\`\\(wl\\|apel\\|flim\\|semi\\|mime\\)-" "wl-settings.el" nil nil))))
+ '(initsplit-customizations-alist (quote (("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil) ("\\`\\(wl\\|apel\\|flim\\|semi\\|mime\\|mm\\)-" "wl-settings.el" nil nil))))
  '(initsplit-load-before-customizing t)
  '(ispell-program-name "aspell" t)
  '(magit-repo-dirs (quote ("/Users/dave/src" "/Users/dave/work/pipsync")))
@@ -110,15 +110,6 @@ Handle Germans' Aw: version of Re:")
 always strip the trailing old subject in (was: ...) subjects")
  '(message-syntax-checks (quote ((sender . disabled) (long-lines . disabled))) nil nil "
 Don't complain about long lines, please")
- '(mime-edit-split-message nil nil nil "
-This should really be the default.  Most MUAs can't decode the split messages!")
- '(mime-play-delete-file-immediately nil)
- '(mime-save-directory "/tmp")
- '(mm-attachment-override-types (quote ("text/x-vcard" "application/pkcs7-mime" "application/x-pkcs7-mime" "application/pkcs7-signature" "application/x-pkcs7-signature" "image/*")) nil nil "
-Added image/* to display attached images inline")
- '(mm-discouraged-alternatives (quote ("text/html" "text/richtext" "image/.*")) nil nil "
-The documentation for this variable says it all")
- '(mm-inline-text-html-with-images t)
  '(muse-project-alist (quote (("WikiPlanner" ("~/plans" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(ns-alternate-modifier (quote control) nil nil "
 I'm continually pressing option when I mean control.  So, I get no
