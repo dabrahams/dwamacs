@@ -1,3 +1,52 @@
+(require 'filladapt)
+(require 'mime-conf)
+(require 'wl-summary)
+(require 'filladapt)
+(require 'wl-conversation)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Summary Mode
+;;
+(define-key wl-summary-mode-map [?D] 'wl-thread-delete)
+(define-key wl-summary-mode-map [?d] 'wl-summary-delete)
+(define-key wl-summary-mode-map [?b] 'wl-summary-resend-bounced-mail)
+
+(defun dwa/wl-summary-delete-and-move-prev ()
+  (interactive)
+  (let (wl-summary-move-direction-downward)
+    (call-interactively 'wl-summary-delete)))
+
+(define-key wl-summary-mode-map [(control ?d)] 'dwa/wl-summary-delete-and-move-prev)
+
+(add-hook 'wl-summary-mode-hook 'hl-line-mode)
+
+;; Synchronize the folder with the server after executing the summary
+;; operation
+(add-hook 'wl-summary-exec-hook 'wl-summary-sync-update)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Address Book
+;;
+
+;;; Use ~/.mailrc
+(setq wl-address-init-function 'my-wl-address-init)
+(defun my-wl-address-init ()
+  (wl-local-address-init)
+  (setq wl-address-completion-list
+        (append wl-address-completion-list (build-mail-aliases))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Spam Processing
+;;
+(require 'wl-spam)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Signatures
+;;
 (require 'signature)
 (setq signature-insert-at-eof t)
 (setq signature-delete-blank-lines-at-eof t)
@@ -32,6 +81,117 @@
     (goto-char (mime-edit-content-end))
     (insert-signature)))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Window splitting
+;;
+(defadvice split-window (before wl-split-horizontally disable)
+    "When the system is going to split the summary buffer window
+to show a message, I want to split it horizontally!  The default
+of splitting vertically (i.e. with a horizontal divider) leaves
+me looking at really long lines through really narrow spaces,
+which kinda blows."
+        (ad-set-arg 2 t)
+        (ad-set-arg 1 nil)
+        )
+
+(defadvice wl-message-select-buffer (around setup-wl-split-horizontally activate protect)
+    "See split-window advice \"wl-split-horizontally\".  Make sure it only applies 
+when we need it."
+    (ad-enable-advice 'split-window 'before 'wl-split-horizontally)
+    (ad-activate 'split-window)
+    ad-do-it
+    (ad-disable-advice 'split-window 'before 'wl-split-horizontally)
+    (ad-activate 'split-window)
+    )
+
+(add-hook 'wl-message-redisplay-hook
+          (lambda () (let ((growth (- 80 (window-width)))) (> growth 0) (enlarge-window-horizontally growth))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Message Presentation
+;;
+(add-hook 'wl-message-buffer-created-hook 'visual-line-mode)
+
+(require 'wl-highlight)
+(loop for x in wl-highlight-citation-face-list do 
+      (set-face-background x "#F0F0F0"))
+
+;;; Adjustments to be able to display faulty jpg MIME type
+;;; per [[http://news.gmane.org/find-root.php?message_id=%3c82bp6fjj71.wl%25kzhr%40d1.dion.ne.jp%3e][Email from Kazuhiro Ito: Re: Counfounding MIME]]
+(eval-after-load "mime-image"
+  '(let ((rule '(image jpg jpeg)))
+     (ctree-set-calist-strictly
+      'mime-preview-condition
+      (list (cons 'type (car rule))(cons 'subtype (nth 1 rule))
+	    '(body . visible)
+	    (cons 'body-presentation-method #'mime-display-image)
+	    (cons 'image-format (nth 2 rule))))))
+
+;; From [[http://mid.gmane.org/87mxqjn7un.wl%25ucecesf@ucl.ac.uk][Eric S. Fraga]]
+;; use visual-line-mode for displaying message.  This is a customization of some
+;; code posted by lloyd zusman on the wanderlust mailing list
+(defun dwa/summary-redisplay-hook () 
+  (save-excursion
+    (save-restriction
+      (set-buffer wl-message-buffer)
+      (save-excursion
+	;; (visual-line-mode t) ;; code for reformating the message buffer goes here
+	(setq word-wrap t)
+	)            
+      )))
+
+(add-hook 'wl-summary-redisplay-hook 'dwa/summary-redisplay-hook)
+
+;; to have text flowing automatically in display of emails in wanderlust
+(autoload 'fill-flowed "flow-fill")
+(defun dwa/flow-fill-mime-display ()
+ 	    (when (string= "flowed"
+ 			   (cdr (assoc "format"
+ 				       (mime-content-type-parameters
+ 					(mime-entity-content-type entity)))))
+ 	      (fill-flowed)))
+(add-hook 'mime-display-text/plain-hook 'dwa/flow-fill-mime-display)
+
+(defun wl-summary-fill-message (all)
+  (interactive "P")
+  (if (and wl-message-buffer (get-buffer-window wl-message-buffer))
+      (progn
+        (wl-summary-toggle-disp-msg 'on)
+        (save-excursion
+          (with-current-buffer wl-message-buffer
+          (goto-char (point-min))
+          (re-search-forward "^$")
+          (while (or (looking-at "^\\[[1-9]") (looking-at "^$"))
+            (forward-line 1))
+          (let* ((buffer-read-only nil)
+                 (find (lambda (regexp)
+                         (save-excursion
+                           (if (re-search-forward regexp nil t)
+                               (match-beginning 0)
+                             (point-max)))))
+                 (start (point))
+                 (end (if all
+                          (point-max)
+                        (min (funcall find "^[^>\n]* wrote:[ \n]+")
+                             (funcall find "^>>>>>")
+                             (funcall find "^ *>.*\n *>")
+                             (funcall find "^-----Original Message-----")))))
+            (save-restriction
+              (narrow-to-region start end)
+              (filladapt-mode 1)
+              (fill-region (point-min) (point-max))))))
+        (message "Message re-filled"))
+    (message "No message to re-fill")))
+
+(define-key wl-summary-mode-map "\M-q" 'wl-summary-fill-message)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Interactive Customization
+;;
 
 ;; Settings
 (custom-set-variables
