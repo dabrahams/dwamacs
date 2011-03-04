@@ -4,6 +4,205 @@
 (require 'filladapt)
 (require 'wl-conversation)
 
+(add-hook
+ 'mime-view-mode-hook
+ '(lambda ()
+    "Change [mouse-2] to drag-scroll rather than follow link.
+Set [(return)] to execute the mime-button.
+Set the `f' key to run `find-file' on the attached entity.
+;Set the `C-f' key to run `find-file-at-point'.
+Set the `w' key to run `wget'.
+Set the `j' key to run `mime-preview-quit'."
+    ;; Key bindings
+    (local-set-key [down-mouse-2] 'mouse-drag-drag)
+    (local-set-key [(return)] 'my-mime-button-exec)
+    (local-set-key [?f] 'my-mime-find-file-current-entity)
+    ;; (local-set-key [(control ?f)] 'find-file-at-point)
+    (local-set-key [?w] 'wget)
+    (local-set-key [?o] 'wget-open)
+    (local-set-key [?j] 'mime-preview-quit)
+    (local-set-key [?s] '(lambda ()
+                           (interactive)
+                           (mime-preview-quit)
+                           (wl-summary-sync)))
+    ))
+
+;; Smilies
+(add-hook
+ 'wl-message-redisplay-hook
+ '(lambda () (smiley-region (point-min) (point-max))
+    ))
+
+(add-hook
+ 'wl-draft-cited-hook
+ '(lambda ()
+     (and (featurep 'smiley-mule)
+          (smiley-toggle-buffer -1))
+     ))
+
+;; ----------------------------------------------------------------------------
+;;; User Functions
+
+(defun my-wl-draft-kill-force ()
+  (interactive)
+  (wl-draft-kill t))
+
+(defun my-wl-delete-whole-folder ()
+  (interactive)
+  (wl-summary-target-mark-all)
+  (wl-summary-target-mark-delete)
+  (wl-summary-exec)
+  (wl-summary-exit))
+
+(defun my-wl-check-mail-primary ()
+  (interactive)
+  (unless (get-buffer wl-folder-buffer-name)
+    (wl))
+  (delete-other-windows)
+  (switch-to-buffer wl-folder-buffer-name)
+  (goto-char (point-min))
+  (next-line 1)
+  (wl-folder-jump-to-current-entity))
+
+(defun my-wl-auto-save-draft-buffers ()
+  (let ((buffers (wl-collect-draft)))
+    (save-excursion
+      (while buffers
+        (set-buffer (car buffers))
+        (if (buffer-modified-p) (wl-draft-save))
+        (setq buffers (cdr buffers))))))
+
+(defun my-wl-update-current-summaries ()
+  (let ((buffers (wl-collect-summary)))
+    (while buffers
+      (with-current-buffer (car buffers)
+        (save-excursion
+          (wl-summary-sync-update)))
+      (setq buffers (cdr buffers)))))
+
+(defun my-wl-summary-delete-and-move-prev ()
+  (interactive)
+  (let (wl-summary-move-direction-downward)
+    (call-interactively 'wl-summary-delete)))
+
+(defun my-wl-summary-goto-to-folder (folder)
+  "Goto FOLDER from the summary buffer after closing it."
+  (wl-summary-exit t)
+  (set-buffer (get-buffer wl-folder-buffer-name))
+  (wl-folder-goto-folder-subr folder))
+
+(defun my-wl-goto-to-folder (folder)
+  "Goto FOLDER from either the folders or summary buffer after closing it."
+  (if (string= (buffer-name) wl-summary-buffer-name)
+      (my-wl-summary-goto-to-folder search-folder)
+    (wl-folder-goto-folder-subr search-folder)))
+
+(defun my-clean-mime-reply ()
+  "Clean-up the citation in replies, removing unnecessary entities."
+  (interactive)
+  (require 'misc-cmds)
+  ;; Find and strip the first tag, indicating the start of the
+  ;; cited message
+  (when (re-search-forward "^> \\[1" nil t)
+    (beginning-of-line)
+    (delete-lines 1)
+    (while (or (looking-at "^> *$")
+               (looking-at "^> \\[[1-9]"))
+      (delete-lines 1))
+    (when (re-search-forward "^> \\[[1-9][\\. ]" nil t)
+      (beginning-of-line)
+      (let ((pt (point)))
+        (re-search-forward "^$")
+        (delete-region pt (point)))))
+  ;; Now find the tag that ends the first section, and strip off
+  ;; everything from there to the end of the message (including any
+  ;; other sections that got cited)
+  (goto-char (point-max))
+  (when (re-search-backward "^> +[^ ]" nil t)
+    (beginning-of-line)
+    (let ((pt (point)))
+      (goto-char (point-max))
+      (if (re-search-backward "^> *$" pt t)
+          (progn
+            (beginning-of-line)
+            (while (looking-at "^> *$")
+              (delete-lines 1)
+              (forward-line -1))
+            (forward-line 1)
+            (delete-lines 1))
+        (goto-char (point-max))
+        (re-search-backward "^$")
+        (delete-lines 1)))))
+
+(defun wl-rehilight ()
+  "Re-highlight message."
+  (let ((beg (point-min))
+        (end (point-max)))
+    (put-text-property beg end 'face nil)
+    (wl-highlight-message beg end t)))
+
+(defun my-mime-save-content-find-file (entity &optional situation)
+  "Save the attached mime ENTITY and load it with `find-file-other-frame'
+so that the appropriate emacs mode is selected according to the file extension."
+  (let* ((name (or (mime-entity-safe-filename entity)
+                   (format "%s" (mime-entity-media-type entity))))
+         (dir (if (eq t mime-save-directory)
+                  default-directory
+                mime-save-directory))
+         (filename (expand-file-name
+                    (file-name-nondirectory name) temporary-file-directory)))
+    (mime-write-entity-content entity filename)
+    (select-frame (make-frame))
+    (find-file filename)
+    ))
+
+(defun my-mime-view-emacs-mode (entity &optional situation)
+  "Internal method for mime-view to display the mime ENTITY in a buffer with an
+appropriate emacs mode."
+  (let ((buf (get-buffer-create
+              (format "%s-%s" (buffer-name) (mime-entity-number entity)))))
+    (with-current-buffer buf
+      (setq buffer-read-only nil)
+      (erase-buffer)
+      (mime-insert-text-content entity)
+      ;;(mule-caesar-region (point-min) (point-max))
+      ;; Set emacs mode here
+      (set-buffer-modified-p nil)
+      )
+    (let ((win (get-buffer-window (current-buffer))))
+      (or (eq (selected-window) win)
+          (select-window (or win (get-largest-window)))
+          ))
+    (view-buffer buf)
+    (goto-char (point-min))
+    ))
+
+(defun my-mime-find-file-current-entity ()
+  "Save the current mime entity and load it with `find-file-other-frame'
+so that the appropriate emacs mode is selected according to the file extension."
+  (interactive)
+  (let ((entity (get-text-property (point) 'mime-view-entity)))
+    (if entity
+        (my-mime-save-content-find-file entity)))
+  )
+
+(defun my-mime-button-exec ()
+  "Execute the button under point without using the mouse."
+  (interactive)
+  (let (buf point func data)
+    (save-window-excursion
+      (setq buf (current-buffer)
+            point (point)
+            func (get-text-property (point) 'mime-button-callback)
+            data (get-text-property (point) 'mime-button-data)
+            ))
+    (save-excursion
+      (set-buffer buf)
+      (goto-char point)
+      (if func
+          (apply func data))
+      )))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Summary Mode
