@@ -89,8 +89,6 @@ from macports.")
  '(magit-repo-dirs (quote ("/Users/dave/src" "/Users/dave/work/pipsync")))
  '(magit-repo-dirs-depth 1)
  '(mail-signature t)
- '(mail-user-agent (quote gnus-user-agent) nil nil "
-Gnus Message with full Gnus features")
  '(mairix-command "ssh boostpro.com mairix")
  '(mairix-file-path "/home/dave/Maildir/")
  '(mairix-mail-program (quote wl))
