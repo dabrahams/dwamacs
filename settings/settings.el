@@ -22,7 +22,7 @@ If you don't do this, all the nice navigation stuff is disabled by default.  Who
  '(diff-switches "-du")
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
- '(dwa/el-get-standard-packages (quote ("apel" "elscreen" "yasnippet" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "magit" "semi" "flim" "wanderlust" "el-get" "initsplit")))
+ '(dwa/el-get-standard-packages (quote ("org-mode" "apel" "elscreen" "yasnippet" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "magit" "semi" "flim" "wanderlust" "el-get" "initsplit")))
  '(elmo-imap4-default-authenticate-type (quote clear))
  '(elmo-imap4-default-port 993)
  '(elmo-imap4-default-server "imap.gmail.com")
@@ -76,6 +76,7 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
 Requires wget, which isn't on the Mac by default.  Someday should
 figure out how to use curl instead, but for now I just installed wget
 from macports.")
+ '(gravatar-size 48)
  '(ido-everywhere t)
  '(ido-mode (quote buffer) nil (ido))
  '(ido-use-filename-at-point (quote guess))

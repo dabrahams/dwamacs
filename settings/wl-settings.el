@@ -3,6 +3,8 @@
 (require 'wl-summary)
 (require 'filladapt)
 (require 'wl-conversation)
+(ignore-errors
+  (require 'wl-gravatar))
 
 (add-hook
  'mime-view-mode-hook
@@ -437,6 +439,7 @@ This has to be on if I want the 'sendlog folder to contain anything
 Don't show me any duplicate messages")
  '(wl-folder-window-width 60)
  '(wl-highlight-folder-by-numbers 1)
+ '(wl-highlight-x-face-function (quote wl-gravatar-insert))
  '(wl-icon-directory "~/.emacs.d/el-get/wanderlust/icons/")
  '(wl-interactive-exit nil)
  '(wl-interactive-save-folders nil)
