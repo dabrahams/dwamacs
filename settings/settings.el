@@ -55,22 +55,6 @@ Invoking ffap without any prefix tends to do things I don't intend.")
 Increased the number of stack frames displayed from 40")
  '(global-auto-revert-mode t nil nil "
 We want our file buffers to stay up-to-date with changes on disk")
- '(gnus-buttonized-mime-types (quote ("multipart/signed" "multipart/alternative" "application/msword")))
- '(gnus-extra-headers (quote (To Newsgroups X-Spambayes-Classification Reply-To Message-ID Message-Id)))
- '(gnus-gravatar-style (quote inline))
- '(gnus-group-line-format "%M%S%p%P%5y%~(form my-align-gnus-group)@|%B%(%G%)%O
-")
- '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
- '(gnus-picon-style (quote right))
- '(gnus-registry-install t)
- '(gnus-secondary-select-methods (quote ((nnimap "Personal GMail" (nnimap-address "imap.gmail.com") (nnimap-server-port 993) (nnimap-stream ssl)))))
- '(gnus-select-method (quote (nnimap "BoostPro GMail" (nnimap-address "imap.gmail.com") (nnimap-stream ssl) (nnimap-authenticator login) (nnimap-nov-is-evil t))))
- '(gnus-summary-ignore-duplicates t)
- '(gnus-treat-fill-long-lines (quote first) nil nil "
-Some people don't embed linebreaks in their paragraphs; this will force-add them.")
- '(gnus-treat-from-picon (quote head))
- '(gnus-treat-mail-picon (quote head))
- '(gnus-treat-newsgroups-picon (quote head))
  '(gravatar-icon-size 50)
  '(gravatar-retrieval-program "wget -q -O '%s' '%s'" nil nil "
 Requires wget, which isn't on the Mac by default.  Someday should
