@@ -143,6 +143,26 @@ Set the `j' key to run `mime-preview-quit'."
     (put-text-property beg end 'face nil)
     (wl-highlight-message beg end t)))
 
+(defun dwa/wl-highlight-hook (beg end len)
+  (let ((begining (or (save-excursion
+			(goto-char beg)
+			(re-search-backward "^" nil t))
+		      (point-min)))
+	(ending (or (save-excursion
+		      (goto-char end)
+		      (re-search-forward "$" nil t))
+		    (point-max))))
+    (put-text-property begining ending 'face nil)
+    (wl-highlight-message begining ending t nil)
+    (wl-highlight-message begining ending t t)))
+
+(add-hook 'wl-draft-mode-hook
+          (lambda ()
+            (make-local-variable
+             'after-change-functions)
+            (add-hook 'after-change-functions
+                      'dwa/wl-highlight-hook)))
+
 (defun my-mime-save-content-find-file (entity &optional situation)
   "Save the attached mime ENTITY and load it with `find-file-other-frame'
 so that the appropriate emacs mode is selected according to the file extension."
