@@ -108,7 +108,7 @@ command.")
 As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: buffer-file-name was checked in the default.")
  '(remember-handler-functions (quote (org-remember-handler)) nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(rmail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
- '(safe-local-variable-values (quote ((test-case-name . buildbot\.test\.test_sourcestamp) (test-case-name . buildbot\.test\.test_changes) (test-case-name . buildbot\.broken_test\.test_web_status_json) (encoding . utf8) (folded-file . t))))
+ '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)) (test-case-name . buildbot\.test\.test_sourcestamp) (test-case-name . buildbot\.test\.test_changes) (test-case-name . buildbot\.broken_test\.test_web_status_json) (encoding . utf8) (folded-file . t))))
  '(server-mode t nil nil "
 Always run a server so we can open files in existing emacs frames.")
  '(show-paren-mode t)
