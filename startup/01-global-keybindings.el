@@ -110,3 +110,7 @@ so we can watch errors as they come up"
 
 (autoload 'my-wl-check-mail-primary "wl")
 (define-key me-minor-mode-map "\C-xM" 'my-wl-check-mail-primary)
+
+(define-key me-minor-mode-map [(meta ?m)] (lambda () (interactive) (org-capture nil "t")))
+(define-key me-minor-mode-map [(meta ?z)] 'org-inline-note)
+(define-key me-minor-mode-map [(meta ?C)] 'jump-to-org-agenda)
