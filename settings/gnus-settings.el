@@ -240,8 +240,7 @@
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-picon-style (quote right))
  '(gnus-registry-install t)
- '(gnus-secondary-select-methods (quote ((nnimap "Personal GMail" (nnimap-address "imap.gmail.com") (nnimap-server-port 993) (nnimap-stream ssl)))))
- '(gnus-select-method (quote (nnimap "BoostPro GMail" (nnimap-address "imap.gmail.com") (nnimap-stream ssl) (nnimap-authenticator login) (nnimap-nov-is-evil t))))
+ '(gnus-select-method (quote (nnimap "BoostPro" (nnimap-address "imap.gmail.com") (nnimap-stream ssl) (nnimap-authenticator login) (nnimap-nov-is-evil t))))
  '(gnus-summary-ignore-duplicates t)
  '(gnus-treat-fill-long-lines (quote first) nil nil "
 Some people don't embed linebreaks in their paragraphs; this will force-add them.")
