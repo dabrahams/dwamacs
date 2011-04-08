@@ -13,7 +13,7 @@ Blinking cursor just annoys me")
  '(clang-flags (quote ("-I" "/Users/dave/src/boost-svn-git" "-I" "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/")))
  '(cursor-type (quote box) t)
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
- '(default-frame-alist (quote ((menu-bar-lines . 1) (tool-bar-lines . 0))))
+ '(default-frame-alist (quote ((menu-bar-lines . 1))))
  '(delete-selection-mode t nil nil "
 Creates normal editor behavior: select a region and begin
 typing, the region is replaced")
