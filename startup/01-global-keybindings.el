@@ -111,6 +111,14 @@ so we can watch errors as they come up"
 (autoload 'my-wl-check-mail-primary "wl")
 (define-key me-minor-mode-map "\C-xM" 'my-wl-check-mail-primary)
 
-(define-key me-minor-mode-map [(meta ?m)] (lambda () (interactive) (org-capture nil "t")))
-(define-key me-minor-mode-map [(meta ?z)] 'org-inline-note)
+;; Org bindings
+(define-key me-minor-mode-map [(meta ?m)] 
+  (lambda () (interactive) (org-capture nil "t")))
+
+(autoload 'jump-to-org-agenda "org" t)
 (define-key me-minor-mode-map [(meta ?C)] 'jump-to-org-agenda)
+
+(define-key me-minor-mode-map [(control ?c) ?a] 'org-agenda)
+
+(define-key me-minor-mode-map [(control ?c) (meta ?w)] 'org-store-link)
+(define-key me-minor-mode-map [(control ?c) (shift ?w)] 'org-kill-entry)

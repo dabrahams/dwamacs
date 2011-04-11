@@ -6,8 +6,8 @@
             (define-key org-capture-mode-map "\C-c\C-f" 'org-capture-refile)
             ))
 
-(define-prefix-command 'org-todo-state-map)
-(define-key org-mode-map "\C-cx" 'org-todo-state-map)
+(define-prefix-command 'dwa/org-x-map)
+(define-key org-mode-map "\C-cx" 'dwa/org-x-map)
 (define-key org-mode-map "\M-/" 'org-complete)
 
 (defun save-org-mode-files ()
@@ -332,48 +332,47 @@ end tell" (match-string 1))))
 
 ;;;_ + global
 
-(define-key global-map [(meta ?m)] 'org-capture)
-(define-key global-map [(ctrl meta ?r)] 'org-capture)
-(define-key global-map [(meta ?z)] 'org-inline-note)
-(define-key global-map [(meta ?C)] 'jump-to-org-agenda)
+(defconst dwa/org-todo-key-alist
+  '((?d . done) 
+    (?r . deferred)
+    (?y . someday)
+    (?g . delegated)
+    (?n . note)
+    (?s . started)
+    (?t . todo)
+    (?w . waiting)
+    (?x . cancelled)))
 
-(define-key mode-specific-map [?a] 'org-agenda)
-(define-key mode-specific-map [(meta ?w)] 'org-store-link)
-(define-key mode-specific-map [(shift ?w)] 'org-kill-entry)
+(dolist (pair dwa/org-todo-key-alist)
+  (let* ((key (car pair))
+         (name (prin1-to-string (cdr pair)))
+         (NAME (upcase name))
+         (fn (intern (concat "dwa/org-todo-mark-" name))))
 
-(define-key mode-specific-map [?x ?d]
-  #'(lambda nil (interactive) (org-todo "DONE")))
-(define-key mode-specific-map [?x ?r]
-  #'(lambda nil (interactive) (org-todo "DEFERRED")))
-(define-key mode-specific-map [?x ?y]
-  #'(lambda nil (interactive) (org-todo "SOMEDAY")))
-(define-key mode-specific-map [?x ?g]
-  #'(lambda nil (interactive) (org-todo "DELEGATED")))
-(define-key mode-specific-map [?x ?n]
-  #'(lambda nil (interactive) (org-todo "NOTE")))
-(define-key mode-specific-map [?x ?s]
-  #'(lambda nil (interactive) (org-todo "STARTED")))
-(define-key mode-specific-map [?x ?t]
-  #'(lambda nil (interactive) (org-todo "TODO")))
-(define-key mode-specific-map [?x ?w]
-  #'(lambda nil (interactive) (org-todo "WAITING")))
-(define-key mode-specific-map [?x ?x]
-  #'(lambda nil (interactive) (org-todo "CANCELED")))
+    (eval `(defun ,fn ()
+             (interactive) 
+             (if (eq major-mode 'org-agenda-mode)
+                 (,(intern (concat "org-agenda-" "todo")) ,NAME)
+               (,(intern (concat "org-" "todo")) ,NAME))))
+    
+    (eval `(define-key dwa/org-x-map (vector key) ',fn))))
 
-(define-key mode-specific-map [?x ?L] 'org-set-dtp-link)
-(define-key mode-specific-map [?x ?M] 'org-set-message-link)
-(define-key mode-specific-map [?x ?Y] 'org-set-message-sender)
-(define-key mode-specific-map [?x ?U] 'org-set-url-link)
-(define-key mode-specific-map [?x ?F] 'org-set-file-link)
-(define-key mode-specific-map [?x ?C] 'cvs-examine)
-(define-key mode-specific-map [?x ?S] 'svn-status)
-(define-key mode-specific-map [?x ?b] 'org-insert-bug)
-(define-key mode-specific-map [?x ?l] 'org-insert-dtp-link)
-(define-key mode-specific-map [?x ?m] 'org-insert-message-link)
-(define-key mode-specific-map [?x ?u] 'org-insert-url-link)
-(define-key mode-specific-map [?x ?f] 'org-insert-file-link)
+(define-key org-mode-map [(control ?c) (shift ?w)] 'org-kill-entry)
+(define-key org-mode-map [(control ?c) (shift ?y)] 'org-yank-entry)
 
-(define-key mode-specific-map [(shift ?y)] 'org-yank-entry)
+(define-key org-mode-map [(meta ?z)] 'org-inline-note)
+
+(define-key dwa/org-x-map [?L] 'org-set-dtp-link)
+(define-key dwa/org-x-map [?l] 'org-set-dtp-link)
+(define-key dwa/org-x-map [?M] 'org-set-message-link)
+(define-key dwa/org-x-map [?m] 'org-set-message-link)
+(define-key dwa/org-x-map [?Y] 'org-set-message-sender)
+(define-key dwa/org-x-map [?U] 'org-set-url-link)
+(define-key dwa/org-x-map [?u] 'org-set-url-link)
+(define-key dwa/org-x-map [?F] 'org-set-file-link)
+(define-key dwa/org-x-map [?f] 'org-set-file-link)
+(define-key dwa/org-x-map [?b] 'org-insert-bug)
+
 
 ;;;_ + org-mode
 
@@ -415,6 +414,7 @@ defined in `yas/fallback-behavior'" t)
     
 (eval-after-load "org-agenda"    
   '(progn    
+     (require 'org-habit)
      (dolist (map (list org-agenda-keymap org-agenda-mode-map))    
        (define-key map "\C-n" 'next-line)
        (define-key map "\C-p" 'previous-line)
@@ -434,43 +434,12 @@ defined in `yas/fallback-behavior'" t)
        (define-key map [(meta ?p)] 'org-agenda-earlier)
        (define-key map [(meta ?n)] 'org-agenda-later)
 
-       (define-prefix-command 'org-todo-state-map)
-
-       (define-key map "x" 'org-todo-state-map)
+       (define-key map "x" 'dwa/org-x-map)
 
        (define-key map "\C-c\C-s" 'org-agenda-sunrise-sunset)
        (define-key map "S" 'org-agenda-schedule)
 
-       (defun org-todo-mark-done ()
-         (interactive) (org-agenda-todo "DONE"))
-       (defun org-todo-mark-deferred ()
-         (interactive) (org-agenda-todo "DEFERRED"))
-       (defun org-todo-mark-someday ()
-         (interactive) (org-agenda-todo "SOMEDAY"))
-       (defun org-todo-mark-delegated ()
-         (interactive) (org-agenda-todo "DELEGATED"))
-       (defun org-todo-mark-note ()
-         (interactive) (org-agenda-todo "NOTE"))
-       (defun org-todo-mark-started ()
-         (interactive) (org-agenda-todo "STARTED"))
-       (defun org-todo-mark-todo ()
-         (interactive) (org-agenda-todo "TODO"))
-       (defun org-todo-mark-waiting ()
-         (interactive) (org-agenda-todo "WAITING"))
-       (defun org-todo-mark-canceled ()
-         (interactive) (org-agenda-todo "CANCELED"))
-
-       (define-key org-todo-state-map "d" #'org-todo-mark-done)
-       (define-key org-todo-state-map "r" #'org-todo-mark-deferred)
-       (define-key org-todo-state-map "y" #'org-todo-mark-someday)
-       (define-key org-todo-state-map "g" #'org-todo-mark-delegated)
-       (define-key org-todo-state-map "n" #'org-todo-mark-note)
-       (define-key org-todo-state-map "s" #'org-todo-mark-started)
-       (define-key org-todo-state-map "t" #'org-todo-mark-todo)
-       (define-key org-todo-state-map "w" #'org-todo-mark-waiting)
-       (define-key org-todo-state-map "x" #'org-todo-mark-canceled)
-
-       (define-key org-todo-state-map "z" #'make-bug-link))))
+     )))
 
 
 ;;;_* startup
