@@ -24,7 +24,7 @@
   (with-current-buffer (find-file-noselect "~/Dropbox/todo.txt")
     (org-mobile-push)))
 
-(run-with-idle-timer 600 t 'my-org-push-mobile)
+;(run-with-idle-timer 600 t 'my-org-push-mobile)
 
 (defun my-org-convert-incoming-items ()
  (interactive)
@@ -326,7 +326,7 @@ end tell" (match-string 1))))
   ;;    (org-agenda-goto-calendar)))
   )
 
-(run-with-idle-timer 300 t 'jump-to-org-agenda)
+;(run-with-idle-timer 300 t 'jump-to-org-agenda)
 
 ;;;_* keybindings
 
