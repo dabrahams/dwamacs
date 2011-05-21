@@ -143,6 +143,13 @@ Set the `j' key to run `mime-preview-quit'."
     (put-text-property beg end 'face nil)
     (wl-highlight-message beg end t)))
 
+;; (defadvice wl-summary-reply-with-citation 
+;;   (around wl-summary-reply-sans-mime-buttons activate )
+;;     (let (mime-view-buttons-visible)
+;;       (wl-message-buffer-cache-clean-up)
+;;       (wl-summary-redisplay)
+;;       ad-do-it))
+
 (defun dwa/wl-highlight-hook (beg end len)
   (let ((begining (or (save-excursion
 			(goto-char beg)
