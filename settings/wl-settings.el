@@ -335,7 +335,7 @@ when we need it."
     )
 
 (add-hook 'wl-message-redisplay-hook
-          (lambda () (let ((growth (- 80 (window-width)))) (> growth 0) (enlarge-window-horizontally growth))))
+          (lambda () (let ((growth (- 80 (window-width)))) (if (> growth 0) (enlarge-window-horizontally growth)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
