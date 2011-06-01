@@ -29,22 +29,6 @@ Set the `j' key to run `mime-preview-quit'."
                            (wl-summary-sync)))
     ))
 
-;;
-;; ***** Nasty workaround ****** 
-;;
-;; for me, Wanderlust hangs trying to send or receive if I wait too
-;; long between operations that require a connection, or put the
-;; computer to sleep, etc.  Toggling the plugged state every now and
-;; then seems to fix it though.
-
-(defun dwa/wl-do-not-hang ()
-  (when wl-plugged
-    (save-buffer-excursion
-      (wl-toggle-plugged)
-      (wl-toggle-plugged))))
-(run-at-time "1 min" 60 'dwa/wl-do-not-hang)
-
-                     
 ;; Smilies
 (add-hook
  'wl-message-redisplay-hook
