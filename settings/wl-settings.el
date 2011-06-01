@@ -443,6 +443,20 @@ when we need it."
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(elmo-imap4-default-authenticate-type (quote clear))
+ '(elmo-imap4-default-port 993)
+ '(elmo-imap4-default-server "imap.gmail.com")
+ '(elmo-imap4-default-stream-type (quote ssl))
+ '(elmo-imap4-default-user "dave@boostpro.com")
+ '(elmo-lang "en")
+ '(elmo-localdir-folder-path "~/Maildir")
+ '(elmo-message-fetch-confirm nil)
+ '(elmo-message-fetch-threshold 250000 nil nil "
+The default limit is so low that it always asks about messages that would fetch quickly.")
+ '(elmo-network-session-idle-timeout 300 nil nil "James Harkins' alternative to the nasty workaround in commit b1692de9 of dwamacs")
+ '(elmo-nntp-default-server "news.gmane.org")
+ '(elmo-search-namazu-default-index-path "~/Maildir")
+ '(elmo-spam-scheme (quote bogofilter))
  '(mime-edit-split-message nil nil nil "
 This should really be the default.  Most MUAs can't decode the split messages!")
  '(mime-play-delete-file-immediately nil)
