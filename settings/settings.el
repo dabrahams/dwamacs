@@ -23,6 +23,7 @@ If you don't do this, all the nice navigation stuff is disabled by default.  Who
  '(diff-switches "-du")
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
+ '(el-get-byte-compile nil)
  '(el-get-standard-packages (quote ("semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "magit" "el-get" "initsplit")))
  '(elscreen-display-screen-number t)
  '(elscreen-display-tab nil)
