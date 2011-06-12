@@ -7,9 +7,8 @@
             ))
 
 (define-prefix-command 'dwa/org-x-map)
-
-    (define-key org-mode-map "\C-cx" 'dwa/org-x-map)
-    (define-key org-mode-map "\M-/" 'org-complete)
+(define-key org-mode-map "\C-cx" 'dwa/org-x-map)
+(define-key org-mode-map "\M-/" 'org-complete)
 
 (defun save-org-mode-files ()
   (dolist (buf (buffer-list))
@@ -358,12 +357,10 @@ end tell" (match-string 1))))
     
     (eval `(define-key dwa/org-x-map (vector key) ',fn))))
 
-(eval-after-load "org"
-  '(progn
-    (define-key org-mode-map [(control ?c) (shift ?w)] 'org-kill-entry)
-    (define-key org-mode-map [(control ?c) (shift ?y)] 'org-yank-entry)
+(define-key org-mode-map [(control ?c) (shift ?w)] 'org-kill-entry)
+(define-key org-mode-map [(control ?c) (shift ?y)] 'org-yank-entry)
 
-    (define-key org-mode-map [(meta ?z)] 'org-inline-note)))
+(define-key org-mode-map [(meta ?z)] 'org-inline-note)
 
 (define-key dwa/org-x-map [?L] 'org-set-dtp-link)
 (define-key dwa/org-x-map [?l] 'org-set-dtp-link)
