@@ -35,9 +35,9 @@
                       default-mime-charset)
                   'CRLF)))
     ;; Modify as you like.
-    (if (and (< (length content) 160)
-             (string-match "[hH][tT][mM][lL]"
-                           content))
+    (if (or (string-match "NEW COMMENT AWAITING APPROVAL" content)
+            (and (< (length content) 160)
+                 (string-match "[hH][tT][mM][lL]" content)))
         1 4)))
 
 (defun mime-display-multipart/alternative (entity situation)
