@@ -255,7 +255,20 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
  '(rmail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
  '(safe-local-variable-values
    (quote
-    ((eval add-hook
+    ((eval whitespace-mode)
+     (eval set-face-attribute
+           (quote whitespace-line)
+           nil :background "red1" :foreground "yellow" :weight
+           (quote bold))
+     (eval set-face-attribute
+           (quote whitespace-tab)
+           nil :background "red1" :foreground "yellow" :weight
+           (quote bold))
+     (whitespace-style face trailing lines-tail)
+     (whitespace-line-column . 80)
+     (eval require
+           (quote whitespace))
+     (eval add-hook
            (quote write-file-hooks)
            (quote time-stamp))
      (test-case-name . buildbot\.test\.test_sourcestamp)
