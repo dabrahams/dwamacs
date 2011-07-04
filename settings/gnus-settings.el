@@ -188,6 +188,10 @@
 (loop for x in gnus-cite-face-list do 
       (set-face-background x "#F0F0F0"))
 
+(defadvice color-theme-zenburn (after wl-zenburn-setup activate)
+  (loop for x in gnus-cite-face-list do 
+        (set-face-background x zenburn-bg+1)))
+
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 (require 'gnus-spec)
 (require 'gravatar)

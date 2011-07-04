@@ -370,6 +370,10 @@ when we need it."
 (loop for x in wl-highlight-citation-face-list do 
       (set-face-background x "#F0F0F0"))
 
+(defadvice color-theme-zenburn (after wl-zenburn-setup activate)
+  (loop for x in wl-highlight-citation-face-list do 
+        (set-face-background x zenburn-bg+1)))
+
 ;;; Adjustments to be able to display faulty jpg MIME type
 ;;; per [[http://news.gmane.org/find-root.php?message_id=%3c82bp6fjj71.wl%25kzhr%40d1.dion.ne.jp%3e][Email from Kazuhiro Ito: Re: Counfounding MIME]]
 (eval-after-load "mime-image"
