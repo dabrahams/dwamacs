@@ -248,6 +248,7 @@
  '(gnus-group-line-format "%M%S%p%P%5y%~(form my-align-gnus-group)@|%B%(%G%)%O
 ")
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
+ '(gnus-novice-user nil)
  '(gnus-picon-style
    (quote right))
  '(gnus-registry-install t)
