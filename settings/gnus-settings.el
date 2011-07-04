@@ -235,6 +235,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(gnus-article-update-date-headers 300 nil nil "Update article date every 5 minutes.  Without this it's like having a timer that updates every second.")
  '(gnus-buttonized-mime-types
    (quote
     ("multipart/signed" "multipart/alternative" "application/msword")))
