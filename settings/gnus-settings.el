@@ -252,6 +252,9 @@
  '(gnus-picon-style
    (quote right))
  '(gnus-registry-install t)
+ '(gnus-secondary-select-methods
+   (quote
+    ((nntp "news.gmane.org"))))
  '(gnus-select-method
    (quote
     (nnimap "BoostPro"
