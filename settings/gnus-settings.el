@@ -239,6 +239,7 @@
  '(gnus-buttonized-mime-types
    (quote
     ("multipart/signed" "multipart/alternative" "application/msword")))
+ '(gnus-check-new-newsgroups nil nil nil "Save time at startup by not checking for new newsgroups")
  '(gnus-extra-headers
    (quote
     (To Newsgroups X-Spambayes-Classification Reply-To Message-ID Message-Id)))
