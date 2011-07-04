@@ -42,6 +42,29 @@ Set the `j' key to run `mime-preview-quit'."
           (smiley-toggle-buffer -1))
      ))
 
+;; ---------- Some nice stuff from Mat ----------
+(add-hook 'wl-summary-prepared-hook
+         (lambda ()
+           (setq wl-summary-buffer-exit-function
+                 (when (eq 'filter
+                           (elmo-folder-type-internal
+wl-summary-buffer-elmo-folder))
+                   'wl-summary-unvirtual))))
+
+(defun wl-summary-filter-unread-important ()
+ "Make a virtual folder containing only unread or important messages."
+ (interactive)
+ (if (eq 'filter
+           (elmo-folder-type-internal wl-summary-buffer-elmo-folder))
+     (wl-summary-unvirtual)
+   (wl-summary-goto-folder-subr
+                (concat "/flag:important|flag:unread/"
+(wl-summary-buffer-folder-name))
+                'update nil nil t)))
+
+(define-key wl-summary-mode-map "\C-co" 'wl-summary-filter-unread-important)
+
+
 ;; ----------------------------------------------------------------------------
 ;;; User Functions
 
