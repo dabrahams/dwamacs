@@ -278,4 +278,5 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
  '(gnus-treat-mail-picon
    (quote head))
  '(gnus-treat-newsgroups-picon
-   (quote head)))
+   (quote head))
+ '(gnus-verbose 5))
