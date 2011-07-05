@@ -1,3 +1,82 @@
+;;
+;; Background colorization from JohnW 
+;; [[wl:/message-id:"<BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com>"|references:"<BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com>"/%25%5BGmail%5D/All%20Mail#BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com][original email]]
+;;
+(defun org-agenda-add-overlays (&optional line)
+  "Add overlays found in OVERLAY properties to agenda items.
+Note that habitual items are excluded, as they already
+extensively use text properties to draw the habits graph.
+
+For example, for work tasks I like to use a subtle, yellow
+background color; for tasks involving other people, green; and
+for tasks concerning only myself, blue.  This way I know at a
+glance how different responsibilities are divided for any given
+day.
+
+To achieve this, I have the following in my todo file:
+
+  * Work
+    :PROPERTIES:
+    :CATEGORY: Work
+    :OVERLAY:  (face (:background \"#fdfdeb\"))
+    :END:
+  ** TODO Task
+  * Family
+    :PROPERTIES:
+    :CATEGORY: Personal
+    :OVERLAY:  (face (:background \"#e8f9e8\"))
+    :END:
+  ** TODO Task
+  * Personal
+    :PROPERTIES:
+    :CATEGORY: Personal
+    :OVERLAY:  (face (:background \"#e8eff9\"))
+    :END:
+  ** TODO Task
+
+The colors (which only work well for white backgrounds) are:
+
+  Yellow: #fdfdeb
+  Green:  #e8f9e8
+  Blue:   #e8eff9
+
+To use this function, add it to `org-agenda-finalize-hook':
+
+  (add-hook 'org-finalize-agenda-hook 'org-agenda-add-overlays)"
+  (let ((inhibit-read-only t) l c
+	(buffer-invisibility-spec '(org-link)))
+    (save-excursion
+      (goto-char (if line (point-at-bol) (point-min)))
+      (while (not (eobp))
+	(let ((org-marker (get-text-property (point) 'org-marker)))
+          (when (and org-marker
+                     (null (overlays-at (point)))
+                     (not (get-text-property (point) 'org-habit-p))
+                     (string-match "\\(sched\\|dead\\|todo\\)"
+                                   (get-text-property (point) 'type)))
+            (let ((overlays (org-entry-get org-marker "OVERLAY" t)))
+              (when overlays
+                (goto-char (line-end-position))
+                (let ((rest (- (window-width) (current-column))))
+                  (if (> rest 0)
+                      (insert (make-string rest ? ))))
+                (let ((ol (make-overlay (line-beginning-position)
+                                        (line-end-position)))
+                      (proplist (read overlays)))
+                  (while proplist
+                    (overlay-put ol (car proplist) (cadr proplist))
+                    (setq proplist (cddr proplist))))))))
+	(forward-line)))))
+
+(add-hook 'org-finalize-agenda-hook 'org-agenda-add-overlays)
+
+(defadvice color-theme-zenburn (after wl-zenburn-setup activate)
+  (remove-hook 'org-finalize-agenda-hook 'org-agenda-add-overlays))
+
+;;
+;; End background colorization from JohnW.
+;;
+
 (add-hook 'org-capture-mode-hook
           (lambda ()
             (define-key mode-specific-map [?f] 'org-capture-refile)
@@ -8,7 +87,7 @@
 
 (define-prefix-command 'dwa/org-x-map)
 (define-key org-mode-map "\C-cx" 'dwa/org-x-map)
-(define-key org-mode-map "\M-/" 'org-complete)
+;(define-key org-mode-map "\M-/" 'pcomplete)
 
 (defun save-org-mode-files ()
   (dolist (buf (buffer-list))
@@ -375,6 +454,8 @@ end tell" (match-string 1))))
 
 
 ;;;_ + org-mode
+
+(require 'org-info nil 'noerror)
 
 (eval-after-load "org"
   '(progn
