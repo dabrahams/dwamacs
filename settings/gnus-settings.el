@@ -42,6 +42,10 @@
 (setq gnus-started-hook 'my-gnus-started-hook)
 
 (require 'gnus)
+(require 'gnus-summary)
+
+(define-key gnus-summary-mode-map
+  "$" 'gnus-summary-mark-as-spam)
 
 (defvar my-gnus-group-faces
   '(
