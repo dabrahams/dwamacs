@@ -40,9 +40,32 @@ If you don't do this, all the nice navigation stuff is disabled by default.  Who
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
+ '(el-get-sources
+   (quote
+    ((:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
+     (:name dwamacs :depends
+            (elhome)
+            :type git :url "git@github.com:dabrahams/dwamacs")
+     (:name zenburn-theme :type git :url "git@github.com:dabrahams/zenburn-theme.git" :load-path
+            ("themes")
+            :compile
+            ("themes"))
+     (:name bbatsov-zenburn :depends
+            (color-theme)
+            :type git :url "https://github.com/bbatsov/zenburn-emacs" :build
+            (let
+                ((default-directory
+                   (el-get-package-directory "bbatsov-zenburn")))
+              (mkdir "site-lisp")
+              (copy-file "color-theme-zenburn.el" "site-lisp" t)
+              nil)
+            :load-path
+            ("site-lisp")
+            :compile
+            ("site-lisp")))))
  '(el-get-standard-packages
    (quote
-    ("semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "magit" "el-get" "initsplit")))
+    ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust")))
  '(elscreen-display-screen-number t)
  '(elscreen-display-tab nil)
  '(elscreen-tab-display-kill-screen nil)
