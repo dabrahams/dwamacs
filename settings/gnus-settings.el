@@ -42,7 +42,7 @@
 (setq gnus-started-hook 'my-gnus-started-hook)
 
 (require 'gnus)
-(require 'gnus-summary)
+(require 'gnus-sum)
 
 (define-key gnus-summary-mode-map
   "$" 'gnus-summary-mark-as-spam)
@@ -189,12 +189,10 @@
 ;; Make sure cited text has a light gray background, in case people
 ;; forget to add a blank line after their citations.
 (require 'gnus-cite)
-(loop for x in gnus-cite-face-list do 
-      (set-face-background x "#F0F0F0"))
+(require 'mail-settings)
 
-(defadvice color-theme-zenburn (after wl-zenburn-setup activate)
-  (loop for x in gnus-cite-face-list do 
-        (set-face-background x zenburn-bg+1)))
+(loop for x in gnus-cite-face-list do 
+      (set-face-attribute x nil ':inherit 'dwa/mail-citation))
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 (require 'gnus-spec)

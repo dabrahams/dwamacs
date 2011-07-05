@@ -367,8 +367,10 @@ when we need it."
 (add-hook 'wl-message-buffer-created-hook 'visual-line-mode)
 
 (require 'wl-highlight)
+(require 'mail-settings)
+
 (loop for x in wl-highlight-citation-face-list do 
-      (set-face-background x "#F0F0F0"))
+      (set-face-attribute x nil ':inherit 'dwa/mail-citation))
 
 (defadvice color-theme-zenburn (after wl-zenburn-setup activate)
   (loop for x in wl-highlight-citation-face-list do 

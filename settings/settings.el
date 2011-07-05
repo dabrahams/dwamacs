@@ -124,8 +124,6 @@ from macports.")
    (quote
     ("/Users/dave/src" "/Users/dave/work/pipsync")))
  '(magit-repo-dirs-depth 1)
- '(mail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
- '(mail-signature t)
  '(mairix-command "ssh boostpro.com mairix")
  '(mairix-file-path "/home/dave/Maildir/")
  '(mairix-mail-program
