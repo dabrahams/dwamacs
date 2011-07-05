@@ -17,4 +17,6 @@ Added image/* to display attached images inline")
     ("text/html" "text/richtext" "image/.*"))
    nil nil "
 The documentation for this variable says it all")
- '(mm-inline-text-html-with-images t))
+ '(mm-inline-text-html-with-images t)
+ '(mm-text-html-renderer
+   (quote w3m)))
