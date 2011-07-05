@@ -280,7 +280,22 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
  '(rmail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
  '(safe-local-variable-values
    (quote
-    ((eval whitespace-mode)
+    ((eval add-hook
+           (quote local-write-file-hooks)
+           (lambda nil
+             (save-excursion
+               (delete-trailing-whitespace))))
+     (whitespace-style face lines-tail)
+     (eval add-hook
+           (quote local-write-file-hooks)
+           (quote
+            (lambda nil
+              (save-excursion
+                (delete-trailing-whitespace)))))
+     (eval add-hook
+           (quote before-save-hook)
+           (quote delete-trailing-whitespace))
+     (eval whitespace-mode)
      (eval set-face-attribute
            (quote whitespace-line)
            nil :background "red1" :foreground "yellow" :weight
