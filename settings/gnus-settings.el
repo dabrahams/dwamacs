@@ -251,7 +251,9 @@
  '(gnus-novice-user nil)
  '(gnus-picon-style
    (quote right))
+ '(gnus-read-newsrc-file nil)
  '(gnus-registry-install t)
+ '(gnus-save-newsrc-file nil)
  '(gnus-secondary-select-methods
    (quote
     ((nntp "news.gmane.org"))))
