@@ -91,7 +91,8 @@ from macports.")
  '(initsplit-customizations-alist
    (quote
     (("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
-     ("\\`\\(wl\\|apel\\|flim\\|semi\\|mime\\|mm\\|elmo\\)-" "wl-settings.el" nil nil)
+     ("\\`\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
+     ("\\`\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
      ("\\`yas/" "yasnippet-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(ispell-program-name "aspell")
