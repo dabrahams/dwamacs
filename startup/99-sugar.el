@@ -3,6 +3,9 @@
 ;; all lost in a debugging session.
 ;;
 
+;; Automatically find files and URLs at point
+(ffap-bindings)
+
 ;; Maximize emacs on startup
 (ignore-errors
   (require 'maxframe)

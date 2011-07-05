@@ -82,11 +82,12 @@ Added -h so I can read file sizes")
    nil nil "
 added -l so it would take things out of my .bash_profile, like (on boostpro.com) the prompt pattern.  Otherwise I get this abomination: ///bd5882fff11dd5c2900e1ce95b895e66")
  '(ffap-machine-p-known
-   (quote reject)
-   nil nil "
-This hung emacs on my Mac once when pinging.")
- '(ffap-require-prefix t nil nil "
-Invoking ffap without any prefix tends to do things I don't intend.")
+   (quote accept))
+ '(ffap-machine-p-local
+   (quote reject))
+ '(ffap-machine-p-unknown
+   (quote ping))
+ '(ffap-require-prefix nil)
  '(g-user-email "dave@boostpro.com")
  '(gdb-max-frames 100 nil nil "
 Increased the number of stack frames displayed from 40")
