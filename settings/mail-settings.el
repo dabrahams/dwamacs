@@ -4,7 +4,7 @@
 ;; gnus-settings.el and wl-settings.el, where I inherit this face.
 (defface dwa/mail-citation '((((class color)
 			 (background dark))
-			(:background "#4f4f4f"))
+			(:background "#383838"))
 		       (((class color)
 			 (background light))
 			(:background "#efefef")))
