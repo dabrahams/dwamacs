@@ -43,6 +43,7 @@
 
 (require 'gnus)
 (require 'gnus-sum)
+(spam-initialize)
 
 (define-key gnus-summary-mode-map
   "$" 'gnus-summary-mark-as-spam)
