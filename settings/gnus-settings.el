@@ -265,8 +265,7 @@
     (nnimap "BoostPro"
             (nnimap-address "imap.gmail.com")
             (nnimap-stream ssl)
-            (nnimap-authenticator login)
-            (nnimap-nov-is-evil t))))
+            (nnimap-authenticator login))))
  '(gnus-summary-ignore-duplicates t)
  '(gnus-treat-fill-long-lines
    (quote first)
