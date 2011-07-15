@@ -42,7 +42,20 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
+    ((:name xmlunicode :depends
+            (unichars)
+            :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
+            (lambda nil
+              (progn
+                (autoload
+                  (quote unicode-character-insert)
+                  "xmlunicode" nil t)
+                (setq-default unicode-character-list-file
+                              (concat
+                               (el-get-package-directory "unichars")
+                               "unichars.el")))))
+     (:name unichars :type http :url "http://nwalsh.com/emacs/xmlchars/unichars.el")
+     (:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
      (:name dwamacs :depends
             (elhome)
             :type git :url "git@github.com:dabrahams/dwamacs")

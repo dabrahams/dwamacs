@@ -122,3 +122,9 @@ so we can watch errors as they come up"
 
 (define-key me-minor-mode-map [(control ?c) (meta ?w)] 'org-store-link)
 (define-key me-minor-mode-map [(control ?c) (shift ?w)] 'org-kill-entry)
+
+;; Unicode
+(define-key me-minor-mode-map [(control ?U)] 'unicode-character-shortcut-insert)
+(define-key me-minor-mode-map [(control ?\")] 'unicode-smart-double-quote)
+
+
