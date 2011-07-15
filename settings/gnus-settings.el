@@ -43,6 +43,7 @@
 
 (require 'gnus)
 (require 'gnus-sum)
+(require 'mm-util)
 (spam-initialize)
 
 (define-key gnus-summary-mode-map
