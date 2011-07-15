@@ -257,12 +257,12 @@
  '(gnus-picon-style
    (quote right))
  '(gnus-read-newsrc-file nil)
- '(gnus-registry-install t)
  '(gnus-refer-article-method
    (quote
     (current
      (nnir)
      (nntp "news.gmane.org"))))
+ '(gnus-registry-install t)
  '(gnus-save-newsrc-file nil)
  '(gnus-secondary-select-methods
    (quote
