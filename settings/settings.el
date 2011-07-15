@@ -147,6 +147,7 @@ from macports.")
    (quote
     (("WikiPlanner"
       ("~/plans" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
+ '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)")
  '(ns-alternate-modifier
    (quote control)
    nil nil "
