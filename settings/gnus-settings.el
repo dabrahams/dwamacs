@@ -252,6 +252,7 @@
  '(gnus-group-line-format "%E%M%S%p%P%5y%~(form my-align-gnus-group)@|%B%(%G%)
 ")
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
+ '(gnus-large-newsgroup 5000)
  '(gnus-novice-user nil)
  '(gnus-picon-style
    (quote right))
