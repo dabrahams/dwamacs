@@ -100,7 +100,7 @@ added -l so it would take things out of my .bash_profile, like (on boostpro.com)
    (quote reject))
  '(ffap-machine-p-unknown
    (quote ping))
- '(ffap-require-prefix nil)
+ '(ffap-require-prefix t)
  '(g-user-email "dave@boostpro.com")
  '(gdb-max-frames 100 nil nil "
 Increased the number of stack frames displayed from 40")
