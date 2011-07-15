@@ -411,8 +411,7 @@ where I don't expect it to be keeping undo history anyway")
       (:background "brown"))
     (nil nil)))
  '(diff-refine-change
-   ((default nil)
-    (nil
+   ((((background light))
      (:background "#FFFFC0"))))
  '(elscreen-tab-background-face
    ((((class color))
