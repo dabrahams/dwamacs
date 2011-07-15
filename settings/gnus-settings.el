@@ -249,7 +249,7 @@
     (To Newsgroups X-Spambayes-Classification Reply-To Message-ID Message-Id)))
  '(gnus-gravatar-style
    (quote inline))
- '(gnus-group-line-format "%M%S%p%P%5y%~(form my-align-gnus-group)@|%B%(%G%)%O
+ '(gnus-group-line-format "%E%M%S%p%P%5y%~(form my-align-gnus-group)@|%B%(%G%)
 ")
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-novice-user nil)
