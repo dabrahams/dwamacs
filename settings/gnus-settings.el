@@ -273,6 +273,12 @@
             (nnimap-address "imap.gmail.com")
             (nnimap-stream ssl)
             (nnimap-authenticator login))))
+ '(gnus-spam-process-destinations
+   (quote
+    (("INBOX" "[Gmail]/Spam"))))
+ '(gnus-spam-process-newsgroups
+   (quote
+    (("INBOX" nil))))
  '(gnus-summary-ignore-duplicates t)
  '(gnus-treat-fill-long-lines
    (quote first)
