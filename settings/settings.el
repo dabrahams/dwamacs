@@ -82,6 +82,7 @@ Added -h so I can read file sizes")
  '(elscreen-display-screen-number t)
  '(elscreen-display-tab nil)
  '(elscreen-tab-display-kill-screen nil)
+ '(enable-local-eval t)
  '(erc-default-sound "~/erc.wav")
  '(erc-modules
    (quote
