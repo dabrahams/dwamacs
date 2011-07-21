@@ -121,9 +121,6 @@ from macports.")
  '(ido-use-filename-at-point
    (quote guess))
  '(ido-use-url-at-point t)
- '(imap-shell-program
-   (quote
-    ("dovecot --exec-mail imap")))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
