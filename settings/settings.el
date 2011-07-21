@@ -77,7 +77,7 @@ Added -h so I can read file sizes")
             :compile
             ("site-lisp")))))
  '(el-get-standard-packages
-   (quote
+   (quotet
     ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust")))
  '(elscreen-display-screen-number t)
  '(elscreen-display-tab nil)
