@@ -1,3 +1,7 @@
+;; Undo built-in annoyances
+(when window-system
+  (global-unset-key [(control z)]))
+
 ;; Navigation by words
 (define-key me-minor-mode-map [(control ?,)] 'backward-word)
 (define-key me-minor-mode-map [(control ?.)] 'forward-word)
