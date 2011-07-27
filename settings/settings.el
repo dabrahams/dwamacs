@@ -132,7 +132,7 @@ from macports.")
      ("\\`\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
      ("\\`\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
      ("\\`yas/" "yasnippet-settings.el" nil nil)
-     ("\\`(nn\\|gnus-)" "gnus-settings.el" nil nil))))
+     ("\\`\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(ispell-program-name "aspell")
  '(magit-repo-dirs
@@ -149,7 +149,6 @@ from macports.")
    (quote
     (("WikiPlanner"
       ("~/plans" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
- '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)")
  '(ns-alternate-modifier
    (quote control)
    nil nil "
