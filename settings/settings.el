@@ -48,7 +48,10 @@ Added -h so I can read file sizes")
             (lambda nil
               (progn
                 (autoload
-                  (quote unicode-character-insert)
+                  (quote unicode-character-shortcut-insert)
+                  "xmlunicode" nil t)
+                (autoload
+                  (quote unicode-smart-double-quote)
                   "xmlunicode" nil t)
                 (setq-default unicode-character-list-file
                               (concat
