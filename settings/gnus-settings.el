@@ -45,6 +45,7 @@
 (require 'gnus-sum)
 (require 'mm-util)
 (spam-initialize)
+(gnus-registry-initialize)
 
 (define-key gnus-summary-mode-map
   "$" 'gnus-summary-mark-as-spam)
@@ -256,6 +257,7 @@
  '(gnus-novice-user nil)
  '(gnus-picon-style
    (quote right))
+ '(gnus-read-active-file t)
  '(gnus-read-newsrc-file nil)
  '(gnus-refer-article-method
    (quote
@@ -290,6 +292,5 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
    (quote head))
  '(gnus-treat-newsgroups-picon
    (quote head))
- '(gnus-verbose 5)
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)" nil nil "Only search in Gmail's \"All Mail\" group.  
 Emacs regexps don't support negative matches, so this is about the best we can do."))
