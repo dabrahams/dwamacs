@@ -6,6 +6,11 @@
 ;; Automatically find files and URLs at point
 (ffap-bindings)
 
+;; These hooks set up by ffap-bindings rebind `M-m', which I use for
+;; org capture
+(remove-hook 'gnus-summary-mode-hook 'ffap-gnus-hook)
+(remove-hook 'gnus-article-mode-hook 'ffap-gnus-hook)
+
 ;; Maximize emacs on startup
 (ignore-errors
   (require 'maxframe)

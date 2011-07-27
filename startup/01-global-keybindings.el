@@ -116,8 +116,39 @@ so we can watch errors as they come up"
 (define-key me-minor-mode-map "\C-xM" 'my-wl-check-mail-primary)
 
 ;; Org bindings
-(define-key me-minor-mode-map [(meta ?m)] 
-  (lambda () (interactive) (org-capture nil "t")))
+(defun dwa/org-capture ()
+  (interactive)
+
+  ;; Make sure the article buffer is available
+  (when (eq major-mode 'gnus-summary-mode)
+    (save-window-excursion (gnus-summary-display-article
+                            (gnus-summary-article-number))))
+
+  (if (memq major-mode '(gnus-summary-mode gnus-article-mode))
+      (with-current-buffer gnus-original-article-buffer
+        (nnheader-narrow-to-headers)
+        (let ((message-id (message-fetch-field "message-id"))
+              (subject (message-fetch-field "subject"))
+              (from (message-fetch-field "from"))
+              (date-sent (message-fetch-field "date")))
+          (org-capture nil "t")
+          (save-excursion
+            (insert (replace-regexp-in-string
+                     "\\[.*? - [A-Za-z]+ #\\([0-9]+\\)\\] (New)"
+                     "[[redmine:\\1][#\\1]]"
+                     (replace-regexp-in-string "^\\(Re\\|Fwd\\): " ""
+                                               subject))))
+          (org-set-property "Date" date-sent)
+          (org-set-property "Message"
+                            (format "[[message://%s][%s]]"
+                                    (substring message-id 1 -1)
+                                    (subst-char-in-string
+                                     ?\[ ?\{ (subst-char-in-string
+                                              ?\] ?\} subject))))
+          (org-set-property "Submitter" from)))
+    (org-capture nil "t")))
+
+(define-key me-minor-mode-map [(meta ?m)] 'dwa/org-capture)
 
 (autoload 'jump-to-org-agenda "org" t)
 (define-key me-minor-mode-map [(meta ?C)] 'jump-to-org-agenda)
