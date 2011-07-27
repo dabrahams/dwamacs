@@ -68,7 +68,7 @@
 ;; started.
 (defun my-end-of-current-compilation-buffer()
   (if (equal (buffer-name) "*compilation*")
-      (end-of-buffer)))
+      (goto-char (point-max))))
   
 (defun my-compile(&optional command)
   (interactive)
@@ -77,7 +77,7 @@
     (compile command))
   (save-excursion
     (pop-to-buffer "*compilation*")
-    (end-of-buffer))
+    (goto-char (point-max)))
   ;; force scrolling despite save-excursion
   (my-end-of-current-compilation-buffer))
 
@@ -98,7 +98,7 @@ so we can watch errors as they come up"
         (pop-to-buffer "*compilation*")
         (recompile)
         (pop-to-buffer "*compilation*")
-        (end-of-buffer))
+        (goto-char (point-max)))
     ;; else
     (call-interactively 'my-compile))
   ;; force scrolling despite save-excursion
