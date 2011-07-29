@@ -44,6 +44,10 @@
 (require 'gnus)
 (require 'gnus-sum)
 (require 'mm-util)
+
+(ignore-errors 
+  (require 'gnus-gravatar))
+
 (spam-initialize)
 (gnus-registry-initialize)
 
@@ -286,7 +290,11 @@
    (quote first)
    nil nil "
 Some people don't embed linebreaks in their paragraphs; this will force-add them.")
+ '(gnus-treat-from-gravatar
+   (quote head))
  '(gnus-treat-from-picon
+   (quote head))
+ '(gnus-treat-mail-gravatar
    (quote head))
  '(gnus-treat-mail-picon
    (quote head))
