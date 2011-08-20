@@ -1,3 +1,25 @@
+(defun gnus-goto-article (message-id)
+  (gnus-group-read-ephemeral-group 
+   message-id
+   `(nneething ,temporary-file-directory) t nil nil nil nil 0)
+  (gnus-summary-refer-article message-id))
+
+(defun org-my-message-open (message-id)
+  (condition-case err
+      (if (get-buffer "*Group*")
+          (gnus-goto-article
+           (gnus-string-remove-all-properties (substring message-id 2)))
+        (org-mac-message-open message-id))
+    (error
+     (org-mac-message-open message-id))))
+
+(eval-after-load "org-mac-message"
+  '(progn
+     (let ((protocol (assoc "message" org-link-protocols)))
+       (assert protocol)
+       (setcar (cdr protocol) 'org-my-message-open))))
+
+
 ;;
 ;; Background colorization from JohnW 
 ;; [[wl:/message-id:"<BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com>"|references:"<BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com>"/%25%5BGmail%5D/All%20Mail#BF242FD6-F409-4D90-958A-37584FA24B82@boostpro.com][original email]]
