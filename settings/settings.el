@@ -185,7 +185,7 @@ from macports.")
  '(ispell-program-name "aspell")
  '(magit-repo-dirs
    (quote
-    ("/Users/dave/src" "/Users/dave/work/pipsync")))
+    ("/Users/dave/src" "/Users/dave/src/bbotpriv-top" "/Users/dave/src/fossbot-top")))
  '(magit-repo-dirs-depth 1)
  '(mairix-command "ssh boostpro.com mairix")
  '(mairix-file-path "/home/dave/Maildir/")
