@@ -17,6 +17,7 @@
     (("." . "~/.emacs.d/backups"))))
  '(blink-cursor-mode nil nil nil "
 Blinking cursor just annoys me")
+ '(byte-compile-verbose nil)
  '(c-default-style
    (quote
     ((java-mode . "java")
@@ -108,6 +109,7 @@ added -l so it would take things out of my .bash_profile, like (on boostpro.com)
  '(ffap-machine-p-unknown
    (quote ping))
  '(ffap-require-prefix t)
+ '(font-lock-verbose nil)
  '(g-user-email "dave@boostpro.com")
  '(gdb-max-frames 100 nil nil "
 Increased the number of stack frames displayed from 40")
