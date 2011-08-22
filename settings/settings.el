@@ -89,17 +89,34 @@ Added -h so I can read file sizes")
  '(el-get-standard-packages
    (quotet
     ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust")))
+ '(elscreen-buffer-to-nickname-alist
+   (quote
+    (("[Ss]hell" . "shell")
+     ("compilation" . "compile")
+     ("-telnet" . "telnet")
+     ("dict" . "OnlineDict")
+     ("*WL:Message*" . "Wanderlust"))))
  '(elscreen-display-screen-number t)
- '(elscreen-display-tab nil)
+ '(elscreen-display-tab t)
+ '(elscreen-mode-to-nickname-alist
+   (quote
+    (("^dired-mode$" lambda nil
+      (format "Dired(%s)" dired-directory))
+     ("^Info-mode$" lambda nil
+      (format "Info(%s)"
+              (file-name-nondirectory Info-current-file)))
+     ("^mew-draft-mode$" lambda nil
+      (format "Mew(%s)"
+              (buffer-name
+               (current-buffer))))
+     ("^mew-" . "Mew")
+     ("^irchat-" . "IRChat")
+     ("^liece-" . "Liece")
+     ("^lookup-" . "Lookup")
+     ("^gnus-" . "Gnus"))))
+ '(elscreen-tab-display-control nil)
  '(elscreen-tab-display-kill-screen nil)
  '(enable-local-eval t)
- '(erc-default-sound "~/erc.wav")
- '(erc-modules
-   (quote
-    (autoaway autojoin button completion fill irccontrols list log match menu move-to-prompt netsplit networks noncommands readonly ring smiley sound stamp track)))
- '(erc-nick "bewst")
- '(erc-notify-mode t)
- '(erc-sound-mode t)
  '(explicit-bash-args
    (quote
     ("--noediting" "-i" "-l"))
