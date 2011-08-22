@@ -49,7 +49,28 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name xmlunicode :depends
+    ((:name gnus-harvest :type git :url "git://github.com/jwiegley/gnus-harvest.git")
+     (:name tramp :type cvs :url ":pserver:anonymous@cvs.savannah.gnu.org:/sources/tramp" :website "http://www.gnu.org/s/tramp/" :build
+            (\`
+             (("autoconf")
+              ("./configure"
+               (\,
+                (concat "--with-emacs=" el-get-emacs))
+               "--with-contrib"
+               (\,
+                (concat "--prefix="
+                        (expand-file-name
+                         (el-get-package-directory "tramp")))))
+              ("make")
+              ("make"
+               ("install"))))
+            :load-path
+            ("share/emacs/site-lisp")
+            :info "share/info" :module "tramp")
+     (:name workspaces :type emacswiki)
+     (:name company :type elpa)
+     (:name grep-ed :type emacswiki)
+     (:name xmlunicode :depends
             (unichars)
             :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
             (lambda nil
