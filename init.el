@@ -5,7 +5,7 @@
   (&rest d)
   (mapconcat 'file-name-as-directory
              (append
-              (list user-emacs-directory "el-get")
+              (list (if (boundp 'user-emacs-directory) user-emacs-directory "~/.emacs.d/") "el-get")
               d)
              ""))
 (setq elhome-directory
