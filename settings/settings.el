@@ -89,7 +89,8 @@ Added -h so I can read file sizes")
      (:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
      (:name dwamacs :depends
             (elhome)
-            :type git :url "git@github.com:dabrahams/dwamacs")
+            :type git :url "git@github.com:dabrahams/dwamacs" :load-path
+            ("." "settings" "startup" "site-lisp"))
      (:name zenburn-theme :type git :url "git@github.com:dabrahams/zenburn-theme.git" :load-path
             ("themes")
             :compile
