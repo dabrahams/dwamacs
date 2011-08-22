@@ -25,31 +25,94 @@
 
 (defvar my-align-gnus-group (propertize " " 'display '(space :align-to 8)))
 
-(defun my-gnus-started-hook()
-  (set-frame-name "Gnus")
-  (ignore-errors
-   (require 'w3m-load))
 
-  ;; Display word docs inline with antiword installed.  See
-  ;; http://www.emacswiki.org/emacs/MimeTypesWithGnus
-    (add-to-list 'mm-inline-media-tests
-                 '("application/msword" mm-inline-text identity))
-    (add-to-list 'mm-automatic-external-display "application/msword")
-    (add-to-list 'mm-attachment-override-types "application/msword")
-    (add-to-list 'mm-automatic-display "application/msword")
-)
+;; Display word docs inline with antiword installed.  See
+;; http://www.emacswiki.org/emacs/MimeTypesWithGnus
+(when nil
+  (require 'mm-view)
+  (add-to-list 'mm-inline-media-tests
+               '("application/msword" mm-inline-text identity))
+  (add-to-list 'mm-automatic-external-display "application/msword")
+  (add-to-list 'mm-attachment-override-types "application/msword")
+  (add-to-list 'mm-automatic-display "application/msword"))
 
-(setq gnus-started-hook 'my-gnus-started-hook)
+(defun jidanni-gnus-summary-first-unseen-or-last-subject ()
+  "Place the point on the subject line of the first unseen article.
+If all article have been seen, on the subject line of the last article."
+  (interactive)
+  (prog1
+      (unless
+	  (when (gnus-summary-first-subject nil nil t)
+	    (gnus-summary-show-thread)
+	    (gnus-summary-first-subject nil nil t))
+	(goto-char (point-max))
+	(forward-line -1))
+    (gnus-summary-position-point)))
+;; (setq gnus-auto-select-subject 'jidanni-gnus-summary-first-unseen-or-last-subject)
 
 (require 'gnus)
 (require 'gnus-sum)
 (require 'mm-util)
+(require 'w3m-load)
+
+;;; Things from John
+
+(require 'gnus-harvest)
+(require 'message-x)
+(gnus-harvest-install 'message-x)
+
+(defun my-process-running-p (name)
+  (catch 'proc-running
+    (dolist (proc (process-list))
+      (if (and (string-match name (process-name proc))
+               (eq 'run (process-status proc)))
+          (throw 'proc-running proc)))))
+
+(defvar offlineimap-process nil)
+
+(defun start-offlineimap ()
+  (interactive)
+  (unless (my-process-running-p "offlineimap")
+    (let ((buf (get-buffer-create "*offlineimap*")))
+      (setq offlineimap-process
+            (start-process "*offlineimap*" buf "/opt/local/bin/offlineimap"))
+      (display-buffer buf))))
+
+(defun safely-kill-process (name)
+  (let ((proc (my-process-running-p name)))
+    (when (and proc (eq 'run (process-status proc)))
+      (let ((sigs '(SIGTERM SIGINT SIGQUIT SIGKILL)))
+        (while sigs
+          (if (not (eq 'run (process-status proc)))
+              (setq sigs nil)
+            (message "Signaling process %s with %s..." name (car sigs))
+            (signal-process proc (car sigs))
+            (sleep-for 3)
+            (setq sigs (cdr sigs))))))))
+
+(defun my-shutdown-external-processes ()
+  (safely-kill-process "offlineimap"))
+
+(add-hook 'gnus-after-exiting-gnus-hook 'my-shutdown-external-processes)
+
+;;;_ + Cleanup all Gnus buffers on exit
+
+(defun exit-gnus-on-exit ()
+  (if (and (fboundp 'gnus-group-exit)
+	   (gnus-alive-p))
+      (with-current-buffer (get-buffer "*Group*")
+	(let (gnus-interactive-exit)
+	  (gnus-group-exit)))))
+
+(add-hook 'kill-emacs-hook 'exit-gnus-on-exit)
+
+;;;;;;;;;
 
 (ignore-errors 
   (require 'gnus-gravatar))
 
 (spam-initialize)
-(gnus-registry-initialize)
+; (gnus-registry-initialize)
 
 (define-key gnus-summary-mode-map
   "$" 'gnus-summary-mark-as-spam)
@@ -267,18 +330,33 @@
    (quote
     (current
      (nnir)
-     (nntp "news.gmane.org"))))
+     (nnregistry)
+     (nntp "news.gmane.org")
+     (nnir "nnimap:BoostPro"))))
+ '(gnus-registry-ignored-groups
+   (quote
+    (("delayed$" t)
+     ("drafts$" t)
+     ("queue$" t)
+     ("INBOX$" t)
+     ("^nnmairix:" t)
+     ("archive" t)
+     ("^nntp:" t))))
  '(gnus-registry-install t)
+ '(gnus-registry-max-entries 10000)
  '(gnus-save-newsrc-file nil)
  '(gnus-secondary-select-methods
    (quote
-    ((nntp "news.gmane.org"))))
+    ((nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119)))))
  '(gnus-select-method
    (quote
-    (nnimap "BoostPro"
-            (nnimap-address "imap.gmail.com")
-            (nnimap-stream ssl)
-            (nnimap-authenticator login))))
+    (nnimap "LocalIMAP"
+            (nnimap-address "localhost")
+            (nnimap-user "dave")
+            (nnimap-server-port 9143)
+            (nnimap-stream network))))
  '(gnus-spam-process-destinations
    (quote
     (("INBOX" "[Gmail]/Spam"))))
@@ -300,5 +378,8 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
    (quote head))
  '(gnus-treat-newsgroups-picon
    (quote head))
- '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)" nil nil "Only search in Gmail's \"All Mail\" group.  
-Emacs regexps don't support negative matches, so this is about the best we can do."))
+ '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail][./][^A]\\)" nil nil "Only search in Gmail's \"All Mail\" group.  
+Emacs regexps don't support negative matches, so this is about the best we can do.")
+ '(nnmail-extra-headers
+   (quote
+    (To Newsgroups Cc))))
