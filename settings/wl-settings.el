@@ -458,18 +458,19 @@ when we need it."
  ;; If there is more than one, they won't work right.
  '(elmo-imap4-default-authenticate-type
    (quote clear))
- '(elmo-imap4-default-port 993)
- '(elmo-imap4-default-server "imap.gmail.com")
- '(elmo-imap4-default-stream-type
-   (quote ssl))
+ '(elmo-imap4-default-server "localhost")
  '(elmo-imap4-default-user "dave@boostpro.com")
  '(elmo-lang "en")
- '(elmo-localdir-folder-path "~/Maildir")
+ '(elmo-localdir-folder-path "~/Library/Data/LocalMH")
  '(elmo-message-fetch-confirm nil)
  '(elmo-message-fetch-threshold 250000 nil nil "
 The default limit is so low that it always asks about messages that would fetch quickly.")
  '(elmo-network-session-idle-timeout 300 nil nil "James Harkins' alternative to the nasty workaround in commit b1692de9 of dwamacs")
- '(elmo-nntp-default-server "news.gmane.org")
+ '(elmo-nntp-default-port 9119)
+ '(elmo-nntp-default-server "localhost")
+ '(elmo-nntp-default-stream-type
+   (quote !direct))
+ '(elmo-nntp-default-user "dave")
  '(elmo-search-namazu-default-index-path "~/Maildir")
  '(elmo-spam-scheme
    (quote bogofilter))
@@ -598,6 +599,9 @@ Don't show me any duplicate messages")
  '(wl-message-visible-field-list
    (quote
     ("^\\(To\\|Cc\\):" "^Subject:" "^\\(From\\|Reply-To\\):" "^Organization:" "^Message-Id:" "^\\(Posted\\|Date\\):" "^\\(Mailer\\|User-Agent\\):" "^\\(List-Post\\):" "^\\(Xref\\):")))
+ '(wl-nntp-posting-port 9119)
+ '(wl-nntp-posting-server "localhost")
+ '(wl-nntp-posting-user "dave@boostpro.com")
  '(wl-smtp-authenticate-type "plain")
  '(wl-smtp-connection-type
    (quote starttls))
