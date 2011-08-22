@@ -1,4 +1,4 @@
-(defun dwa/kill-corresponding-elc-file ()
+(defun dwa/delete-corresponding-elc-file ()
   "When the current buffer is an elisp source file, delete
 any corresponding compiled .elc file"
   (when (and (buffer-file-name) 
@@ -8,4 +8,4 @@ any corresponding compiled .elc file"
         (delete-file elc)))))
 
 ;; Be sure not to leave around any outdated .elc files
-(add-hook 'before-save-hook 'dwa/kill-corresponding-elc-file)
+(add-hook 'before-save-hook 'dwa/delete-corresponding-elc-file)
