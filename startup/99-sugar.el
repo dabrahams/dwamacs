@@ -3,6 +3,10 @@
 ;; all lost in a debugging session.
 ;;
 
+;;;;;;;;;;
+;; FFAP
+;;;;;;;;;;
+
 ;; Automatically find files and URLs at point
 (ffap-bindings)
 
