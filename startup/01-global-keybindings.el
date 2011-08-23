@@ -162,4 +162,5 @@ so we can watch errors as they come up"
 (define-key me-minor-mode-map [(control ?U)] 'unicode-character-shortcut-insert)
 (define-key me-minor-mode-map [(control ?\")] 'unicode-smart-double-quote)
 
+(define-key me-minor-mode-map [(meta ?`)] 'other-frame)
 
