@@ -164,3 +164,5 @@ so we can watch errors as they come up"
 
 (define-key me-minor-mode-map [(meta ?`)] 'other-frame)
 
+;;; Need this to make dired-jump work from `C-x C-j'
+(add-hook 'dired-load-hook (lambda () (require 'dired-x)))
