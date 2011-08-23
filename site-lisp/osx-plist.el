@@ -84,7 +84,8 @@
   "Parse the plist file FILE into an elisp hash table."
   (let ((xml (car (xml-parse-file file))))
     (when (osx-plist-p xml)
-      (osx-plist-node-value (car (xml-get-children xml 'dict))))))
+      (osx-plist-node-value (car (or (xml-get-children xml 'dict)
+				     (xml-get-children xml 'array)))))))
 
 ;; Example code: initialize Emacs' environment based on your
 ;; environment.plist.
