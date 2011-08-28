@@ -197,6 +197,7 @@
   (message "Offlineimap started"))
 
 (defun shutdown-offlineimap ()
+  (interactive)
   (shell-command
    "launchctl unload -w ~/Library/LaunchAgents/mac.offlineimap.plist")
   (message "Offlineimap stopped"))
