@@ -308,6 +308,12 @@ If all article have been seen, on the subject line of the last article."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(gnus-article-update-date-headers 300 nil nil "Update article date every 5 minutes.  Without this it's like having a timer that updates every second.")
+ '(gnus-auto-select-next
+   (quote slightly-quietly)
+   nil nil "**VERY IMPORTANT SETTING**
+Without it I have a tendency to hold down the wrong key by mistake
+and unintentionally mark many articles read and then leave the group
+without a chance to even see what they were.")
  '(gnus-buttonized-mime-types
    (quote
     ("multipart/signed" "multipart/alternative" "application/msword")))
