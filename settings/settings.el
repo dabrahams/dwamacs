@@ -182,7 +182,8 @@ from macports.")
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
    (quote
-    (("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
+    (("erc-nickserv-passwords" "../startup/10-passwd.el" nil nil)
+     ("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
      ("\\`\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
      ("\\`\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
      ("\\`yas/" "yasnippet-settings.el" nil nil)
