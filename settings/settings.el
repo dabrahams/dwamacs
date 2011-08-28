@@ -49,7 +49,10 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name gnus-harvest :type git :url "git://github.com/jwiegley/gnus-harvest.git")
+    ((:name org-mode :url "http://github.com/jwiegley/org-mode")
+     (:name org-html5presentation :type git :url "git://gist.github.com/509761.git")
+     (:name org-magit :type git :url "https://github.com/sigma/org-magit")
+     (:name gnus-harvest :type git :url "git://github.com/jwiegley/gnus-harvest.git")
      (:name tramp :type cvs :url ":pserver:anonymous@cvs.savannah.gnu.org:/sources/tramp" :website "http://www.gnu.org/s/tramp/" :build
             (\`
              (("autoconf")
@@ -87,6 +90,7 @@ Added -h so I can read file sizes")
                                "unichars.el")))))
      (:name unichars :type http :url "http://nwalsh.com/emacs/xmlchars/unichars.el")
      (:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
+     (:name wiegleymacs :type git :url "http://github.com/jwiegley/dot-emacs" :load-path nil)
      (:name dwamacs :depends
             (elhome)
             :type git :url "git@github.com:dabrahams/dwamacs" :load-path
