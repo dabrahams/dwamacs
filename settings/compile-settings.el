@@ -6,3 +6,7 @@
             (cons
              (concat "^\\s-" (substring pat 2))
              (cddr clause)))))
+
+(if (featurep 'compile-)
+    (require 'compile+)
+  (warn "compile- must be loaded before compile and compile+"))
