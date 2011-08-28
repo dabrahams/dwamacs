@@ -462,13 +462,14 @@ To use this function, add it to `org-agenda-finalize-hook':
 	((string= tag "errand")
 	 (let ((hour (nth 2 (decode-time))))
 	   (or (< hour 12) (> hour 17))))
-        ((or (string= tag "home") (string= tag "nasim"))
+        ((string-match "\\`\\(home\\|luann\\|moses\\)\\'" tag)
+         (when nil ;; John fiddles his network settings
 	 (with-temp-buffer
 	   (call-process "/sbin/ifconfig" nil t nil "en0" "inet")
 	   (call-process "/sbin/ifconfig" nil t nil "en1" "inet")
 	   (call-process "/sbin/ifconfig" nil t nil "bond0" "inet")
 	   (goto-char (point-min))
-	   (not (re-search-forward "inet 192\\.168\\.9\\." nil t))))
+	   (not (re-search-forward "inet 192\\.168\\.9\\." nil t)))))
 	((string= tag "net")
 	 (/= 0 (call-process "/sbin/ping" nil nil nil
 			     "-c1" "-q" "-t1" "mail.gnu.org")))
