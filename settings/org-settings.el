@@ -30,10 +30,6 @@
  ;; If there is more than one, they won't work right.
  '(calendar-mark-holidays-flag t)
  '(diary-file "~/Documents/Tasks/diary")
- '(org-M-RET-may-split-line
-   (quote
-    ((headline)
-     (default . t))))
  '(org-agenda-auto-exclude-function
    (quote org-my-auto-exclude-function))
  '(org-agenda-custom-commands
