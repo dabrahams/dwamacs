@@ -1,6 +1,3 @@
-[submodule "wiegleymacs"]
-	path = wiegleymacs
-	url = http://github.com/jwiegley/dot-emacs
 [submodule "el-staging"]
 	path = el-staging
 	url = http://github.com/boostpro/el-staging
