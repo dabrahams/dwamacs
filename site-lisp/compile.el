@@ -1,6 +1,6 @@
 ;; This file makes sure that Drew Adams' "compile-" library is loaded
 ;; before the built-in "compile" library
-(require 'compile-)
+(require 'compile- nil 'noerror)
 
 (catch 'found
   (dolist (d (mapcar 'file-name-as-directory load-path))
