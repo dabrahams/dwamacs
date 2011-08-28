@@ -378,6 +378,7 @@ Some people don't embed linebreaks in their paragraphs; this will force-add them
    (quote head))
  '(gnus-treat-newsgroups-picon
    (quote head))
+ '(gnus-treat-strip-cr t)
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail][./][^A]\\)" nil nil "Only search in Gmail's \"All Mail\" group.  
 Emacs regexps don't support negative matches, so this is about the best we can do.")
  '(nnmail-extra-headers
