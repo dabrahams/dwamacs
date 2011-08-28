@@ -5,5 +5,5 @@
 (when (and
        (eq system-type 'darwin)
        ;; This is not important enough to abort startup on failure
-       (ignore-errors (require 'osx-plist)))
+       (require 'osx-plist nil 'noerror))
   (osx-plist-update-environment))
