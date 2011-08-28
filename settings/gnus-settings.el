@@ -589,6 +589,150 @@ This moves them into the Spam folder."
 (eval-after-load "w3m"
   '(define-key w3m-minor-mode-map "\C-m" 'w3m-view-url-with-external-browser))
 
+;;;_ + dave's stuff
+
+;;
+;; Support proportional fonts in the summary and group buffers by inserting a forced alignment
+;;
+;; See http://news.gmane.org/find-root.php?message_id=%3cyoij63rj41q5.fsf%40remote5.student.chalmers.se%3e
+(defvar my-align-gnus-summary (propertize " " 'display '(space :align-to 5)))
+(defvar my-align-gnus-subject (propertize " " 'display '(space :align-to 30)))
+
+(defvar my-align-gnus-group (propertize " " 'display '(space :align-to 8)))
+
+
+;; Display word docs inline with antiword installed.  See
+;; http://www.emacswiki.org/emacs/MimeTypesWithGnus
+(when nil
+  (require 'mm-view)
+  (add-to-list 'mm-inline-media-tests
+               '("application/msword" mm-inline-text identity))
+  (add-to-list 'mm-automatic-external-display "application/msword")
+  (add-to-list 'mm-attachment-override-types "application/msword")
+  (add-to-list 'mm-automatic-display "application/msword"))
+
+(defun jidanni-gnus-summary-first-unseen-or-last-subject ()
+  "Place the point on the subject line of the first unseen article.
+If all article have been seen, on the subject line of the last article."
+  (interactive)
+  (prog1
+      (unless
+	  (when (gnus-summary-first-subject nil nil t)
+	    (gnus-summary-show-thread)
+	    (gnus-summary-first-subject nil nil t))
+	(goto-char (point-max))
+	(forward-line -1))
+    (gnus-summary-position-point)))
+(setq gnus-auto-select-subject 'jidanni-gnus-summary-first-unseen-or-last-subject)
+
+(require 'gnus-spec)
+(gnus-compile)
+
+(require 'gravatar nil 'noerror)
+(require 'gnus-gravatar nil 'noerror)
+(spam-initialize)
+(define-key gnus-summary-mode-map
+  "$" 'gnus-summary-mark-as-spam)
+
+(require 'gnus)
+(require 'gnus-sum)
+(require 'mm-util)
+(require 'w3m-load)
+
+(defvar my-gnus-group-faces
+  '(
+    gnus-group-news-1
+    gnus-group-news-1-empty
+    gnus-group-news-2
+    gnus-group-news-2-empty
+    gnus-group-news-3
+    gnus-group-news-3-empty
+    gnus-group-news-4
+    gnus-group-news-4-empty
+    gnus-group-news-5
+    gnus-group-news-5-empty
+    gnus-group-news-6
+    gnus-group-news-6-empty
+    gnus-group-news-low
+    gnus-group-news-low-empty
+    gnus-group-mail-1
+    gnus-group-mail-1-empty
+    gnus-group-mail-2
+    gnus-group-mail-2-empty
+    gnus-group-mail-3
+    gnus-group-mail-3-empty
+    gnus-group-mail-low
+    gnus-group-mail-low-empty))
+
+(defvar my-gnus-summary-faces 
+  '(
+    gnus-summary-selected
+    gnus-summary-cancelled
+    gnus-summary-high-ticked
+    gnus-summary-low-ticked
+    gnus-summary-normal-ticked
+    gnus-summary-high-ancient
+    gnus-summary-low-ancient
+    gnus-summary-normal-ancient
+    gnus-summary-high-undownloaded
+    gnus-summary-low-undownloaded
+    gnus-summary-normal-undownloaded
+    gnus-summary-high-unread
+    gnus-summary-low-unread
+    gnus-summary-normal-unread
+    gnus-summary-high-read
+    gnus-summary-low-read
+    gnus-summary-normal-read))
+
+(defvar my-gnus-group-face-attributes '(:family "Helvetica" :weight normal :width condensed))
+(defvar my-gnus-summary-face-attributes '(:family "Helvetica" :weight normal :width condensed))
+
+(dolist (facename my-gnus-group-faces)
+  (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
+(dolist (facename my-gnus-summary-faces)
+  (apply 'set-face-attribute facename nil my-gnus-summary-face-attributes))
+
+;; Make sure cited text has a light gray background, in case people
+;; forget to add a blank line after their citations.
+(require 'gnus-cite)
+(require 'mail-settings)
+
+(loop for x in gnus-cite-face-list do 
+      (set-face-attribute x nil ':inherit 'dwa/mail-citation))
+
+;; Thanks to David Engster
+;; [[gnus:nntp%2Bnews.gmane.org:gmane.emacs.gnus.general#87vdnimyxd.fsf@randomsample.de][Posting on ding@gnus.org]]
+(defun DE-collapse-group-names ()
+  (save-excursion
+    (let (previous-group current-group common-prefix
+			 common-dot-count prefix suffix)
+      (goto-char (point-min))
+      (while (not (eobp))
+	(when (setq current-group 
+		    (get-text-property (point) 'gnus-group))
+	  (setq current-group (symbol-name current-group))
+	  (when (string-match "\\(.+\\):\\(.+\\)" current-group)
+	    (setq current-group (match-string 2 current-group)))
+	  (setq common-prefix (substring current-group 0 
+					 (mismatch previous-group current-group))
+		common-dot-count (count ?. common-prefix)
+		prefix (mapconcat (lambda (x) x) 
+				  (make-list common-dot-count "  .") "")
+		suffix (and (string-match
+			     (format "\\([^.]*[.]\\)\\{%d\\}\\(.+\\)" common-dot-count) 
+			     current-group)
+			    (match-string 2 current-group))
+		previous-group current-group)
+	  (unless (zerop (length prefix))
+	    (when (search-forward current-group (point-at-eol) t)
+	      (let ((props (text-properties-at (1- (point)))))
+		(replace-match (apply 'propertize (concat prefix suffix)
+				      props))))))
+	(forward-line 1)))))
+
+(add-hook 'gnus-group-prepare-hook 'DE-collapse-group-names)
+(add-hook 'gnus-group-update-group-hook 'DE-collapse-group-names)
+
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
