@@ -43,7 +43,7 @@
       (progn (customize-unsaved) nil)
     (error 
      (or (equal err '(error "No user options are set but unsaved"))
-         (apply 'signal err)))))
+         (signal (car err) (cdr err))))))
 (add-to-list 'kill-emacs-query-functions 'dwa/save-customizations-before-exit)
 
 (ignore-errors (require 'elscreen))
