@@ -15,6 +15,11 @@
 (remove-hook 'gnus-summary-mode-hook 'ffap-gnus-hook)
 (remove-hook 'gnus-article-mode-hook 'ffap-gnus-hook)
 
+;; Per-window point
+
+(require 'per-window-point)
+(pwp-mode)
+
 ;;;;;;;;
 
 (require 'session)
