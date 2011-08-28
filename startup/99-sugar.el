@@ -48,6 +48,14 @@
 
 (ignore-errors (require 'elscreen))
 
+;; Man pages often come out too wide
+(defadvice Man-getpage-in-background
+  (around Man-narrow-please activate compile preactivate)
+  (let ((Man-width (when (> (window-width) 90) 90)))
+    ad-do-it))
+(setenv "MANWIDTH" "") ;; the `man' function respects these environment variables
+(setenv "COLUMNS" "")  ;; so let's dis' them.
+
 ;; The git pager sux except in a terminal
 (setenv "GIT_PAGER" "")
 
