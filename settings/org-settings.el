@@ -245,11 +245,6 @@
  '(org-modules
    (quote
     (org-id org-info org-habit)))
- '(org-refile-targets
-   (quote
-    (("~/Documents/Tasks/todo.txt" :level . 1)
-     ("~/Documents/Tasks/todo.txt" :todo . "PROJECT")
-     ("~/src/ledger/plan/TODO" :level . 1))))
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
