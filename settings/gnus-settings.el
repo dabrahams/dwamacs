@@ -48,7 +48,7 @@ If all article have been seen, on the subject line of the last article."
 	(goto-char (point-max))
 	(forward-line -1))
     (gnus-summary-position-point)))
-;; (setq gnus-auto-select-subject 'jidanni-gnus-summary-first-unseen-or-last-subject)
+(setq gnus-auto-select-subject 'jidanni-gnus-summary-first-unseen-or-last-subject)
 
 (require 'gnus)
 (require 'gnus-sum)
