@@ -49,7 +49,8 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name org-mode :url "http://github.com/jwiegley/org-mode")
+    ((:name rs-info :type emacsmirror :website "http://lists.gnu.org/archive/html/info-gnus-english/2006-10/msg00081.html" :description "Info enhancements from Reiner Steib, including boxquote")
+     (:name org-mode :url "http://github.com/jwiegley/org-mode")
      (:name org-html5presentation :type git :url "git://gist.github.com/509761.git")
      (:name org-magit :type git :url "https://github.com/sigma/org-magit")
      (:name gnus-harvest :type git :url "git://github.com/jwiegley/gnus-harvest.git")
