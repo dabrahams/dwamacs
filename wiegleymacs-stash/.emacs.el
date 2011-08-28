@@ -908,25 +908,6 @@ If the buffer is currently not visible, makes it sticky."
 
 ;;;_ + org-mode
 
-(defun jump-to-org-agenda ()
-  (interactive)
-  (unless (featurep 'org-agenda)
-    (load ".org"))
-  (let ((buf (get-buffer "*Org Agenda*"))
-        wind)
-    (if buf
-        (if (setq wind (get-buffer-window buf))
-            (when (called-interactively-p 'any)
-              (select-window wind)
-              (org-fit-window-to-buffer))
-          (if (called-interactively-p 'any)
-              (progn
-                (select-window (display-buffer buf t t))
-                (org-fit-window-to-buffer))
-            (with-selected-window (display-buffer buf)
-              (org-fit-window-to-buffer))))
-      (call-interactively 'org-agenda-list))))
-
 (run-with-idle-timer 300 t 'jump-to-org-agenda)
 
 ;;;_ + per-window-point
