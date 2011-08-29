@@ -28,6 +28,8 @@
  '(gnus-article-date-lapsed-new-header t)
  '(gnus-article-update-date-headers nil)
  '(gnus-asynchronous t)
+ '(gnus-auto-select-next nil nil nil "
+*** VERY IMPORTANT SETTING ***.  See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=9399")
  '(gnus-check-new-newsgroups nil)
  '(gnus-default-adaptive-score-alist
    (quote
