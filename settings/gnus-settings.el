@@ -592,6 +592,9 @@ If all article have been seen, on the subject line of the last article."
 (define-key gnus-summary-mode-map
   "$" 'gnus-summary-mark-as-spam)
 
+(define-key gnus-summary-mode-map
+  [?v ?o] 'start-offlineimap)
+
 (require 'gnus)
 (require 'gnus-sum)
 (require 'mm-util)
