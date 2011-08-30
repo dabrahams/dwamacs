@@ -124,7 +124,7 @@ Added -h so I can read file sizes")
      ("-telnet" . "telnet")
      ("dict" . "OnlineDict")
      ("*WL:Message*" . "Wanderlust"))))
- '(elscreen-display-screen-number t)
+ '(elscreen-display-screen-number nil)
  '(elscreen-display-tab t)
  '(elscreen-mode-to-nickname-alist
    (quote
@@ -520,4 +520,7 @@ where I don't expect it to be keeping undo history anyway")
  '(rst-level-6-face
    ((t
      (:background "grey50" :foreground "black")))
-   t))
+   t)
+ '(show-paren-match
+   ((t
+     (:inherit font-lock-keyword :background "black")))))
