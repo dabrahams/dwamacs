@@ -53,7 +53,7 @@
    (quote gnus-summary-write-to-file))
  '(gnus-extra-headers
    (quote
-    (To)))
+    (To Cc)))
  '(gnus-gcc-mark-as-read t)
  '(gnus-generate-tree-function
    (quote gnus-generate-horizontal-tree))
@@ -171,7 +171,7 @@
  '(nnmail-expiry-wait 30)
  '(nnmail-extra-headers
    (quote
-    (To)))
+    (To Cc)))
  '(nnmail-scan-directory-mail-source-once t))
 
 ;;;_ + faces
