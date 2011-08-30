@@ -16,6 +16,17 @@
        (cdr (assoc "dave" (cadr (assq 'BitlBee erc-nickserv-passwords))))))
 
 ;;;###autoload
+(defun chat ()
+  (interactive)
+  (let ((found (rassoc "Chat" (elscreen-get-screen-to-name-alist))))
+    (if found
+        (elscreen-goto (car found))
+      (elscreen-create)
+      (elscreen-screen-nickname "Chat")
+      (irc)
+      (im))))
+
+;;;###autoload
 (defun erc-tiny-frame ()
   (interactive)
   (with-selected-frame
