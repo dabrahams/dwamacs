@@ -75,6 +75,9 @@
     ((format-time-string "sent.%Y-%m"))))
  '(gnus-message-replyencrypt nil)
  '(gnus-novice-user nil)
+ '(gnus-propagate-marks t nil nil "
+*** VERY IMPORTANT SETTING ***.  This should always be on nowadays, per
+http://permalink.gmane.org/gmane.emacs.gnus.general/79777")
  '(gnus-read-active-file nil)
  '(gnus-read-newsrc-file nil)
  '(gnus-refer-article-method
