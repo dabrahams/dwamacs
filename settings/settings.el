@@ -395,6 +395,7 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
      (test-case-name . buildbot\.broken_test\.test_web_status_json)
      (encoding . utf8)
      (folded-file . t))))
+ '(scroll-bar-mode nil)
  '(server-mode t nil nil "
 Always run a server so we can open files in existing emacs frames.")
  '(show-paren-mode t)
