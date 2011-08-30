@@ -138,7 +138,7 @@ Added -h so I can read file sizes")
               (buffer-name
                (current-buffer))))
      ("^mew-" . "Mew")
-     ("^irchat-" . "IRChat")
+     ("^\\(irchat\\|erc\\)-" . "Chat")
      ("^liece-" . "Liece")
      ("^lookup-" . "Lookup")
      ("^gnus-" . "Gnus"))))
