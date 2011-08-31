@@ -11,12 +11,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(canlock-password "8d2ee9a7e4658c4ff6d863f91a3dd5340b3918ec")
- '(check-mail-boxes
-   (quote
-    ("~/Library/Mail/incoming/mail\\..*\\.spool")))
- '(check-mail-summary-function
-   (quote check-mail-box-summary))
  '(eudc-inline-expansion-format
    (quote
     ("%s <%s>" name email)))
@@ -71,7 +65,7 @@
    (quote
     (gnus-topic-mode gnus-agent-mode)))
  '(gnus-home-directory "~/Library/Mail/Gnus/")
- '(gnus-ignored-from-addresses "\\(johnw\\|jwiegley\\)@\\(gnu\\.org\\|\\(forumjobs\\|3dex\\|gmail\\|hotmail\\|newartisans\\|boostpro\\)\\.com\\)")
+ '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-ignored-mime-types
    (quote
     ("application/x-pkcs7-signature" "application/ms-tnef" "text/x-vcard")))
@@ -82,14 +76,6 @@
     ((format-time-string "sent.%Y-%m"))))
  '(gnus-message-replyencrypt nil)
  '(gnus-novice-user nil)
- '(gnus-posting-styles
-   (quote
-    (("\\(c\\+\\+\\|clang\\|llvm\\|[Bb]oost\\|[Rr]yppl\\)"
-      ("From" "johnw@boostpro.com")
-      (organization "BoostPro Computing, Inc.")
-      (signature "  John Wiegley
-  BoostPro Computing, Inc.
-  http://www.boostpro.com")))))
  '(gnus-read-active-file nil)
  '(gnus-read-newsrc-file nil)
  '(gnus-refer-article-method
@@ -118,11 +104,16 @@
  '(gnus-select-group-hook
    (quote
     (gnus-group-set-timestamp)))
+ '(gnus-secondary-select-methods
+   (quote
+    ((nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119)))))
  '(gnus-select-method
    (quote
-    (nnimap "Local"
+    (nnimap "LocalIMAP"
             (nnimap-address "localhost")
-            (nnimap-user "johnw")
+            (nnimap-user "dave")
             (nnimap-server-port 9143)
             (nnimap-stream network))))
  '(gnus-signature-separator
@@ -147,7 +138,7 @@
  '(gnus-subscribe-newsgroup-method
    (quote gnus-subscribe-topics))
  '(gnus-summary-expunge-below -100)
- '(gnus-summary-line-format "%U%R%I%(%ut: %uS %S, %uZ%)
+ '(gnus-summary-line-format "%O%U%R%z%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)* %s
 ")
  '(gnus-summary-mark-below -100)
  '(gnus-suspend-gnus-hook
@@ -181,14 +172,10 @@
  '(mail-source-delete-incoming t)
  '(mail-source-delete-old-incoming-confirm nil)
  '(mail-source-report-new-mail-interval 15)
- '(mail-sources
-   (quote
-    ((file :path "/var/mail/johnw"))))
  '(mail-specify-envelope-from t)
  '(mail-user-agent
    (quote gnus-user-agent))
- '(message-alternative-emails "\\(johnw?\\|jwiegley\\)@\\(gmail\\|newartisans\\|boostpro\\).com")
- '(message-directory "~/Library/Mail/Gnus/Mail/")
+ '(message-directory "~/Library/Data/Gnus/")
  '(message-fill-column 78)
  '(message-interactive t)
  '(message-mail-alias-type nil)
@@ -228,58 +215,9 @@
  '(nnmail-extra-headers
    (quote
     (To)))
- '(nnmail-scan-directory-mail-source-once t)
- '(sc-attrib-selection-list
-   (quote
-    (("sc-from-address"
-      ((".*" bbdb/sc-consult-attr
-        (sc-mail-field "sc-from-address")))))))
- '(sc-citation-leader "")
- '(sc-confirm-always-p nil)
- '(sc-default-attribution "")
- '(sc-preferred-attribution-list nil)
- '(sc-use-only-preference-p t)
- '(send-mail-function
-   (quote sendmail-send-it))
- '(smtpmail-default-smtp-server "mail.johnwiegley.com")
- '(smtpmail-smtp-server "mail.johnwiegley.com" t)
- '(smtpmail-smtp-service 587 t)
- '(smtpmail-starttls-credentials
-   (quote
-    (("mail.johnwiegley.com" 587 nil nil)
-     ("smtp.gmail.com" 587 nil nil)))))
+ '(nnmail-scan-directory-mail-source-once t))
 
 ;;;_ + faces
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(message-cited-text
-   ((((class color))
-     (:foreground "Blue"))))
- '(message-header-cc
-   ((((class color))
-     (:bold t :foreground "green2"))))
- '(message-header-name
-   ((((class color))
-     (:bold nil :foreground "Blue"))))
- '(message-header-other
-   ((((class color))
-     (:foreground "Firebrick"))))
- '(message-header-subject
-   ((((class color))
-     (:foreground "black"))))
- '(message-header-xheader
-   ((((class color))
-     (:foreground "Blue"))))
- '(message-mml
-   ((((class color))
-     (:foreground "DarkGreen"))))
- '(message-separator
-   ((((class color))
-     (:foreground "Tan")))))
 
 ;;;_* configuration
 
@@ -289,7 +227,6 @@
 (require 'pgg)
 
 (gnus-harvest-install 'message-x)
-(add-hook 'mail-citation-hook 'sc-cite-original)
 
 (defun my-process-running-p (name)
   (catch 'proc-running
@@ -318,23 +255,6 @@
 
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
-
-(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
-(add-hook 'gnus-startup-hook 'bbdb-insinuate-sc)
-
-(eval-after-load "supercite"
-  '(setq
-    sc-mail-glom-frame
-    '((begin                        (setq sc-mail-headers-start (point)))
-      ("^x-attribution:[ \t]+.*$"   (sc-mail-fetch-field t) nil t)
-      ("^\\S +:.*$"                 (sc-mail-fetch-field) nil t)
-      ("^$"                         (progn (bbdb/sc-default)
-                                           (list 'abort '(step . 0))))
-      ("^[ \t]+"                    (sc-mail-append-field))
-      (sc-mail-warn-if-non-rfc822-p (sc-mail-error-in-mail-field))
-      (end                          (setq sc-mail-headers-end (point))))))
-
-;;(gnus-registry-initialize)
 
 (defun gnus-query (query)
   (interactive "sMail Query: ")
@@ -389,22 +309,14 @@ This moves them into the Spam folder."
 
 (defadvice message-goto-from (after insert-boostpro-address activate)
   (if (looking-back ": ")
-      (insert "John Wiegley <johnw@boostpro.com>"))
+      (insert "Dave Abrahams <dave@boostpro.com>"))
   (goto-char (line-end-position))
   (re-search-backward ": ")
   (goto-char (match-end 0)))
 
 (setq my-smtpmailer-alist
-      '((".*@\\(boostpro.com\\)"
-         ("johnw@boostpro.com" . "smtp.gmail.com"))
-        (".*@\\(3dex\\|smartceg\\).com"
-         ("johnw@3dex.com" . "smtp.gmail.com"))
-        ;;(".*@\\(gmail.com\\)"
-        ;; ("jwiegley@gmail.com" . "smtp.gmail.com"))
-        ;;(".*"
-        ;; ("johnw@newartisans.com" . "mail.johnwiegley.com"))
-        (".*"
-         ("jwiegley@gmail.com" . "smtp.gmail.com"))
+      '((".*"
+         ("dave@boostpro.com" . "smtp.gmail.com"))
         ))
 
 (defun my-set-smtp-server ()
@@ -439,13 +351,52 @@ This moves them into the Spam folder."
 
 ;;;_ + Determine layout of the summary windows
 
-(gnus-add-configuration
-      '(article
-	(vertical 1.0
-		  (horizontal 0.25
-			      (summary 0.75 point)
-			      (tree 1.0))
-		  (article 1.0))))
+    (progn
+      (gnus-add-configuration
+       '(article
+         (horizontal 1.0
+                     (vertical 1.0
+                               (group 35)
+                               (summary 1.0 point))
+                     (vertical .5 (article 1.0)))))
+
+
+      (gnus-add-configuration
+       '(summary
+         (horizontal 1.0
+                     (vertical 1.0
+                               (group 35)
+                               (summary 1.0 point))
+                     (vertical .5 (article 1.0)))))
+
+      (gnus-add-configuration
+       '(message
+         (horizontal 1.0
+                     (vertical 1.0
+                               (group 35)
+                               (summary 1.0))
+                     (vertical .5
+                               (message 1.0 point)))))
+
+      (gnus-add-configuration
+       '(reply
+         (horizontal 1.0
+                     (vertical 1.0
+                               (group 35)
+                               (summary 1.0))
+                     (vertical .5
+                               (message 1.0 point)
+                               (article .25)))))
+
+      (gnus-add-configuration
+       '(reply-yank
+         (horizontal 1.0
+                     (vertical 1.0
+                               (group 35)
+                               (summary 1.0))
+                     (vertical .5
+                               (message 1.0 point)))))
+      )
 
 ;;;_ + Cleanup all Gnus buffers on exit
 
