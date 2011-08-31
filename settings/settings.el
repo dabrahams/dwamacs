@@ -30,7 +30,14 @@ Blinking cursor just annoys me")
  '(cursor-type
    (quote box)
    t)
+ '(custom-buffer-done-kill t)
+ '(custom-face-default-form
+   (quote all))
+ '(custom-magic-show
+   (quote short))
+ '(custom-magic-show-button t)
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
+ '(custom-unlispify-tag-names nil)
  '(default-frame-alist
     (quote
      ((menu-bar-lines . 1)
