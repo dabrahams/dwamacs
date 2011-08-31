@@ -190,7 +190,8 @@ from macports.")
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
    (quote
-    (("erc-nickserv-passwords" "../startup/10-passwd.el" nil nil)
+    (("\\`\\(gnus\\(-home\\)?\\|message\\)-directory\\'" "preloaded-settings.el" nil t)
+     ("\\`erc-nickserv-passwords\\'" "../startup/10-passwd.el" nil nil)
      ("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
      ("\\`\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
      ("\\`\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
@@ -203,11 +204,7 @@ from macports.")
    (quote
     ("/Users/dave/src" "/Users/dave/src/bbotpriv-top" "/Users/dave/src/fossbot-top")))
  '(magit-repo-dirs-depth 1)
- '(mairix-command "ssh boostpro.com mairix")
- '(mairix-file-path "/home/dave/Maildir/")
- '(mairix-mail-program
-   (quote wl))
- '(mairix-search-file ".zz_mairix-results")
+ '(mairix-file-path "~/Library/Data/Indexes")
  '(markdown-command "markdown-extra")
  '(mm-discouraged-alternatives
    (quote
@@ -402,6 +399,7 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
  '(server-mode t nil nil "
 Always run a server so we can open files in existing emacs frames.")
  '(show-paren-mode t)
+ '(smime-certificate-directory "~/Library/Data/Gnus/Mail/certs/")
  '(smtp-server "smtp.gmail.com")
  '(smtpmail-default-smtp-server "www.boostpro.com")
  '(smtpmail-local-domain "boostpro.com")

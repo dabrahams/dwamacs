@@ -149,7 +149,7 @@ If the buffer is currently not visible, makes it sticky."
  '(erc-keywords
    (quote
     ("dave" "abrahams" "JohnWiegley" "boost")))
- '(erc-log-channels-directory "~/Library/Mail/ERC")
+ '(erc-log-channels-directory "~/Library/Data/ERC")
  '(erc-log-write-after-send t)
  '(erc-modules
    (quote

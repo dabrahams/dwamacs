@@ -63,7 +63,6 @@
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
- '(gnus-home-directory "~/Library/Mail/Gnus/")
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-ignored-mime-types
    (quote
@@ -81,8 +80,8 @@
    (quote
     (current
      (nnir)
-     (nnir "nnimap:Local")
-     (nntp "LocalNews")
+     (nnir "nnimap:LocalIMAP")
+     (nntp "LocalNNTP")
      (nnweb "gmane"
             (nnweb-type gmane))
      (nnweb "google"
@@ -165,8 +164,19 @@
     (line)))
  '(gnus-use-cache t)
  '(gnus-use-trees t)
+ '(nnir-hyrex-remove-prefix "~/Library/Data/Gnus/Mail")
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)")
  '(nnir-imap-default-search-key "imap")
+ '(nnir-namazu-index-directory "~/Library/Data/Gnus/Mail/namazu")
+ '(nnir-namazu-remove-prefix "~/Library/Data/Gnus/Mail")
+ '(nnir-notmuch-remove-prefix "~/Library/Data/Gnus/Mail")
+ '(nnir-swish++-configuration-file "~/Library/Data/Gnus/Mail/swish++.conf")
+ '(nnir-swish++-remove-prefix "~/Library/Data/Gnus/Mail/")
+ '(nnir-swish-e-index-file "~/Library/Data/Gnus/Mail/index.swish-e")
+ '(nnir-swish-e-index-files
+   (quote
+    ("~/Library/Data/Gnus/Mail/index.swish-e")))
+ '(nnir-swish-e-remove-prefix "~/Library/Data/Gnus/Mail/")
  '(nnmail-crosspost nil)
  '(nnmail-expiry-wait 30)
  '(nnmail-extra-headers

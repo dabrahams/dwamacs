@@ -237,7 +237,6 @@
  '(org-footnote-section nil)
  '(org-habit-preceding-days 42)
  '(org-hide-leading-stars t)
- '(org-id-locations-file "~/.emacs.d/data/org-id-locations")
  '(org-irc-link-to-logs t t)
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-mobile-files nil)
