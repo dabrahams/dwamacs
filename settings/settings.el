@@ -116,6 +116,7 @@ Added -h so I can read file sizes")
  '(el-get-standard-packages
    (quotet
     ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust")))
+ '(elscreen-buffer-list-enabled t)
  '(elscreen-buffer-to-nickname-alist
    (quote
     (("[Ss]hell" . "shell")
