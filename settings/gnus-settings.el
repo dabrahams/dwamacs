@@ -11,9 +11,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(eudc-inline-expansion-format
-   (quote
-    ("%s <%s>" name email)))
  '(gnus-after-getting-new-news-hook
    (quote
     (gnus-group-list-groups gnus-display-time-event-handler gnus-score-groups gnus-group-save-newsrc
@@ -101,14 +98,14 @@
  '(gnus-score-find-score-files-function
    (quote
     (gnus-score-find-hierarchical)))
- '(gnus-select-group-hook
-   (quote
-    (gnus-group-set-timestamp)))
  '(gnus-secondary-select-methods
    (quote
     ((nntp "LocalNNTP"
            (nntp-address "localhost")
            (nntp-port-number 9119)))))
+ '(gnus-select-group-hook
+   (quote
+    (gnus-group-set-timestamp)))
  '(gnus-select-method
    (quote
     (nnimap "LocalIMAP"
@@ -166,48 +163,6 @@
     (line)))
  '(gnus-use-cache t)
  '(gnus-use-trees t)
- '(mail-envelope-from
-   (quote header))
- '(mail-setup-with-from nil)
- '(mail-source-delete-incoming t)
- '(mail-source-delete-old-incoming-confirm nil)
- '(mail-source-report-new-mail-interval 15)
- '(mail-specify-envelope-from t)
- '(mail-user-agent
-   (quote gnus-user-agent))
- '(message-directory "~/Library/Data/Gnus/")
- '(message-fill-column 78)
- '(message-interactive t)
- '(message-mail-alias-type nil)
- '(message-mode-hook
-   (quote
-    (footnote-mode turn-on-auto-fill flyspell-mode turn-on-orgstruct)))
- '(message-send-mail-function
-   (quote message-send-mail-with-sendmail))
- '(message-send-mail-partially-limit nil)
- '(message-sendmail-envelope-from
-   (quote header))
- '(message-sent-hook
-   (quote
-    (gnus-score-followup-article)))
- '(message-setup-hook
-   (quote
-    (message-check-recipients
-     (lambda nil
-       (message-remove-header "From")))))
- '(message-x-completion-alist
-   (quote
-    (("\\([rR]esent-\\|[rR]eply-\\)?[tT]o:\\|[bB]?[cC][cC]:" . gnus-harvest-find-address)
-     ((if
-          (boundp
-           (quote message-newgroups-header-regexp))
-          message-newgroups-header-regexp message-newsgroups-header-regexp)
-      . message-expand-group))))
- '(mm-discouraged-alternatives
-   (quote
-    ("application/msword" "text/richtext")))
- '(mm-text-html-renderer
-   (quote w3m))
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail]/[^A]\\)")
  '(nnir-imap-default-search-key "imap")
  '(nnmail-crosspost nil)

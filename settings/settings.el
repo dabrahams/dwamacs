@@ -143,6 +143,9 @@ Added -h so I can read file sizes")
  '(elscreen-tab-display-control nil)
  '(elscreen-tab-display-kill-screen nil)
  '(enable-local-eval t)
+ '(eudc-inline-expansion-format
+   (quote
+    ("%s <%s>" name email)))
  '(explicit-bash-args
    (quote
     ("--noediting" "-i" "-l"))
@@ -201,6 +204,11 @@ from macports.")
    (quote wl))
  '(mairix-search-file ".zz_mairix-results")
  '(markdown-command "markdown-extra")
+ '(mm-discouraged-alternatives
+   (quote
+    ("application/msword" "text/richtext")))
+ '(mm-text-html-renderer
+   (quote w3m))
  '(muse-project-alist
    (quote
     (("WikiPlanner"
@@ -391,7 +399,7 @@ Always run a server so we can open files in existing emacs frames.")
  '(smtp-server "smtp.gmail.com")
  '(smtpmail-default-smtp-server "www.boostpro.com")
  '(smtpmail-local-domain "boostpro.com")
- '(smtpmail-smtp-service 587)
+ '(smtpmail-smtp-service 587 t)
  '(smtpmail-starttls-credentials
    (quote
     (("www.boostpro.com" 587 "" ""))))

@@ -17,4 +17,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(mail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
- '(mail-signature t))
+ '(mail-envelope-from
+   (quote header))
+ '(mail-setup-with-from nil)
+ '(mail-signature t)
+ '(mail-source-delete-incoming t)
+ '(mail-source-delete-old-incoming-confirm nil)
+ '(mail-source-report-new-mail-interval 15)
+ '(mail-specify-envelope-from t)
+ '(mail-user-agent
+   (quote gnus-user-agent)))
