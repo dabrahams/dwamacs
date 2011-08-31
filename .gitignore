@@ -1,2 +1,4 @@
 *.elc
 /startup/10-passwd.el
+.DS_Store
+
