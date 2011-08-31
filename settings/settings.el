@@ -178,6 +178,9 @@ figure out how to use curl instead, but for now I just installed wget
 from macports.")
  '(gravatar-size 48)
  '(ido-everywhere t)
+ '(ido-gather-virtual-filenames
+   (quote
+    (ido-gather-recent-files ido-gather-git-project-files)))
  '(ido-mode
    (quote buffer)
    nil
@@ -185,6 +188,7 @@ from macports.")
  '(ido-use-filename-at-point
    (quote guess))
  '(ido-use-url-at-point t)
+ '(ido-use-virtual-buffers t)
  '(imap-shell-program
    (quote
     ("/opt/local/sbin/dovecot --exec-mail imap" "ssh %s imapd" "rsh %s imapd" "ssh %g ssh %s imapd" "rsh %g rsh %s imapd")))
