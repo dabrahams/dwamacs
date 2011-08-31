@@ -15,10 +15,18 @@
 (remove-hook 'gnus-summary-mode-hook 'ffap-gnus-hook)
 (remove-hook 'gnus-article-mode-hook 'ffap-gnus-hook)
 
-;; Per-window point
+;; Pretty ^L
+(ignore-errors 
+  (require 'pp-c-l)
+  (pretty-control-l-mode))
 
-(require 'per-window-point)
-(pwp-mode)
+;; Page navigation 
+(require 'page-ext)
+
+;; Per-window point
+(ignore-errors
+  (require 'per-window-point)
+  (pwp-mode))
 
 ;;;;;;;;
 

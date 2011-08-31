@@ -230,6 +230,7 @@ Command key.  Oh, well!  I wish I could make right-command work as
 command.")
  '(ns-command-modifier
    (quote meta))
+ '(pp^L-^L-string "                                                                              ")
  '(ps-font-family
    (quote Helvetica))
  '(ps-font-info-database
