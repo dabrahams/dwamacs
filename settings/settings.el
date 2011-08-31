@@ -33,7 +33,9 @@ Blinking cursor just annoys me")
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
  '(default-frame-alist
     (quote
-     ((menu-bar-lines . 1))))
+     ((menu-bar-lines . 1)
+      (line-spacing . 3)
+      (font . "DejaVu Sans Mono-14"))))
  '(delete-selection-mode t nil nil "
 Creates normal editor behavior: select a region and begin
 typing, the region is replaced")
@@ -200,6 +202,7 @@ from macports.")
      ("\\`bcc-" "byte-code-cache-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(ispell-program-name "aspell")
+ '(line-spacing 0.25)
  '(magit-repo-dirs
    (quote
     ("/Users/dave/src" "/Users/dave/src/bbotpriv-top" "/Users/dave/src/fossbot-top")))
@@ -488,6 +491,9 @@ where I don't expect it to be keeping undo history anyway")
       (min-colors 88)
       (background light))
      (:background "Beige" :foreground "DarkGreen" :slant italic))))
+ '(hl-line
+   ((t
+     (:inherit highlight-current-line))))
  '(italic
    ((t
      (:slant italic :family "Monaco"))))

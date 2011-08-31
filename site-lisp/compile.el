@@ -1,6 +1,11 @@
 ;; This file makes sure that Drew Adams' "compile-" library is loaded
 ;; before the built-in "compile" library
-(require 'compile- nil 'noerror)
+
+;; load compile-, but first make sure it doesn't stomp on zenburn's
+;; color choices
+(flet ((x-color-defined-p))
+  (fmakunbound 'x-color-defined-p)
+  (require 'compile- nil 'noerror))
 
 (catch 'found
   (dolist (d (mapcar 'file-name-as-directory load-path))

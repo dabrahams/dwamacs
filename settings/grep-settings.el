@@ -1,2 +1,6 @@
 (require 'grep-ed nil 'noerror)
-(require 'grep+ nil 'noerror)
+
+(flet ((set-face-foreground (&rest args))
+       (set-face-background (&rest args)))
+  (let (grep-hit-face)
+    (require 'grep+ nil 'noerror)))

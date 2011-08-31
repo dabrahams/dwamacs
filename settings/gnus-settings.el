@@ -224,9 +224,7 @@
 (add-hook 'gnus-after-exiting-gnus-hook 'shutdown-offlineimap)
 
 (add-hook 'gnus-summary-mode-hook
-          (lambda ()
-            (set (make-local-variable 'hl-line-face) 'underline)
-            (hl-line-mode 1)))
+          (lambda ()(hl-line-mode 1)))
 
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
@@ -662,8 +660,8 @@ If all article have been seen, on the subject line of the last article."
     gnus-summary-low-read
     gnus-summary-normal-read))
 
-(defvar my-gnus-group-face-attributes '(:family "Helvetica" :weight normal :width condensed))
-(defvar my-gnus-summary-face-attributes '(:family "Helvetica" :weight normal :width condensed))
+(defvar my-gnus-group-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
+(defvar my-gnus-summary-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
 
 (dolist (facename my-gnus-group-faces)
   (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
