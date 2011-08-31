@@ -481,9 +481,6 @@ where I don't expect it to be keeping undo history anyway")
  '(diff-refine-change
    ((((background light))
      (:background "#FFFFC0"))))
- '(elscreen-tab-background-face
-   ((((class color))
-     (:background "lightgray" :height 1.0 :family "Helvetica"))))
  '(font-lock-string-face
    ((((class color)
       (min-colors 88)
