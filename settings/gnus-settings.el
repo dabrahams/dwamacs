@@ -123,6 +123,13 @@
  '(gnus-sort-gathered-threads-function
    (quote gnus-thread-sort-by-date)
    t)
+ '(gnus-spam-process-destinations
+   (quote
+    (("^\\(\\(nnimap\\+\\)?LocalIMAP:\\)?[^+]*$" "[Gmail].Spam"))))
+ '(gnus-spam-process-newsgroups
+   (quote
+    (("^\\(\\(nntp\\+\\)?LocalNNTP:\\)?gmane\\."
+      ((spam spam-use-gmane))))))
  '(gnus-split-methods
    (quote
     ((gnus-save-site-lisp-file)

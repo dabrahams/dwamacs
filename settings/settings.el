@@ -407,6 +407,7 @@ Always run a server so we can open files in existing emacs frames.")
  '(smtpmail-starttls-credentials
    (quote
     (("www.boostpro.com" 587 "" ""))))
+ '(spam-report-gmane-use-article-number nil)
  '(split-height-threshold nil)
  '(tab-stop-list
    (quote
