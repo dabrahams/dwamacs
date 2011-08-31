@@ -30,8 +30,9 @@
 
 ;;;;;;;;
 
-(require 'session)
-(add-hook 'after-init-hook 'session-initialize)
+(ignore-errors
+  (require 'session)
+  (add-hook 'after-init-hook 'session-initialize))
 
 ;;;;;;;
 
