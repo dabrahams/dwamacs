@@ -158,7 +158,7 @@
 ")
  '(gnus-treat-date-lapsed
    (quote head))
- '(gnus-treat-hide-citation-maybe t)
+ '(gnus-treat-hide-citation t)
  '(gnus-treat-strip-cr t)
  '(gnus-treat-strip-leading-blank-lines t)
  '(gnus-treat-strip-multiple-blank-lines t)
