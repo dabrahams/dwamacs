@@ -579,6 +579,24 @@ This moves them into the Spam folder."
 
 ;;;_ + dave's stuff
 
+(defun dwa/gnus-summary-ignore-thread ()
+  (interactive)
+  (gnus-summary-top-thread)
+  (let ((message-id (gnus-summary-header "message-id")))
+    (dolist (hdr-type '(("references" . s) ("message-id" . e)))
+      (gnus-summary-score-entry
+       (car hdr-type)                       ; Header
+       (gnus-summary-header "message-id")   ; Match
+       (cdr hdr-type)                       ; Type
+       (- (gnus-score-delta-default nil))   ; Score
+       nil                                  ; Temp
+       nil                                  ; Prompt
+       nil                                  ; not silent
+       nil)))                               ; non-standard overview.
+  (gnus-summary-hide-thread))
+(define-key gnus-summary-mode-map
+  [?i] 'dwa/gnus-summary-ignore-thread)
+
 ;;
 ;; Support proportional fonts in the summary and group buffers by inserting a forced alignment
 ;;
