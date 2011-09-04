@@ -232,6 +232,10 @@ Command key.  Oh, well!  I wish I could make right-command work as
 command.")
  '(ns-command-modifier
    (quote meta))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(pp^L-^L-string "                                                                              ")
  '(ps-font-family
    (quote Helvetica))
