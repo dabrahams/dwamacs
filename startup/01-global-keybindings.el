@@ -166,3 +166,6 @@ so we can watch errors as they come up"
 
 ;;; Need this to make dired-jump work from `C-x C-j'
 (add-hook 'dired-load-hook (lambda () (require 'dired-x)))
+
+(define-key ctl-x-map [(control ?z)] 'shell-toggle)
+
