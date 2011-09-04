@@ -163,7 +163,11 @@ NOTICE: ")))
 ")
  '(gnus-treat-date-lapsed
    (quote head))
+ '(gnus-treat-from-gravatar
+   (quote head))
  '(gnus-treat-hide-citation t)
+ '(gnus-treat-mail-gravatar
+   (quote head))
  '(gnus-treat-strip-cr t)
  '(gnus-treat-strip-leading-blank-lines t)
  '(gnus-treat-strip-multiple-blank-lines t)
