@@ -35,6 +35,13 @@
  '(gnus-auto-select-next nil nil nil "
 *** VERY IMPORTANT SETTING ***.  See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=9399")
  '(gnus-check-new-newsgroups nil)
+ '(gnus-cited-closed-text-button-line-format "...<schnipp %n>...
+")
+ '(gnus-cited-lines-visible
+   (quote
+    (1 . 4)))
+ '(gnus-cited-opened-text-button-line-format "%(%1{[-]%}%)
+")
  '(gnus-default-adaptive-score-alist
    (quote
     ((gnus-dormant-mark
