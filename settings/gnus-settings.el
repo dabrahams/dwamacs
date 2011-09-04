@@ -617,19 +617,17 @@ This moves them into the Spam folder."
   (add-to-list 'mm-attachment-override-types "application/msword")
   (add-to-list 'mm-automatic-display "application/msword"))
 
-(defun jidanni-gnus-summary-first-unseen-or-last-subject ()
+(defun dwa/gnus-summary-first-unread-or-first-subject ()
   "Place the point on the subject line of the first unseen article.
 If all article have been seen, on the subject line of the last article."
   (interactive)
   (prog1
       (unless
-	  (when (gnus-summary-first-subject nil nil t)
+	  (when (gnus-summary-first-subject t nil t)
 	    (gnus-summary-show-thread)
-	    (gnus-summary-first-subject nil nil t))
-	(goto-char (point-max))
-	(forward-line -1))
-    (gnus-summary-position-point)))
-(setq gnus-auto-select-subject 'jidanni-gnus-summary-first-unseen-or-last-subject)
+	    (gnus-summary-first-subject t nil t))
+	(goto-char (point-min)))))
+(setq gnus-auto-select-subject 'dwa/gnus-summary-first-unread-or-first-subject)
 
 (require 'gnus-spec)
 (gnus-compile)
