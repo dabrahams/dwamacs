@@ -172,7 +172,6 @@ NOTICE: ")))
  '(gnus-treat-strip-leading-blank-lines t)
  '(gnus-treat-strip-multiple-blank-lines t)
  '(gnus-treat-strip-trailing-blank-lines t)
- '(gnus-treat-unsplit-urls t)
  '(gnus-tree-minimize-window nil)
  '(gnus-uncacheable-groups "^nnml")
  '(gnus-use-adaptive-scoring
