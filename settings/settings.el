@@ -58,7 +58,8 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name info+ :depends
+    ((:name wpmail :type git :url "github.com/thomas11/wpmail")
+     (:name info+ :depends
             (fit-frame misc-fns strings thingatpt+)
             :website "http://www.emacswiki.org/emacs/InfoPlus")
      (:name rs-info :type emacsmirror :website "http://lists.gnu.org/archive/html/info-gnus-english/2006-10/msg00081.html" :description "Info enhancements from Reiner Steib, including boxquote")
