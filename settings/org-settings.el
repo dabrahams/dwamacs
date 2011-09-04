@@ -322,7 +322,6 @@
 
 ;;(require 'org-crypt)
 (require 'org-devonthink)
-(require 'org-magit)
 (require 'org-x)
 (require 'ox-org)
 (require 'ox-redmine)
