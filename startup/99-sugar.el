@@ -68,6 +68,13 @@
 ;; The git pager sux except in a terminal
 (setenv "GIT_PAGER" "")
 
+(defun tde () 
+  (interactive)
+  (setq debug-on-error (not debug-on-error)))
+(defun tdq () 
+  (interactive)
+  (setq debug-on-quit (not debug-on-quit)))
+
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
