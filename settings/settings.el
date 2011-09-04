@@ -220,11 +220,6 @@ from macports.")
  '(magit-repo-dirs-depth 1)
  '(mairix-file-path "~/Library/Data/Indexes")
  '(markdown-command "markdown-extra")
- '(mm-discouraged-alternatives
-   (quote
-    ("application/msword" "text/richtext")))
- '(mm-text-html-renderer
-   (quote w3m))
  '(muse-project-alist
    (quote
     (("WikiPlanner"
