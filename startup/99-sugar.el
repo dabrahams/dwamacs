@@ -73,6 +73,8 @@
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
 
+(ignore-errors (global-undo-tree-mode t))
+
 ;; Maximize emacs on startup
 (ignore-errors
   (require 'maxframe)
