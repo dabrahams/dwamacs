@@ -8,6 +8,25 @@
             ", "
             (replace-regexp-in-string "@" "-AT-" (mail-header-from message-reply-headers))
             " wrote:\n\n")) )
+
+(defun org-message-store-link ()
+  (when (eq major-mode 'message-mode)
+    (save-restriction
+      (nnheader-narrow-to-headers)
+      (org-store-link-props
+       :type "message"
+       :link (org-make-link "message://" (substring (message-fetch-field "message-id" t) 1 -1))
+       :description (message-fetch-field "subject")))
+    t))
+
+(defun org-message-buffer-store-link ()
+  (require 'org)
+  (let ((org-store-link-functions '(org-message-store-link)))
+    (call-interactively 'org-store-link)))
+
+(add-hook 'org-store-link-functions 'org-message-maybe-store-link)
+(add-hook 'message-sent-hook 'org-message-buffer-store-link)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
