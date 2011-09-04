@@ -58,7 +58,8 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name wpmail :type git :url "github.com/thomas11/wpmail")
+    ((:name package :url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
+     (:name wpmail :type git :url "github.com/thomas11/wpmail")
      (:name info+ :depends
             (fit-frame misc-fns strings thingatpt+)
             :website "http://www.emacswiki.org/emacs/InfoPlus")
