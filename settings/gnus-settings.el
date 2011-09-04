@@ -25,6 +25,10 @@
  '(gnus-agent-mark-unread-after-downloaded nil)
  '(gnus-agent-synchronize-flags t)
  '(gnus-always-read-dribble-file t)
+ '(gnus-article-address-banner-alist
+   (quote
+    (("@sig\\.com\\'" . signature)
+     ("@volcanocorp\\.com\\'" . signature))))
  '(gnus-article-date-lapsed-new-header t)
  '(gnus-article-update-date-headers nil)
  '(gnus-asynchronous t)
@@ -116,7 +120,8 @@
             (nnimap-stream network))))
  '(gnus-signature-separator
    (quote
-    ("^-- $" "^-- *$" "^_____+$")))
+    ("^-- $" "^-- *$" "^_____+$" "^-----+?
+NOTICE: ")))
  '(gnus-simplify-subject-functions
    (quote
     (gnus-simplify-subject-fuzzy)))
