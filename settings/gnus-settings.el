@@ -251,7 +251,7 @@ NOTICE: ")))
      nil
      `((query    . ,query)
        (criteria . "")
-       (server   . "nnimap:Local") ))))
+       (server   . "nnimap:LocalIMAP") ))))
 
 (define-key global-map [(alt meta ?f)] 'gnus-query)
 
@@ -261,7 +261,7 @@ NOTICE: ")))
      nil
      `((query    . ,(concat "header message-id " message-id))
        (criteria . "")
-       (server   . "nnimap:Local") )))
+       (server   . "nnimap:LocalIMAP") )))
   (gnus-summary-refer-article message-id))
 
 (defun gnus-current-message-id ()
