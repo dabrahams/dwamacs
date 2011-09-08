@@ -133,7 +133,11 @@ so we can watch errors as they come up"
               (date-sent (message-fetch-field "date")))
           (org-capture nil "t")
           (save-excursion
-            (insert (replace-regexp-in-string
+            (insert ?( (replace-regexp-in-string 
+                        "\\([^<@]*[^<@ ]\\) *<.*@.*>"
+                        "\\1"
+                        from) ?) " " 
+                    (replace-regexp-in-string
                      "\\[.*? - [A-Za-z]+ #\\([0-9]+\\)\\] (New)"
                      "[[redmine:\\1][#\\1]]"
                      (replace-regexp-in-string "^\\(Re\\|Fwd\\): " ""
