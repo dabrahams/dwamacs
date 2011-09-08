@@ -629,8 +629,8 @@ If all article have been seen, on the subject line of the last article."
 	(goto-char (point-min)))))
 (setq gnus-auto-select-subject 'dwa/gnus-summary-first-unread-or-first-subject)
 
-(require 'gnus-spec)
-(gnus-compile)
+;(require 'gnus-spec)
+;(eval-when-compile (gnus-compile))
 
 (require 'gravatar nil 'noerror)
 (require 'gnus-gravatar nil 'noerror)
