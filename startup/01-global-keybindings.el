@@ -128,8 +128,8 @@ so we can watch errors as they come up"
       (with-current-buffer gnus-original-article-buffer
         (nnheader-narrow-to-headers)
         (let ((message-id (message-fetch-field "message-id"))
-              (subject (message-fetch-field "subject"))
-              (from (message-fetch-field "from"))
+              (subject (rfc2047-decode-string (message-fetch-field "subject")))
+              (from (rfc2047-decode-string (message-fetch-field "from")))
               (date-sent (message-fetch-field "date")))
           (org-capture nil "t")
           (save-excursion
