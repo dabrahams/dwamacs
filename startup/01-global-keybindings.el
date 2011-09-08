@@ -116,6 +116,8 @@ so we can watch errors as they come up"
 (define-key me-minor-mode-map "\C-xM" 'my-wl-check-mail-primary)
 
 ;; Org bindings
+(eval-when-compile '(require 'gnus-sum))
+
 (defun dwa/org-capture ()
   (interactive)
 
