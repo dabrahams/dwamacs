@@ -3,6 +3,8 @@
 ;; all lost in a debugging session.
 ;;
 
+(prefer-coding-system 'utf-8)
+
 ;;;;;;;;;;
 ;; FFAP
 ;;;;;;;;;;
