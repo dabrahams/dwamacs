@@ -2,15 +2,21 @@
 
 ;;;_ + erc
 
+(push '(iff (message (eq major-mode 'erc-mode)
+            (string= (frame-parameter frame 'name) "Chat")))
+      frame-bufs-assoc-rules)
+
+(add-hook 'erc-mode-hook 'frame-bufs-enforce-rules)
+
 ;;;###autoload
-(defun irc ()
+(defun dwa/irc ()
   (interactive)
   (erc :server "irc.freenode.net" :port 6667 :nick "bewst" :password
        (cdr (assoc "bewst" (cadr (assq 'freenode erc-nickserv-passwords)))))
   (erc :server "irc.oftc.net" :port 6667 :nick "bewst"))
 
 ;;;###autoload
-(defun im ()
+(defun dwa/im ()
   (interactive)
   (erc :server "localhost" :port 6667 :nick "dave" :password
        (cdr (assoc "dave" (cadr (assq 'BitlBee erc-nickserv-passwords))))))
@@ -18,13 +24,15 @@
 ;;;###autoload
 (defun chat ()
   (interactive)
-  (let ((found (rassoc "Chat" (elscreen-get-screen-to-name-alist))))
+  
+  (let ((found 
+         (find-if 
+          (lambda (frame) (string= "Chat" (frame-parameter frame 'name))) (frame-list))))
     (if found
-        (elscreen-goto (car found))
-      (elscreen-create)
-      (elscreen-screen-nickname "Chat")
-      (irc)
-      (im))))
+        (select-frame-set-input-focus found)
+      (new-frame '((name . "Chat")))))
+  (dwa/irc)
+  (dwa/im))
 
 ;;;###autoload
 (defun erc-tiny-frame ()
