@@ -1,5 +1,6 @@
 ;;; -*- mode: emacs-lisp -*-
 
+;;;###autoload
 (defun jump-to-org-agenda ()
   (interactive)
   (unless (featurep 'org-agenda)
