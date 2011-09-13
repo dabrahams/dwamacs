@@ -148,8 +148,8 @@ If the buffer is currently not visible, makes it sticky."
  '(erc-autoaway-mode t)
  '(erc-autojoin-channels-alist
    (quote
-    (("localhost" "&bitlbee")
-     ("freenode.net" "#buildbot" "#ryppl"))))
+    (("localhost")
+     ("freenode.net"))))
  '(erc-autojoin-mode t)
  '(erc-default-sound "~/erc.wav")
  '(erc-generate-log-file-name-function
