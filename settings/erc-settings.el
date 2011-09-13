@@ -9,6 +9,7 @@
 (add-hook 'erc-mode-hook 'frame-bufs-enforce-rules)
 
 ;;;###autoload
+(autoload 'dwa/irc "erc" "" t)
 (defun dwa/irc ()
   (interactive)
   (erc :server "irc.freenode.net" :port 6667 :nick "bewst" :password
@@ -16,12 +17,14 @@
   (erc :server "irc.oftc.net" :port 6667 :nick "bewst"))
 
 ;;;###autoload
+(autoload 'dwa/im "erc" "" t)
 (defun dwa/im ()
   (interactive)
   (erc :server "localhost" :port 6667 :nick "dave" :password
        (cdr (assoc "dave" (cadr (assq 'BitlBee erc-nickserv-passwords))))))
 
 ;;;###autoload
+(autoload 'chat "erc" "" t)
 (defun chat ()
   (interactive)
   
@@ -35,6 +38,7 @@
   (dwa/im))
 
 ;;;###autoload
+(autoload 'erc-tiny-frame "erc" "" t)
 (defun erc-tiny-frame ()
   (interactive)
   (with-selected-frame

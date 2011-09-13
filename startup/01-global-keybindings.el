@@ -156,7 +156,6 @@ so we can watch errors as they come up"
 
 (define-key me-minor-mode-map [(meta ?m)] 'dwa/org-capture)
 
-(autoload 'jump-to-org-agenda "org" t)
 (define-key me-minor-mode-map [(meta ?C)] 'jump-to-org-agenda)
 
 (define-key me-minor-mode-map [(control ?c) ?a] 'org-agenda)
