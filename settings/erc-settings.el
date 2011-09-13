@@ -2,9 +2,11 @@
 
 ;;;_ + erc
 
-(push '(iff (message (eq major-mode 'erc-mode)
-            (string= (frame-parameter frame 'name) "Chat")))
-      frame-bufs-assoc-rules)
+(eval-after-load 'frame-bufs
+  (quote
+   (push '(iff (eq major-mode 'erc-mode)
+               (string= (frame-parameter frame 'name) "Chat"))
+         frame-bufs-assoc-rules)))
 
 (add-hook 'erc-mode-hook 'frame-bufs-enforce-rules)
 
