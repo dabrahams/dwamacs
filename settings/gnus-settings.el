@@ -42,6 +42,8 @@
     (1 . 4)))
  '(gnus-cited-opened-text-button-line-format "%(%1{[-]%}%)
 ")
+ '(gnus-completing-read-function
+   (quote gnus-ido-completing-read))
  '(gnus-default-adaptive-score-alist
    (quote
     ((gnus-dormant-mark
