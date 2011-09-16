@@ -85,8 +85,6 @@
 (ignore-errors (global-undo-tree-mode t))
 
 ;; Maximize emacs on startup
-(ignore-errors
-  (require 'maxframe)
-  (if (eq system-type 'gnu/linux)
-   (setq mf-max-width 1600))  ;; Pixel width of main monitor.
-  (add-hook 'window-setup-hook 'maximize-frame t))
+(add-hook 'window-setup-hook 
+          (lambda () (modify-frame-parameters nil '((fullscreen . maximized))))
+          t)
