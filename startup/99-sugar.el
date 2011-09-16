@@ -72,10 +72,11 @@
 
 (defun tde () 
   (interactive)
-  (setq debug-on-error (not debug-on-error)))
+  (call-interactively 'toggle-debug-on-error))
+
 (defun tdq () 
   (interactive)
-  (setq debug-on-quit (not debug-on-quit)))
+  (call-interactively 'toggle-debug-on-quit))
 
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]
