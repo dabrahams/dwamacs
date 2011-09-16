@@ -171,7 +171,9 @@ NOTICE: ")))
  '(gnus-suspend-gnus-hook
    (quote
     (gnus-group-save-newsrc)))
- '(gnus-thread-hide-subtree t)
+ '(gnus-thread-hide-subtree
+   (quote
+    (not gnus-article-unread-p)))
  '(gnus-thread-sort-functions
    (quote
     ((not gnus-thread-sort-by-number)
