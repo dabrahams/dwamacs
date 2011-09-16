@@ -30,6 +30,9 @@
     (("@sig\\.com\\'" . signature)
      ("@volcanocorp\\.com\\'" . signature))))
  '(gnus-article-date-lapsed-new-header t)
+ '(gnus-article-sort-functions
+   (quote
+    ((not gnus-article-sort-by-number))))
  '(gnus-article-update-date-headers nil)
  '(gnus-asynchronous t)
  '(gnus-auto-select-next nil nil nil "
@@ -171,7 +174,8 @@ NOTICE: ")))
  '(gnus-thread-hide-subtree t)
  '(gnus-thread-sort-functions
    (quote
-    (gnus-thread-sort-by-number gnus-thread-sort-by-total-score gnus-thread-sort-by-most-recent-date)))
+    ((not gnus-thread-sort-by-number)
+     gnus-thread-sort-by-most-recent-date gnus-thread-sort-by-total-score)))
  '(gnus-topic-display-empty-topics nil)
  '(gnus-topic-line-format "%i[ %A: %(%{%n%}%) ]%v
 ")
