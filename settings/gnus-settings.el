@@ -108,6 +108,7 @@
    (quote
     (("nntp" t)
      ("^INBOX" t))))
+ '(gnus-safe-html-newsgroups ".")
  '(gnus-save-killed-list nil)
  '(gnus-save-newsrc-file nil)
  '(gnus-score-default-duration
