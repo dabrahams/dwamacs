@@ -94,13 +94,15 @@
  '(gnus-refer-article-method
    (quote
     (current
-     (nnir)
      (nnir "nnimap:LocalIMAP")
-     (nntp "LocalNNTP")
-     (nnweb "gmane"
-            (nnweb-type gmane))
-     (nnweb "google"
-            (nnweb-type google)))))
+     (nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119))
+     (nntp "Gmane"
+           (nntp-address "news.gmane.org"))
+     (nntp "GigaNews"
+           (nntp-address "text.giganews.com")
+           (nntp-authinfo-user "dabrahams")))))
  '(gnus-refer-thread-use-nnir t)
  '(gnus-registry-ignored-groups
    (quote
