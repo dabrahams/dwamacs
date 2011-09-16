@@ -71,7 +71,7 @@
  '(gnus-generate-tree-function
    (quote gnus-generate-horizontal-tree))
  '(gnus-group-default-list-level 4)
- '(gnus-group-line-format "%S%p%P%5y%5T: %(%G%)
+ '(gnus-group-line-format "%S%p%P%5y%5T: %(%B%G%B%)
 ")
  '(gnus-group-mode-hook
    (quote
