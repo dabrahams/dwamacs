@@ -10,6 +10,7 @@
              ""))
 (setq elhome-directory
       (el-get-subdir "dwamacs")
+      bcc-enabled nil
       redisplay-dont-pause t) ;; See [[message://83ipovw2z2.fsf@gnu.org]]
 (load
  (concat

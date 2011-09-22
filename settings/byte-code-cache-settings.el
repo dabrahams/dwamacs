@@ -16,4 +16,4 @@ any corresponding compiled .elc file"
  ;; If there is more than one, they won't work right.
  '(bcc-blacklist
    (quote
-    ("/\\.recentf$" "/history$" "/.newsrc.eld$" "/.session$"))))
+    ("/\\.recentf$" "/history$" "/\\.newsrc\\.eld$" "/\\.session$" "/gnus-settings\\.el\\'"))))
