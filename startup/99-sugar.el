@@ -50,11 +50,19 @@
 ;; Make sure any customizations are saved before exiting.  Should
 ;; eventually be replaced by the use of cus-edit+
 (defun dwa/save-customizations-before-exit ()
-  (condition-case err 
-      (progn (customize-unsaved) nil)
-    (error 
-     (or (equal err '(error "No user options are set but unsaved"))
-         (signal (car err) (cdr err))))))
+  (let ((doe (get 'debug-on-error 'customized-value))
+        (doq (get 'debug-on-quit 'customized-value)))
+    (unwind-protect
+        (progn
+          (put 'debug-on-error 'customized-value nil)
+          (put 'debug-on-quit 'customized-value nil)
+          (condition-case err 
+              (progn (customize-unsaved) nil)
+            (error 
+             (or (equal err '(error "No user options are set but unsaved"))
+                 (signal (car err) (cdr err))))))
+      (put 'debug-on-error 'customized-value doe)
+      (put 'debug-on-quit 'customized-value doq))))
 (add-to-list 'kill-emacs-query-functions 'dwa/save-customizations-before-exit)
 
 ;(require 'elscreen-buffer-list nil 'noerror)
