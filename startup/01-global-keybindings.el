@@ -14,6 +14,7 @@
 
 ;; Navigation to other windows (panes)
 (define-key me-minor-mode-map "\C-x\C-n" 'other-window)  ; Normally bound to set-goal-column
+(define-key me-minor-mode-map [(control return)] 'other-window)
 
 (defun dwa/other-window-backward (&optional n)
   "Select the previous window. Copied from \"Writing Gnu Emacs Extensions\"."
@@ -22,6 +23,7 @@
   )
 
 (define-key me-minor-mode-map "\C-x\C-p" 'dwa/other-window-backward) ; Normally bound to mark-page
+(define-key me-minor-mode-map [(control shift return)] 'dwa/other-window-backward)
 
 ;; This is the way I like it; the defaults go to the beginning and/or end of line
 (define-key me-minor-mode-map [home] 'beginning-of-buffer)
