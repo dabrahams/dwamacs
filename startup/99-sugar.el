@@ -57,7 +57,10 @@
          (signal (car err) (cdr err))))))
 (add-to-list 'kill-emacs-query-functions 'dwa/save-customizations-before-exit)
 
-(require 'elscreen-buffer-list nil 'noerror)
+;(require 'elscreen-buffer-list nil 'noerror)
+
+(require 'frame-bufs nil 'noerror)
+(ignore-errors (frame-bufs-mode t))
 
 ;; Man pages often come out too wide
 (defadvice Man-getpage-in-background
