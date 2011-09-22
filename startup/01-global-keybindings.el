@@ -183,5 +183,14 @@ so we can watch errors as they come up"
 ;;; Need this to make dired-jump work from `C-x C-j'
 (add-hook 'dired-load-hook (lambda () (require 'dired-x)))
 
+(defun dwa/dired-copy-full-path-as-kill ()
+  (interactive) 
+  (setq current-prefix-arg '(0))
+  (call-interactively 'dired-copy-filename-as-kill))
+
+(add-hook 'dired-load-hook 
+          (lambda ()
+            (define-key dired-mode-map [?W] 'dwa/dired-copy-full-path-as-kill)))
+
 (define-key ctl-x-map [(control ?z)] 'shell-toggle)
 
