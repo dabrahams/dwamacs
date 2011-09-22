@@ -38,8 +38,8 @@
 
 ;;;;;;;
 
-(ignore-errors
-  (zenburn))
+(when (ignore-errors (progn (zenburn) t))
+  (load-theme 'zenburn-overrides))
 
 (setq frame-title-format
     '(:eval
