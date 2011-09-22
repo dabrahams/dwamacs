@@ -271,13 +271,23 @@ NOTICE: ")))
 (define-key global-map [(alt meta ?f)] 'gnus-query)
 
 (defun gnus-goto-article (message-id)
-  (let ((nnir-imap-default-search-key "imap"))
-    (gnus-group-make-nnir-group
-     nil
-     `((query    . ,(concat "header message-id " message-id))
-       (criteria . "")
-       (server   . "nnimap:LocalIMAP") )))
-  (gnus-summary-refer-article message-id))
+  (with-temp-buffer
+    (erase-buffer)
+    ;; Insert dummy article
+    (insert (format "From nobody Tue Sep 13 22:05:34 2011\n\n"))
+    (gnus-group-read-ephemeral-group
+     message-id
+     `(nndoc ,message-id
+             (nndoc-address ,(current-buffer))
+             (nndoc-article-type mbox))
+     'activate
+     (not    'quit-config)
+     (not    'request-only)
+     '(-1) ; 'select-articles
+     (not    'parameters)
+     0     ; ' number
+     )
+    (gnus-summary-refer-article message-id)))
 
 (defun gnus-current-message-id ()
   (with-current-buffer gnus-original-article-buffer
