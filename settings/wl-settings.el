@@ -457,9 +457,10 @@ when we need it."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(elmo-imap4-default-authenticate-type
-   (quote clear))
+   (quote login))
+ '(elmo-imap4-default-port 9143)
  '(elmo-imap4-default-server "localhost")
- '(elmo-imap4-default-user "dave@boostpro.com")
+ '(elmo-imap4-default-user "dave")
  '(elmo-lang "en")
  '(elmo-localdir-folder-path "~/Library/Data/LocalMH")
  '(elmo-message-fetch-confirm nil)
@@ -553,25 +554,43 @@ This has to be on if I want the 'sendlog folder to contain anything
         (wl-folder-is-group nil wl-folder-entity-id 2))
       . "Flagged")
      ("%Trash" . "Trash")
+     (#("%[Gmail]/Starred" 0 16
+        (wl-folder-is-group nil wl-folder-entity-id 2))
+      . "Important")
+     (#("%[Gmail]/Sent Mail" 0 18
+        (wl-folder-is-group nil wl-folder-entity-id 3))
+      . "Sent")
+     (#("%[Gmail]/Drafts" 0 15
+        (wl-folder-is-group nil wl-folder-entity-id 4))
+      . "Drafts")
+     (#("%[Gmail]/All Mail" 0 17
+        (wl-folder-is-group nil wl-folder-entity-id 6))
+      . "Archive")
+     (#("%[Gmail]/Trash" 0 14
+        (wl-folder-is-group nil wl-folder-entity-id 7))
+      . "Trash")
+     (#("%[Gmail]/Spam" 0 13
+        (wl-folder-is-group nil wl-folder-entity-id 9))
+      . "Spam")
      (#("%INBOX" 0 6
         (wl-folder-entity-id 1 wl-folder-is-group nil))
       . "Inbox")
-     (#("%[Gmail]/Starred" 0 16
+     (#("%[Gmail].Starred" 0 16
         (wl-folder-entity-id 2 wl-folder-is-group nil))
       . "Important")
-     (#("%[Gmail]/Sent Mail" 0 18
+     (#("%[Gmail].Sent Mail" 0 18
         (wl-folder-entity-id 3 wl-folder-is-group nil))
       . "Sent")
-     (#("%[Gmail]/Drafts" 0 15
+     (#("%[Gmail].Drafts" 0 15
         (wl-folder-entity-id 4 wl-folder-is-group nil))
       . "Drafts")
-     (#("%[Gmail]/All Mail" 0 17
+     (#("%[Gmail].All Mail" 0 17
         (wl-folder-entity-id 6 wl-folder-is-group nil))
       . "Archive")
-     (#("%[Gmail]/Trash" 0 14
+     (#("%[Gmail].Trash" 0 14
         (wl-folder-entity-id 7 wl-folder-is-group nil))
       . "Trash")
-     (#("%[Gmail]/Spam" 0 13
+     (#("%[Gmail].Spam" 0 13
         (wl-folder-entity-id 9 wl-folder-is-group nil))
       . "Spam")
      (#("+draft" 0 6

@@ -1,7 +1,7 @@
 ;; Much credit for this code goes to Eric G. Hetzner
 (require 'org-wl)
 
-(defun dwa:wl-all-folder () "%[Gmail]/All Mail")
+(defun dwa:wl-all-folder () "%[Gmail].All Mail")
 
 (defvar dwa:wl-summary-prev-folder-name nil)
 (defvar dwa:wl-summary-prev-message-id nil)
