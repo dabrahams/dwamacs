@@ -9,7 +9,8 @@
               d)
              ""))
 (setq elhome-directory
-      (el-get-subdir "dwamacs"))
+      (el-get-subdir "dwamacs")
+      redisplay-dont-pause t) ;; See [[message://83ipovw2z2.fsf@gnu.org]]
 (load
  (concat
   (el-get-subdir "elhome")
