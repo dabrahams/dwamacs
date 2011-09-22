@@ -705,11 +705,11 @@ If all article have been seen, on the subject line of the last article."
     gnus-summary-low-read
     gnus-summary-normal-read))
 
-(defvar my-gnus-group-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
+;(defvar my-gnus-group-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
 (defvar my-gnus-summary-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
 
-(dolist (facename my-gnus-group-faces)
-  (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
+;(dolist (facename my-gnus-group-faces)
+;  (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
 (dolist (facename my-gnus-summary-faces)
   (apply 'set-face-attribute facename nil my-gnus-summary-face-attributes))
 
