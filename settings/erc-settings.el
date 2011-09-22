@@ -29,13 +29,19 @@
 (autoload 'chat "erc" "" t)
 (defun chat ()
   (interactive)
-  
-  (let ((found 
-         (find-if 
-          (lambda (frame) (string= "Chat" (frame-parameter frame 'name))) (frame-list))))
-    (if found
-        (select-frame-set-input-focus found)
-      (new-frame '((name . "Chat")))))
+  (if 'use-elscreen
+      (progn
+        (let ((found (rassoc "Chat" (elscreen-get-screen-to-name-alist))))
+          (elscreen-goto (car found))
+          (elscreen-create)
+          (elscreen-screen-nickname "Chat")))
+
+    (let ((found
+           (find-if
+            (lambda (frame) (string= "Chat" (frame-parameter frame 'name))) (frame-list))))
+      (if found
+          (select-frame-set-input-focus found)
+        (new-frame '((name . "Chat"))))))
   (dwa/irc)
   (dwa/im))
 
