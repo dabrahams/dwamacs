@@ -2,6 +2,12 @@
 (when window-system
   (global-unset-key [(control z)]))
 
+;; Mouse stuff
+(define-key me-minor-mode-map [mouse-9] 'mac-mouse-turn-on-fullscreen)
+(define-key me-minor-mode-map [drag-mouse-9] 'mac-mouse-turn-on-fullscreen)
+(define-key me-minor-mode-map [mouse-11] 'mac-mouse-turn-off-fullscreen)
+(define-key me-minor-mode-map [drag-mouse-11] 'mac-mouse-turn-off-fullscreen)
+
 ;; Navigation by words
 (define-key me-minor-mode-map [(control ?,)] 'backward-word)
 (define-key me-minor-mode-map [(control ?.)] 'forward-word)
