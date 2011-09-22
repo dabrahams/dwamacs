@@ -24,7 +24,7 @@
   (let ((org-store-link-functions '(org-message-store-link)))
     (call-interactively 'org-store-link)))
 
-(add-hook 'org-store-link-functions 'org-message-maybe-store-link)
+(add-hook 'org-store-link-functions 'org-message-store-link)
 (add-hook 'message-sent-hook 'org-message-buffer-store-link)
 
 (defun dwa/message-send-rename ()

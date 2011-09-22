@@ -4,8 +4,6 @@
 (autoload 'jump-to-org-agenda "org" "" t)
 (defun jump-to-org-agenda ()
   (interactive)
-  (unless (featurep 'org-agenda)
-    (load ".org"))
   (let ((buf (get-buffer "*Org Agenda*"))
         wind)
     (if buf
