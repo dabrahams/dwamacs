@@ -85,7 +85,7 @@
     ("application/x-pkcs7-signature" "application/ms-tnef" "text/x-vcard")))
  '(gnus-interactive-exit
    (quote quiet))
- '(gnus-large-newsgroup 4000)
+ '(gnus-large-newsgroup 1000)
  '(gnus-local-domain "boostpro.com")
  '(gnus-message-archive-group
    (quote
