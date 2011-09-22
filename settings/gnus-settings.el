@@ -1,4 +1,4 @@
-;;; -*- mode: emacs-lisp -*-
+;;; -*- mode: emacs-lisp; coding: utf-8-unix; -*-
 
 ;; $Revision: 147 $
 
@@ -712,6 +712,17 @@ If all article have been seen, on the subject line of the last article."
   (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
 (dolist (facename my-gnus-summary-faces)
   (apply 'set-face-attribute facename nil my-gnus-summary-face-attributes))
+
+;; prettier summary buffers
+(when window-system
+  (setq gnus-sum-thread-tree-indent "  ")                            ;; "  "
+  (setq gnus-sum-thread-tree-root "\u25cf ")                         ;; "● "
+  (setq gnus-sum-thread-tree-false-root "\u25ef ")                   ;; "◯ "
+  (setq gnus-sum-thread-tree-single-indent   "\u25ce ")              ;; "◎ "
+  (setq gnus-sum-thread-tree-vertical        "\u2502")               ;; "│"
+  (setq gnus-sum-thread-tree-leaf-with-other "\u251c\u2500\u25ba ")  ;; "├─► "
+  (setq gnus-sum-thread-tree-single-leaf     "\u2570\u2500\u25ba ")) ;; "╰─► "
+
 
 ;; Make sure cited text has a light gray background, in case people
 ;; forget to add a blank line after their citations.
