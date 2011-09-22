@@ -407,8 +407,7 @@ This moves them into the Spam folder."
   (if (and (fboundp 'gnus-group-exit)
 	   (gnus-alive-p))
       (with-current-buffer (get-buffer "*Group*")
-	(let (gnus-interactive-exit)
-	  (gnus-group-exit)))))
+        (gnus-group-exit))))
 
 (add-hook 'kill-emacs-hook 'exit-gnus-on-exit)
 
