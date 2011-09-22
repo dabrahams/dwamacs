@@ -165,7 +165,7 @@ NOTICE: ")))
  '(gnus-subscribe-newsgroup-method
    (quote gnus-subscribe-topics))
  '(gnus-summary-expunge-below -100)
- '(gnus-summary-line-format "%O%U%R%z%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)* %s
+ '(gnus-summary-line-format "%O%U%R%z%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)		%s
 ")
  '(gnus-summary-mark-below -100)
  '(gnus-suspend-gnus-hook
