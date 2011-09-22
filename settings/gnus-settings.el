@@ -607,7 +607,7 @@ This moves them into the Spam folder."
        nil                                  ; Prompt
        nil                                  ; not silent
        nil)))                               ; non-standard overview.
-  (gnus-summary-hide-thread))
+  (gnus-summary-kill-thread))
 (define-key gnus-summary-mode-map
   [?i] 'dwa/gnus-summary-ignore-thread)
 
