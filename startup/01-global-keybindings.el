@@ -194,3 +194,9 @@ so we can watch errors as they come up"
 
 (define-key ctl-x-map [(control ?z)] 'shell-toggle)
 
+(define-key mode-specific-map [?y ?n] 'yas/new-snippet)
+(define-key mode-specific-map [?y tab] 'yas/expand)
+(define-key mode-specific-map [?y ?f] 'yas/find-snippets)
+(define-key mode-specific-map [?y ?r] 'yas/reload-all)
+(define-key mode-specific-map [?y ?v] 'yas/visit-snippet-file)
+
