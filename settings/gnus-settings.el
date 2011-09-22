@@ -765,8 +765,6 @@ If all article have been seen, on the subject line of the last article."
 (add-hook 'gnus-group-prepare-hook 'DE-collapse-group-names)
 (add-hook 'gnus-group-update-group-hook 'DE-collapse-group-names)
 
-(xgit-insinuate-gnus)
-(dvc-insinuate-gnus)
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
