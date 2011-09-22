@@ -60,6 +60,7 @@ Added -h so I can read file sizes")
    (quote
     ((:name elhome :depends
             (initsplit))
+     (:name ws-trim :type ftp :url "ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el")
      (:name package :url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
      (:name wpmail :type git :url "github.com/thomas11/wpmail")
      (:name info+ :depends

@@ -17,6 +17,11 @@
 (remove-hook 'gnus-summary-mode-hook 'ffap-gnus-hook)
 (remove-hook 'gnus-article-mode-hook 'ffap-gnus-hook)
 
+(when (require 'ws-trim nil 'noerror)
+  (global-ws-trim-mode t)
+  (set-default 'ws-trim-level 1)
+  (setq ws-trim-global-modes '(guess (not message-mode eshell-mode))))
+
 ;; Pretty ^L
 (ignore-errors 
   (require 'pp-c-l)
