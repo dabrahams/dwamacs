@@ -38,6 +38,16 @@
        (org-agenda-sorting-strategy
         (quote
          (todo-state-up priority-down category-up)))))
+     ("p" "Unprioritized tasks" tags "AREA<>\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT\\|DEFERRED\\|SOMEDAY}"
+      ((org-agenda-files
+        (quote
+         ("~/Documents/Tasks/todo.txt")))
+       (org-agenda-overriding-header "Unprioritized tasks: ")
+       (org-agenda-skip-function
+        (quote
+         (org-agenda-skip-entry-if
+          (quote regexp)
+          "\\=.*\\[#[A-Z]\\]")))))
      ("u" "Unscheduled tasks" tags "AREA<>\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
       ((org-agenda-files
         (quote
