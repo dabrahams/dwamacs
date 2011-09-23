@@ -55,7 +55,7 @@ typing, the region is replaced")
 If you don't do this, all the nice navigation stuff is disabled by default.  Who wants to edit diffs by hand, anyway?")
  '(diff-jump-to-old-file t)
  '(diff-switches "-du")
- '(dired-dwim-target t nil nil "This customization replaces John's entire desire for sunrise, 
+ '(dired-dwim-target t nil nil "This customization replaces John's entire desire for sunrise,
 which I now deinstall with relish")
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
