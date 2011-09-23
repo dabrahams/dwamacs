@@ -48,11 +48,6 @@ Blinking cursor just annoys me")
  '(custom-magic-show-button t)
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
  '(custom-unlispify-tag-names nil)
- '(default-frame-alist
-    (quote
-     ((menu-bar-lines . 1)
-      (line-spacing . 3)
-      (font . "DejaVu Sans Mono-14"))))
  '(delete-selection-mode t nil nil "
 Creates normal editor behavior: select a region and begin
 typing, the region is replaced")
