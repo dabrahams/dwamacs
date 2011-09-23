@@ -524,12 +524,6 @@ where I don't expect it to be keeping undo history anyway")
  '(italic
    ((t
      (:slant italic :family "Monaco"))))
- '(mode-line
-   ((((class color)
-      (min-colors 88))
-     (:inherit variable-pitch :background "lightblue" :foreground "black" :box
-               (:line-width -1 :style released-button)
-               :height 1.2))))
  '(rst-level-1-face
    ((t
      (:background "grey85" :foreground "black")))
