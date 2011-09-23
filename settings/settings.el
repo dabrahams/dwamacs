@@ -19,6 +19,9 @@
  '(ac-dictionary-directories
    (quote
     ("~/.emacs.d/elhome/ac-dict/")))
+ '(ad-redefinition-action
+   (quote accept)
+   nil nil "The default, `warn', Makes a lot of noise for no apparent benefit")
  '(backup-directory-alist
    (quote
     (("." . "~/.emacs.d/backups"))))
