@@ -5,4 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(yas/snippet-dirs
    (quote
-    ("~/.emacs.d/el-get/dwamacs/snippets" "~/.emacs.d/el-get/yasnippet/snippets"))))
+    ("~/.emacs.d/el-get/dwamacs/snippets" "~/.emacs.d/el-get/yasnippet/snippets"))
+   nil
+   (yasnippet)))
