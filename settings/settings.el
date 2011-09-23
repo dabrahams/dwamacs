@@ -466,6 +466,9 @@ then sudo on the remote host itself.")
  '(truncate-partial-width-windows nil)
  '(user-mail-address "dave@boostpro.com")
  '(vc-diff-switches "-du")
+ '(vc-handled-backends
+   (quote
+    (Git)))
  '(w3m-confirm-leaving-secure-page t nil nil "
 I never like being nannied by regular browsers either.")
  '(w3m-default-display-inline-images t)
