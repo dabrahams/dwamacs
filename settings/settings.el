@@ -5,7 +5,14 @@
  ;; If there is more than one, they won't work right.
  '(Info-additional-directory-list
    (quote
-    ("~/src/buildbot/master/docs/" "~/Library/Info/python/")))
+    ("~/src/buildbot/master/docs/" "~/Library/Info/python/" "~/Library/Info/c++11/")))
+ '(Info-fit-frame-flag nil)
+ '(Info-saved-nodes
+   (quote
+    ("(elisp)Top" "(org)Top" "(gnus)Top" "(std)Top")))
+ '(Man-header-file-path
+   (quote
+    ("/usr/include" "/usr/local/include" "/opt/local/include")))
  '(ac-clang-flags
    (quote
     ("-I" "/Users/dave/src/boost-svn-git" "-I" "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/")))
