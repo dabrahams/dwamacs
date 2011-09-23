@@ -194,6 +194,7 @@ Requires wget, which isn't on the Mac by default.  Someday should
 figure out how to use curl instead, but for now I just installed wget
 from macports.")
  '(gravatar-size 48)
+ '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(ido-gather-virtual-filenames
    (quote
