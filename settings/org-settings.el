@@ -235,6 +235,9 @@
  '(org-modules
    (quote
     (org-id org-info org-habit)))
+ '(org-refile-targets
+   (quote
+    ((nil :todo . "PROJECT"))))
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
