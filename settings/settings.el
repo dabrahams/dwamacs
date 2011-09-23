@@ -246,7 +246,7 @@ command.")
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
- '(pp^L-^L-string "                                                                              ")
+ '(pp^L-^L-string "····································✄····································")
  '(ps-font-family
    (quote Helvetica))
  '(ps-font-info-database
