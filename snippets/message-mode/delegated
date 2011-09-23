@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: delegated
+# --
+Hi ${1:Lu},
+
+I delegated a task to you to $2.  It just popped up in my Org today,
+which means I should follow up and see if it's been done.  $0 What's the
+status?
