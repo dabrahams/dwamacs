@@ -496,14 +496,6 @@ where I don't expect it to be keeping undo history anyway")
    (quote my-weblogger-markdown-mode))
  '(weblogger-server-url "http://cpp-next.com/xmlrpc.php")
  '(weblogger-server-username "dave")
- '(weblogger-start-edit-entry-hook
-   (quote
-    ((lambda nil
-       (message-goto-body)
-       (while
-           (search-forward "
-" nil t)
-         (replace-match "" nil t))))))
  '(x-select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
