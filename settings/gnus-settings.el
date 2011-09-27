@@ -695,7 +695,7 @@ If all article have been seen, on the subject line of the last article."
     gnus-group-mail-low
     gnus-group-mail-low-empty))
 
-(defvar my-gnus-summary-faces 
+(defvar my-gnus-summary-faces
   '(
     gnus-summary-selected
     gnus-summary-cancelled
@@ -739,7 +739,7 @@ If all article have been seen, on the subject line of the last article."
 (require 'gnus-cite)
 (require 'mail-settings)
 
-(loop for x in gnus-cite-face-list do 
+(loop for x in gnus-cite-face-list do
       (set-face-attribute x nil ':inherit 'dwa/mail-citation))
 
 ;; Thanks to David Engster
@@ -750,18 +750,18 @@ If all article have been seen, on the subject line of the last article."
 			 common-dot-count prefix suffix)
       (goto-char (point-min))
       (while (not (eobp))
-	(when (setq current-group 
+	(when (setq current-group
 		    (get-text-property (point) 'gnus-group))
 	  (setq current-group (symbol-name current-group))
 	  (when (string-match "\\(.+\\):\\(.+\\)" current-group)
 	    (setq current-group (match-string 2 current-group)))
-	  (setq common-prefix (substring current-group 0 
+	  (setq common-prefix (substring current-group 0
 					 (mismatch previous-group current-group))
 		common-dot-count (count ?. common-prefix)
-		prefix (mapconcat (lambda (x) x) 
+		prefix (mapconcat (lambda (x) x)
 				  (make-list common-dot-count "  .") "")
 		suffix (and (string-match
-			     (format "\\([^.]*[.]\\)\\{%d\\}\\(.+\\)" common-dot-count) 
+			     (format "\\([^.]*[.]\\)\\{%d\\}\\(.+\\)" common-dot-count)
 			     current-group)
 			    (match-string 2 current-group))
 		previous-group current-group)
