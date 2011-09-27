@@ -5,6 +5,10 @@
 
 (prefer-coding-system 'utf-8)
 
+;; auto modes
+(add-to-list 'auto-mode-alist
+             '("\\.\\(text\\|mkdn\\|mmd\\|markdown\\)\\'" . markdown-mode))
+
 ;;;;;;;;;;
 ;; FFAP
 ;;;;;;;;;;
