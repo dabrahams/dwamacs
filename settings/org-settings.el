@@ -235,6 +235,8 @@
  '(org-modules
    (quote
     (org-id org-info org-habit)))
+ '(org-refile-target-verify-function
+   (quote dwa/org-verify-refile-target))
  '(org-refile-targets
    (quote
     ((nil :todo . "PROJECT"))))
@@ -1017,6 +1019,12 @@ end tell" (match-string 1))))
      (define-key map [(meta ?n)] 'org-agenda-later)
 
      (define-key map "x" 'org-todo-state-map)))
+
+;;;; Refile settings
+; Exclude DONE state tasks from refile targets
+(defun dwa/org-verify-refile-target ()
+  "Exclude todo keywords with a done state from refile targets"
+  (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
 (defun org-fit-agenda-window ()
   "Fit the window to the buffer size."
