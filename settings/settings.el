@@ -502,10 +502,6 @@ where I don't expect it to be keeping undo history anyway")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(cursor
-   ((default
-      (:background "brown"))
-    (nil nil)))
  '(diff-refine-change
    ((((background light))
      (:background "#FFFFC0"))))
