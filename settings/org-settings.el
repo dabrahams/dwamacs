@@ -244,7 +244,8 @@
    (quote dwa/org-verify-refile-target))
  '(org-refile-targets
    (quote
-    ((nil :todo . "PROJECT"))))
+    ((nil :todo . "PROJECT")
+     (nil :maxlevel . 2))))
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
