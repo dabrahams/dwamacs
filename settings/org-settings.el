@@ -229,7 +229,9 @@
  '(org-fast-tag-selection-single-key
    (quote expert))
  '(org-footnote-section nil)
+ '(org-habit-completed-glyph 10004)
  '(org-habit-preceding-days 42)
+ '(org-habit-today-glyph 9483)
  '(org-hide-leading-stars t)
  '(org-irc-link-to-logs t t)
  '(org-mobile-directory "~/Dropbox/MobileOrg")
@@ -268,30 +270,36 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dwa/org-habit
+   ((((background dark))
+     (:foreground "#3f3f3f" :family "DejaVu Sans Mono"))
+    (t
+     (:family "DejaVu Sans Mono")))
+   t)
  '(org-habit-alert-face
-   ((((background light))
-     (:background "#f5f946"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#f5f946"))))
  '(org-habit-alert-future-face
-   ((((background light))
-     (:background "#fafca9"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#fafca9"))))
  '(org-habit-clear-face
-   ((((background light))
-     (:background "#8270f9"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#8270f9"))))
  '(org-habit-clear-future-face
-   ((((background light))
-     (:background "#d6e4fc"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#d6e4fc"))))
  '(org-habit-overdue-face
-   ((((background light))
-     (:background "#f9372d"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#f9372d"))))
  '(org-habit-overdue-future-face
-   ((((background light))
-     (:background "#fc9590"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#fc9590"))))
  '(org-habit-ready-face
-   ((((background light))
-     (:background "#4df946"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#4df946"))))
  '(org-habit-ready-future-face
-   ((((background light))
-     (:background "#acfca9"))))
+   ((((background light dark))
+     (:inherit dwa/org-habit :background "#acfca9"))))
  '(org-scheduled
    ((((class color)
       (min-colors 88)

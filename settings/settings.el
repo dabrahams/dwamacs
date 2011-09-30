@@ -1,3 +1,5 @@
+(defface dwa/org-habit nil "")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -48,6 +50,11 @@ Blinking cursor just annoys me")
  '(custom-magic-show-button t)
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
  '(custom-unlispify-tag-names nil)
+ '(default-frame-alist
+    (quote
+     ((fullscreen . maximized)
+      (menu-bar-lines . 1)
+      (font . "LucidaMonoEF-14"))))
  '(delete-selection-mode t nil nil "
 Creates normal editor behavior: select a region and begin
 typing, the region is replaced")
@@ -184,8 +191,11 @@ added -l so it would take things out of my .bash_profile, like (on boostpro.com)
  '(ffap-require-prefix t)
  '(font-lock-verbose nil)
  '(g-user-email "dave@boostpro.com")
+ '(gdb-delete-out-of-scope nil)
+ '(gdb-many-windows t)
  '(gdb-max-frames 100 nil nil "
 Increased the number of stack frames displayed from 40")
+ '(gdb-show-main t)
  '(global-auto-revert-mode t nil nil "
 We want our file buffers to stay up-to-date with changes on disk")
  '(gravatar-icon-size 50)
@@ -194,6 +204,7 @@ Requires wget, which isn't on the Mac by default.  Someday should
 figure out how to use curl instead, but for now I just installed wget
 from macports.")
  '(gravatar-size 48)
+ '(hl-line-sticky-flag nil)
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(ido-gather-virtual-filenames
@@ -216,15 +227,14 @@ from macports.")
    (quote
     (("\\`\\(gnus\\(-home\\)?\\|message\\)-directory\\'" "preloaded-settings.el" nil t)
      ("\\`erc-nickserv-passwords\\'" "../startup/10-passwd.el" nil nil)
-     ("\\`\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
-     ("\\`\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
-     ("\\`\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
-     ("\\`yas/" "yasnippet-settings.el" nil nil)
-     ("\\`\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil)
-     ("\\`bcc-" "byte-code-cache-settings.el" nil nil))))
+     ("\\`\\(dwa/\\)?\\(org\\|calendar\\|diary\\)-" "org-settings.el" nil nil)
+     ("\\`\\(dwa/\\)?\\(mime\\|mm\\)-" "mime-settings.el" nil nil)
+     ("\\`\\(dwa/\\)?\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
+     ("\\`\\(dwa/\\)?yas/" "yasnippet-settings.el" nil nil)
+     ("\\`\\(dwa/\\)?\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil)
+     ("\\`\\(dwa/\\)?bcc-" "byte-code-cache-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(ispell-program-name "aspell")
- '(line-spacing 0.25)
  '(magit-repo-dirs
    (quote
     ("/Users/dave/src" "/Users/dave/src/bbotpriv-top" "/Users/dave/src/fossbot-top")))
@@ -510,36 +520,21 @@ where I don't expect it to be keeping undo history anyway")
       (min-colors 88)
       (background light))
      (:background "Beige" :foreground "DarkGreen" :slant italic))))
- '(hl-line
-   ((t
-     (:inherit highlight-current-line))))
- '(italic
-   ((t
-     (:slant italic :family "Monaco"))))
  '(rst-level-1-face
    ((t
-     (:background "grey85" :foreground "black")))
-   t)
+     (:background "grey85" :foreground "black"))))
  '(rst-level-2-face
    ((t
-     (:inherit nil :background "grey78" :foreground "black")))
-   t)
+     (:inherit nil :background "grey78" :foreground "black"))))
  '(rst-level-3-face
    ((t
-     (:background "grey71" :foreground "black")))
-   t)
+     (:background "grey71" :foreground "black"))))
  '(rst-level-4-face
    ((t
-     (:background "grey64" :foreground "black")))
-   t)
+     (:background "grey64" :foreground "black"))))
  '(rst-level-5-face
    ((t
-     (:background "grey57" :foreground "black")))
-   t)
+     (:background "grey57" :foreground "black"))))
  '(rst-level-6-face
    ((t
-     (:background "grey50" :foreground "black")))
-   t)
- '(show-paren-match
-   ((t
-     (:inherit font-lock-keyword :background "black")))))
+     (:background "grey50" :foreground "black")))))
