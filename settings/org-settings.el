@@ -318,7 +318,7 @@
 (require 'org-agenda)
 
 ;;(require 'org-crypt)
-(require 'org-devonthink)
+(require 'org-devonthink nil 'noerror)
 (require 'org-x)
 (require 'ox-org)
 (require 'ox-redmine)
