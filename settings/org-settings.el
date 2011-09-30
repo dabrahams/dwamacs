@@ -153,6 +153,7 @@
  '(org-agenda-files
    (quote
     ("~/Documents/Tasks/todo.txt" "~/src/ledger/plan/TODO")))
+ '(org-agenda-follow-indirect t)
  '(org-agenda-fontify-priorities t)
  '(org-agenda-include-diary t)
  '(org-agenda-ndays 1)
@@ -180,6 +181,7 @@
      (tags priority-down category-keep)
      (search category-keep))))
  '(org-agenda-start-on-weekday nil)
+ '(org-agenda-start-with-follow-mode t)
  '(org-agenda-tags-column -100)
  '(org-agenda-text-search-extra-files
    (quote
