@@ -47,8 +47,14 @@
 
 ;;;;;;;
 
-(when (ignore-errors (progn (zenburn) t))
-  (load-theme 'zenburn-overrides))
+(when (require 'color-theme nil 'noerror)
+  (define-color-theme
+    dwa-dark
+    "Dave Abrahams"
+    "Refinement of zenburn for dark spaces"
+    (color-theme-zenburn)
+    (load-theme 'zenburn-overrides))
+  (dwa-dark))
 
 (setq frame-title-format
     '(:eval
