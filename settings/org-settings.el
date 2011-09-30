@@ -225,6 +225,7 @@
  '(org-edit-src-content-indentation 0)
  '(org-enforce-todo-dependencies t)
  '(org-export-babel-evaluate nil)
+ '(org-extend-today-until 6)
  '(org-fast-tag-selection-single-key
    (quote expert))
  '(org-footnote-section nil)
