@@ -186,6 +186,7 @@ NOTICE: ")))
  '(gnus-treat-from-gravatar
    (quote head))
  '(gnus-treat-hide-citation t)
+ '(gnus-treat-hide-signature t)
  '(gnus-treat-mail-gravatar
    (quote head))
  '(gnus-treat-strip-cr t)
