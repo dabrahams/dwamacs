@@ -164,6 +164,7 @@
      (timeline . "  % s")
      (todo . "  %-11:c")
      (tags . "  %-11:c"))))
+ '(org-agenda-restore-windows-after-quit t)
  '(org-agenda-scheduled-leaders
    (quote
     ("" "S%d: ")))
@@ -186,6 +187,8 @@
  '(org-agenda-text-search-extra-files
    (quote
     (agenda-archives)))
+ '(org-agenda-window-setup
+   (quote other-window))
  '(org-archive-location "TODO-archive::")
  '(org-archive-save-context-info
    (quote
