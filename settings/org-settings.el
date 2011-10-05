@@ -152,7 +152,7 @@
  '(org-agenda-default-appointment-duration 60)
  '(org-agenda-files
    (quote
-    ("~/Documents/Tasks/todo.txt" "~/src/ledger/plan/TODO")))
+    ("~/Documents/Tasks/todo.txt")))
  '(org-agenda-follow-indirect t)
  '(org-agenda-fontify-priorities t)
  '(org-agenda-include-diary t)
