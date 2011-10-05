@@ -247,14 +247,19 @@ NOTICE: ")))
 
 (defun shutdown-offlineimap ()
   (interactive)
-  (shell-command
-   "launchctl unload -w ~/Library/LaunchAgents/mac.offlineimap.plist")
-  (message "Offlineimap stopped"))
+  (message "Stopping offlineimap...")
+  (set-process-sentinel
+   (start-process-shell-command
+    "*offlineimap*" "*offlineimap*"
+    "launchctl unload -w ~/Library/LaunchAgents/mac.offlineimap.plist")
+   (lambda (process event)
+     (when (string= event "finished\n")
+       (message "Stopping offlineimap...done")))))
 
-(add-hook 'gnus-after-exiting-gnus-hook 'shutdown-offlineimap)
+;(add-hook 'gnus-after-exiting-gnus-hook 'shutdown-offlineimap)
 
-(add-hook 'gnus-summary-mode-hook
-          (lambda ()(hl-line-mode 1)))
+;(add-hook 'gnus-summary-mode-hook
+;          (lambda ()(hl-line-mode 1)))
 
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
