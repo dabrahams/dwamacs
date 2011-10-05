@@ -97,6 +97,7 @@
  '(gnus-refer-article-method
    (quote
     (current
+     (nnregistry)
      (nnir "nnimap:LocalIMAP")
      (nntp "LocalNNTP"
            (nntp-address "localhost")
