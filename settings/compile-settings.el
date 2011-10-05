@@ -10,3 +10,17 @@
 (if (featurep 'compile-)
     (require 'compile+)
   (warn "compile- must be loaded before compile and compile+"))
+
+(add-hook 'compilation-mode-hook
+          (lambda () (make-local-variable 'hl-line-sticky-flag)
+            (setq hl-line-sticky-flag t)
+            (hl-line-mode)
+            ))
+
+(add-hook 'next-error-hook
+          (lambda () 
+            (with-current-buffer next-error-last-buffer
+              (make-local-variable 'hl-line-sticky-flag)
+              (setq hl-line-sticky-flag t)
+              (hl-line-mode nil)
+              (hl-line-mode t))))
