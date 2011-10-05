@@ -241,7 +241,6 @@ NOTICE: ")))
 
 (defun start-offlineimap ()
   (interactive)
-  (shutdown-offlineimap)
   (shell-command
    "launchctl load -S Aqua -w ~/Library/LaunchAgents/mac.offlineimap.plist")
   (message "Offlineimap started"))
