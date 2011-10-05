@@ -182,7 +182,7 @@
      (search category-keep))))
  '(org-agenda-start-on-weekday nil)
  '(org-agenda-start-with-follow-mode t)
- '(org-agenda-tags-column -100)
+ '(org-agenda-tags-column -80)
  '(org-agenda-text-search-extra-files
    (quote
     (agenda-archives)))
