@@ -49,12 +49,20 @@
 
 (when (require 'color-theme nil 'noerror)
   (define-color-theme
-    dwa-dark
+    dwa-dark-theme
     "Dave Abrahams"
     "Refinement of zenburn for dark spaces"
     (color-theme-zenburn)
     (load-theme 'zenburn-overrides))
-  (dwa-dark))
+  (color-theme-initialize)
+  (require 'org-faces nil 'noerror)
+  ;; Store away the emacs default theme so I can get back there
+  (fset 'color-theme-emacs-default (color-theme-make-snapshot))
+  (add-to-list 'color-themes
+               '(color-theme-emacs-default "Emacs Default" "Gnu"))
+  (add-hook 'after-init-hook 'color-theme-select :append)
+;  (add-hook 'after-init-hook 'dwa-dark-theme :append)
+  )
 
 (setq frame-title-format
     '(:eval
