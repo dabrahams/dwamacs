@@ -1,0 +1,4 @@
+(:name repdet
+:type emacswiki
+:description "detect repetition in user activity"
+:website "http://www.emacswiki.org/emacs/download/repdet.el")

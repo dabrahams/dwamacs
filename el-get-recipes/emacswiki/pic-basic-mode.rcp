@@ -1,0 +1,4 @@
+(:name pic-basic-mode
+:type emacswiki
+:description "Editing mode for MELabs PIC Basic"
+:website "http://www.emacswiki.org/emacs/download/pic-basic-mode.el")

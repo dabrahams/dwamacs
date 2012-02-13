@@ -1,0 +1,4 @@
+(:name httpgetwin32
+:type emacswiki
+:description "small utility interactive fn to perform an HTTP GET"
+:website "http://www.emacswiki.org/emacs/download/httpgetwin32.el")

@@ -1,0 +1,4 @@
+(:name org-table-comment
+:type emacswiki
+:description " Org table comment modes."
+:website "http://www.emacswiki.org/emacs/download/org-table-comment.el")

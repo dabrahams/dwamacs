@@ -1,0 +1,4 @@
+(:name clojure-mode
+:type emacswiki
+:description "Major mode for Clojure code"
+:website "http://www.emacswiki.org/emacs/download/clojure-mode.el")

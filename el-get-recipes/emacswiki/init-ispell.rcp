@@ -1,0 +1,4 @@
+(:name init-ispell
+:type emacswiki
+:description "Ispell configuration"
+:website "http://www.emacswiki.org/emacs/download/init-ispell.el")

@@ -1,0 +1,4 @@
+(:name mon-alphabet-list-utils
+:type emacswiki
+:description "return alphabetic sequences in various formats"
+:website "http://www.emacswiki.org/emacs/download/mon-alphabet-list-utils.el")

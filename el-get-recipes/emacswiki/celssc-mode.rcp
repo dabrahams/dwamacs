@@ -1,0 +1,4 @@
+(:name celssc-mode
+:type emacswiki
+:description "Major mode for editing celestia script files"
+:website "http://www.emacswiki.org/emacs/download/celssc-mode.el")

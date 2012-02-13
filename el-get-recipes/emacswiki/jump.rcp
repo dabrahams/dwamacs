@@ -1,0 +1,4 @@
+(:name jump
+:type emacswiki
+:description "interactive function that jump directly to the thing at point"
+:website "http://www.emacswiki.org/emacs/download/jump.el")

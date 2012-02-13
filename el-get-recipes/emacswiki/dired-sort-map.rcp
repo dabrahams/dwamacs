@@ -1,0 +1,4 @@
+(:name dired-sort-map
+:type emacswiki
+:description "in Dired: press s then s, x, t or n to sort by Size, eXtension, Time or Name"
+:website "http://www.emacswiki.org/emacs/download/dired-sort-map.el")

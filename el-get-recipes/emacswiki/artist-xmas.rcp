@@ -1,0 +1,4 @@
+(:name artist-xmas
+:type emacswiki
+:description "xemacs port of artist.el"
+:website "http://www.emacswiki.org/emacs/download/artist-xmas.el")

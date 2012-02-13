@@ -1,0 +1,4 @@
+(:name slime-company
+:type emacswiki
+:description "slime completion backend for company mode"
+:website "http://www.emacswiki.org/emacs/download/slime-company.el")

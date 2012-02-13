@@ -1,0 +1,4 @@
+(:name corba
+:type emacswiki
+:description "A Client Side CORBA Implementation for Emacs"
+:website "http://www.emacswiki.org/emacs/download/corba.el")

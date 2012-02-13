@@ -1,0 +1,4 @@
+(:name linum-ex
+:type emacswiki
+:description "Display line numbers to the left of buffers"
+:website "http://www.emacswiki.org/emacs/download/linum-ex.el")

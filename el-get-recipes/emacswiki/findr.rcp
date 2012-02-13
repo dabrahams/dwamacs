@@ -1,0 +1,4 @@
+(:name findr
+:type emacswiki
+:description "Breadth-first file-finding facility for (X)Emacs"
+:website "http://www.emacswiki.org/emacs/download/findr.el")

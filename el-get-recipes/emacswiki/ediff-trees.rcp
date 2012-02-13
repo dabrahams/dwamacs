@@ -1,0 +1,4 @@
+(:name ediff-trees
+:type emacswiki
+:description "Recursively ediff two directory trees "
+:website "http://www.emacswiki.org/emacs/download/ediff-trees.el")

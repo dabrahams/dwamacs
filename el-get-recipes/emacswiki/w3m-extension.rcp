@@ -1,0 +1,4 @@
+(:name w3m-extension
+:type emacswiki
+:description "Emacs-W3m extensions"
+:website "http://www.emacswiki.org/emacs/download/w3m-extension.el")

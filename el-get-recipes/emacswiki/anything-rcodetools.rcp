@@ -1,0 +1,4 @@
+(:name anything-rcodetools
+:type emacswiki
+:description "accurate Ruby method completion with anything"
+:website "http://www.emacswiki.org/emacs/download/anything-rcodetools.el")

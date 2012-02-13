@@ -1,0 +1,4 @@
+(:name appt
+:type emacswiki
+:description "Notification of appointments from your diary file."
+:website "http://www.emacswiki.org/emacs/download/appt.el")

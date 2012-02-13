@@ -1,0 +1,4 @@
+(:name w3m-fb
+:type emacswiki
+:description "frame-local buffers support for Emacs-w3m"
+:website "http://www.emacswiki.org/emacs/download/w3m-fb.el")

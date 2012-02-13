@@ -1,0 +1,4 @@
+(:name mon-seq-utils
+:type emacswiki
+:description "procedures for frobbing sequences"
+:website "http://www.emacswiki.org/emacs/download/mon-seq-utils.el")

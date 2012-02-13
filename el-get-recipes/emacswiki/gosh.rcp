@@ -1,0 +1,4 @@
+(:name gosh
+:type emacswiki
+:description "an interface to Gauche"
+:website "http://www.emacswiki.org/emacs/download/gosh.el")

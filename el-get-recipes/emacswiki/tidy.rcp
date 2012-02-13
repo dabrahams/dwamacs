@@ -1,0 +1,4 @@
+(:name tidy
+:type emacswiki
+:description "Interface to the HTML Tidy program"
+:website "http://www.emacswiki.org/emacs/download/tidy.el")

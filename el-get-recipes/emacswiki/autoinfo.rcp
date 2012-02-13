@@ -1,0 +1,4 @@
+(:name autoinfo
+:type emacswiki
+:description "show automatic information for the current selection"
+:website "http://www.emacswiki.org/emacs/download/autoinfo.el")

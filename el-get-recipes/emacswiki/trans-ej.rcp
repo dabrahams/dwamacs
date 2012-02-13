@@ -1,0 +1,4 @@
+(:name trans-ej
+:type emacswiki
+:description "English-Japanese translator using web translation service -*- Coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/trans-ej.el")

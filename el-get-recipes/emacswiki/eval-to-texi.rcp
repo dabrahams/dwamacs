@@ -1,0 +1,4 @@
+(:name eval-to-texi
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/eval-to-texi.el")

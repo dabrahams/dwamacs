@@ -1,0 +1,4 @@
+(:name mpris-dbus
+:type emacswiki
+:description "MPRIS call via dbus"
+:website "http://www.emacswiki.org/emacs/download/mpris-dbus.el")

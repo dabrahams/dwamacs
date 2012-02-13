@@ -1,0 +1,4 @@
+(:name plural
+:type emacswiki
+:description "Pluralize english nouns."
+:website "http://www.emacswiki.org/emacs/download/plural.el")

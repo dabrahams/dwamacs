@@ -1,0 +1,4 @@
+(:name latex-math-preview-extra-data
+:type emacswiki
+:description "Extra data for latex-math-preview.el."
+:website "http://www.emacswiki.org/emacs/download/latex-math-preview-extra-data.el")

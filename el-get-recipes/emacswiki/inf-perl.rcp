@@ -1,0 +1,4 @@
+(:name inf-perl
+:type emacswiki
+:description "Perl"
+:website "http://www.emacswiki.org/emacs/download/inf-perl.el")

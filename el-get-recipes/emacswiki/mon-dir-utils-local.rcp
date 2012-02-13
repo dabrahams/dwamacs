@@ -1,0 +1,4 @@
+(:name mon-dir-utils-local
+:type emacswiki
+:description "local directory and file utilities "
+:website "http://www.emacswiki.org/emacs/download/mon-dir-utils-local.el")

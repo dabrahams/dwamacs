@@ -1,0 +1,4 @@
+(:name pushy
+:type emacswiki
+:description "pushy completion"
+:website "http://www.emacswiki.org/emacs/download/pushy.el")

@@ -1,0 +1,4 @@
+(:name project-buffer-mode+
+:type emacswiki
+:description "Extension for project-buffer-mode"
+:website "http://www.emacswiki.org/emacs/download/project-buffer-mode+.el")

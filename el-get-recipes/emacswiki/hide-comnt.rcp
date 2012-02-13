@@ -1,0 +1,4 @@
+(:name hide-comnt
+:type emacswiki
+:description "Hide/show comments in code."
+:website "http://www.emacswiki.org/emacs/download/hide-comnt.el")

@@ -1,0 +1,4 @@
+(:name widen-window
+:type emacswiki
+:description "Widening selecting window"
+:website "http://www.emacswiki.org/emacs/download/widen-window.el")

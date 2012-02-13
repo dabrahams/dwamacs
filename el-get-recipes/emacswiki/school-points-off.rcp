@@ -1,0 +1,4 @@
+(:name school-points-off
+:type emacswiki
+:description "Display grades based on number of problems on the test"
+:website "http://www.emacswiki.org/emacs/download/school-points-off.el")

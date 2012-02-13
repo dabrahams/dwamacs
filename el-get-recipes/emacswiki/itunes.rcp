@@ -1,0 +1,4 @@
+(:name itunes
+:type emacswiki
+:description "utility functions to interact with iTunes"
+:website "http://www.emacswiki.org/emacs/download/itunes.el")

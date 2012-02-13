@@ -1,0 +1,4 @@
+(:name devkitemacs
+:type emacswiki
+:description "Helper functions for working with the devkitpro package (NDS and PSP development)"
+:website "http://www.emacswiki.org/emacs/download/devkitemacs.el")

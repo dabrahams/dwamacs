@@ -1,0 +1,4 @@
+(:name hangul
+:type emacswiki
+:description "Korean Hangul input method"
+:website "http://www.emacswiki.org/emacs/download/hangul.el")

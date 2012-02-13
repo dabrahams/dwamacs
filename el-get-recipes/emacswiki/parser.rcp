@@ -1,0 +1,4 @@
+(:name parser
+:type emacswiki
+:description "Elisp Macro DSL Parser Compiler"
+:website "http://www.emacswiki.org/emacs/download/parser.el")

@@ -1,0 +1,4 @@
+(:name type-test
+:type emacswiki
+:description "Typing test"
+:website "http://www.emacswiki.org/emacs/download/type-test.el")

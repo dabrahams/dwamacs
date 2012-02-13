@@ -1,0 +1,4 @@
+(:name sudo-save
+:type emacswiki
+:description "Allow saving files using sudo"
+:website "http://www.emacswiki.org/emacs/download/sudo-save.el")

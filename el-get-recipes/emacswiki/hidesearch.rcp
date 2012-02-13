@@ -1,0 +1,4 @@
+(:name hidesearch
+:type emacswiki
+:description "Incremental search while hiding non-matching lines."
+:website "http://www.emacswiki.org/emacs/download/hidesearch.el")

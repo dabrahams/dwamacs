@@ -1,0 +1,4 @@
+(:name icicles-mode
+:type emacswiki
+:description "Icicle Mode definition for Icicles"
+:website "http://www.emacswiki.org/emacs/download/icicles-mode.el")

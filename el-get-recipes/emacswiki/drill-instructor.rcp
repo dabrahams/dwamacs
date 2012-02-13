@@ -1,0 +1,4 @@
+(:name drill-instructor
+:type emacswiki
+:description " Enforce key-bind of Emacs."
+:website "http://www.emacswiki.org/emacs/download/drill-instructor.el")

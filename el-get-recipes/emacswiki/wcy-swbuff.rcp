@@ -1,0 +1,4 @@
+(:name wcy-swbuff
+:type emacswiki
+:description "switch buffer quickly"
+:website "http://www.emacswiki.org/emacs/download/wcy-swbuff.el")

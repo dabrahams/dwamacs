@@ -1,0 +1,4 @@
+(:name couchdb-document
+:type emacswiki
+:description "couchdb document handler"
+:website "http://www.emacswiki.org/emacs/download/couchdb-document.el")

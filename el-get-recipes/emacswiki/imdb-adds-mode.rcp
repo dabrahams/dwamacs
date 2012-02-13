@@ -1,0 +1,4 @@
+(:name imdb-adds-mode
+:type emacswiki
+:description "Major mode for editing IMDb data submissions"
+:website "http://www.emacswiki.org/emacs/download/imdb-adds-mode.el")

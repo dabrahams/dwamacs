@@ -1,0 +1,4 @@
+(:name follow-mouse
+:type emacswiki
+:description "Automatically select the window under the mouse -*-unibyte: t; coding: iso-8859-1;-*-"
+:website "http://www.emacswiki.org/emacs/download/follow-mouse.el")

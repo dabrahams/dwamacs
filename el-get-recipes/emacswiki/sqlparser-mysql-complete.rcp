@@ -1,0 +1,4 @@
+(:name sqlparser-mysql-complete
+:type emacswiki
+:description "completing tablename,column name for mysql. -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/sqlparser-mysql-complete.el")

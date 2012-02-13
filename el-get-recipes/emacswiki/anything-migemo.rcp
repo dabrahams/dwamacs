@@ -1,0 +1,4 @@
+(:name anything-migemo
+:type emacswiki
+:description "Migemo plug-in for anything"
+:website "http://www.emacswiki.org/emacs/download/anything-migemo.el")

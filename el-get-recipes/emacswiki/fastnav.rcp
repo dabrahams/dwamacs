@@ -1,0 +1,4 @@
+(:name fastnav
+:type emacswiki
+:description "Fast navigation and editing routines."
+:website "http://www.emacswiki.org/emacs/download/fastnav.el")

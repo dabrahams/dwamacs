@@ -1,0 +1,4 @@
+(:name pp+
+:type emacswiki
+:description "Extensions to `pp.el'."
+:website "http://www.emacswiki.org/emacs/download/pp+.el")

@@ -1,0 +1,4 @@
+(:name cmd-mode
+:type emacswiki
+:description "Edit of MS Windows cmd and bat files ;; -*- coding: sjis-dos -*-"
+:website "http://www.emacswiki.org/emacs/download/cmd-mode.el")

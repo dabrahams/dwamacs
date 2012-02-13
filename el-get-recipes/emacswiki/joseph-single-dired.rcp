@@ -1,0 +1,4 @@
+(:name joseph-single-dired
+:type emacswiki
+:description "Only Open One Dired Buffer."
+:website "http://www.emacswiki.org/emacs/download/joseph-single-dired.el")

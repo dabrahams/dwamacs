@@ -1,0 +1,4 @@
+(:name bracketphobia
+:type emacswiki
+:description "Protect the user from the Bracket Invasion"
+:website "http://www.emacswiki.org/emacs/download/bracketphobia.el")

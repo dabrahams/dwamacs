@@ -1,0 +1,4 @@
+(:name atom-blogger
+:type emacswiki
+:description "Utilities for Atom Blogger API"
+:website "http://www.emacswiki.org/emacs/download/atom-blogger.el")

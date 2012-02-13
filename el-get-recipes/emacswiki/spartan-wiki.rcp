@@ -1,0 +1,4 @@
+(:name spartan-wiki
+:type emacswiki
+:description "a really spartan personal wiki"
+:website "http://www.emacswiki.org/emacs/download/spartan-wiki.el")

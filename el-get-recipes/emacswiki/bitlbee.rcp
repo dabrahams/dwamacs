@@ -1,0 +1,4 @@
+(:name bitlbee
+:type emacswiki
+:description "Help get Bitlbee (http://www.bitlbee.org) up and running"
+:website "http://www.emacswiki.org/emacs/download/bitlbee.el")

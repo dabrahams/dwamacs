@@ -1,0 +1,4 @@
+(:name register-list
+:type emacswiki
+:description " Interactively list/edit registers"
+:website "http://www.emacswiki.org/emacs/download/register-list.el")

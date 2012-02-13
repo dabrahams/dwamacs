@@ -1,0 +1,4 @@
+(:name mp3player
+:type emacswiki
+:description "Interface to mpg123 or winamp"
+:website "http://www.emacswiki.org/emacs/download/mp3player.el")

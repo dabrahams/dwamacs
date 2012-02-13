@@ -1,0 +1,4 @@
+(:name mon-error-utils
+:type emacswiki
+:description "extensions for conditions and error handling"
+:website "http://www.emacswiki.org/emacs/download/mon-error-utils.el")

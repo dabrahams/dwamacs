@@ -1,0 +1,4 @@
+(:name grep-a-lot
+:type emacswiki
+:description "manages multiple search results buffers for grep.el"
+:website "http://www.emacswiki.org/emacs/download/grep-a-lot.el")

@@ -1,0 +1,4 @@
+(:name w32-utl
+:type emacswiki
+:description "small utility functions implemented using vbscript"
+:website "http://www.emacswiki.org/emacs/download/w32-utl.el")

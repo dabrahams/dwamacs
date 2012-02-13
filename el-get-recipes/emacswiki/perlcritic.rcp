@@ -1,0 +1,4 @@
+(:name perlcritic
+:type emacswiki
+:description "Call perlcritic in Emacs"
+:website "http://www.emacswiki.org/emacs/download/perlcritic.el")

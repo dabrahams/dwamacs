@@ -1,0 +1,4 @@
+(:name rtf-mode
+:type emacswiki
+:description "Emacs major mode for viewing/editing raw RTF source"
+:website "http://www.emacswiki.org/emacs/download/rtf-mode.el")

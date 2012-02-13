@@ -1,0 +1,4 @@
+(:name wikiarea
+:type emacswiki
+:description "Interface to the Emacs Wiki's Elisp area"
+:website "http://www.emacswiki.org/emacs/download/wikiarea.el")

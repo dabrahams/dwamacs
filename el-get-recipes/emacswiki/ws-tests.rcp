@@ -1,0 +1,4 @@
+(:name ws-tests
+:type emacswiki
+:description "automated tests for win-switch"
+:website "http://www.emacswiki.org/emacs/download/ws-tests.el")

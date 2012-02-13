@@ -1,0 +1,4 @@
+(:name srfi
+:type emacswiki
+:description "View Scheme requests for implementation"
+:website "http://www.emacswiki.org/emacs/download/srfi.el")

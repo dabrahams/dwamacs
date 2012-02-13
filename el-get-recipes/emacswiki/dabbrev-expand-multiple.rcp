@@ -1,0 +1,4 @@
+(:name dabbrev-expand-multiple
+:type emacswiki
+:description "dabbrev-expand for multiple"
+:website "http://www.emacswiki.org/emacs/download/dabbrev-expand-multiple.el")

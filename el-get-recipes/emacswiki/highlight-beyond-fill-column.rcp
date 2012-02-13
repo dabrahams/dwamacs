@@ -1,0 +1,4 @@
+(:name highlight-beyond-fill-column
+:type emacswiki
+:description "font-lock-add-keywords aid for Emacs"
+:website "http://www.emacswiki.org/emacs/download/highlight-beyond-fill-column.el")

@@ -1,0 +1,4 @@
+(:name pos-tip
+:type emacswiki
+:description "Show tooltip at point -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/pos-tip.el")

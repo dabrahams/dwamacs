@@ -1,0 +1,4 @@
+(:name transpose-frame
+:type emacswiki
+:description "Transpose windows arrangement in a frame"
+:website "http://www.emacswiki.org/emacs/download/transpose-frame.el")

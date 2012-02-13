@@ -1,0 +1,4 @@
+(:name descbinds-anything
+:type emacswiki
+:description "Yet Another `describe-bindings' with `anything'."
+:website "http://www.emacswiki.org/emacs/download/descbinds-anything.el")

@@ -1,0 +1,4 @@
+(:name weekly-view
+:type emacswiki
+:description "bar graph view of the week's diary events"
+:website "http://www.emacswiki.org/emacs/download/weekly-view.el")

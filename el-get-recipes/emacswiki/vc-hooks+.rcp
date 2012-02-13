@@ -1,0 +1,4 @@
+(:name vc-hooks+
+:type emacswiki
+:description "Extensions to `vc-hooks.el'."
+:website "http://www.emacswiki.org/emacs/download/vc-hooks+.el")

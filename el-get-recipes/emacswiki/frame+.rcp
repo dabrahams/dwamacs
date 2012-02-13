@@ -1,0 +1,4 @@
+(:name frame+
+:type emacswiki
+:description "Extensions to `frame.el'."
+:website "http://www.emacswiki.org/emacs/download/frame+.el")

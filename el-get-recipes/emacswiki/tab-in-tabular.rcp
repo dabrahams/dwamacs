@@ -1,0 +1,4 @@
+(:name tab-in-tabular
+:type emacswiki
+:description "Treat ampersands like table field separators"
+:website "http://www.emacswiki.org/emacs/download/tab-in-tabular.el")

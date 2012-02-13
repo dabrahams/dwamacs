@@ -1,0 +1,4 @@
+(:name poor-mans-bidi
+:type emacswiki
+:description "BiDirectional editing mode  -*-coding: utf-8;-*-"
+:website "http://www.emacswiki.org/emacs/download/poor-mans-bidi.el")

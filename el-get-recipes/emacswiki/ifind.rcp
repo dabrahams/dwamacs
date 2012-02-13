@@ -1,0 +1,4 @@
+(:name ifind
+:type emacswiki
+:description "An interface to `find` based on igrep.el"
+:website "http://www.emacswiki.org/emacs/download/ifind.el")

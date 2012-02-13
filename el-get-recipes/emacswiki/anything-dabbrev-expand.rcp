@@ -1,0 +1,4 @@
+(:name anything-dabbrev-expand
+:type emacswiki
+:description "dabbrev-expand / dabbrev-completion / partial-dabbrev using anything.el"
+:website "http://www.emacswiki.org/emacs/download/anything-dabbrev-expand.el")

@@ -1,0 +1,4 @@
+(:name typing
+:type emacswiki
+:description "The Typing Of Emacs"
+:website "http://www.emacswiki.org/emacs/download/typing.el")

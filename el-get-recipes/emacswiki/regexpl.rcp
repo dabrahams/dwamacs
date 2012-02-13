@@ -1,0 +1,4 @@
+(:name regexpl
+:type emacswiki
+:description "Search and replace list of patterns and replacements."
+:website "http://www.emacswiki.org/emacs/download/regexpl.el")

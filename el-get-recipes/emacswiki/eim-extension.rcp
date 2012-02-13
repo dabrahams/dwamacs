@@ -1,0 +1,4 @@
+(:name eim-extension
+:type emacswiki
+:description "Some extension for eim (Emacs Input Method)"
+:website "http://www.emacswiki.org/emacs/download/eim-extension.el")

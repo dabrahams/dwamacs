@@ -1,0 +1,4 @@
+(:name etags-stack
+:type emacswiki
+:description "Navigate the tags stack"
+:website "http://www.emacswiki.org/emacs/download/etags-stack.el")

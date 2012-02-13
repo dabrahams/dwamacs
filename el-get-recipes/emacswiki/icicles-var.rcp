@@ -1,0 +1,4 @@
+(:name icicles-var
+:type emacswiki
+:description "Internal variables for Icicles"
+:website "http://www.emacswiki.org/emacs/download/icicles-var.el")

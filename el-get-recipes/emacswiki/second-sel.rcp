@@ -1,0 +1,4 @@
+(:name second-sel
+:type emacswiki
+:description "Secondary selection commands"
+:website "http://www.emacswiki.org/emacs/download/second-sel.el")

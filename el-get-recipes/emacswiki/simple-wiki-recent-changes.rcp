@@ -1,0 +1,4 @@
+(:name simple-wiki-recent-changes
+:type emacswiki
+:description "view recent changes "
+:website "http://www.emacswiki.org/emacs/download/simple-wiki-recent-changes.el")

@@ -1,0 +1,4 @@
+(:name gds
+:type emacswiki
+:description "Emacs interface to Google Desktop Search"
+:website "http://www.emacswiki.org/emacs/download/gds.el")

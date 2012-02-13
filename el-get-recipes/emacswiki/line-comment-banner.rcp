@@ -1,0 +1,4 @@
+(:name line-comment-banner
+:type emacswiki
+:description "Comment a line in a banner style."
+:website "http://www.emacswiki.org/emacs/download/line-comment-banner.el")

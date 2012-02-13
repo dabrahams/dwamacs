@@ -1,0 +1,4 @@
+(:name timeclock-x
+:type emacswiki
+:description "Extra features for John Wiegley's timeclock package"
+:website "http://www.emacswiki.org/emacs/download/timeclock-x.el")

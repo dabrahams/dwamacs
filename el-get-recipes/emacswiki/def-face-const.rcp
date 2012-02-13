@@ -1,0 +1,4 @@
+(:name def-face-const
+:type emacswiki
+:description "Macro for defining faces & their variables."
+:website "http://www.emacswiki.org/emacs/download/def-face-const.el")

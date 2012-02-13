@@ -1,0 +1,4 @@
+(:name pom
+:type emacswiki
+:description "Utility functions for dealing with maven project.xml files"
+:website "http://www.emacswiki.org/emacs/download/pom.el")

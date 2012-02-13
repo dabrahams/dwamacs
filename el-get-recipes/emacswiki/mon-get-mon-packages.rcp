@@ -1,0 +1,4 @@
+(:name mon-get-mon-packages
+:type emacswiki
+:description "snarf MON libraries with wget."
+:website "http://www.emacswiki.org/emacs/download/mon-get-mon-packages.el")

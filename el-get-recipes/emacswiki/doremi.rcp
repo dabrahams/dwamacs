@@ -1,0 +1,4 @@
+(:name doremi
+:type emacswiki
+:description "Do Re Mi: Incremental change using arrow keys or mouse wheel."
+:website "http://www.emacswiki.org/emacs/download/doremi.el")

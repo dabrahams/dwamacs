@@ -1,0 +1,4 @@
+(:name ac-dabbrev
+:type emacswiki
+:description "auto-complete.el source for dabbrev"
+:website "http://www.emacswiki.org/emacs/download/ac-dabbrev.el")

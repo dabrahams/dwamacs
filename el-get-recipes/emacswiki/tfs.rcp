@@ -1,0 +1,4 @@
+(:name tfs
+:type emacswiki
+:description "MS Team Foundation Server commands for Emacs."
+:website "http://www.emacswiki.org/emacs/download/tfs.el")

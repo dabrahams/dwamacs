@@ -1,0 +1,4 @@
+(:name docmap
+:type emacswiki
+:description "display document map window"
+:website "http://www.emacswiki.org/emacs/download/docmap.el")

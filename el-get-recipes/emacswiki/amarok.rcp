@@ -1,0 +1,4 @@
+(:name amarok
+:type emacswiki
+:description "Simple interface to Amarok music player"
+:website "http://www.emacswiki.org/emacs/download/amarok.el")

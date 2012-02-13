@@ -1,0 +1,4 @@
+(:name erefactor
+:type emacswiki
+:description "Emacs-Lisp tools"
+:website "http://www.emacswiki.org/emacs/download/erefactor.el")

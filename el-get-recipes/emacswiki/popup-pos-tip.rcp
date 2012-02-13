@@ -1,0 +1,4 @@
+(:name popup-pos-tip
+:type emacswiki
+:description "pos-tip.el wrapper library for programs using popup.el"
+:website "http://www.emacswiki.org/emacs/download/popup-pos-tip.el")

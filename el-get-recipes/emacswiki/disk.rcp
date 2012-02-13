@@ -1,0 +1,4 @@
+(:name disk
+:type emacswiki
+:description "simplified find-file, revert-file, save-buffer interface"
+:website "http://www.emacswiki.org/emacs/download/disk.el")

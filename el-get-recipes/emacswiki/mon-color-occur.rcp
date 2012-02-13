@@ -1,0 +1,4 @@
+(:name mon-color-occur
+:type emacswiki
+:description "color-occur.el with minor patches"
+:website "http://www.emacswiki.org/emacs/download/mon-color-occur.el")

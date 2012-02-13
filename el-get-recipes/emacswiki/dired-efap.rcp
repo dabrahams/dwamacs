@@ -1,0 +1,4 @@
+(:name dired-efap
+:type emacswiki
+:description "Edit Filename At Point in a dired buffer"
+:website "http://www.emacswiki.org/emacs/download/dired-efap.el")

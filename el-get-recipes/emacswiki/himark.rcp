@@ -1,0 +1,4 @@
+(:name himark
+:type emacswiki
+:description "marking text by highlighting"
+:website "http://www.emacswiki.org/emacs/download/himark.el")

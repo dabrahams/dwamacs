@@ -1,0 +1,4 @@
+(:name rcirc-dbus
+:type emacswiki
+:description "rcirc dbus notifications"
+:website "http://www.emacswiki.org/emacs/download/rcirc-dbus.el")

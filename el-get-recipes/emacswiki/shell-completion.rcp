@@ -1,0 +1,4 @@
+(:name shell-completion
+:type emacswiki
+:description "provides tab completion for shell commands"
+:website "http://www.emacswiki.org/emacs/download/shell-completion.el")

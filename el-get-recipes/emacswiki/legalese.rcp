@@ -1,0 +1,4 @@
+(:name legalese
+:type emacswiki
+:description "Add legalese to your program files"
+:website "http://www.emacswiki.org/emacs/download/legalese.el")

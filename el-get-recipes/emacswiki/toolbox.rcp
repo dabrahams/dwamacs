@@ -1,0 +1,4 @@
+(:name toolbox
+:type emacswiki
+:description "create simple menus in buffers"
+:website "http://www.emacswiki.org/emacs/download/toolbox.el")

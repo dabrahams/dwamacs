@@ -1,0 +1,4 @@
+(:name erc-highlight-nicknames
+:type emacswiki
+:description "Highlights nicknames"
+:website "http://www.emacswiki.org/emacs/download/erc-highlight-nicknames.el")

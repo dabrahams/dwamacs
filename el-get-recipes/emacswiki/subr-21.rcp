@@ -1,0 +1,4 @@
+(:name subr-21
+:type emacswiki
+:description "Provides Emacs 20 with Emacs 21 subr.el and built-in functions."
+:website "http://www.emacswiki.org/emacs/download/subr-21.el")

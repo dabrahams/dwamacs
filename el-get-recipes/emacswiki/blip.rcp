@@ -1,0 +1,4 @@
+(:name blip
+:type emacswiki
+:description "interface with blip.pl"
+:website "http://www.emacswiki.org/emacs/download/blip.el")

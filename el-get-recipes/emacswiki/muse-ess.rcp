@@ -1,0 +1,4 @@
+(:name muse-ess
+:type emacswiki
+:description "emacs muse speaks statistics"
+:website "http://www.emacswiki.org/emacs/download/muse-ess.el")

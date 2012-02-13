@@ -1,0 +1,4 @@
+(:name dired-isearch
+:type emacswiki
+:description "isearch in Dired"
+:website "http://www.emacswiki.org/emacs/download/dired-isearch.el")

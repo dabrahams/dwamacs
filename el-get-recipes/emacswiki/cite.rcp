@@ -1,0 +1,4 @@
+(:name cite
+:type emacswiki
+:description "Citing engine for Gnus"
+:website "http://www.emacswiki.org/emacs/download/cite.el")

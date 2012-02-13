@@ -1,0 +1,4 @@
+(:name constraint
+:type emacswiki
+:description "a constraint propagation library in elisp"
+:website "http://www.emacswiki.org/emacs/download/constraint.el")

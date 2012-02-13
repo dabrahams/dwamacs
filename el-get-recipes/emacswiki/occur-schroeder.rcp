@@ -1,0 +1,4 @@
+(:name occur-schroeder
+:type emacswiki
+:description "Invoke occur from within isearch"
+:website "http://www.emacswiki.org/emacs/download/occur-schroeder.el")

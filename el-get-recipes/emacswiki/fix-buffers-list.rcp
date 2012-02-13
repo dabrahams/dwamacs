@@ -1,0 +1,4 @@
+(:name fix-buffers-list
+:type emacswiki
+:description "New M status and colors in buffers list"
+:website "http://www.emacswiki.org/emacs/download/fix-buffers-list.el")

@@ -1,0 +1,4 @@
+(:name pastie
+:type emacswiki
+:description "Emacs integration for pastie.org"
+:website "http://www.emacswiki.org/emacs/download/pastie.el")

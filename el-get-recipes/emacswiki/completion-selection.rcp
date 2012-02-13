@@ -1,0 +1,4 @@
+(:name completion-selection
+:type emacswiki
+:description "Completion mechanism selection for completion-ui"
+:website "http://www.emacswiki.org/emacs/download/completion-selection.el")

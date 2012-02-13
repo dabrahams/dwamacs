@@ -1,0 +1,4 @@
+(:name init-w3m
+:type emacswiki
+:description "W3m configuration"
+:website "http://www.emacswiki.org/emacs/download/init-w3m.el")

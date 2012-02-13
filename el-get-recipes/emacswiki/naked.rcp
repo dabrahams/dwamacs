@@ -1,0 +1,4 @@
+(:name naked
+:type emacswiki
+:description "Provide for naked key descriptions: no angle brackets."
+:website "http://www.emacswiki.org/emacs/download/naked.el")

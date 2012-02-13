@@ -1,0 +1,4 @@
+(:name winpoint
+:type emacswiki
+:description "Remember buffer positions per-window, not per buffer"
+:website "http://www.emacswiki.org/emacs/download/winpoint.el")

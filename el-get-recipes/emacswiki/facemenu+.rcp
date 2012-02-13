@@ -1,0 +1,4 @@
+(:name facemenu+
+:type emacswiki
+:description "Extensions to `facemenu.el'."
+:website "http://www.emacswiki.org/emacs/download/facemenu+.el")

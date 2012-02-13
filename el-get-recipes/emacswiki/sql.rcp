@@ -1,0 +1,4 @@
+(:name sql
+:type emacswiki
+:description "specialized comint.el for SQL interpreters"
+:website "http://www.emacswiki.org/emacs/download/sql.el")

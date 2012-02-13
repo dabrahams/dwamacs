@@ -1,0 +1,4 @@
+(:name prand
+:type emacswiki
+:description "generate pesudo-random number"
+:website "http://www.emacswiki.org/emacs/download/prand.el")

@@ -1,0 +1,4 @@
+(:name buffer-stack-suppl
+:type emacswiki
+:description "Bubble though buffers of the same major-mode"
+:website "http://www.emacswiki.org/emacs/download/buffer-stack-suppl.el")

@@ -1,0 +1,4 @@
+(:name whine
+:type emacswiki
+:description "complaint generator for GNU Emacs"
+:website "http://www.emacswiki.org/emacs/download/whine.el")

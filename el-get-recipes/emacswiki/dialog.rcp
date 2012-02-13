@@ -1,0 +1,4 @@
+(:name dialog
+:type emacswiki
+:description "dialog box interface using widgets, frames and windows"
+:website "http://www.emacswiki.org/emacs/download/dialog.el")

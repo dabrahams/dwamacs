@@ -1,0 +1,4 @@
+(:name org-extension
+:type emacswiki
+:description "Some extensions for Org mode"
+:website "http://www.emacswiki.org/emacs/download/org-extension.el")

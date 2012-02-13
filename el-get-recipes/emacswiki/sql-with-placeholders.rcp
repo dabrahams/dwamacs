@@ -1,0 +1,4 @@
+(:name sql-with-placeholders
+:type emacswiki
+:description "handle SQL statements with placeholders gently"
+:website "http://www.emacswiki.org/emacs/download/sql-with-placeholders.el")

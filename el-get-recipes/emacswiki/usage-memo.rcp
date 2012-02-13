@@ -1,0 +1,4 @@
+(:name usage-memo
+:type emacswiki
+:description "integration of Emacs help system and memo"
+:website "http://www.emacswiki.org/emacs/download/usage-memo.el")

@@ -1,0 +1,4 @@
+(:name erec
+:type emacswiki
+:description "Minor mode to record and play back audio"
+:website "http://www.emacswiki.org/emacs/download/erec.el")

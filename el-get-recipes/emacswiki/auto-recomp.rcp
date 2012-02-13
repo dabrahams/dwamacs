@@ -1,0 +1,4 @@
+(:name auto-recomp
+:type emacswiki
+:description "Automatically recompile Emacs Lisp files"
+:website "http://www.emacswiki.org/emacs/download/auto-recomp.el")

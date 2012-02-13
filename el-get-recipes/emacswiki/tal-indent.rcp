@@ -1,0 +1,4 @@
+(:name tal-indent
+:type emacswiki
+:description "Handles indentation functions for tal-mode."
+:website "http://www.emacswiki.org/emacs/download/tal-indent.el")

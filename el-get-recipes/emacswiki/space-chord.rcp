@@ -1,0 +1,4 @@
+(:name space-chord
+:type emacswiki
+:description "key chord with Space"
+:website "http://www.emacswiki.org/emacs/download/space-chord.el")

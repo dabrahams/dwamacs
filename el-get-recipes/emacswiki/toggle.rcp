@@ -1,0 +1,4 @@
+(:name toggle
+:type emacswiki
+:description "quickly open corresponding file (eg test vs impl)."
+:website "http://www.emacswiki.org/emacs/download/toggle.el")

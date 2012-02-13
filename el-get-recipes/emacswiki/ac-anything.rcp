@@ -1,0 +1,4 @@
+(:name ac-anything
+:type emacswiki
+:description "Auto Complete with Anything"
+:website "http://www.emacswiki.org/emacs/download/ac-anything.el")

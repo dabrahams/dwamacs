@@ -1,0 +1,4 @@
+(:name rfringe
+:type emacswiki
+:description "display the relative location of the region, in the fringe."
+:website "http://www.emacswiki.org/emacs/download/rfringe.el")

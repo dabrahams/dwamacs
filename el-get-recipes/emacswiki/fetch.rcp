@@ -1,0 +1,4 @@
+(:name fetch
+:type emacswiki
+:description "Fetch a file from a java hierarchy"
+:website "http://www.emacswiki.org/emacs/download/fetch.el")

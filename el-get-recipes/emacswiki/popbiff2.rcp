@@ -1,0 +1,4 @@
+(:name popbiff2
+:type emacswiki
+:description "Checks for mail using POP3"
+:website "http://www.emacswiki.org/emacs/download/popbiff2.el")

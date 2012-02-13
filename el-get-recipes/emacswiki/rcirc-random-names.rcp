@@ -1,0 +1,4 @@
+(:name rcirc-random-names
+:type emacswiki
+:description "randomize names"
+:website "http://www.emacswiki.org/emacs/download/rcirc-random-names.el")

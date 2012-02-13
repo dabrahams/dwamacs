@@ -1,0 +1,4 @@
+(:name dom
+:type emacswiki
+:description "DOM implementation"
+:website "http://www.emacswiki.org/emacs/download/dom.el")

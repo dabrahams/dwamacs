@@ -1,0 +1,4 @@
+(:name dos-indent
+:type emacswiki
+:description "Adds indentation to Dos-mode"
+:website "http://www.emacswiki.org/emacs/download/dos-indent.el")

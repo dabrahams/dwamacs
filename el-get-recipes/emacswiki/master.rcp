@@ -1,0 +1,4 @@
+(:name master
+:type emacswiki
+:description "make a buffer the master over another buffer"
+:website "http://www.emacswiki.org/emacs/download/master.el")

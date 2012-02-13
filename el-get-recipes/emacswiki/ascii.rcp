@@ -1,0 +1,4 @@
+(:name ascii
+:type emacswiki
+:description "ASCII code display."
+:website "http://www.emacswiki.org/emacs/download/ascii.el")

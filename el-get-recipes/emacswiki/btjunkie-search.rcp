@@ -1,0 +1,4 @@
+(:name btjunkie-search
+:type emacswiki
+:description "brutal query engine against btjunkie.org"
+:website "http://www.emacswiki.org/emacs/download/btjunkie-search.el")

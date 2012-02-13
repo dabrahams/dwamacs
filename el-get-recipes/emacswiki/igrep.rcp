@@ -1,0 +1,4 @@
+(:name igrep
+:type emacswiki
+:description "An improved interface to `grep` and `find`"
+:website "http://www.emacswiki.org/emacs/download/igrep.el")

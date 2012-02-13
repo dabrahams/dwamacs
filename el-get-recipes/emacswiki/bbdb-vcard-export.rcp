@@ -1,0 +1,4 @@
+(:name bbdb-vcard-export
+:type emacswiki
+:description "export BBDB as vCard files"
+:website "http://www.emacswiki.org/emacs/download/bbdb-vcard-export.el")

@@ -1,0 +1,4 @@
+(:name topsongs
+:type emacswiki
+:description "a song database for the lazy emacser"
+:website "http://www.emacswiki.org/emacs/download/topsongs.el")

@@ -1,0 +1,4 @@
+(:name apropos+
+:type emacswiki
+:description "Extensions to `apropos.el'"
+:website "http://www.emacswiki.org/emacs/download/apropos+.el")

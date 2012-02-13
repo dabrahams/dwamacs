@@ -1,0 +1,4 @@
+(:name online-search
+:type emacswiki
+:description "Online dictionary or intelligent api search engine for developers"
+:website "http://www.emacswiki.org/emacs/download/online-search.el")

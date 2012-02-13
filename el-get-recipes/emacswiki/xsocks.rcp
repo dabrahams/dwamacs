@@ -1,0 +1,4 @@
+(:name xsocks
+:type emacswiki
+:description "emacs sockets extender"
+:website "http://www.emacswiki.org/emacs/download/xsocks.el")

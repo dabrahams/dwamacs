@@ -1,0 +1,4 @@
+(:name sourcepair
+:type emacswiki
+:description "Load the corresponding C/C++ header or source file for the current buffer."
+:website "http://www.emacswiki.org/emacs/download/sourcepair.el")

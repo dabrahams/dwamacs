@@ -1,0 +1,4 @@
+(:name mark-lines
+:type emacswiki
+:description "triple-click like line marking functions"
+:website "http://www.emacswiki.org/emacs/download/mark-lines.el")

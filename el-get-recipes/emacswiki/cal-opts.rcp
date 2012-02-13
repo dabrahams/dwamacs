@@ -1,0 +1,4 @@
+(:name cal-opts
+:type emacswiki
+:description "Set various calendar, diary etc. options."
+:website "http://www.emacswiki.org/emacs/download/cal-opts.el")

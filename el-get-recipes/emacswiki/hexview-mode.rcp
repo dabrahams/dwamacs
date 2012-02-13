@@ -1,0 +1,4 @@
+(:name hexview-mode
+:type emacswiki
+:description "A simple & fast hexadecimal file viewer"
+:website "http://www.emacswiki.org/emacs/download/hexview-mode.el")

@@ -1,0 +1,4 @@
+(:name yasnippet-config
+:type emacswiki
+:description "Configuration of yasnippet.el"
+:website "http://www.emacswiki.org/emacs/download/yasnippet-config.el")

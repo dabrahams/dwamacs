@@ -1,0 +1,4 @@
+(:name cisco-router-mode
+:type emacswiki
+:description "Major mode for editing Cisco router configuration files"
+:website "http://www.emacswiki.org/emacs/download/cisco-router-mode.el")

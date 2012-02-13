@@ -1,0 +1,4 @@
+(:name profiles
+:type emacswiki
+:description "profile management system"
+:website "http://www.emacswiki.org/emacs/download/profiles.el")

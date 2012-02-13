@@ -1,0 +1,4 @@
+(:name mon-image-utils
+:type emacswiki
+:description "interfacing with image manipulation processes"
+:website "http://www.emacswiki.org/emacs/download/mon-image-utils.el")

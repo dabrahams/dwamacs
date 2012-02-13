@@ -1,0 +1,4 @@
+(:name anything-ipa
+:type emacswiki
+:description "Anything interface of In Place Annotation"
+:website "http://www.emacswiki.org/emacs/download/anything-ipa.el")

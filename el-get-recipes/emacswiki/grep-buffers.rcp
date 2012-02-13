@@ -1,0 +1,4 @@
+(:name grep-buffers
+:type emacswiki
+:description "grep through buffers (a la 'moccur')"
+:website "http://www.emacswiki.org/emacs/download/grep-buffers.el")

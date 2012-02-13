@@ -1,0 +1,4 @@
+(:name ctags-update
+:type emacswiki
+:description "auto update TAGS in parent directory using exuberant-ctags"
+:website "http://www.emacswiki.org/emacs/download/ctags-update.el")

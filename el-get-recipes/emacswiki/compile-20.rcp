@@ -1,0 +1,4 @@
+(:name compile-20
+:type emacswiki
+:description "Extensions to `compile.el'."
+:website "http://www.emacswiki.org/emacs/download/compile-20.el")

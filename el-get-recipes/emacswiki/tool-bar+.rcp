@@ -1,0 +1,4 @@
+(:name tool-bar+
+:type emacswiki
+:description "Extensions to standard library tool-bar.el"
+:website "http://www.emacswiki.org/emacs/download/tool-bar+.el")

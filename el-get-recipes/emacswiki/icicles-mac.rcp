@@ -1,0 +1,4 @@
+(:name icicles-mac
+:type emacswiki
+:description "Macros for Icicles"
+:website "http://www.emacswiki.org/emacs/download/icicles-mac.el")

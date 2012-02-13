@@ -1,0 +1,4 @@
+(:name py-indent
+:type emacswiki
+:description "Python indentation with annotations"
+:website "http://www.emacswiki.org/emacs/download/py-indent.el")

@@ -1,0 +1,4 @@
+(:name save-load-path
+:type emacswiki
+:description "save load-path and reuse it to test"
+:website "http://www.emacswiki.org/emacs/download/save-load-path.el")

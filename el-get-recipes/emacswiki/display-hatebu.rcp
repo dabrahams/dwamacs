@@ -1,0 +1,4 @@
+(:name display-hatebu
+:type emacswiki
+:description "はてなブックマークでブックマークされた数をモードラインに表示する"
+:website "http://www.emacswiki.org/emacs/download/display-hatebu.el")

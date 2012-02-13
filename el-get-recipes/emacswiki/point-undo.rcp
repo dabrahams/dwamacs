@@ -1,0 +1,4 @@
+(:name point-undo
+:type emacswiki
+:description "undo/redo position"
+:website "http://www.emacswiki.org/emacs/download/point-undo.el")

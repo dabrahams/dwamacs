@@ -1,0 +1,4 @@
+(:name w32-symlinks
+:type emacswiki
+:description "MS Windows symbolic link (shortcut) support"
+:website "http://www.emacswiki.org/emacs/download/w32-symlinks.el")

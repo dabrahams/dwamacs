@@ -1,0 +1,4 @@
+(:name kdic
+:type emacswiki
+:description "Practice your Kanji using a dictionary."
+:website "http://www.emacswiki.org/emacs/download/kdic.el")

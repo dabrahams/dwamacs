@@ -1,0 +1,4 @@
+(:name axcess
+:type emacswiki
+:description "Axcess and Netlinx editing support"
+:website "http://www.emacswiki.org/emacs/download/axcess.el")

@@ -1,0 +1,4 @@
+(:name vlf
+:type emacswiki
+:description "View Large Files"
+:website "http://www.emacswiki.org/emacs/download/vlf.el")

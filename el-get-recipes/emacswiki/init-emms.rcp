@@ -1,0 +1,4 @@
+(:name init-emms
+:type emacswiki
+:description "Emms configuration"
+:website "http://www.emacswiki.org/emacs/download/init-emms.el")

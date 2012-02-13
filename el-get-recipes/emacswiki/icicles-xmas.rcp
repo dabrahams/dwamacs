@@ -1,0 +1,4 @@
+(:name icicles-xmas
+:type emacswiki
+:description "xemacs port (beta) of icicles.el"
+:website "http://www.emacswiki.org/emacs/download/icicles-xmas.el")

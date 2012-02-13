@@ -1,0 +1,4 @@
+(:name iswitchb-highlight
+:type emacswiki
+:description "Highlighting extension for iswitchb"
+:website "http://www.emacswiki.org/emacs/download/iswitchb-highlight.el")

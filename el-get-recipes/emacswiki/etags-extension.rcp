@@ -1,0 +1,4 @@
+(:name etags-extension
+:type emacswiki
+:description "A collect extensions for etags."
+:website "http://www.emacswiki.org/emacs/download/etags-extension.el")

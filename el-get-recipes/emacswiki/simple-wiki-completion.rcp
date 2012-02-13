@@ -1,0 +1,4 @@
+(:name simple-wiki-completion
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/simple-wiki-completion.el")

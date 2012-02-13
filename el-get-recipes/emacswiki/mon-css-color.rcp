@@ -1,0 +1,4 @@
+(:name mon-css-color
+:type emacswiki
+:description "Highlight and edit CSS colors"
+:website "http://www.emacswiki.org/emacs/download/mon-css-color.el")

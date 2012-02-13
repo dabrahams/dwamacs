@@ -1,0 +1,4 @@
+(:name frame-restore
+:type emacswiki
+:description "save/restore frame size&position at shutdown/startup"
+:website "http://www.emacswiki.org/emacs/download/frame-restore.el")

@@ -1,0 +1,4 @@
+(:name cfml-helper-mode
+:type emacswiki
+:description "Major mode for composing cfml files."
+:website "http://www.emacswiki.org/emacs/download/cfml-helper-mode.el")

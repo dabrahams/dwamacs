@@ -1,0 +1,4 @@
+(:name bookmark-add
+:type emacswiki
+:description "creates the buffer for work with bookmarks"
+:website "http://www.emacswiki.org/emacs/download/bookmark-add.el")

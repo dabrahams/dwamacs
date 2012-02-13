@@ -1,0 +1,4 @@
+(:name annotate
+:type emacswiki
+:description "simple file annotation system"
+:website "http://www.emacswiki.org/emacs/download/annotate.el")

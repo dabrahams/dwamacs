@@ -1,0 +1,4 @@
+(:name anything-kyr
+:type emacswiki
+:description "Show context-aware commands"
+:website "http://www.emacswiki.org/emacs/download/anything-kyr.el")

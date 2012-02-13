@@ -1,0 +1,4 @@
+(:name options+
+:type emacswiki
+:description "Extensions to `options.el'."
+:website "http://www.emacswiki.org/emacs/download/options+.el")

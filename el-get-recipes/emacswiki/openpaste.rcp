@@ -1,0 +1,4 @@
+(:name openpaste
+:type emacswiki
+:description "Emacs interface for OpenPastebin"
+:website "http://www.emacswiki.org/emacs/download/openpaste.el")

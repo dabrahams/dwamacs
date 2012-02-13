@@ -1,0 +1,4 @@
+(:name ffap-
+:type emacswiki
+:description "Extensions to library `ffap.el'"
+:website "http://www.emacswiki.org/emacs/download/ffap-.el")

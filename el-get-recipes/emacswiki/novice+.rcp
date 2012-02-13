@@ -1,0 +1,4 @@
+(:name novice+
+:type emacswiki
+:description "Extensions to `novice.el'."
+:website "http://www.emacswiki.org/emacs/download/novice+.el")

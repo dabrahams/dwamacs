@@ -1,0 +1,4 @@
+(:name phutball
+:type emacswiki
+:description "play phutball in Emacs"
+:website "http://www.emacswiki.org/emacs/download/phutball.el")

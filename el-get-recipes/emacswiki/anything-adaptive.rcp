@@ -1,0 +1,4 @@
+(:name anything-adaptive
+:type emacswiki
+:description "Sort candidates by usage frequency"
+:website "http://www.emacswiki.org/emacs/download/anything-adaptive.el")

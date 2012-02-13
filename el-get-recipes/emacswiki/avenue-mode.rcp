@@ -1,0 +1,4 @@
+(:name avenue-mode
+:type emacswiki
+:description "major mode for editing ESRI avenue scrips"
+:website "http://www.emacswiki.org/emacs/download/avenue-mode.el")

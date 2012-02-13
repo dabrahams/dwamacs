@@ -1,0 +1,4 @@
+(:name wcy-recentf
+:type emacswiki
+:description "open recent saved file and recent opened file"
+:website "http://www.emacswiki.org/emacs/download/wcy-recentf.el")

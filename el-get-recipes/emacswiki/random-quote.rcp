@@ -1,0 +1,4 @@
+(:name random-quote
+:type emacswiki
+:description "chooses a random quote from a file"
+:website "http://www.emacswiki.org/emacs/download/random-quote.el")

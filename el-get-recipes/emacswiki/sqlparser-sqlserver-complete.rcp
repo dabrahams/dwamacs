@@ -1,0 +1,4 @@
+(:name sqlparser-sqlserver-complete
+:type emacswiki
+:description "complete tablename and columnname when editing sql -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/sqlparser-sqlserver-complete.el")

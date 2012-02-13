@@ -1,0 +1,4 @@
+(:name bc-mode
+:type emacswiki
+:description "BC code editing commands for Emacs"
+:website "http://www.emacswiki.org/emacs/download/bc-mode.el")

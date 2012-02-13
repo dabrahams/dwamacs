@@ -1,0 +1,4 @@
+(:name mon-empty-registers
+:type emacswiki
+:description "fill and empty register locations en masse."
+:website "http://www.emacswiki.org/emacs/download/mon-empty-registers.el")

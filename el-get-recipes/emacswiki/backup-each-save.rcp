@@ -1,0 +1,4 @@
+(:name backup-each-save
+:type emacswiki
+:description "backup each savepoint of a file"
+:website "http://www.emacswiki.org/emacs/download/backup-each-save.el")

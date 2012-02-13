@@ -1,0 +1,4 @@
+(:name sequential-command
+:type emacswiki
+:description "Many commands into one command"
+:website "http://www.emacswiki.org/emacs/download/sequential-command.el")

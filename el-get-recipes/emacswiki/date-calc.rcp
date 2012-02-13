@@ -1,0 +1,4 @@
+(:name date-calc
+:type emacswiki
+:description "date calculation and parsing routines"
+:website "http://www.emacswiki.org/emacs/download/date-calc.el")

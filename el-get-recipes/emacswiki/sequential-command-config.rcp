@@ -1,0 +1,4 @@
+(:name sequential-command-config
+:type emacswiki
+:description "Examples of sequential-command.el "
+:website "http://www.emacswiki.org/emacs/download/sequential-command-config.el")

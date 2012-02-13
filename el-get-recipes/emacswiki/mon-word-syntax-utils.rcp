@@ -1,0 +1,4 @@
+(:name mon-word-syntax-utils
+:type emacswiki
+:description "counting things with word syntax"
+:website "http://www.emacswiki.org/emacs/download/mon-word-syntax-utils.el")

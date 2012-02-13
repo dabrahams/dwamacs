@@ -1,0 +1,4 @@
+(:name mon-replacement-utils
+:type emacswiki
+:description "common regexp and subsitiution procedures "
+:website "http://www.emacswiki.org/emacs/download/mon-replacement-utils.el")

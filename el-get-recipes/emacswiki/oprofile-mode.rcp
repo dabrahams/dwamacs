@@ -1,0 +1,4 @@
+(:name oprofile-mode
+:type emacswiki
+:description "An oprofile callgraph viewer"
+:website "http://www.emacswiki.org/emacs/download/oprofile-mode.el")

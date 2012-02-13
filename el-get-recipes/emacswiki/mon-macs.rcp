@@ -1,0 +1,4 @@
+(:name mon-macs
+:type emacswiki
+:description "macros for use with mon-*utils features"
+:website "http://www.emacswiki.org/emacs/download/mon-macs.el")

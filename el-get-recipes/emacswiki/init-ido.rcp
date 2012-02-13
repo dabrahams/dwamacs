@@ -1,0 +1,4 @@
+(:name init-ido
+:type emacswiki
+:description "Ido configuration"
+:website "http://www.emacswiki.org/emacs/download/init-ido.el")

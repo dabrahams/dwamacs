@@ -1,0 +1,4 @@
+(:name lacarte
+:type emacswiki
+:description "Execute menu items as commands, with completion."
+:website "http://www.emacswiki.org/emacs/download/lacarte.el")

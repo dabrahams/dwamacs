@@ -1,0 +1,4 @@
+(:name mkhtml-htmlize
+:type emacswiki
+:description "HTML-ize font-lock buffers"
+:website "http://www.emacswiki.org/emacs/download/mkhtml-htmlize.el")

@@ -1,0 +1,4 @@
+(:name anything-obsolete
+:type emacswiki
+:description "obsolete functions of anything"
+:website "http://www.emacswiki.org/emacs/download/anything-obsolete.el")

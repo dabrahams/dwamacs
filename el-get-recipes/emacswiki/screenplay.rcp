@@ -1,0 +1,4 @@
+(:name screenplay
+:type emacswiki
+:description "support writing of plain text screen plays"
+:website "http://www.emacswiki.org/emacs/download/screenplay.el")

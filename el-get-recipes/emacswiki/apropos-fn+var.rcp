@@ -1,0 +1,4 @@
+(:name apropos-fn+var
+:type emacswiki
+:description "Apropos for functions and variables"
+:website "http://www.emacswiki.org/emacs/download/apropos-fn+var.el")

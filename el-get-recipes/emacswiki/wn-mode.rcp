@@ -1,0 +1,4 @@
+(:name wn-mode
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/wn-mode.el")

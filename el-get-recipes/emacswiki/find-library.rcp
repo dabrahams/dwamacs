@@ -1,0 +1,4 @@
+(:name find-library
+:type emacswiki
+:description "Find emacs-lisp library with completion"
+:website "http://www.emacswiki.org/emacs/download/find-library.el")

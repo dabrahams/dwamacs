@@ -1,0 +1,4 @@
+(:name wikify-ell
+:type emacswiki
+:description "Transform the ELL into a Wiki page."
+:website "http://www.emacswiki.org/emacs/download/wikify-ell.el")

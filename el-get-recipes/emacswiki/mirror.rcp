@@ -1,0 +1,4 @@
+(:name mirror
+:type emacswiki
+:description "Maintain a (remote) copy of a (local) file"
+:website "http://www.emacswiki.org/emacs/download/mirror.el")

@@ -1,0 +1,4 @@
+(:name multi-shell
+:type emacswiki
+:description "Multi-Shell Manager"
+:website "http://www.emacswiki.org/emacs/download/multi-shell.el")

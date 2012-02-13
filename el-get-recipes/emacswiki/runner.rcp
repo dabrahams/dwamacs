@@ -1,0 +1,4 @@
+(:name runner
+:type emacswiki
+:description "improved "open with" suggestions for dired ---"
+:website "http://www.emacswiki.org/emacs/download/runner.el")

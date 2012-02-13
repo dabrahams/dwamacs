@@ -1,0 +1,4 @@
+(:name rcirc-notify-mode
+:type emacswiki
+:description "an emacs buffer in rcirc-notify-mode major mode"
+:website "http://www.emacswiki.org/emacs/download/rcirc-notify-mode.el")

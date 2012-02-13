@@ -1,0 +1,4 @@
+(:name beginner
+:type emacswiki
+:description "simplify Emacs"
+:website "http://www.emacswiki.org/emacs/download/beginner.el")

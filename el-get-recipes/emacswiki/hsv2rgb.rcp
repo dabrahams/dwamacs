@@ -1,0 +1,4 @@
+(:name hsv2rgb
+:type emacswiki
+:description "Transformation from HSV to RGB"
+:website "http://www.emacswiki.org/emacs/download/hsv2rgb.el")

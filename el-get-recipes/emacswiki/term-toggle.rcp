@@ -1,0 +1,4 @@
+(:name term-toggle
+:type emacswiki
+:description "Toggle to and from the *terminal* buffer"
+:website "http://www.emacswiki.org/emacs/download/term-toggle.el")

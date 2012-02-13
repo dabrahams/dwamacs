@@ -1,0 +1,4 @@
+(:name encrypt
+:type emacswiki
+:description "encrypt and decrypt using coding system"
+:website "http://www.emacswiki.org/emacs/download/encrypt.el")

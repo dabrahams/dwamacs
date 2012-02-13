@@ -1,0 +1,4 @@
+(:name gtk-perl
+:type emacswiki
+:description "A minor mode to help write gtk-perl code"
+:website "http://www.emacswiki.org/emacs/download/gtk-perl.el")

@@ -1,0 +1,4 @@
+(:name face-list
+:type emacswiki
+:description "convenience functions for face customization"
+:website "http://www.emacswiki.org/emacs/download/face-list.el")

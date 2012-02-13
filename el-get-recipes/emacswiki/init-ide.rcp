@@ -1,0 +1,4 @@
+(:name init-ide
+:type emacswiki
+:description "IDE configuration"
+:website "http://www.emacswiki.org/emacs/download/init-ide.el")

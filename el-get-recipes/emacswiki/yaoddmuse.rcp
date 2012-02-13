@@ -1,0 +1,4 @@
+(:name yaoddmuse
+:type emacswiki
+:description "Yet another oddmuse for Emacs"
+:website "http://www.emacswiki.org/emacs/download/yaoddmuse.el")

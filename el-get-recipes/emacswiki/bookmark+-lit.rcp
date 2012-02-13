@@ -1,0 +1,4 @@
+(:name bookmark+-lit
+:type emacswiki
+:description "Bookmark highlighting for Bookmark+."
+:website "http://www.emacswiki.org/emacs/download/bookmark+-lit.el")

@@ -1,0 +1,4 @@
+(:name speck
+:type emacswiki
+:description "minor mode for spell checking"
+:website "http://www.emacswiki.org/emacs/download/speck.el")

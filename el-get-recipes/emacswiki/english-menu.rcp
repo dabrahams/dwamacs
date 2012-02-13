@@ -1,0 +1,4 @@
+(:name english-menu
+:type emacswiki
+:description "mule-menu template"
+:website "http://www.emacswiki.org/emacs/download/english-menu.el")

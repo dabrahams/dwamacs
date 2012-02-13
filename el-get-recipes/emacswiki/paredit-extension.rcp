@@ -1,0 +1,4 @@
+(:name paredit-extension
+:type emacswiki
+:description "Simple extension base on paredit.el"
+:website "http://www.emacswiki.org/emacs/download/paredit-extension.el")

@@ -1,0 +1,4 @@
+(:name auto-mark
+:type emacswiki
+:description "Mark automatically"
+:website "http://www.emacswiki.org/emacs/download/auto-mark.el")

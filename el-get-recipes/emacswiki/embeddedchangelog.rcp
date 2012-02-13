@@ -1,0 +1,4 @@
+(:name embeddedchangelog
+:type emacswiki
+:description "edit a change log embedded in a file"
+:website "http://www.emacswiki.org/emacs/download/embeddedchangelog.el")

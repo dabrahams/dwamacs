@@ -1,0 +1,4 @@
+(:name mon-string-utils
+:type emacswiki
+:description "string frobbing procedures for mon-*utils features"
+:website "http://www.emacswiki.org/emacs/download/mon-string-utils.el")

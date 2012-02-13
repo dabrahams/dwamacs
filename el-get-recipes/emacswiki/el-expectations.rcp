@@ -1,0 +1,4 @@
+(:name el-expectations
+:type emacswiki
+:description "minimalist unit testing framework"
+:website "http://www.emacswiki.org/emacs/download/el-expectations.el")

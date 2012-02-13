@@ -1,0 +1,4 @@
+(:name steno
+:type emacswiki
+:description "edit time-stamped entries in text notepads under Emacs."
+:website "http://www.emacswiki.org/emacs/download/steno.el")

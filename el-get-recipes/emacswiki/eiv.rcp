@@ -1,0 +1,4 @@
+(:name eiv
+:type emacswiki
+:description "emacs image viewer"
+:website "http://www.emacswiki.org/emacs/download/eiv.el")

@@ -1,0 +1,4 @@
+(:name paste2
+:type emacswiki
+:description "Simple interface for paste2.org"
+:website "http://www.emacswiki.org/emacs/download/paste2.el")

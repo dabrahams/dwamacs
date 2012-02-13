@@ -1,0 +1,4 @@
+(:name linkify
+:type emacswiki
+:description "Create clickable links to lines in files."
+:website "http://www.emacswiki.org/emacs/download/linkify.el")

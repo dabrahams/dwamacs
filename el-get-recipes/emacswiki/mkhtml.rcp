@@ -1,0 +1,4 @@
+(:name mkhtml
+:type emacswiki
+:description " Create HTML with links.  (Extensions to `htmlize.el'.)"
+:website "http://www.emacswiki.org/emacs/download/mkhtml.el")

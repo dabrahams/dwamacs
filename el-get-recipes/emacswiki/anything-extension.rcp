@@ -1,0 +1,4 @@
+(:name anything-extension
+:type emacswiki
+:description "Extension functions for anything.el"
+:website "http://www.emacswiki.org/emacs/download/anything-extension.el")

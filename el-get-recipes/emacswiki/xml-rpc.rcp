@@ -1,0 +1,4 @@
+(:name xml-rpc
+:type emacswiki
+:description "An elisp implementation of clientside XML-RPC"
+:website "http://www.emacswiki.org/emacs/download/xml-rpc.el")

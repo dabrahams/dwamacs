@@ -1,0 +1,4 @@
+(:name org-occur-goto
+:type emacswiki
+:description "search open org buffers with an occur interface"
+:website "http://www.emacswiki.org/emacs/download/org-occur-goto.el")

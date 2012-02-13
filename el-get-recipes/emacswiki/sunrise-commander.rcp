@@ -1,0 +1,4 @@
+(:name sunrise-commander
+:type emacswiki
+:description "two-pane file manager for Emacs based on Dired and inspired by MC"
+:website "http://www.emacswiki.org/emacs/download/sunrise-commander.el")

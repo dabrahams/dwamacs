@@ -1,0 +1,4 @@
+(:name anything-slime
+:type emacswiki
+:description "anything-sources and some utilities for SLIME."
+:website "http://www.emacswiki.org/emacs/download/anything-slime.el")

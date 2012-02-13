@@ -1,0 +1,4 @@
+(:name showtip
+:type emacswiki
+:description "Show tip at cursor"
+:website "http://www.emacswiki.org/emacs/download/showtip.el")

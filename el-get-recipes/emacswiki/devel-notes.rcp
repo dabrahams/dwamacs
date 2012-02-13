@@ -1,0 +1,4 @@
+(:name devel-notes
+:type emacswiki
+:description "Add annotation to sources and track them in an org file."
+:website "http://www.emacswiki.org/emacs/download/devel-notes.el")

@@ -1,0 +1,4 @@
+(:name extract-ical
+:type emacswiki
+:description "Import iCalendar events from buffers to OS X iCal"
+:website "http://www.emacswiki.org/emacs/download/extract-ical.el")

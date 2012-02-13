@@ -1,0 +1,4 @@
+(:name doi-extension
+:type emacswiki
+:description "Extension for doi.el"
+:website "http://www.emacswiki.org/emacs/download/doi-extension.el")

@@ -1,0 +1,4 @@
+(:name http-post-curl
+:type emacswiki
+:description "simple HTTP POST"
+:website "http://www.emacswiki.org/emacs/download/http-post-curl.el")

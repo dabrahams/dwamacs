@@ -1,0 +1,4 @@
+(:name inferior-apl
+:type emacswiki
+:description "Basic Apl (Aplus) in a buffer functionality"
+:website "http://www.emacswiki.org/emacs/download/inferior-apl.el")

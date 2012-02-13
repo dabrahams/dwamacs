@@ -1,0 +1,4 @@
+(:name dired-sort
+:type emacswiki
+:description "Sort files in dired."
+:website "http://www.emacswiki.org/emacs/download/dired-sort.el")

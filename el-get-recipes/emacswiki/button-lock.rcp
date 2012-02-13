@@ -1,0 +1,4 @@
+(:name button-lock
+:type emacswiki
+:description "clickable text defined by regular expression, controlled by font-lock"
+:website "http://www.emacswiki.org/emacs/download/button-lock.el")

@@ -1,0 +1,4 @@
+(:name init-icicles
+:type emacswiki
+:description "Config file for icicles.el"
+:website "http://www.emacswiki.org/emacs/download/init-icicles.el")

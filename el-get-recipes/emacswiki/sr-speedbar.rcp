@@ -1,0 +1,4 @@
+(:name sr-speedbar
+:type emacswiki
+:description "Same frame speedbar"
+:website "http://www.emacswiki.org/emacs/download/sr-speedbar.el")

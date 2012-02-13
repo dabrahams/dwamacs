@@ -1,0 +1,4 @@
+(:name superego
+:type emacswiki
+:description "highlight your name"
+:website "http://www.emacswiki.org/emacs/download/superego.el")

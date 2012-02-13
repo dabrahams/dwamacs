@@ -1,0 +1,4 @@
+(:name init-company-mode
+:type emacswiki
+:description "Company-mode configuration"
+:website "http://www.emacswiki.org/emacs/download/init-company-mode.el")

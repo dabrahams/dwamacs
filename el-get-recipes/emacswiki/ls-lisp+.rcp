@@ -1,0 +1,4 @@
+(:name ls-lisp+
+:type emacswiki
+:description "Enhancements of standard library `ls-lisp.el'."
+:website "http://www.emacswiki.org/emacs/download/ls-lisp+.el")

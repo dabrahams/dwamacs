@@ -1,0 +1,4 @@
+(:name scheme-complete
+:type emacswiki
+:description "Smart tab completion for Emacs"
+:website "http://www.emacswiki.org/emacs/download/scheme-complete.el")

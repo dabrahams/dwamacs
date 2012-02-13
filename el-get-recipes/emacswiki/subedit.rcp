@@ -1,0 +1,4 @@
+(:name subedit
+:type emacswiki
+:description "edit part of a buffer in a new buffer"
+:website "http://www.emacswiki.org/emacs/download/subedit.el")

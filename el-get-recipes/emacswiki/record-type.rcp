@@ -1,0 +1,4 @@
+(:name record-type
+:type emacswiki
+:description "Define record type for Emacs Lisp"
+:website "http://www.emacswiki.org/emacs/download/record-type.el")

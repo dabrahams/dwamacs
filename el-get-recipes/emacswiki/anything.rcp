@@ -1,0 +1,4 @@
+(:name anything
+:type emacswiki
+:description "open anything / QuickSilver-like candidate-selection framework"
+:website "http://www.emacswiki.org/emacs/download/anything.el")

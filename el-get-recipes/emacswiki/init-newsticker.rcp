@@ -1,0 +1,4 @@
+(:name init-newsticker
+:type emacswiki
+:description "Newsticker configuration"
+:website "http://www.emacswiki.org/emacs/download/init-newsticker.el")

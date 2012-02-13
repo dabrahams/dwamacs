@@ -1,0 +1,4 @@
+(:name replace-eval-xmas
+:type emacswiki
+:description "Xemacs port of gnu emacs query-replace-* functions."
+:website "http://www.emacswiki.org/emacs/download/replace-eval-xmas.el")

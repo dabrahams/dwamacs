@@ -1,0 +1,4 @@
+(:name anything-complete
+:type emacswiki
+:description "completion with anything"
+:website "http://www.emacswiki.org/emacs/download/anything-complete.el")

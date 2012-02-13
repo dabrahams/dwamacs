@@ -1,0 +1,4 @@
+(:name modeline-posn
+:type emacswiki
+:description "Set up `mode-line-position'."
+:website "http://www.emacswiki.org/emacs/download/modeline-posn.el")

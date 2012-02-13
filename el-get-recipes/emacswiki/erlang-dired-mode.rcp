@@ -1,0 +1,4 @@
+(:name erlang-dired-mode
+:type emacswiki
+:description "erlang dired mode    -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/erlang-dired-mode.el")

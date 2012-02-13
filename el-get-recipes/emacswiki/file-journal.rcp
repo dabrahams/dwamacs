@@ -1,0 +1,4 @@
+(:name file-journal
+:type emacswiki
+:description "revisit files by date"
+:website "http://www.emacswiki.org/emacs/download/file-journal.el")

@@ -1,0 +1,4 @@
+(:name rational
+:type emacswiki
+:description "Rational number in factorial-base format."
+:website "http://www.emacswiki.org/emacs/download/rational.el")

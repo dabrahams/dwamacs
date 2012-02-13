@@ -1,0 +1,4 @@
+(:name flashcard-sm5
+:type emacswiki
+:description "SuperMemo algorithm for Emacs flashcard"
+:website "http://www.emacswiki.org/emacs/download/flashcard-sm5.el")

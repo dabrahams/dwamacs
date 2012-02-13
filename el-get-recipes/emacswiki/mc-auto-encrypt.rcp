@@ -1,0 +1,4 @@
+(:name mc-auto-encrypt
+:type emacswiki
+:description "automatically encrypt and decrypt at file open and save"
+:website "http://www.emacswiki.org/emacs/download/mc-auto-encrypt.el")

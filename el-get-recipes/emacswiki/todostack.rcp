@@ -1,0 +1,4 @@
+(:name todostack
+:type emacswiki
+:description "keep a to-do list as a simple stack"
+:website "http://www.emacswiki.org/emacs/download/todostack.el")

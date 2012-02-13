@@ -1,0 +1,4 @@
+(:name mon-dir-locals-alist
+:type emacswiki
+:description "MON global vars bound to commonly used local-site paths"
+:website "http://www.emacswiki.org/emacs/download/mon-dir-locals-alist.el")

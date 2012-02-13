@@ -1,0 +1,4 @@
+(:name win-switch
+:type emacswiki
+:description "fast, dynamic bindings for window-switching/resizing"
+:website "http://www.emacswiki.org/emacs/download/win-switch.el")

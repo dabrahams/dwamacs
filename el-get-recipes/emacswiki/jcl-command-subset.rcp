@@ -1,0 +1,4 @@
+(:name jcl-command-subset
+:type emacswiki
+:description "Like M-x but with only a subset of commands."
+:website "http://www.emacswiki.org/emacs/download/jcl-command-subset.el")

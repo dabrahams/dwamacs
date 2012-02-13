@@ -1,0 +1,4 @@
+(:name latex-frame-mode
+:type emacswiki
+:description "minor mode for latex beamer geeks equipped with folding power"
+:website "http://www.emacswiki.org/emacs/download/latex-frame-mode.el")

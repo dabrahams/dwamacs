@@ -1,0 +1,4 @@
+(:name cycle-buffer
+:type emacswiki
+:description "select buffer by cycling through"
+:website "http://www.emacswiki.org/emacs/download/cycle-buffer.el")

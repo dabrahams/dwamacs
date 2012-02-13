@@ -1,0 +1,4 @@
+(:name finkinfo
+:type emacswiki
+:description "major mode for Fink package info files"
+:website "http://www.emacswiki.org/emacs/download/finkinfo.el")

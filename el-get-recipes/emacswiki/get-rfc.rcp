@@ -1,0 +1,4 @@
+(:name get-rfc
+:type emacswiki
+:description "Getting and viewing RFCs"
+:website "http://www.emacswiki.org/emacs/download/get-rfc.el")

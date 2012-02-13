@@ -1,0 +1,4 @@
+(:name wiki
+:type emacswiki
+:description "hypertext authoring the WikiWay"
+:website "http://www.emacswiki.org/emacs/download/wiki.el")

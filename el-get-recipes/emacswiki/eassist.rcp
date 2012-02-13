@@ -1,0 +1,4 @@
+(:name eassist
+:type emacswiki
+:description "EmacsAssist, C/C++/Java/Python/ELisp method/function navigator."
+:website "http://www.emacswiki.org/emacs/download/eassist.el")

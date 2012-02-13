@@ -1,0 +1,4 @@
+(:name outline-wiki
+:type emacswiki
+:description "An outline-based wiki-like mode"
+:website "http://www.emacswiki.org/emacs/download/outline-wiki.el")

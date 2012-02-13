@@ -1,0 +1,4 @@
+(:name wget-extension
+:type emacswiki
+:description "Some enhanced functions for wget.el"
+:website "http://www.emacswiki.org/emacs/download/wget-extension.el")

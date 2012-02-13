@@ -1,0 +1,4 @@
+(:name iy-go-to-char
+:type emacswiki
+:description "Go to next CHAR which is similar to "f" in vim"
+:website "http://www.emacswiki.org/emacs/download/iy-go-to-char.el")

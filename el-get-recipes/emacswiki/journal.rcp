@@ -1,0 +1,4 @@
+(:name journal
+:type emacswiki
+:description "The Emacs Journal"
+:website "http://www.emacswiki.org/emacs/download/journal.el")

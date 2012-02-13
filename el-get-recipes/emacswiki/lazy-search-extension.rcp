@@ -1,0 +1,4 @@
+(:name lazy-search-extension
+:type emacswiki
+:description "Lazy Search Extension"
+:website "http://www.emacswiki.org/emacs/download/lazy-search-extension.el")

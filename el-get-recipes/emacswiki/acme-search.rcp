@@ -1,0 +1,4 @@
+(:name acme-search
+:type emacswiki
+:description "right-click searching"
+:website "http://www.emacswiki.org/emacs/download/acme-search.el")

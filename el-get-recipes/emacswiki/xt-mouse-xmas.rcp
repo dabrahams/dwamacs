@@ -1,0 +1,4 @@
+(:name xt-mouse-xmas
+:type emacswiki
+:description "Xemacs port of xt-mouse.el - Support the mouse when emacs run in an xterm."
+:website "http://www.emacswiki.org/emacs/download/xt-mouse-xmas.el")

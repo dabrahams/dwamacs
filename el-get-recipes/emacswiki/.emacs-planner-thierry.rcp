@@ -1,0 +1,4 @@
+(:name .emacs-planner-thierry
+:type emacswiki
+:description "configuration planner, muse, remember pour laptop thierry"
+:website "http://www.emacswiki.org/emacs/download/.emacs-planner-thierry.el")

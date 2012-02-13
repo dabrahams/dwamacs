@@ -1,0 +1,4 @@
+(:name shell-history
+:type emacswiki
+:description "integration with shell history"
+:website "http://www.emacswiki.org/emacs/download/shell-history.el")

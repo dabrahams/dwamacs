@@ -1,0 +1,4 @@
+(:name plsql
+:type emacswiki
+:description "Programming support for PL/SQL code"
+:website "http://www.emacswiki.org/emacs/download/plsql.el")

@@ -1,0 +1,4 @@
+(:name tiling
+:type emacswiki
+:description "changing window layout"
+:website "http://www.emacswiki.org/emacs/download/tiling.el")

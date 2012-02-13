@@ -1,0 +1,4 @@
+(:name trantab
+:type emacswiki
+:description "translation table bundles"
+:website "http://www.emacswiki.org/emacs/download/trantab.el")

@@ -1,0 +1,4 @@
+(:name summarye
+:type emacswiki
+:description "list up matched strings from a buffer, and display them in summary buffer"
+:website "http://www.emacswiki.org/emacs/download/summarye.el")

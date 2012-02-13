@@ -1,0 +1,4 @@
+(:name simple+
+:type emacswiki
+:description "Extensions to standard library `simple.el'."
+:website "http://www.emacswiki.org/emacs/download/simple+.el")

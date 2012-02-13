@@ -1,0 +1,4 @@
+(:name savehist-20+
+:type emacswiki
+:description "Save minibuffer history."
+:website "http://www.emacswiki.org/emacs/download/savehist-20+.el")

@@ -1,0 +1,4 @@
+(:name bug
+:type emacswiki
+:description "A simple, alternative interface to the ant command line"
+:website "http://www.emacswiki.org/emacs/download/bug.el")

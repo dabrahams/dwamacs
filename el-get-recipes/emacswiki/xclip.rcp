@@ -1,0 +1,4 @@
+(:name xclip
+:type emacswiki
+:description "Emacs Interface to XClip"
+:website "http://www.emacswiki.org/emacs/download/xclip.el")

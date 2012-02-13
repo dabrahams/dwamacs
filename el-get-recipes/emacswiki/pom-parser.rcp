@@ -1,0 +1,4 @@
+(:name pom-parser
+:type emacswiki
+:description "Tools for using attributes from a Maven POM in JDE project files"
+:website "http://www.emacswiki.org/emacs/download/pom-parser.el")

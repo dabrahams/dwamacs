@@ -1,0 +1,4 @@
+(:name policy-switch
+:type emacswiki
+:description "Window configuration navigation utility."
+:website "http://www.emacswiki.org/emacs/download/policy-switch.el")

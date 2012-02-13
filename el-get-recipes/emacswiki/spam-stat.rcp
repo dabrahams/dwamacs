@@ -1,0 +1,4 @@
+(:name spam-stat
+:type emacswiki
+:description "detecting spam based on statistics"
+:website "http://www.emacswiki.org/emacs/download/spam-stat.el")

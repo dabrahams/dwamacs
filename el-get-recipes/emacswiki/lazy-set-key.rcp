@@ -1,0 +1,4 @@
+(:name lazy-set-key
+:type emacswiki
+:description "Lazy set keystroke."
+:website "http://www.emacswiki.org/emacs/download/lazy-set-key.el")

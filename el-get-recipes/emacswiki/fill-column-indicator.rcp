@@ -1,0 +1,4 @@
+(:name fill-column-indicator
+:type emacswiki
+:description "graphically indicate the fill column"
+:website "http://www.emacswiki.org/emacs/download/fill-column-indicator.el")

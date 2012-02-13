@@ -1,0 +1,4 @@
+(:name misc-cmds
+:type emacswiki
+:description "Miscellaneous commands (interactive functions)."
+:website "http://www.emacswiki.org/emacs/download/misc-cmds.el")

@@ -1,0 +1,4 @@
+(:name diameter-avp
+:type emacswiki
+:description "Compute diameter-avp in hexadecimal-form"
+:website "http://www.emacswiki.org/emacs/download/diameter-avp.el")

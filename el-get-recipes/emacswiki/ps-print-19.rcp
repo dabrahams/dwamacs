@@ -1,0 +1,4 @@
+(:name ps-print-19
+:type emacswiki
+:description "Print text from the buffer as PostScript"
+:website "http://www.emacswiki.org/emacs/download/ps-print-19.el")

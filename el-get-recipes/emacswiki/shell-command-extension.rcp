@@ -1,0 +1,4 @@
+(:name shell-command-extension
+:type emacswiki
+:description "Some extension for shell-command"
+:website "http://www.emacswiki.org/emacs/download/shell-command-extension.el")

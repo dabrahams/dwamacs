@@ -1,0 +1,4 @@
+(:name sml-modeline
+:type emacswiki
+:description "Show position in a scrollbar like way in mode-line"
+:website "http://www.emacswiki.org/emacs/download/sml-modeline.el")

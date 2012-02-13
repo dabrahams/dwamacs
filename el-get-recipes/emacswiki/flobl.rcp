@@ -1,0 +1,4 @@
+(:name flobl
+:type emacswiki
+:description "frame-local buffer list"
+:website "http://www.emacswiki.org/emacs/download/flobl.el")

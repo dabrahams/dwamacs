@@ -1,0 +1,4 @@
+(:name semantic-tag-folding
+:type emacswiki
+:description "semantic decoration style to enable folding of semantic tags"
+:website "http://www.emacswiki.org/emacs/download/semantic-tag-folding.el")

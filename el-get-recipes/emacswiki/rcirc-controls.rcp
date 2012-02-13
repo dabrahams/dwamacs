@@ -1,0 +1,4 @@
+(:name rcirc-controls
+:type emacswiki
+:description "control sequences"
+:website "http://www.emacswiki.org/emacs/download/rcirc-controls.el")

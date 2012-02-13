@@ -1,0 +1,4 @@
+(:name foo
+:type emacswiki
+:description "example file"
+:website "http://www.emacswiki.org/emacs/download/foo.el")

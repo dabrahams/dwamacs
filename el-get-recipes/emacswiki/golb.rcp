@@ -1,0 +1,4 @@
+(:name golb
+:type emacswiki
+:description "A simple blog and webpage generator"
+:website "http://www.emacswiki.org/emacs/download/golb.el")

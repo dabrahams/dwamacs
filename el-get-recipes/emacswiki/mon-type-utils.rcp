@@ -1,0 +1,4 @@
+(:name mon-type-utils
+:type emacswiki
+:description "procedures for interogating lisp objects"
+:website "http://www.emacswiki.org/emacs/download/mon-type-utils.el")

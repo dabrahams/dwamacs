@@ -1,0 +1,4 @@
+(:name help-mode+
+:type emacswiki
+:description "Extensions to `help-mode.el'"
+:website "http://www.emacswiki.org/emacs/download/help-mode+.el")

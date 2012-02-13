@@ -1,0 +1,4 @@
+(:name yari
+:type emacswiki
+:description "Yet Another RI interface for Emacs"
+:website "http://www.emacswiki.org/emacs/download/yari.el")

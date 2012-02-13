@@ -1,0 +1,4 @@
+(:name tabbar-ruler
+:type emacswiki
+:description "Setup tabbar to look pretty..."
+:website "http://www.emacswiki.org/emacs/download/tabbar-ruler.el")

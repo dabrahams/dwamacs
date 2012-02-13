@@ -1,0 +1,4 @@
+(:name byte-code-cache
+:type emacswiki
+:description "Compile files as they're used"
+:website "http://www.emacswiki.org/emacs/download/byte-code-cache.el")

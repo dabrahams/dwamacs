@@ -1,0 +1,4 @@
+(:name epubmode
+:type emacswiki
+:description "Minor mode for reading epub e-books in Emacs"
+:website "http://www.emacswiki.org/emacs/download/epubmode.el")

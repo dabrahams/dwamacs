@@ -1,0 +1,4 @@
+(:name face-remap+
+:type emacswiki
+:description "Extensions to standard library `face-remap.el'."
+:website "http://www.emacswiki.org/emacs/download/face-remap+.el")

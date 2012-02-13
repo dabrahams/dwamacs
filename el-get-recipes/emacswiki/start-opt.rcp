@@ -1,0 +1,4 @@
+(:name start-opt
+:type emacswiki
+:description "Some customizations to be done at the end of startup."
+:website "http://www.emacswiki.org/emacs/download/start-opt.el")

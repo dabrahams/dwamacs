@@ -1,0 +1,4 @@
+(:name window-number
+:type emacswiki
+:description "Select windows by numbers"
+:website "http://www.emacswiki.org/emacs/download/window-number.el")

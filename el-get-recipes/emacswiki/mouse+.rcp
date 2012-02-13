@@ -1,0 +1,4 @@
+(:name mouse+
+:type emacswiki
+:description "Extensions to `mouse.el'."
+:website "http://www.emacswiki.org/emacs/download/mouse+.el")

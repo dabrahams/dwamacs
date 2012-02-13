@@ -1,0 +1,4 @@
+(:name duplicate-line
+:type emacswiki
+:description "Easily dublicate a line"
+:website "http://www.emacswiki.org/emacs/download/duplicate-line.el")

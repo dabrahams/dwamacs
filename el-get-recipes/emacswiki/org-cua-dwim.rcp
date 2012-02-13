@@ -1,0 +1,4 @@
+(:name org-cua-dwim
+:type emacswiki
+:description "Org-mode and Cua mode compatibility layer"
+:website "http://www.emacswiki.org/emacs/download/org-cua-dwim.el")

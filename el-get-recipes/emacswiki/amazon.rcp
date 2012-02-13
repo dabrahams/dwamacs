@@ -1,0 +1,4 @@
+(:name amazon
+:type emacswiki
+:description "Emacs client for Amazon E-Commerce Service (i.e. use Emacs to search books on Amazon.com)"
+:website "http://www.emacswiki.org/emacs/download/amazon.el")

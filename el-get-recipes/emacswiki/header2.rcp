@@ -1,0 +1,4 @@
+(:name header2
+:type emacswiki
+:description "Support for creation and update of file headers."
+:website "http://www.emacswiki.org/emacs/download/header2.el")

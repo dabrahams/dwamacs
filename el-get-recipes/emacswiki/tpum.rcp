@@ -1,0 +1,4 @@
+(:name tpum
+:type emacswiki
+:description "Popup menus in text mode."
+:website "http://www.emacswiki.org/emacs/download/tpum.el")

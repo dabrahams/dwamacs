@@ -1,0 +1,4 @@
+(:name longlines
+:type emacswiki
+:description "automatically wrap long lines"
+:website "http://www.emacswiki.org/emacs/download/longlines.el")

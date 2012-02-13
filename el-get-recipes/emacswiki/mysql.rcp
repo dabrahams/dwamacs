@@ -1,0 +1,4 @@
+(:name mysql
+:type emacswiki
+:description "mysql front-end"
+:website "http://www.emacswiki.org/emacs/download/mysql.el")

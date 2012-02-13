@@ -1,0 +1,4 @@
+(:name help-dwim
+:type emacswiki
+:description "Show help information"
+:website "http://www.emacswiki.org/emacs/download/help-dwim.el")

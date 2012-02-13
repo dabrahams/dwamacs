@@ -1,0 +1,4 @@
+(:name ska-skel-matlab
+:type emacswiki
+:description "my matlab skeletons"
+:website "http://www.emacswiki.org/emacs/download/ska-skel-matlab.el")

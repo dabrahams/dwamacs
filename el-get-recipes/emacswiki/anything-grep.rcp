@@ -1,0 +1,4 @@
+(:name anything-grep
+:type emacswiki
+:description "search refinement of grep result with anything"
+:website "http://www.emacswiki.org/emacs/download/anything-grep.el")

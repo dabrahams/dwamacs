@@ -1,0 +1,4 @@
+(:name visws
+:type emacswiki
+:description "Make whitespace visible    -*- coding: latin-1 -*-"
+:website "http://www.emacswiki.org/emacs/download/visws.el")

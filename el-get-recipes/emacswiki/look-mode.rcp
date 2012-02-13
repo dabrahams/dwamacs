@@ -1,0 +1,4 @@
+(:name look-mode
+:type emacswiki
+:description "quick file viewer for image and text file browsing"
+:website "http://www.emacswiki.org/emacs/download/look-mode.el")

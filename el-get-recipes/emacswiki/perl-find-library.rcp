@@ -1,0 +1,4 @@
+(:name perl-find-library
+:type emacswiki
+:description "Functions for locating perl libraries on your system"
+:website "http://www.emacswiki.org/emacs/download/perl-find-library.el")

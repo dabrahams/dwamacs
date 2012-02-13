@@ -1,0 +1,4 @@
+(:name wgrep
+:type emacswiki
+:description "Writable grep buffer and apply the changes to files"
+:website "http://www.emacswiki.org/emacs/download/wgrep.el")

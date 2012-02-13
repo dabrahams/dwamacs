@@ -1,0 +1,4 @@
+(:name judge-indent
+:type emacswiki
+:description "judge indent and tab widths"
+:website "http://www.emacswiki.org/emacs/download/judge-indent.el")

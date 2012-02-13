@@ -1,0 +1,4 @@
+(:name festival
+:type emacswiki
+:description "emacs interface into festival."
+:website "http://www.emacswiki.org/emacs/download/festival.el")

@@ -1,0 +1,4 @@
+(:name bg-rlogin-setup
+:type emacswiki
+:description "Rlogin setup"
+:website "http://www.emacswiki.org/emacs/download/bg-rlogin-setup.el")

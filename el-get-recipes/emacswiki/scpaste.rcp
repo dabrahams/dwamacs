@@ -1,0 +1,4 @@
+(:name scpaste
+:type emacswiki
+:description "Paste to the web via scp."
+:website "http://www.emacswiki.org/emacs/download/scpaste.el")

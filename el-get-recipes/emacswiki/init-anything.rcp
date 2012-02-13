@@ -1,0 +1,4 @@
+(:name init-anything
+:type emacswiki
+:description "Anything configuration"
+:website "http://www.emacswiki.org/emacs/download/init-anything.el")

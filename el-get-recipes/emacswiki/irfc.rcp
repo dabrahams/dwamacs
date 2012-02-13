@@ -1,0 +1,4 @@
+(:name irfc
+:type emacswiki
+:description "Interface for IETF RFC document."
+:website "http://www.emacswiki.org/emacs/download/irfc.el")

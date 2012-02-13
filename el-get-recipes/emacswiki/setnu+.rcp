@@ -1,0 +1,4 @@
+(:name setnu+
+:type emacswiki
+:description "Extensions to `setnu.el'."
+:website "http://www.emacswiki.org/emacs/download/setnu+.el")

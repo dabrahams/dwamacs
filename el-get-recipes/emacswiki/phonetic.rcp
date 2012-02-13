@@ -1,0 +1,4 @@
+(:name phonetic
+:type emacswiki
+:description "Phonetize (Alpha, Bravo, Charlie...) the region"
+:website "http://www.emacswiki.org/emacs/download/phonetic.el")

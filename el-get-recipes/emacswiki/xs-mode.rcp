@@ -1,0 +1,4 @@
+(:name xs-mode
+:type emacswiki
+:description "A simple major mode for write perl XS code"
+:website "http://www.emacswiki.org/emacs/download/xs-mode.el")

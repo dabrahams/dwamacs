@@ -1,0 +1,4 @@
+(:name eform
+:type emacswiki
+:description "Web form like forms"
+:website "http://www.emacswiki.org/emacs/download/eform.el")

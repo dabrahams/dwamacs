@@ -1,0 +1,4 @@
+(:name wikidoc
+:type emacswiki
+:description "use elisp doc strings to make other documentation"
+:website "http://www.emacswiki.org/emacs/download/wikidoc.el")

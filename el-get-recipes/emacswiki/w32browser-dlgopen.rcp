@@ -1,0 +1,4 @@
+(:name w32browser-dlgopen
+:type emacswiki
+:description "Use w32browser with standard Windows Open File box."
+:website "http://www.emacswiki.org/emacs/download/w32browser-dlgopen.el")

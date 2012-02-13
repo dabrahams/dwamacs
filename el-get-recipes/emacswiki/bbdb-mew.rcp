@@ -1,0 +1,4 @@
+(:name bbdb-mew
+:type emacswiki
+:description "BBDB interface to Mew"
+:website "http://www.emacswiki.org/emacs/download/bbdb-mew.el")

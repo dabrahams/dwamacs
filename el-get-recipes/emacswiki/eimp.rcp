@@ -1,0 +1,4 @@
+(:name eimp
+:type emacswiki
+:description "Emacs Image Manipulation Package"
+:website "http://www.emacswiki.org/emacs/download/eimp.el")

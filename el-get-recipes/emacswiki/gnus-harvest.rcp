@@ -1,0 +1,4 @@
+(:name gnus-harvest
+:type emacswiki
+:description "Harvest e-mail address from read/written articles"
+:website "http://www.emacswiki.org/emacs/download/gnus-harvest.el")

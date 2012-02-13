@@ -1,0 +1,4 @@
+(:name slime-loads
+:type emacswiki
+:description "stub to indirect slime/swank configs on GNU"
+:website "http://www.emacswiki.org/emacs/download/slime-loads.el")

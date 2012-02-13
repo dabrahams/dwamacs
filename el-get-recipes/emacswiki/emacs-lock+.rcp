@@ -1,0 +1,4 @@
+(:name emacs-lock+
+:type emacswiki
+:description "extensions to standard library `emacs-lock.el'"
+:website "http://www.emacswiki.org/emacs/download/emacs-lock+.el")

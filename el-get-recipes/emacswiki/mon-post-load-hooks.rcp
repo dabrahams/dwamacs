@@ -1,0 +1,4 @@
+(:name mon-post-load-hooks
+:type emacswiki
+:description "fncns to perform after initializing MON Emacsen"
+:website "http://www.emacswiki.org/emacs/download/mon-post-load-hooks.el")

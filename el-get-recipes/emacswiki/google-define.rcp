@@ -1,0 +1,4 @@
+(:name google-define
+:type emacswiki
+:description "Pull definitions from google and displays them in a buffer."
+:website "http://www.emacswiki.org/emacs/download/google-define.el")

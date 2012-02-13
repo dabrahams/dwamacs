@@ -1,0 +1,4 @@
+(:name singlebind
+:type emacswiki
+:description "Bind commands to single characters"
+:website "http://www.emacswiki.org/emacs/download/singlebind.el")

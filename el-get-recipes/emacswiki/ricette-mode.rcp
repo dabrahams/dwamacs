@@ -1,0 +1,4 @@
+(:name ricette-mode
+:type emacswiki
+:description "vedere ricette"
+:website "http://www.emacswiki.org/emacs/download/ricette-mode.el")

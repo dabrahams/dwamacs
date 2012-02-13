@@ -1,0 +1,4 @@
+(:name gnuslog
+:type emacswiki
+:description "Gnus Splitting Log Facility"
+:website "http://www.emacswiki.org/emacs/download/gnuslog.el")

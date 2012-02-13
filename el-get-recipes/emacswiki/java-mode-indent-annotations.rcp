@@ -1,0 +1,4 @@
+(:name java-mode-indent-annotations
+:type emacswiki
+:description "Indentation for Java 5 annotations."
+:website "http://www.emacswiki.org/emacs/download/java-mode-indent-annotations.el")

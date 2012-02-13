@@ -1,0 +1,4 @@
+(:name framemove
+:type emacswiki
+:description "directional frame selection routines"
+:website "http://www.emacswiki.org/emacs/download/framemove.el")

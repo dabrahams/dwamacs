@@ -1,0 +1,4 @@
+(:name mc
+:type emacswiki
+:description "Midnight Commander emulation for emacs using dired"
+:website "http://www.emacswiki.org/emacs/download/mc.el")

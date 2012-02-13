@@ -1,0 +1,4 @@
+(:name a-menu
+:type emacswiki
+:description "create a menu from a specified directory"
+:website "http://www.emacswiki.org/emacs/download/a-menu.el")

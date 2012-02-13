@@ -1,0 +1,4 @@
+(:name minor-mode-hack
+:type emacswiki
+:description "Hack of minor-modes"
+:website "http://www.emacswiki.org/emacs/download/minor-mode-hack.el")

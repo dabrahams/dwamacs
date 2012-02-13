@@ -1,0 +1,4 @@
+(:name folding
+:type emacswiki
+:description "A folding-editor-like minor mode. [version 2.107]"
+:website "http://www.emacswiki.org/emacs/download/folding.el")

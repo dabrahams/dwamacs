@@ -1,0 +1,4 @@
+(:name double-type
+:type emacswiki
+:description "keyboard operation method corresponding to double click on a mouse."
+:website "http://www.emacswiki.org/emacs/download/double-type.el")

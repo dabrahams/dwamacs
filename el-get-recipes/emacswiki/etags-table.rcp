@@ -1,0 +1,4 @@
+(:name etags-table
+:type emacswiki
+:description "Set tags table(s) based on current file"
+:website "http://www.emacswiki.org/emacs/download/etags-table.el")

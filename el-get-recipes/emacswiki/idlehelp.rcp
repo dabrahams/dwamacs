@@ -1,0 +1,4 @@
+(:name idlehelp
+:type emacswiki
+:description "Display help when being idle."
+:website "http://www.emacswiki.org/emacs/download/idlehelp.el")

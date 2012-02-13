@@ -1,0 +1,4 @@
+(:name ipa
+:type emacswiki
+:description "In-place annotations"
+:website "http://www.emacswiki.org/emacs/download/ipa.el")

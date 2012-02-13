@@ -1,0 +1,4 @@
+(:name recentf-ext
+:type emacswiki
+:description "Recentf extensions"
+:website "http://www.emacswiki.org/emacs/download/recentf-ext.el")

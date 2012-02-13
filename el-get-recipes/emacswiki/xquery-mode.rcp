@@ -1,0 +1,4 @@
+(:name xquery-mode
+:type emacswiki
+:description "A simple mode for editing xquery programs"
+:website "http://www.emacswiki.org/emacs/download/xquery-mode.el")

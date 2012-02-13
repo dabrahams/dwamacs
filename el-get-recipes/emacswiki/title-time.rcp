@@ -1,0 +1,4 @@
+(:name title-time
+:type emacswiki
+:description "like display-time but in the title-bar"
+:website "http://www.emacswiki.org/emacs/download/title-time.el")

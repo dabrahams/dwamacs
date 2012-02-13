@@ -1,0 +1,4 @@
+(:name message-x
+:type emacswiki
+:description "customizable completion in message headers"
+:website "http://www.emacswiki.org/emacs/download/message-x.el")

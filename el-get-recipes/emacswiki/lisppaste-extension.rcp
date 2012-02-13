@@ -1,0 +1,4 @@
+(:name lisppaste-extension
+:type emacswiki
+:description "Some extension for lisppaste"
+:website "http://www.emacswiki.org/emacs/download/lisppaste-extension.el")

@@ -1,0 +1,4 @@
+(:name festival-extension
+:type emacswiki
+:description "Simple festival extension for festival.el"
+:website "http://www.emacswiki.org/emacs/download/festival-extension.el")

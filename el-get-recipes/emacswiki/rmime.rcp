@@ -1,0 +1,4 @@
+(:name rmime
+:type emacswiki
+:description "read MIME messages"
+:website "http://www.emacswiki.org/emacs/download/rmime.el")

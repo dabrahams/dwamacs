@@ -1,0 +1,4 @@
+(:name sunrise-x-popviewer
+:type emacswiki
+:description "floating viewer window for the Sunrise Commander"
+:website "http://www.emacswiki.org/emacs/download/sunrise-x-popviewer.el")

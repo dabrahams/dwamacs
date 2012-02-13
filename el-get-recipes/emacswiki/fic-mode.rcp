@@ -1,0 +1,4 @@
+(:name fic-mode
+:type emacswiki
+:description "Show FIXME/TODO/BUG/KLUDGE in special face only in comments and strings"
+:website "http://www.emacswiki.org/emacs/download/fic-mode.el")

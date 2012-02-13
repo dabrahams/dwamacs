@@ -1,0 +1,4 @@
+(:name display-buffer-for-wide-screen
+:type emacswiki
+:description "Set `display-buffer-function' for wide-screen display"
+:website "http://www.emacswiki.org/emacs/download/display-buffer-for-wide-screen.el")

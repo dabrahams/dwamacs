@@ -1,0 +1,4 @@
+(:name thingatpt+
+:type emacswiki
+:description "Extensions to `thingatpt.el'."
+:website "http://www.emacswiki.org/emacs/download/thingatpt+.el")

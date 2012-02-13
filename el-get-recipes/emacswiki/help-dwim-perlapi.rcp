@@ -1,0 +1,4 @@
+(:name help-dwim-perlapi
+:type emacswiki
+:description "Show help of perlapi"
+:website "http://www.emacswiki.org/emacs/download/help-dwim-perlapi.el")

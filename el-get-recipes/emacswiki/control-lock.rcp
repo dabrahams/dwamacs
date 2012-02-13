@@ -1,0 +1,4 @@
+(:name control-lock
+:type emacswiki
+:description "Like caps-lock, but for your control key.  Give your pinky a rest!"
+:website "http://www.emacswiki.org/emacs/download/control-lock.el")

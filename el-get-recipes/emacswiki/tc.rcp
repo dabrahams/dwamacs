@@ -1,0 +1,4 @@
+(:name tc
+:type emacswiki
+:description "cite text with proper filling"
+:website "http://www.emacswiki.org/emacs/download/tc.el")

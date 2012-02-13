@@ -1,0 +1,4 @@
+(:name rcirc
+:type emacswiki
+:description "emacs irc client"
+:website "http://www.emacswiki.org/emacs/download/rcirc.el")

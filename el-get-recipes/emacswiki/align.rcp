@@ -1,0 +1,4 @@
+(:name align
+:type emacswiki
+:description "aling text seperated by whitespaces in columns"
+:website "http://www.emacswiki.org/emacs/download/align.el")

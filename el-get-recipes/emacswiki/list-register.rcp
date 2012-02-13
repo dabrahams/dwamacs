@@ -1,0 +1,4 @@
+(:name list-register
+:type emacswiki
+:description "List register"
+:website "http://www.emacswiki.org/emacs/download/list-register.el")

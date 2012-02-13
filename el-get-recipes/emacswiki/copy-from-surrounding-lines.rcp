@@ -1,0 +1,4 @@
+(:name copy-from-surrounding-lines
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/copy-from-surrounding-lines.el")

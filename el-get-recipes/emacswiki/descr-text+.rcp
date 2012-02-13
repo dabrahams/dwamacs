@@ -1,0 +1,4 @@
+(:name descr-text+
+:type emacswiki
+:description "Extensions to `descr-text.el'."
+:website "http://www.emacswiki.org/emacs/download/descr-text+.el")

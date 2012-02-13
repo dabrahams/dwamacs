@@ -1,0 +1,4 @@
+(:name erc-babel
+:type emacswiki
+:description "communicate in different languages with ERC, using automatic translation"
+:website "http://www.emacswiki.org/emacs/download/erc-babel.el")

@@ -1,0 +1,4 @@
+(:name emacs-init-check
+:type emacswiki
+:description "Automatic init file checker"
+:website "http://www.emacswiki.org/emacs/download/emacs-init-check.el")

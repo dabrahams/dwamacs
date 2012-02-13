@@ -1,0 +1,4 @@
+(:name blank-mode
+:type emacswiki
+:description "minor mode to visualize TAB, (HARD) SPACE, NEWLINE"
+:website "http://www.emacswiki.org/emacs/download/blank-mode.el")

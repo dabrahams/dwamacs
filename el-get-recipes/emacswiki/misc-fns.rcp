@@ -1,0 +1,4 @@
+(:name misc-fns
+:type emacswiki
+:description "Miscellaneous non-interactive functions."
+:website "http://www.emacswiki.org/emacs/download/misc-fns.el")

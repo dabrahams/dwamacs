@@ -1,0 +1,4 @@
+(:name wcy-complete
+:type emacswiki
+:description "extremely simple version of tempo, not as powerful as tempo. "
+:website "http://www.emacswiki.org/emacs/download/wcy-complete.el")

@@ -1,0 +1,4 @@
+(:name wikitext-mode
+:type emacswiki
+:description "Mode for editing Wikitexts"
+:website "http://www.emacswiki.org/emacs/download/wikitext-mode.el")

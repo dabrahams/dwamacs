@@ -1,0 +1,4 @@
+(:name flymake-extension
+:type emacswiki
+:description "Some extension for flymake"
+:website "http://www.emacswiki.org/emacs/download/flymake-extension.el")

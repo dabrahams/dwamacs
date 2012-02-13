@@ -1,0 +1,4 @@
+(:name symlink-fix
+:type emacswiki
+:description "Remove symbolic links from file pathnames."
+:website "http://www.emacswiki.org/emacs/download/symlink-fix.el")

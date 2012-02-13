@@ -1,0 +1,4 @@
+(:name google-define-redux
+:type emacswiki
+:description "extends google-define.el "
+:website "http://www.emacswiki.org/emacs/download/google-define-redux.el")

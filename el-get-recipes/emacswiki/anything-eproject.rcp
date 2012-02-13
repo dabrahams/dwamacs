@@ -1,0 +1,4 @@
+(:name anything-eproject
+:type emacswiki
+:description "Anything integration for eproject."
+:website "http://www.emacswiki.org/emacs/download/anything-eproject.el")

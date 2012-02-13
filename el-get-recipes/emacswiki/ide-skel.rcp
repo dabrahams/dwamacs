@@ -1,0 +1,4 @@
+(:name ide-skel
+:type emacswiki
+:description "IDE skeleton for Emacs Lisp hackers"
+:website "http://www.emacswiki.org/emacs/download/ide-skel.el")

@@ -1,0 +1,4 @@
+(:name imapua
+:type emacswiki
+:description "a purely IMAP based email client for EMACS"
+:website "http://www.emacswiki.org/emacs/download/imapua.el")

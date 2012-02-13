@@ -1,0 +1,4 @@
+(:name log-buffer
+:type emacswiki
+:description "Log buffer utils"
+:website "http://www.emacswiki.org/emacs/download/log-buffer.el")

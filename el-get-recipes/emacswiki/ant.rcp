@@ -1,0 +1,4 @@
+(:name ant
+:type emacswiki
+:description "A major mode for editing ant files."
+:website "http://www.emacswiki.org/emacs/download/ant.el")

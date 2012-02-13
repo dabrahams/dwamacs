@@ -1,0 +1,4 @@
+(:name linum+
+:type emacswiki
+:description "Extension of linum"
+:website "http://www.emacswiki.org/emacs/download/linum+.el")

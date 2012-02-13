@@ -1,0 +1,4 @@
+(:name diff+
+:type emacswiki
+:description "Extensions to `diff.el' for Emacs 21 and later."
+:website "http://www.emacswiki.org/emacs/download/diff+.el")

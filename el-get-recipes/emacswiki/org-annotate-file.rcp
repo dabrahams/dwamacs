@@ -1,0 +1,4 @@
+(:name org-annotate-file
+:type emacswiki
+:description "Annotate a file with org syntax"
+:website "http://www.emacswiki.org/emacs/download/org-annotate-file.el")

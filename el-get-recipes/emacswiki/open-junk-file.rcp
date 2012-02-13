@@ -1,0 +1,4 @@
+(:name open-junk-file
+:type emacswiki
+:description "Open a junk (memo) file to try-and-error"
+:website "http://www.emacswiki.org/emacs/download/open-junk-file.el")

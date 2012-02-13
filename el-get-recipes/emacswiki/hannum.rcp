@@ -1,0 +1,4 @@
+(:name hannum
+:type emacswiki
+:description "convert han number  -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/hannum.el")

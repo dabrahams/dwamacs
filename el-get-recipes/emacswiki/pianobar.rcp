@@ -1,0 +1,4 @@
+(:name pianobar
+:type emacswiki
+:description "Run Pandora as an inferior process in emacs by using pianobar"
+:website "http://www.emacswiki.org/emacs/download/pianobar.el")

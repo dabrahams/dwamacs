@@ -1,0 +1,4 @@
+(:name ac-R
+:type emacswiki
+:description "Autocompletion routines for R"
+:website "http://www.emacswiki.org/emacs/download/ac-R.el")

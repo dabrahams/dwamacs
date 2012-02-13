@@ -1,0 +1,4 @@
+(:name scilab
+:type emacswiki
+:description "SCILAB INTEGRATED SHELL, EDITING AND  HELP in GNU-Emacs/Xemacs "
+:website "http://www.emacswiki.org/emacs/download/scilab.el")

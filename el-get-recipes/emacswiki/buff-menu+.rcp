@@ -1,0 +1,4 @@
+(:name buff-menu+
+:type emacswiki
+:description "Extensions to `buff-menu.el'.    -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/buff-menu+.el")

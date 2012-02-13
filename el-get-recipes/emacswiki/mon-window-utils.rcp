@@ -1,0 +1,4 @@
+(:name mon-window-utils
+:type emacswiki
+:description "window related procedures for mon-*utils features"
+:website "http://www.emacswiki.org/emacs/download/mon-window-utils.el")

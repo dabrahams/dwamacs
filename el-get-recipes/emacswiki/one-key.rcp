@@ -1,0 +1,4 @@
+(:name one-key
+:type emacswiki
+:description "One key"
+:website "http://www.emacswiki.org/emacs/download/one-key.el")

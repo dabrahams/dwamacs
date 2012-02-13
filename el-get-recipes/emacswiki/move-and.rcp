@@ -1,0 +1,4 @@
+(:name move-and
+:type emacswiki
+:description "Move point and perform some other action"
+:website "http://www.emacswiki.org/emacs/download/move-and.el")

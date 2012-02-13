@@ -1,0 +1,4 @@
+(:name wc
+:type emacswiki
+:description "count words"
+:website "http://www.emacswiki.org/emacs/download/wc.el")

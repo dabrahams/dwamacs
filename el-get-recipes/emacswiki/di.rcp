@@ -1,0 +1,4 @@
+(:name di
+:type emacswiki
+:description "Simple directory editor for GNU Emacs"
+:website "http://www.emacswiki.org/emacs/download/di.el")

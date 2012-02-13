@@ -1,0 +1,4 @@
+(:name w3m-session
+:type emacswiki
+:description "Persistent emacs-w3m sessions"
+:website "http://www.emacswiki.org/emacs/download/w3m-session.el")

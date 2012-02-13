@@ -1,0 +1,4 @@
+(:name el-get
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/el-get.el")

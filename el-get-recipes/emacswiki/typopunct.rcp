@@ -1,0 +1,4 @@
+(:name typopunct
+:type emacswiki
+:description "Automatic typographical punctuation marks"
+:website "http://www.emacswiki.org/emacs/download/typopunct.el")

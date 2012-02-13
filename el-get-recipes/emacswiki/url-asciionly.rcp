@@ -1,0 +1,4 @@
+(:name url-asciionly
+:type emacswiki
+:description "ffap url handling workaround"
+:website "http://www.emacswiki.org/emacs/download/url-asciionly.el")

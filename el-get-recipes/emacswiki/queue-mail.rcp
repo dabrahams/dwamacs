@@ -1,0 +1,4 @@
+(:name queue-mail
+:type emacswiki
+:description "Queue draft e-mail in a directory"
+:website "http://www.emacswiki.org/emacs/download/queue-mail.el")

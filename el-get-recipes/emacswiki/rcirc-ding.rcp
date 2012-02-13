@@ -1,0 +1,4 @@
+(:name rcirc-ding
+:type emacswiki
+:description "do something such as beep on channel activity"
+:website "http://www.emacswiki.org/emacs/download/rcirc-ding.el")

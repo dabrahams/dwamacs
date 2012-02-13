@@ -1,0 +1,4 @@
+(:name ascii-table
+:type emacswiki
+:description "simple ASCII table"
+:website "http://www.emacswiki.org/emacs/download/ascii-table.el")

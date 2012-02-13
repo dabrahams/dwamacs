@@ -1,0 +1,4 @@
+(:name anything-show-completion
+:type emacswiki
+:description "Show selection in buffer for anything completion"
+:website "http://www.emacswiki.org/emacs/download/anything-show-completion.el")

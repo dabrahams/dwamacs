@@ -1,0 +1,4 @@
+(:name tal-mode
+:type emacswiki
+:description "Handles the Tandem/NSK/Guardian TAL & PTAL languages."
+:website "http://www.emacswiki.org/emacs/download/tal-mode.el")

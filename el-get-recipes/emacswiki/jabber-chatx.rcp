@@ -1,0 +1,4 @@
+(:name jabber-chatx
+:type emacswiki
+:description "Add the ability to remember and extract old messages"
+:website "http://www.emacswiki.org/emacs/download/jabber-chatx.el")

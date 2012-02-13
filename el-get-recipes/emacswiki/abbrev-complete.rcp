@@ -1,0 +1,4 @@
+(:name abbrev-complete
+:type emacswiki
+:description "Abbrev mode completion function"
+:website "http://www.emacswiki.org/emacs/download/abbrev-complete.el")

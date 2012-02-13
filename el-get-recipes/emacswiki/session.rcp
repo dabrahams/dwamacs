@@ -1,0 +1,4 @@
+(:name session
+:type emacswiki
+:description "use variables, registers and buffer places across sessions"
+:website "http://www.emacswiki.org/emacs/download/session.el")

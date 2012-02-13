@@ -1,0 +1,4 @@
+(:name jpl-reformat
+:type emacswiki
+:description "Reformat source code, especially parameter"
+:website "http://www.emacswiki.org/emacs/download/jpl-reformat.el")

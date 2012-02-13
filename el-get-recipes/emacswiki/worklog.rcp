@@ -1,0 +1,4 @@
+(:name worklog
+:type emacswiki
+:description ""
+:website "http://www.emacswiki.org/emacs/download/worklog.el")

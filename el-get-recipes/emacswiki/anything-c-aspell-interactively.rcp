@@ -1,0 +1,4 @@
+(:name anything-c-aspell-interactively
+:type emacswiki
+:description "Interactive aspell with `anything'."
+:website "http://www.emacswiki.org/emacs/download/anything-c-aspell-interactively.el")

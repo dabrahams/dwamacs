@@ -1,0 +1,4 @@
+(:name imenu+
+:type emacswiki
+:description "Extensions to `imenu.el'."
+:website "http://www.emacswiki.org/emacs/download/imenu+.el")

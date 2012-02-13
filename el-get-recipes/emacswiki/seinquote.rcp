@@ -1,0 +1,4 @@
+(:name seinquote
+:type emacswiki
+:description "Seinfeld Quotes"
+:website "http://www.emacswiki.org/emacs/download/seinquote.el")

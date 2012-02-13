@@ -1,0 +1,4 @@
+(:name icicles-chg
+:type emacswiki
+:description "Change logs for Icicles libraries."
+:website "http://www.emacswiki.org/emacs/download/icicles-chg.el")

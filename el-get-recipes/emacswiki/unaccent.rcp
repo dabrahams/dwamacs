@@ -1,0 +1,4 @@
+(:name unaccent
+:type emacswiki
+:description "Functions dealing with accented characters."
+:website "http://www.emacswiki.org/emacs/download/unaccent.el")

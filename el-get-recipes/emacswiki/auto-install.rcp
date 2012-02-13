@@ -1,0 +1,4 @@
+(:name auto-install
+:type emacswiki
+:description "Auto install elisp file"
+:website "http://www.emacswiki.org/emacs/download/auto-install.el")

@@ -1,0 +1,4 @@
+(:name erc-robot
+:type emacswiki
+:description "A robot for ERC."
+:website "http://www.emacswiki.org/emacs/download/erc-robot.el")

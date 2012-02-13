@@ -1,0 +1,4 @@
+(:name gmail-message-send-mail
+:type emacswiki
+:description "advice for that function to use gmail smtp when appropriate"
+:website "http://www.emacswiki.org/emacs/download/gmail-message-send-mail.el")

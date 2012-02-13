@@ -1,0 +1,4 @@
+(:name grep-ed
+:type emacswiki
+:description "Edit the results of a grep"
+:website "http://www.emacswiki.org/emacs/download/grep-ed.el")

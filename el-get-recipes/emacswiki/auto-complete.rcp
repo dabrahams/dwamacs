@@ -1,0 +1,4 @@
+(:name auto-complete
+:type emacswiki
+:description "Inline auto completion"
+:website "http://www.emacswiki.org/emacs/download/auto-complete.el")

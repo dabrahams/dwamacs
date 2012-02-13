@@ -1,0 +1,4 @@
+(:name pc-keys
+:type emacswiki
+:description "Smart `home' and `end' keys."
+:website "http://www.emacswiki.org/emacs/download/pc-keys.el")

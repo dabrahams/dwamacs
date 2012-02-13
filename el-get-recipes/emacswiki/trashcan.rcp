@@ -1,0 +1,4 @@
+(:name trashcan
+:type emacswiki
+:description "A recoverable file deletion system"
+:website "http://www.emacswiki.org/emacs/download/trashcan.el")

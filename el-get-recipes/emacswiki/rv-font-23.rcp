@@ -1,0 +1,4 @@
+(:name rv-font-23
+:type emacswiki
+:description "set font(cjk) for emacs-23"
+:website "http://www.emacswiki.org/emacs/download/rv-font-23.el")

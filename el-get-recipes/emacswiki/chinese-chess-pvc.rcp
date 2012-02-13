@@ -1,0 +1,4 @@
+(:name chinese-chess-pvc
+:type emacswiki
+:description "a chinese chess computer player -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/chinese-chess-pvc.el")

@@ -1,0 +1,4 @@
+(:name text-translator-vars
+:type emacswiki
+:description "Text Translator"
+:website "http://www.emacswiki.org/emacs/download/text-translator-vars.el")

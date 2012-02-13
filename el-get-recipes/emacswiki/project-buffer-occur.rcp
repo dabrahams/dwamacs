@@ -1,0 +1,4 @@
+(:name project-buffer-occur
+:type emacswiki
+:description "Occur functionality for Project Mode"
+:website "http://www.emacswiki.org/emacs/download/project-buffer-occur.el")

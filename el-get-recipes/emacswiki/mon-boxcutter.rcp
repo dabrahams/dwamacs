@@ -1,0 +1,4 @@
+(:name mon-boxcutter
+:type emacswiki
+:description "w32 screencaptures from Emacs"
+:website "http://www.emacswiki.org/emacs/download/mon-boxcutter.el")

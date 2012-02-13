@@ -1,0 +1,4 @@
+(:name rcirc-groups
+:type emacswiki
+:description "an emacs buffer in rcirc-groups major mode"
+:website "http://www.emacswiki.org/emacs/download/rcirc-groups.el")

@@ -1,0 +1,4 @@
+(:name bibtex-utils
+:type emacswiki
+:description "utilities for BibTeX"
+:website "http://www.emacswiki.org/emacs/download/bibtex-utils.el")

@@ -1,0 +1,4 @@
+(:name rdict
+:type emacswiki
+:description "Interface to rus<->eng online dictionary."
+:website "http://www.emacswiki.org/emacs/download/rdict.el")

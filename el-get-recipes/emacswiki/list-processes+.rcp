@@ -1,0 +1,4 @@
+(:name list-processes+
+:type emacswiki
+:description "Add process management to `list-processes'"
+:website "http://www.emacswiki.org/emacs/download/list-processes+.el")

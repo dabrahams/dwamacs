@@ -1,0 +1,4 @@
+(:name emacs-init
+:type emacswiki
+:description "Drew Adams's Emacs init file."
+:website "http://www.emacswiki.org/emacs/download/emacs-init.el")

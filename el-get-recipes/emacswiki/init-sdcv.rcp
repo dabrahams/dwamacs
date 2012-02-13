@@ -1,0 +1,4 @@
+(:name init-sdcv
+:type emacswiki
+:description "Configuration file for sdcv.el"
+:website "http://www.emacswiki.org/emacs/download/init-sdcv.el")

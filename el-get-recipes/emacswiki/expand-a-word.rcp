@@ -1,0 +1,4 @@
+(:name expand-a-word
+:type emacswiki
+:description "expand-a-word"
+:website "http://www.emacswiki.org/emacs/download/expand-a-word.el")

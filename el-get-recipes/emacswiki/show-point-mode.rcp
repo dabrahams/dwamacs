@@ -1,0 +1,4 @@
+(:name show-point-mode
+:type emacswiki
+:description "show point position in status bar"
+:website "http://www.emacswiki.org/emacs/download/show-point-mode.el")

@@ -1,0 +1,4 @@
+(:name protbuf
+:type emacswiki
+:description "protect buffers from accidental killing"
+:website "http://www.emacswiki.org/emacs/download/protbuf.el")

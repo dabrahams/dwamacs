@@ -1,0 +1,4 @@
+(:name emdroid
+:type emacswiki
+:description "Android Wrappers for Emacs"
+:website "http://www.emacswiki.org/emacs/download/emdroid.el")

@@ -1,0 +1,4 @@
+(:name cssh
+:type emacswiki
+:description "clusterssh implementation for emacs"
+:website "http://www.emacswiki.org/emacs/download/cssh.el")

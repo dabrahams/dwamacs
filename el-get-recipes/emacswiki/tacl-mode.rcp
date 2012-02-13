@@ -1,0 +1,4 @@
+(:name tacl-mode
+:type emacswiki
+:description "Handles the Tandem/NSK/Guardian TACL language."
+:website "http://www.emacswiki.org/emacs/download/tacl-mode.el")

@@ -1,0 +1,4 @@
+(:name gnus-propfont
+:type emacswiki
+:description " adding faces to *Article* buffer in Gnus "
+:website "http://www.emacswiki.org/emacs/download/gnus-propfont.el")

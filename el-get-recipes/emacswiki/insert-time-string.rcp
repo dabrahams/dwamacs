@@ -1,0 +1,4 @@
+(:name insert-time-string
+:type emacswiki
+:description "Insert the current time. -*- coding: utf-8; -*-"
+:website "http://www.emacswiki.org/emacs/download/insert-time-string.el")

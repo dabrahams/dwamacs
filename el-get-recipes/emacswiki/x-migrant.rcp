@@ -1,0 +1,4 @@
+(:name x-migrant
+:type emacswiki
+:description "Support for subprocesses handling remote X displays"
+:website "http://www.emacswiki.org/emacs/download/x-migrant.el")

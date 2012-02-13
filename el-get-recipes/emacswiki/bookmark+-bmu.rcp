@@ -1,0 +1,4 @@
+(:name bookmark+-bmu
+:type emacswiki
+:description "Bookmark+ code for the `*Bookmark List*' (bmenu)."
+:website "http://www.emacswiki.org/emacs/download/bookmark+-bmu.el")

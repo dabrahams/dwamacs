@@ -1,0 +1,4 @@
+(:name sql-transform
+:type emacswiki
+:description "transform SQL statements"
+:website "http://www.emacswiki.org/emacs/download/sql-transform.el")

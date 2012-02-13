@@ -1,0 +1,4 @@
+(:name cyrillic-win
+:type emacswiki
+:description "support for Cyrillic-CP1251 -*- coding: iso-2022-7bit; -*-"
+:website "http://www.emacswiki.org/emacs/download/cyrillic-win.el")

@@ -1,0 +1,4 @@
+(:name sql-completion
+:type emacswiki
+:description "Completion in *SQL* for mysql"
+:website "http://www.emacswiki.org/emacs/download/sql-completion.el")

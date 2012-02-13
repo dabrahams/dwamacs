@@ -1,0 +1,4 @@
+(:name poker
+:type emacswiki
+:description "A simple poker game for Emacs"
+:website "http://www.emacswiki.org/emacs/download/poker.el")

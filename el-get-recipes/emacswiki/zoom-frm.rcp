@@ -1,0 +1,4 @@
+(:name zoom-frm
+:type emacswiki
+:description "Commands to zoom frame font size."
+:website "http://www.emacswiki.org/emacs/download/zoom-frm.el")

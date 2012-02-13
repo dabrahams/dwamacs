@@ -1,0 +1,4 @@
+(:name idle-scroll
+:type emacswiki
+:description "scroll down a line when Emacs is idle"
+:website "http://www.emacswiki.org/emacs/download/idle-scroll.el")

@@ -1,0 +1,4 @@
+(:name newsticker-extension
+:type emacswiki
+:description "Some extension function for newsticker"
+:website "http://www.emacswiki.org/emacs/download/newsticker-extension.el")

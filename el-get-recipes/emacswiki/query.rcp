@@ -1,0 +1,4 @@
+(:name query
+:type emacswiki
+:description "Functions to query the user"
+:website "http://www.emacswiki.org/emacs/download/query.el")

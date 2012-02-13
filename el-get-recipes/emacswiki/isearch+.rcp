@@ -1,0 +1,4 @@
+(:name isearch+
+:type emacswiki
+:description "Extensions to `isearch.el'."
+:website "http://www.emacswiki.org/emacs/download/isearch+.el")

@@ -1,0 +1,4 @@
+(:name tagbody
+:type emacswiki
+:description "Common Lisp `tagbody' for Emacs Lisp"
+:website "http://www.emacswiki.org/emacs/download/tagbody.el")

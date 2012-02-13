@@ -1,0 +1,4 @@
+(:name cc-mode+
+:type emacswiki
+:description "Extensions to `c-mode.el' & `cc-mode.el'."
+:website "http://www.emacswiki.org/emacs/download/cc-mode+.el")

@@ -1,0 +1,4 @@
+(:name mon-buffer-utils
+:type emacswiki
+:description "buffer related procedures for mon-*utils features"
+:website "http://www.emacswiki.org/emacs/download/mon-buffer-utils.el")

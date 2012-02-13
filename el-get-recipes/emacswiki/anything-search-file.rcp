@@ -1,0 +1,4 @@
+(:name anything-search-file
+:type emacswiki
+:description "Search file by locate or find."
+:website "http://www.emacswiki.org/emacs/download/anything-search-file.el")

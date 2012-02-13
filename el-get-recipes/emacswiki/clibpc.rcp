@@ -1,0 +1,4 @@
+(:name clibpc
+:type emacswiki
+:description "partial complete functions for c libraries"
+:website "http://www.emacswiki.org/emacs/download/clibpc.el")

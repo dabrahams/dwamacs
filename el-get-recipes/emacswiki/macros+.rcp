@@ -1,0 +1,4 @@
+(:name macros+
+:type emacswiki
+:description "Extensions to `macros.el'."
+:website "http://www.emacswiki.org/emacs/download/macros+.el")

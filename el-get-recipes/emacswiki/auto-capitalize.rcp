@@ -1,0 +1,4 @@
+(:name auto-capitalize
+:type emacswiki
+:description "Automatically capitalize (or upcase) words"
+:website "http://www.emacswiki.org/emacs/download/auto-capitalize.el")

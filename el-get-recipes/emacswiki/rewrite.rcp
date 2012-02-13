@@ -1,0 +1,4 @@
+(:name rewrite
+:type emacswiki
+:description " Utility to rewrite text files with easier regular expression handling"
+:website "http://www.emacswiki.org/emacs/download/rewrite.el")

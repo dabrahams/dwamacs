@@ -1,0 +1,4 @@
+(:name cruisecontrol
+:type emacswiki
+:description "Talking to a cruisecontrol server with emacs"
+:website "http://www.emacswiki.org/emacs/download/cruisecontrol.el")

@@ -1,0 +1,4 @@
+(:name basic-edit-toolkit
+:type emacswiki
+:description "Basic edit toolkit."
+:website "http://www.emacswiki.org/emacs/download/basic-edit-toolkit.el")

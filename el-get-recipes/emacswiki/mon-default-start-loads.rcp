@@ -1,0 +1,4 @@
+(:name mon-default-start-loads
+:type emacswiki
+:description "fncns for initializing MON Emacs environment"
+:website "http://www.emacswiki.org/emacs/download/mon-default-start-loads.el")

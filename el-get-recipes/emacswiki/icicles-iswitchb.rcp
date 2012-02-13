@@ -1,0 +1,4 @@
+(:name icicles-iswitchb
+:type emacswiki
+:description "Using iswitchb with Icicles"
+:website "http://www.emacswiki.org/emacs/download/icicles-iswitchb.el")

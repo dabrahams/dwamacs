@@ -1,0 +1,4 @@
+(:name init-erc
+:type emacswiki
+:description "Configuration for erc"
+:website "http://www.emacswiki.org/emacs/download/init-erc.el")

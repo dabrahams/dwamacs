@@ -1,0 +1,4 @@
+(:name ruby-test
+:type emacswiki
+:description "Test runner for ruby unit tests."
+:website "http://www.emacswiki.org/emacs/download/ruby-test.el")

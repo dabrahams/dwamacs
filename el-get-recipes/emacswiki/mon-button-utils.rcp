@@ -1,0 +1,4 @@
+(:name mon-button-utils
+:type emacswiki
+:description "utilities for examining button properties"
+:website "http://www.emacswiki.org/emacs/download/mon-button-utils.el")

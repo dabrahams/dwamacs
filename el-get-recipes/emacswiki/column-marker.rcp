@@ -1,0 +1,4 @@
+(:name column-marker
+:type emacswiki
+:description "Highlight certain character columns"
+:website "http://www.emacswiki.org/emacs/download/column-marker.el")

@@ -1,0 +1,4 @@
+(:name sunrise-x-w32-addons
+:type emacswiki
+:description "MS-Windows-specific utilities for the Sunrise Commander File Manager"
+:website "http://www.emacswiki.org/emacs/download/sunrise-x-w32-addons.el")

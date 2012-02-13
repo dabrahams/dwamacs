@@ -1,0 +1,4 @@
+(:name oddmuse-curl
+:type emacswiki
+:description "edit pages on an Oddmuse wiki using curl"
+:website "http://www.emacswiki.org/emacs/download/oddmuse-curl.el")

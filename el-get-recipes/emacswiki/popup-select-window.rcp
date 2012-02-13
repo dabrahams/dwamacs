@@ -1,0 +1,4 @@
+(:name popup-select-window
+:type emacswiki
+:description "selecting a window by popup-menu*"
+:website "http://www.emacswiki.org/emacs/download/popup-select-window.el")

@@ -1,0 +1,4 @@
+(:name amigo
+:type emacswiki
+:description "interface with friendfeed.com"
+:website "http://www.emacswiki.org/emacs/download/amigo.el")

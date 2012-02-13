@@ -1,0 +1,4 @@
+(:name dired-filetype-face
+:type emacswiki
+:description "set different faces for different filetype in dired buffer."
+:website "http://www.emacswiki.org/emacs/download/dired-filetype-face.el")

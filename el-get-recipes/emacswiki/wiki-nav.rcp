@@ -1,0 +1,4 @@
+(:name wiki-nav
+:type emacswiki
+:description "simple file navigation using [[WikiStrings]]"
+:website "http://www.emacswiki.org/emacs/download/wiki-nav.el")

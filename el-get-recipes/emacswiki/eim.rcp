@@ -1,0 +1,4 @@
+(:name eim
+:type emacswiki
+:description "emacs input method"
+:website "http://www.emacswiki.org/emacs/download/eim.el")

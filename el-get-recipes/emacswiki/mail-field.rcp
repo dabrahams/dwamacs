@@ -1,0 +1,4 @@
+(:name mail-field
+:type emacswiki
+:description "Emulate Sun mailtool field movement"
+:website "http://www.emacswiki.org/emacs/download/mail-field.el")

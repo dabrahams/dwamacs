@@ -1,0 +1,4 @@
+(:name batch-mode
+:type emacswiki
+:description "major mode for editing ESRI batch scrips"
+:website "http://www.emacswiki.org/emacs/download/batch-mode.el")

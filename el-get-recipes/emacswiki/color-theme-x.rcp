@@ -1,0 +1,4 @@
+(:name color-theme-x
+:type emacswiki
+:description "convert color themes to X11 resource settings"
+:website "http://www.emacswiki.org/emacs/download/color-theme-x.el")

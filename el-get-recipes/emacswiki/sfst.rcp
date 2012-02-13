@@ -1,0 +1,4 @@
+(:name sfst
+:type emacswiki
+:description "major mode for editing SFST files"
+:website "http://www.emacswiki.org/emacs/download/sfst.el")

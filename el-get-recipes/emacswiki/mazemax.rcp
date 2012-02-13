@@ -1,0 +1,4 @@
+(:name mazemax
+:type emacswiki
+:description "labyrinth generation and exploration"
+:website "http://www.emacswiki.org/emacs/download/mazemax.el")

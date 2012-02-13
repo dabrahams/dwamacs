@@ -1,0 +1,4 @@
+(:name joccur
+:type emacswiki
+:description "An improved 'occur' implementation."
+:website "http://www.emacswiki.org/emacs/download/joccur.el")

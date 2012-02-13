@@ -1,0 +1,4 @@
+(:name md-readme
+:type emacswiki
+:description "Markdown-formatted READMEs for your ELisp"
+:website "http://www.emacswiki.org/emacs/download/md-readme.el")

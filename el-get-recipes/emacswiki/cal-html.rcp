@@ -1,0 +1,4 @@
+(:name cal-html
+:type emacswiki
+:description "calendar functions for printing calendars with HTML."
+:website "http://www.emacswiki.org/emacs/download/cal-html.el")

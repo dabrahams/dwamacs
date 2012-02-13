@@ -1,0 +1,4 @@
+(:name color-browser
+:type emacswiki
+:description "A utility for designing Emacs color themes."
+:website "http://www.emacswiki.org/emacs/download/color-browser.el")

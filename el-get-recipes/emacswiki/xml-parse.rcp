@@ -1,0 +1,4 @@
+(:name xml-parse
+:type emacswiki
+:description "code to efficiently read/write XML data with Elisp"
+:website "http://www.emacswiki.org/emacs/download/xml-parse.el")

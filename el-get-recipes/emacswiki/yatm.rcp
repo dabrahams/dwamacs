@@ -1,0 +1,4 @@
+(:name yatm
+:type emacswiki
+:description "Yet Another Text Menu"
+:website "http://www.emacswiki.org/emacs/download/yatm.el")

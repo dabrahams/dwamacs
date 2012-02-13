@@ -1,0 +1,4 @@
+(:name versions
+:type emacswiki
+:description "version string comparison"
+:website "http://www.emacswiki.org/emacs/download/versions.el")

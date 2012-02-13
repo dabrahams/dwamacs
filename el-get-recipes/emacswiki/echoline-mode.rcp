@@ -1,0 +1,4 @@
+(:name echoline-mode
+:type emacswiki
+:description "A minor mode for octave which highlights "echoing" lines"
+:website "http://www.emacswiki.org/emacs/download/echoline-mode.el")

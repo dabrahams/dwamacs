@@ -1,0 +1,4 @@
+(:name notify
+:type emacswiki
+:description "notification front-end"
+:website "http://www.emacswiki.org/emacs/download/notify.el")

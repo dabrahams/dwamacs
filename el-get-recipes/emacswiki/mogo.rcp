@@ -1,0 +1,4 @@
+(:name mogo
+:type emacswiki
+:description "Simple MoGo client"
+:website "http://www.emacswiki.org/emacs/download/mogo.el")

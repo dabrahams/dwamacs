@@ -1,0 +1,4 @@
+(:name lnk
+:type emacswiki
+:description "Follow Microsoft Explorer shortcuts"
+:website "http://www.emacswiki.org/emacs/download/lnk.el")

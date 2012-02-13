@@ -1,0 +1,4 @@
+(:name tooltip-help
+:type emacswiki
+:description "show help as tooltip"
+:website "http://www.emacswiki.org/emacs/download/tooltip-help.el")

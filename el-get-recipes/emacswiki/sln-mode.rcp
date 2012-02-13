@@ -1,0 +1,4 @@
+(:name sln-mode
+:type emacswiki
+:description "Create a project-buffer using sln file"
+:website "http://www.emacswiki.org/emacs/download/sln-mode.el")

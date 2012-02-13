@@ -1,0 +1,4 @@
+(:name gtk2hs
+:type emacswiki
+:description "This is tools package for gtk2hs"
+:website "http://www.emacswiki.org/emacs/download/gtk2hs.el")

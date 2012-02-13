@@ -1,0 +1,4 @@
+(:name track-scroll
+:type emacswiki
+:description "Enable direct scrolling with the mouse"
+:website "http://www.emacswiki.org/emacs/download/track-scroll.el")

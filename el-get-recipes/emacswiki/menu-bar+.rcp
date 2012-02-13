@@ -1,0 +1,4 @@
+(:name menu-bar+
+:type emacswiki
+:description "Extensions to `menu-bar.el'."
+:website "http://www.emacswiki.org/emacs/download/menu-bar+.el")

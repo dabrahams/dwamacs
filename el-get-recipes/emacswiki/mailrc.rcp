@@ -1,0 +1,4 @@
+(:name mailrc
+:type emacswiki
+:description "edit mailrc aliases"
+:website "http://www.emacswiki.org/emacs/download/mailrc.el")

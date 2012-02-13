@@ -1,0 +1,4 @@
+(:name bookmark+-key
+:type emacswiki
+:description "Bookmark+ key and menu bindings."
+:website "http://www.emacswiki.org/emacs/download/bookmark+-key.el")

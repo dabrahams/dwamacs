@@ -1,0 +1,4 @@
+(:name simple-emacswiki
+:type emacswiki
+:description "edit emacswiki.org within Emacs"
+:website "http://www.emacswiki.org/emacs/download/simple-emacswiki.el")

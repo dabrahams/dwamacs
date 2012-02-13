@@ -1,0 +1,4 @@
+(:name mgrep
+:type emacswiki
+:description "Search in the directory previously specified"
+:website "http://www.emacswiki.org/emacs/download/mgrep.el")

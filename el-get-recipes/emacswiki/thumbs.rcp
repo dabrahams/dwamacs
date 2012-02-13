@@ -1,0 +1,4 @@
+(:name thumbs
+:type emacswiki
+:description "Thumbnails previewer for images files"
+:website "http://www.emacswiki.org/emacs/download/thumbs.el")

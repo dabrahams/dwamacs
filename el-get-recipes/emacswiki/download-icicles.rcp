@@ -1,0 +1,4 @@
+(:name download-icicles
+:type emacswiki
+:description "Download the Icicles Package"
+:website "http://www.emacswiki.org/emacs/download/download-icicles.el")

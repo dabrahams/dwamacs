@@ -1,0 +1,4 @@
+(:name imdbs
+:type emacswiki
+:description "compute movies statistic using your imdb vote history"
+:website "http://www.emacswiki.org/emacs/download/imdbs.el")

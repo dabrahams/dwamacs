@@ -1,0 +1,4 @@
+(:name dgpg
+:type emacswiki
+:description "David's GPG Extensions for Emacs"
+:website "http://www.emacswiki.org/emacs/download/dgpg.el")

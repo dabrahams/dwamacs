@@ -1,0 +1,4 @@
+(:name msgcodes
+:type emacswiki
+:description "common and rare Usenet message "encodings""
+:website "http://www.emacswiki.org/emacs/download/msgcodes.el")

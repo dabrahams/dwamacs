@@ -1,0 +1,4 @@
+(:name ess-edit
+:type emacswiki
+:description "convenient editing of R code"
+:website "http://www.emacswiki.org/emacs/download/ess-edit.el")

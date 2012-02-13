@@ -1,0 +1,4 @@
+(:name anything-c-shell-history
+:type emacswiki
+:description "shell history anything.el interface"
+:website "http://www.emacswiki.org/emacs/download/anything-c-shell-history.el")

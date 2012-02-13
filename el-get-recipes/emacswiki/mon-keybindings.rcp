@@ -1,0 +1,4 @@
+(:name mon-keybindings
+:type emacswiki
+:description "MON keybindings for fncns used across sites"
+:website "http://www.emacswiki.org/emacs/download/mon-keybindings.el")

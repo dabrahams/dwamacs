@@ -1,0 +1,4 @@
+(:name org-json
+:type emacswiki
+:description "conversion between org and json"
+:website "http://www.emacswiki.org/emacs/download/org-json.el")

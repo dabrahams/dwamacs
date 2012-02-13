@@ -1,0 +1,4 @@
+(:name emoticons
+:type emacswiki
+:description "Replace text with emoticons"
+:website "http://www.emacswiki.org/emacs/download/emoticons.el")

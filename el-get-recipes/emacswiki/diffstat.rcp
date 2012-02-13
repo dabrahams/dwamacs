@@ -1,0 +1,4 @@
+(:name diffstat
+:type emacswiki
+:description "a mode for showing the summary of diff"
+:website "http://www.emacswiki.org/emacs/download/diffstat.el")

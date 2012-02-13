@@ -1,0 +1,4 @@
+(:name duck
+:type emacswiki
+:description "A few utilities for Scheme programming"
+:website "http://www.emacswiki.org/emacs/download/duck.el")

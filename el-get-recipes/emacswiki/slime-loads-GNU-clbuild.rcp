@@ -1,0 +1,4 @@
+(:name slime-loads-GNU-clbuild
+:type emacswiki
+:description "conform slime/swank to current environment"
+:website "http://www.emacswiki.org/emacs/download/slime-loads-GNU-clbuild.el")

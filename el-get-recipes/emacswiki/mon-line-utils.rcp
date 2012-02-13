@@ -1,0 +1,4 @@
+(:name mon-line-utils
+:type emacswiki
+:description "line centric procedures for mon-*utils features"
+:website "http://www.emacswiki.org/emacs/download/mon-line-utils.el")

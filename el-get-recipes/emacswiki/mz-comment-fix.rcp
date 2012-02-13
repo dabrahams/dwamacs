@@ -1,0 +1,4 @@
+(:name mz-comment-fix
+:type emacswiki
+:description "fixes nested comments for XML and other languages"
+:website "http://www.emacswiki.org/emacs/download/mz-comment-fix.el")

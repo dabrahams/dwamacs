@@ -1,0 +1,4 @@
+(:name sticky
+:type emacswiki
+:description "Sticky key for capital letters"
+:website "http://www.emacswiki.org/emacs/download/sticky.el")

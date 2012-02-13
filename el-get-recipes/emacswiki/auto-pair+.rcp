@@ -1,0 +1,4 @@
+(:name auto-pair+
+:type emacswiki
+:description "Autopair handler to extend Autopair behavior."
+:website "http://www.emacswiki.org/emacs/download/auto-pair+.el")

@@ -1,0 +1,4 @@
+(:name finder+
+:type emacswiki
+:description "Extensions to standard library finder.el"
+:website "http://www.emacswiki.org/emacs/download/finder+.el")

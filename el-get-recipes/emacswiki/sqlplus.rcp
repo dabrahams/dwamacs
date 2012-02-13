@@ -1,0 +1,4 @@
+(:name sqlplus
+:type emacswiki
+:description "User friendly interface to SQL*Plus and support for PL/SQL compilation"
+:website "http://www.emacswiki.org/emacs/download/sqlplus.el")

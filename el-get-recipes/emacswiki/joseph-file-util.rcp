@@ -1,0 +1,4 @@
+(:name joseph-file-util
+:type emacswiki
+:description "Function library about file and directory."
+:website "http://www.emacswiki.org/emacs/download/joseph-file-util.el")

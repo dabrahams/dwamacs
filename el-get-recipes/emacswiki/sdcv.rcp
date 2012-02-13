@@ -1,0 +1,4 @@
+(:name sdcv
+:type emacswiki
+:description "Interface for sdcv (StartDict console version)."
+:website "http://www.emacswiki.org/emacs/download/sdcv.el")

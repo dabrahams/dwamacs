@@ -1,0 +1,4 @@
+(:name alarm
+:type emacswiki
+:description "Alarm"
+:website "http://www.emacswiki.org/emacs/download/alarm.el")

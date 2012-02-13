@@ -1,0 +1,4 @@
+(:name init-haskell
+:type emacswiki
+:description "Haskell configuration"
+:website "http://www.emacswiki.org/emacs/download/init-haskell.el")

@@ -1,0 +1,4 @@
+(:name rect-mark
+:type emacswiki
+:description "Mark a rectangle of text with highlighting."
+:website "http://www.emacswiki.org/emacs/download/rect-mark.el")

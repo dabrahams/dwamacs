@@ -1,0 +1,4 @@
+(:name pretty-mode
+:type emacswiki
+:description "redisplay parts of the buffer as pretty symbols"
+:website "http://www.emacswiki.org/emacs/download/pretty-mode.el")

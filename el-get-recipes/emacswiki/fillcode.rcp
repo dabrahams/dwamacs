@@ -1,0 +1,4 @@
+(:name fillcode
+:type emacswiki
+:description "Fillcode minor mode"
+:website "http://www.emacswiki.org/emacs/download/fillcode.el")

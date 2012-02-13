@@ -1,0 +1,4 @@
+(:name deferred
+:type emacswiki
+:description "Simple asynchronous functions for emacs lisp"
+:website "http://www.emacswiki.org/emacs/download/deferred.el")

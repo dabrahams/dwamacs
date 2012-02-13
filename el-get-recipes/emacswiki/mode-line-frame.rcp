@@ -1,0 +1,4 @@
+(:name mode-line-frame
+:type emacswiki
+:description "Create information frame like mode-line^"
+:website "http://www.emacswiki.org/emacs/download/mode-line-frame.el")

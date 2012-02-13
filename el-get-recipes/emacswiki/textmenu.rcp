@@ -1,0 +1,4 @@
+(:name textmenu
+:type emacswiki
+:description "alternate text mode access to menu-bar"
+:website "http://www.emacswiki.org/emacs/download/textmenu.el")

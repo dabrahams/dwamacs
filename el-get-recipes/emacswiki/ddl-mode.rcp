@@ -1,0 +1,4 @@
+(:name ddl-mode
+:type emacswiki
+:description "Handles the Tandem-Compaq-HP DDL language."
+:website "http://www.emacswiki.org/emacs/download/ddl-mode.el")

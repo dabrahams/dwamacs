@@ -1,0 +1,4 @@
+(:name mon-rectangle-utils
+:type emacswiki
+:description "procedures for manipulating rectangles"
+:website "http://www.emacswiki.org/emacs/download/mon-rectangle-utils.el")

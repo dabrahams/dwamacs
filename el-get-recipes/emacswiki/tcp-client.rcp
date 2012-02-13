@@ -1,0 +1,4 @@
+(:name tcp-client
+:type emacswiki
+:description "Providing a network interface"
+:website "http://www.emacswiki.org/emacs/download/tcp-client.el")

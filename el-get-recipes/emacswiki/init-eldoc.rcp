@@ -1,0 +1,4 @@
+(:name init-eldoc
+:type emacswiki
+:description "Eldoc configuration"
+:website "http://www.emacswiki.org/emacs/download/init-eldoc.el")

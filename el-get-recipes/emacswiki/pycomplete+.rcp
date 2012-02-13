@@ -1,0 +1,4 @@
+(:name pycomplete+
+:type emacswiki
+:description "complete symbols at point using Pymacs"
+:website "http://www.emacswiki.org/emacs/download/pycomplete+.el")

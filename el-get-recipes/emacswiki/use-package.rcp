@@ -1,0 +1,4 @@
+(:name use-package
+:type emacswiki
+:description "Arrange use of an elisp package"
+:website "http://www.emacswiki.org/emacs/download/use-package.el")

@@ -1,0 +1,4 @@
+(:name anything-emms
+:type emacswiki
+:description "Integrate EMMS with `anything.el'"
+:website "http://www.emacswiki.org/emacs/download/anything-emms.el")

@@ -1,0 +1,4 @@
+(:name oneonone
+:type emacswiki
+:description "Frame configuration that uses one frame per window."
+:website "http://www.emacswiki.org/emacs/download/oneonone.el")

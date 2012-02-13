@@ -1,0 +1,4 @@
+(:name eight-puzzle
+:type emacswiki
+:description "A simple little puzzle game"
+:website "http://www.emacswiki.org/emacs/download/eight-puzzle.el")

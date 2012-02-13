@@ -1,0 +1,4 @@
+(:name sql-indent
+:type emacswiki
+:description "indentation of SQL statements"
+:website "http://www.emacswiki.org/emacs/download/sql-indent.el")

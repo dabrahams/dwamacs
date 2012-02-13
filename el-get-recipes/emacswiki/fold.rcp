@@ -1,0 +1,4 @@
+(:name fold
+:type emacswiki
+:description "Folding"
+:website "http://www.emacswiki.org/emacs/download/fold.el")

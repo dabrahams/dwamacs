@@ -1,0 +1,4 @@
+(:name jswat
+:type emacswiki
+:description "JDEE interface to JSwat"
+:website "http://www.emacswiki.org/emacs/download/jswat.el")

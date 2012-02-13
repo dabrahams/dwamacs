@@ -1,0 +1,4 @@
+(:name browse-kill-ring
+:type emacswiki
+:description "interactively insert items from kill-ring -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/browse-kill-ring.el")

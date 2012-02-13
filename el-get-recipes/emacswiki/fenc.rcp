@@ -1,0 +1,4 @@
+(:name fenc
+:type emacswiki
+:description "Detect CJK coding system by counting most frequence charaters"
+:website "http://www.emacswiki.org/emacs/download/fenc.el")

@@ -1,0 +1,4 @@
+(:name php-doc
+:type emacswiki
+:description "Php document helper"
+:website "http://www.emacswiki.org/emacs/download/php-doc.el")

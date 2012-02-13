@@ -1,0 +1,4 @@
+(:name oicq
+:type emacswiki
+:description "A front-end to perl OICQ"
+:website "http://www.emacswiki.org/emacs/download/oicq.el")

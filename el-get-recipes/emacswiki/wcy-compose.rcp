@@ -1,0 +1,4 @@
+(:name wcy-compose
+:type emacswiki
+:description "some helper function that is not defined by default"
+:website "http://www.emacswiki.org/emacs/download/wcy-compose.el")

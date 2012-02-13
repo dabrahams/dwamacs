@@ -1,0 +1,4 @@
+(:name php-completion
+:type emacswiki
+:description "complete everything PHP with Anything.el"
+:website "http://www.emacswiki.org/emacs/download/php-completion.el")

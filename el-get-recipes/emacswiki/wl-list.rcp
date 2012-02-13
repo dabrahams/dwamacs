@@ -1,0 +1,4 @@
+(:name wl-list
+:type emacswiki
+:description "List all W3M buffers."
+:website "http://www.emacswiki.org/emacs/download/wl-list.el")

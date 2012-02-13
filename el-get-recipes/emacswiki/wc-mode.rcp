@@ -1,0 +1,4 @@
+(:name wc-mode
+:type emacswiki
+:description "show length of buffer in status bar"
+:website "http://www.emacswiki.org/emacs/download/wc-mode.el")

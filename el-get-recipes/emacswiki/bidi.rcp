@@ -1,0 +1,4 @@
+(:name bidi
+:type emacswiki
+:description "bidi support for Emacs"
+:website "http://www.emacswiki.org/emacs/download/bidi.el")

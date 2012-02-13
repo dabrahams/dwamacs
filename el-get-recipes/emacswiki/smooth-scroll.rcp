@@ -1,0 +1,4 @@
+(:name smooth-scroll
+:type emacswiki
+:description "Minor mode for smooth scrolling."
+:website "http://www.emacswiki.org/emacs/download/smooth-scroll.el")

@@ -1,0 +1,4 @@
+(:name swbuff-x
+:type emacswiki
+:description "Modifications to David Ponce's swbuff"
+:website "http://www.emacswiki.org/emacs/download/swbuff-x.el")

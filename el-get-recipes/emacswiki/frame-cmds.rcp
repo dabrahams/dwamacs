@@ -1,0 +1,4 @@
+(:name frame-cmds
+:type emacswiki
+:description "Frame and window commands (interactive functions)."
+:website "http://www.emacswiki.org/emacs/download/frame-cmds.el")

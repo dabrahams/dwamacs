@@ -1,0 +1,4 @@
+(:name edi-mode
+:type emacswiki
+:description "edit raw EDI files"
+:website "http://www.emacswiki.org/emacs/download/edi-mode.el")

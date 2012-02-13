@@ -1,0 +1,4 @@
+(:name gnus-notify+
+:type emacswiki
+:description "Gnus notify"
+:website "http://www.emacswiki.org/emacs/download/gnus-notify+.el")

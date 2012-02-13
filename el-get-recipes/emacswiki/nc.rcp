@@ -1,0 +1,4 @@
+(:name nc
+:type emacswiki
+:description "emulate famos ms-dog file browser"
+:website "http://www.emacswiki.org/emacs/download/nc.el")

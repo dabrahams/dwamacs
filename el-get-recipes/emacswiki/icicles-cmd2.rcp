@@ -1,0 +1,4 @@
+(:name icicles-cmd2
+:type emacswiki
+:description "Top-level commands for Icicles"
+:website "http://www.emacswiki.org/emacs/download/icicles-cmd2.el")

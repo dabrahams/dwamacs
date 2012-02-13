@@ -1,0 +1,4 @@
+(:name lorem-ipsum
+:type emacswiki
+:description "Insert dummy pseudo Latin text."
+:website "http://www.emacswiki.org/emacs/download/lorem-ipsum.el")

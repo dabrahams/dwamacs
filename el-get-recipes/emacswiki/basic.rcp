@@ -1,0 +1,4 @@
+(:name basic
+:type emacswiki
+:description "major mode for editing basic and visual basic code"
+:website "http://www.emacswiki.org/emacs/download/basic.el")

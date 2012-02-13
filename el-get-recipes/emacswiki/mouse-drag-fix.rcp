@@ -1,0 +1,4 @@
+(:name mouse-drag-fix
+:type emacswiki
+:description "Bug fixed version of mouse-drag"
+:website "http://www.emacswiki.org/emacs/download/mouse-drag-fix.el")

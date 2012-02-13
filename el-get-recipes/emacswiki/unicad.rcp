@@ -1,0 +1,4 @@
+(:name unicad
+:type emacswiki
+:description "an elisp port of Mozilla Universal Charset Auto Detector"
+:website "http://www.emacswiki.org/emacs/download/unicad.el")

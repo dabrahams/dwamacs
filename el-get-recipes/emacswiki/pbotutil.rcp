@@ -1,0 +1,4 @@
+(:name pbotutil
+:type emacswiki
+:description "interface to pbotutil.pl"
+:website "http://www.emacswiki.org/emacs/download/pbotutil.el")

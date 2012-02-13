@@ -1,0 +1,4 @@
+(:name growl
+:type emacswiki
+:description "Growl notifications"
+:website "http://www.emacswiki.org/emacs/download/growl.el")

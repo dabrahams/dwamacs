@@ -1,0 +1,4 @@
+(:name sdic-inline
+:type emacswiki
+:description "Program to view dictionary."
+:website "http://www.emacswiki.org/emacs/download/sdic-inline.el")

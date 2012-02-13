@@ -1,0 +1,4 @@
+(:name key-choices
+:type emacswiki
+:description "Key Choices -- Also Viper has different colors in different modes"
+:website "http://www.emacswiki.org/emacs/download/key-choices.el")

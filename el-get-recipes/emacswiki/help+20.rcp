@@ -1,0 +1,4 @@
+(:name help+20
+:type emacswiki
+:description "Extensions to `help.el' for Emacs 20."
+:website "http://www.emacswiki.org/emacs/download/help+20.el")

@@ -1,0 +1,4 @@
+(:name unit-test
+:type emacswiki
+:description "Run unit tests from Emacs with visual feedback"
+:website "http://www.emacswiki.org/emacs/download/unit-test.el")

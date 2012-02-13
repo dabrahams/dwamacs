@@ -1,0 +1,4 @@
+(:name keychain-environment
+:type emacswiki
+:description "Loads keychain environment variables into emacs"
+:website "http://www.emacswiki.org/emacs/download/keychain-environment.el")

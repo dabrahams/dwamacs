@@ -1,0 +1,4 @@
+(:name sie
+:type emacswiki
+:description "Interpreter of a Scheme-like language"
+:website "http://www.emacswiki.org/emacs/download/sie.el")

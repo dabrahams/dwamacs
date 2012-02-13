@@ -1,0 +1,4 @@
+(:name flydoc
+:type emacswiki
+:description "on-the-fly documentation -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/flydoc.el")

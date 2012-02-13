@@ -1,0 +1,4 @@
+(:name fade-out-kill-buffer
+:type emacswiki
+:description "fade to black when killing buffer"
+:website "http://www.emacswiki.org/emacs/download/fade-out-kill-buffer.el")

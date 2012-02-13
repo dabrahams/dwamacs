@@ -1,0 +1,4 @@
+(:name sqlserver-query
+:type emacswiki
+:description "execute sql select using sqlcmd.exe or osql.exe on SQL SERVER. -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/sqlserver-query.el")

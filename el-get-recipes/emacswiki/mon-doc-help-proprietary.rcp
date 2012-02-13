@@ -1,0 +1,4 @@
+(:name mon-doc-help-proprietary
+:type emacswiki
+:description "extends mon-doc-help-utils with MS related docs"
+:website "http://www.emacswiki.org/emacs/download/mon-doc-help-proprietary.el")

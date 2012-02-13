@@ -1,0 +1,4 @@
+(:name completion-ui-more-sources
+:type emacswiki
+:description "Completion-UI more completion sources"
+:website "http://www.emacswiki.org/emacs/download/completion-ui-more-sources.el")

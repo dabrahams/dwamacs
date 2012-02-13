@@ -1,0 +1,4 @@
+(:name sunrise-x-mirror
+:type emacswiki
+:description "full read/write access to compressed archives for the Sunrise Commander File Manager"
+:website "http://www.emacswiki.org/emacs/download/sunrise-x-mirror.el")

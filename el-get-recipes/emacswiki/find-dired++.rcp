@@ -1,0 +1,4 @@
+(:name find-dired++
+:type emacswiki
+:description "Redefinition of find-dired"
+:website "http://www.emacswiki.org/emacs/download/find-dired++.el")

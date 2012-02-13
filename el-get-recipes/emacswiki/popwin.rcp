@@ -1,0 +1,4 @@
+(:name popwin
+:type emacswiki
+:description "Popup Window Manager."
+:website "http://www.emacswiki.org/emacs/download/popwin.el")

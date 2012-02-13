@@ -1,0 +1,4 @@
+(:name mu
+:type emacswiki
+:description "play on a MUSH or MUD within Emacs"
+:website "http://www.emacswiki.org/emacs/download/mu.el")

@@ -1,0 +1,4 @@
+(:name init-hideshow
+:type emacswiki
+:description "Hideshow configuration"
+:website "http://www.emacswiki.org/emacs/download/init-hideshow.el")

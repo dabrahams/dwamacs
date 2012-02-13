@@ -1,0 +1,4 @@
+(:name msearch
+:type emacswiki
+:description "Search for mouse selection"
+:website "http://www.emacswiki.org/emacs/download/msearch.el")

@@ -1,0 +1,4 @@
+(:name calendar+
+:type emacswiki
+:description "Calendar, diary and appointments stuff."
+:website "http://www.emacswiki.org/emacs/download/calendar+.el")

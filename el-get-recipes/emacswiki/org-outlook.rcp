@@ -1,0 +1,4 @@
+(:name org-outlook
+:type emacswiki
+:description "Outlook org"
+:website "http://www.emacswiki.org/emacs/download/org-outlook.el")

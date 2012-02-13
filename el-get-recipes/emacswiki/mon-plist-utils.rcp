@@ -1,0 +1,4 @@
+(:name mon-plist-utils
+:type emacswiki
+:description "functions for working plist-like lists"
+:website "http://www.emacswiki.org/emacs/download/mon-plist-utils.el")

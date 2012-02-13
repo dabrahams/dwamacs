@@ -1,0 +1,4 @@
+(:name dos
+:type emacswiki
+:description "major mode for editing Dos scripts (batch files)"
+:website "http://www.emacswiki.org/emacs/download/dos.el")

@@ -1,0 +1,4 @@
+(:name screencast
+:type emacswiki
+:description "demonstrate the capabilities of Emacs"
+:website "http://www.emacswiki.org/emacs/download/screencast.el")

@@ -1,0 +1,4 @@
+(:name icomplete+
+:type emacswiki
+:description "Extensions to `icomplete.el'."
+:website "http://www.emacswiki.org/emacs/download/icomplete+.el")

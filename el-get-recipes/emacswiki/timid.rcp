@@ -1,0 +1,4 @@
+(:name timid
+:type emacswiki
+:description "timid completion"
+:website "http://www.emacswiki.org/emacs/download/timid.el")

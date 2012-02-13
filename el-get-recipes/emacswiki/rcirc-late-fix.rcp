@@ -1,0 +1,4 @@
+(:name rcirc-late-fix
+:type emacswiki
+:description "Replace s/wrong/right strings on rcirc buffers"
+:website "http://www.emacswiki.org/emacs/download/rcirc-late-fix.el")

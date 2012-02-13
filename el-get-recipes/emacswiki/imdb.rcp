@@ -1,0 +1,4 @@
+(:name imdb
+:type emacswiki
+:description "Interface to the Internet Movie DB"
+:website "http://www.emacswiki.org/emacs/download/imdb.el")

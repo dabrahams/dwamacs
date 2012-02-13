@@ -1,0 +1,4 @@
+(:name highlight-cl
+:type emacswiki
+:description "Highlighting `cl' functions."
+:website "http://www.emacswiki.org/emacs/download/highlight-cl.el")

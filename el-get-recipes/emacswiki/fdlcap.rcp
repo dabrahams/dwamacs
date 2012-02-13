@@ -1,0 +1,4 @@
+(:name fdlcap
+:type emacswiki
+:description "Cycle through case and capitalization of words."
+:website "http://www.emacswiki.org/emacs/download/fdlcap.el")

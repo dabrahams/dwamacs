@@ -1,0 +1,4 @@
+(:name delsel
+:type emacswiki
+:description "Delete the region (selection) upon char insertion or DEL."
+:website "http://www.emacswiki.org/emacs/download/delsel.el")

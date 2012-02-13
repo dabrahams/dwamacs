@@ -1,0 +1,4 @@
+(:name newsticker-notify
+:type emacswiki
+:description "Notify newsticker news in mode-line"
+:website "http://www.emacswiki.org/emacs/download/newsticker-notify.el")

@@ -1,0 +1,4 @@
+(:name closure
+:type emacswiki
+:description "Experimental closure prototypes"
+:website "http://www.emacswiki.org/emacs/download/closure.el")

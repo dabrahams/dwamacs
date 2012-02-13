@@ -1,0 +1,4 @@
+(:name tumme
+:type emacswiki
+:description "use dired to browse and manipulate your images"
+:website "http://www.emacswiki.org/emacs/download/tumme.el")

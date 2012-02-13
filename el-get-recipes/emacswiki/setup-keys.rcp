@@ -1,0 +1,4 @@
+(:name setup-keys
+:type emacswiki
+:description "Some key bindings."
+:website "http://www.emacswiki.org/emacs/download/setup-keys.el")

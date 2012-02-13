@@ -1,0 +1,4 @@
+(:name mon-type-utils-vars
+:type emacswiki
+:description "variables useful for interogating lisp objects"
+:website "http://www.emacswiki.org/emacs/download/mon-type-utils-vars.el")

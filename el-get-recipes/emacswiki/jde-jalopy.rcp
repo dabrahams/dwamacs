@@ -1,0 +1,4 @@
+(:name jde-jalopy
+:type emacswiki
+:description "JALOPY interface for JDE"
+:website "http://www.emacswiki.org/emacs/download/jde-jalopy.el")

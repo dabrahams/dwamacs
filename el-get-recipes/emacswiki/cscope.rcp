@@ -1,0 +1,4 @@
+(:name cscope
+:type emacswiki
+:description "Interface to cscope browser"
+:website "http://www.emacswiki.org/emacs/download/cscope.el")

@@ -1,0 +1,4 @@
+(:name flymake-cursor
+:type emacswiki
+:description "displays flymake error msg in minibuffer after delay"
+:website "http://www.emacswiki.org/emacs/download/flymake-cursor.el")

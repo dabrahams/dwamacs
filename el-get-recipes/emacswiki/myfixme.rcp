@@ -1,0 +1,4 @@
+(:name myfixme
+:type emacswiki
+:description "minor mode to automatically font-lock FIXME notes"
+:website "http://www.emacswiki.org/emacs/download/myfixme.el")

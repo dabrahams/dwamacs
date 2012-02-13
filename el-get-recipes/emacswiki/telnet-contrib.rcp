@@ -1,0 +1,4 @@
+(:name telnet-contrib
+:type emacswiki
+:description "Telnet commands for Emacs on MS Windows."
+:website "http://www.emacswiki.org/emacs/download/telnet-contrib.el")

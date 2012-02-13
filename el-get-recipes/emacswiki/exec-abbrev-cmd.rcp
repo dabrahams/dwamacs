@@ -1,0 +1,4 @@
+(:name exec-abbrev-cmd
+:type emacswiki
+:description "Execute commands by giving an abbreviation"
+:website "http://www.emacswiki.org/emacs/download/exec-abbrev-cmd.el")

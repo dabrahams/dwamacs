@@ -1,0 +1,4 @@
+(:name csharp-mode
+:type emacswiki
+:description "C# mode derived mode"
+:website "http://www.emacswiki.org/emacs/download/csharp-mode.el")

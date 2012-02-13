@@ -1,0 +1,4 @@
+(:name template-simple
+:type emacswiki
+:description "Simple template functions and utils"
+:website "http://www.emacswiki.org/emacs/download/template-simple.el")

@@ -1,0 +1,4 @@
+(:name sqlparser-oracle-complete
+:type emacswiki
+:description "completing tablename,column name for oracle. -*- coding:utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/sqlparser-oracle-complete.el")

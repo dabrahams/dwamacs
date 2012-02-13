@@ -1,0 +1,4 @@
+(:name rect-extension
+:type emacswiki
+:description "Some extensions for rect.el"
+:website "http://www.emacswiki.org/emacs/download/rect-extension.el")

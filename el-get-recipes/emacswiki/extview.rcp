@@ -1,0 +1,4 @@
+(:name extview
+:type emacswiki
+:description "open files with external viewer"
+:website "http://www.emacswiki.org/emacs/download/extview.el")

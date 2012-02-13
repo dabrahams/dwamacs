@@ -1,0 +1,4 @@
+(:name replace+
+:type emacswiki
+:description "Extensions to `replace.el'."
+:website "http://www.emacswiki.org/emacs/download/replace+.el")

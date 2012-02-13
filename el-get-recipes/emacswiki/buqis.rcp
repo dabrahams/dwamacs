@@ -1,0 +1,4 @@
+(:name buqis
+:type emacswiki
+:description "Quick buffers switcher."
+:website "http://www.emacswiki.org/emacs/download/buqis.el")

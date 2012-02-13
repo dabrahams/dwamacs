@@ -1,0 +1,4 @@
+(:name w3xt
+:type emacswiki
+:description "extended MIME control in w3m"
+:website "http://www.emacswiki.org/emacs/download/w3xt.el")

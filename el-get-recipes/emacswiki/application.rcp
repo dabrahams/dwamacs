@@ -1,0 +1,4 @@
+(:name application
+:type emacswiki
+:description "start application for files matching entries from application-caller-list"
+:website "http://www.emacswiki.org/emacs/download/application.el")

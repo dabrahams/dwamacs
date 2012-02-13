@@ -1,0 +1,4 @@
+(:name mythryl-mode
+:type emacswiki
+:description "Major mode for editing Mythryl code"
+:website "http://www.emacswiki.org/emacs/download/mythryl-mode.el")

@@ -1,0 +1,4 @@
+(:name hexrgb
+:type emacswiki
+:description "Functions to manipulate colors, including RGB hex strings."
+:website "http://www.emacswiki.org/emacs/download/hexrgb.el")

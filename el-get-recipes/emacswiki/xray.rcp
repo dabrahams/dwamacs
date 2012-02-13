@@ -1,0 +1,4 @@
+(:name xray
+:type emacswiki
+:description "Display internal object structures in a temporary buffer."
+:website "http://www.emacswiki.org/emacs/download/xray.el")

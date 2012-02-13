@@ -1,0 +1,4 @@
+(:name mon-env-proc-utils
+:type emacswiki
+:description "procedures for interacting w/ process environment"
+:website "http://www.emacswiki.org/emacs/download/mon-env-proc-utils.el")

@@ -1,0 +1,4 @@
+(:name babel
+:type emacswiki
+:description "interface to web translation services such as Babelfish"
+:website "http://www.emacswiki.org/emacs/download/babel.el")

@@ -1,0 +1,4 @@
+(:name mon-testme-utils
+:type emacswiki
+:description "tests and template for inserting them"
+:website "http://www.emacswiki.org/emacs/download/mon-testme-utils.el")

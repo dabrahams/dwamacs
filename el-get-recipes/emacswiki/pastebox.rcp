@@ -1,0 +1,4 @@
+(:name pastebox
+:type emacswiki
+:description "Emacs lisp lib for pasting to PasteBox-powered bins."
+:website "http://www.emacswiki.org/emacs/download/pastebox.el")

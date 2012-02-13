@@ -1,0 +1,4 @@
+(:name color-theme-maker
+:type emacswiki
+:description "install color themes"
+:website "http://www.emacswiki.org/emacs/download/color-theme-maker.el")

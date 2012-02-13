@@ -1,0 +1,4 @@
+(:name flyspell-guess
+:type emacswiki
+:description "flyspell dictionary guesser"
+:website "http://www.emacswiki.org/emacs/download/flyspell-guess.el")

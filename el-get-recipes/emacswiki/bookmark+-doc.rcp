@@ -1,0 +1,4 @@
+(:name bookmark+-doc
+:type emacswiki
+:description "Documentation for package Bookmark+."
+:website "http://www.emacswiki.org/emacs/download/bookmark+-doc.el")

@@ -1,0 +1,4 @@
+(:name bmi
+:type emacswiki
+:description "Calculate body mass index (BMI)"
+:website "http://www.emacswiki.org/emacs/download/bmi.el")

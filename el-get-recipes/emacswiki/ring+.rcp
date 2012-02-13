@@ -1,0 +1,4 @@
+(:name ring+
+:type emacswiki
+:description "Extensions to `ring.el'."
+:website "http://www.emacswiki.org/emacs/download/ring+.el")

@@ -1,0 +1,4 @@
+(:name w3m-type-ahead
+:type emacswiki
+:description "type ahead support for Emacs-w3m"
+:website "http://www.emacswiki.org/emacs/download/w3m-type-ahead.el")

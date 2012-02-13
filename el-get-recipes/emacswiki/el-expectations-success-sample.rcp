@@ -1,0 +1,4 @@
+(:name el-expectations-success-sample
+:type emacswiki
+:description "success example of Emacs Lisp Expectations."
+:website "http://www.emacswiki.org/emacs/download/el-expectations-success-sample.el")

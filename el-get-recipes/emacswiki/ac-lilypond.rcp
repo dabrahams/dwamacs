@@ -1,0 +1,4 @@
+(:name ac-lilypond
+:type emacswiki
+:description "Set up the use of LilyPond with auto-complete"
+:website "http://www.emacswiki.org/emacs/download/ac-lilypond.el")

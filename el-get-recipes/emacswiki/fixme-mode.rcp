@@ -1,0 +1,4 @@
+(:name fixme-mode
+:type emacswiki
+:description "Makes FIXME, TODO, etc. appear in big, angry letters"
+:website "http://www.emacswiki.org/emacs/download/fixme-mode.el")

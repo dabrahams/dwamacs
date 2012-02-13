@@ -1,0 +1,4 @@
+(:name gradebook
+:type emacswiki
+:description "major mode for keeping a simple plain-text gradebook"
+:website "http://www.emacswiki.org/emacs/download/gradebook.el")

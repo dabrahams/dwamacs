@@ -1,0 +1,4 @@
+(:name anything-el-swank-fuzzy
+:type emacswiki
+:description "anything-sources for el-swank-fuzzy.el"
+:website "http://www.emacswiki.org/emacs/download/anything-el-swank-fuzzy.el")

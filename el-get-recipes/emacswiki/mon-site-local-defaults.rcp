@@ -1,0 +1,4 @@
+(:name mon-site-local-defaults
+:type emacswiki
+:description "load/init fncns, vars, const for MON packages"
+:website "http://www.emacswiki.org/emacs/download/mon-site-local-defaults.el")

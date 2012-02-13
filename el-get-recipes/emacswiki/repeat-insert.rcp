@@ -1,0 +1,4 @@
+(:name repeat-insert
+:type emacswiki
+:description "Repetitititive insertion functions."
+:website "http://www.emacswiki.org/emacs/download/repeat-insert.el")

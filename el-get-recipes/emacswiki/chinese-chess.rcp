@@ -1,0 +1,4 @@
+(:name chinese-chess
+:type emacswiki
+:description "Chinese Chess Game   -*- coding: utf-8 -*-"
+:website "http://www.emacswiki.org/emacs/download/chinese-chess.el")

@@ -1,0 +1,4 @@
+(:name coroutine
+:type emacswiki
+:description "Coroutines for Emacs Lisp"
+:website "http://www.emacswiki.org/emacs/download/coroutine.el")

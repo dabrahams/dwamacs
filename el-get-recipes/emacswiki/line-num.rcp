@@ -1,0 +1,4 @@
+(:name line-num
+:type emacswiki
+:description "Display line numbers in left-margin of buffer."
+:website "http://www.emacswiki.org/emacs/download/line-num.el")

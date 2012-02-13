@@ -1,0 +1,4 @@
+(:name go-to-char
+:type emacswiki
+:description "Go to char"
+:website "http://www.emacswiki.org/emacs/download/go-to-char.el")

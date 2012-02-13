@@ -1,0 +1,4 @@
+(:name rusewiki
+:type emacswiki
+:description "edit pages on an RuseWiki wiki using curl"
+:website "http://www.emacswiki.org/emacs/download/rusewiki.el")

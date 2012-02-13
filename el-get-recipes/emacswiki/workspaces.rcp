@@ -1,0 +1,4 @@
+(:name workspaces
+:type emacswiki
+:description "implemented using registers"
+:website "http://www.emacswiki.org/emacs/download/workspaces.el")

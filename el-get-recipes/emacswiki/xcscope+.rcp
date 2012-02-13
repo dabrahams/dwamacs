@@ -1,0 +1,4 @@
+(:name xcscope+
+:type emacswiki
+:description "Providing an extension to xcscope."
+:website "http://www.emacswiki.org/emacs/download/xcscope+.el")

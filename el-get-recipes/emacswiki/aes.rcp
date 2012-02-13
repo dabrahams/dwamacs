@@ -1,0 +1,4 @@
+(:name aes
+:type emacswiki
+:description "Implementation of AES"
+:website "http://www.emacswiki.org/emacs/download/aes.el")

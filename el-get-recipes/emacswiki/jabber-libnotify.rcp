@@ -1,0 +1,4 @@
+(:name jabber-libnotify
+:type emacswiki
+:description "emacs-jabber interface to libnotify"
+:website "http://www.emacswiki.org/emacs/download/jabber-libnotify.el")

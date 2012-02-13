@@ -1,0 +1,4 @@
+(:name wajig
+:type emacswiki
+:description "an interface for wajig"
+:website "http://www.emacswiki.org/emacs/download/wajig.el")

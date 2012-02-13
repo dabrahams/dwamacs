@@ -1,0 +1,4 @@
+(:name fit-frame
+:type emacswiki
+:description "Resize a frame.  In particular, fit a frame to its buffers."
+:website "http://www.emacswiki.org/emacs/download/fit-frame.el")

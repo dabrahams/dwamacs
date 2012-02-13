@@ -1,0 +1,4 @@
+(:name pkb-0.2
+:type emacswiki
+:description "tools to print keymap bindings in a pretty fashion"
+:website "http://www.emacswiki.org/emacs/download/pkb-0.2.el")

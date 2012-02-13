@@ -1,0 +1,4 @@
+(:name ajc-java-complete-my-config-example
+:type emacswiki
+:description "Auto Java Completion for GNU Emacs"
+:website "http://www.emacswiki.org/emacs/download/ajc-java-complete-my-config-example.el")

@@ -1,0 +1,4 @@
+(:name buffer-stack
+:type emacswiki
+:description "Enhanced intelligent switch-to-other-buffer replacement."
+:website "http://www.emacswiki.org/emacs/download/buffer-stack.el")

@@ -1,0 +1,4 @@
+(:name mojo
+:type emacswiki
+:description "Interactive functions for webOS development"
+:website "http://www.emacswiki.org/emacs/download/mojo.el")

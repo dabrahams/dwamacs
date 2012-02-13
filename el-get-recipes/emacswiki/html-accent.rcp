@@ -1,0 +1,4 @@
+(:name html-accent
+:type emacswiki
+:description "Function that replace accented char by its html representation"
+:website "http://www.emacswiki.org/emacs/download/html-accent.el")
