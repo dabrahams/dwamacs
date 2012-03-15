@@ -14,9 +14,9 @@
 (autoload 'dwa/irc "erc" "" t)
 (defun dwa/irc ()
   (interactive)
-  (erc :server "irc.freenode.net" :port 6667 :nick "bewst" :password
+  (erc :server "irc.freenode.net" :port 6667 :nick "dabrhams" :password
        (cdr (assoc "bewst" (cadr (assq 'freenode erc-nickserv-passwords)))))
-  (erc :server "irc.oftc.net" :port 6667 :nick "bewst"))
+  (erc :server "irc.oftc.net" :port 6667 :nick "dabrahams"))
 
 ;;;###autoload
 (autoload 'dwa/im "erc" "" t)
@@ -174,7 +174,7 @@ If the buffer is currently not visible, makes it sticky."
  '(erc-modules
    (quote
     (autoaway autojoin completion dcc fill identd irccontrols list log match menu move-to-prompt netsplit networks noncommands readonly replace ring scrolltobottom services smiley stamp spelling)))
- '(erc-nick "bewst")
+ '(erc-nick "dabrahams")
  '(erc-notify-mode t)
  '(erc-port 6667)
  '(erc-prompt-for-nickserv-password nil)

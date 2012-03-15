@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: BEG
+# --
+#+BEGIN_SRC $1c++
+  $2
+#+END_SRC

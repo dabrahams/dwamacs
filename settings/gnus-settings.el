@@ -42,31 +42,13 @@
 ")
  '(gnus-cited-lines-visible
    (quote
-    (1 . 4)))
- '(gnus-cited-opened-text-button-line-format "%(%1{[-]%}%)
-")
+    (5 . 10)))
+ '(gnus-cited-opened-text-button-line-format "")
  '(gnus-completing-read-function
    (quote gnus-ido-completing-read))
- '(gnus-default-adaptive-score-alist
-   (quote
-    ((gnus-dormant-mark
-      (from 20)
-      (subject 100))
-     (gnus-ticked-mark
-      (subject 30))
-     (gnus-read-mark
-      (subject 30))
-     (gnus-del-mark
-      (subject -150))
-     (gnus-catchup-mark
-      (subject -150))
-     (gnus-killed-mark
-      (subject -1000))
-     (gnus-expirable-mark
-      (from -1000)
-      (subject -1000)))))
  '(gnus-default-article-saver
    (quote gnus-summary-write-to-file))
+ '(gnus-duplicate-list-length 100000)
  '(gnus-extra-headers
    (quote
     (To Cc)))
@@ -113,6 +95,7 @@
     (("nntp" t)
      ("^INBOX" t))))
  '(gnus-safe-html-newsgroups ".")
+ '(gnus-save-duplicate-list t)
  '(gnus-save-killed-list nil)
  '(gnus-save-newsrc-file nil)
  '(gnus-score-default-duration
@@ -168,7 +151,7 @@ NOTICE: ")))
  '(gnus-summary-expunge-below -100)
  '(gnus-summary-line-format "%O%U%R%z%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)		%s
 ")
- '(gnus-summary-mark-below -100)
+ '(gnus-suppress-duplicates t)
  '(gnus-suspend-gnus-hook
    (quote
     (gnus-group-save-newsrc)))
@@ -178,7 +161,8 @@ NOTICE: ")))
  '(gnus-thread-sort-functions
    (quote
     ((not gnus-thread-sort-by-number)
-     gnus-thread-sort-by-most-recent-date gnus-thread-sort-by-total-score)))
+     (not gnus-thread-sort-by-most-recent-date)
+     gnus-thread-sort-by-total-score)))
  '(gnus-topic-display-empty-topics nil)
  '(gnus-topic-line-format "%i[ %A: %(%{%n%}%) ]%v
 ")
@@ -196,9 +180,6 @@ NOTICE: ")))
  '(gnus-treat-strip-trailing-blank-lines t)
  '(gnus-tree-minimize-window nil)
  '(gnus-uncacheable-groups "^nnml")
- '(gnus-use-adaptive-scoring
-   (quote
-    (line)))
  '(gnus-use-cache t)
  '(gnus-use-trees t)
  '(gnus-verbose 4)
@@ -232,6 +213,8 @@ NOTICE: ")))
 (require 'pgg)
 
 (gnus-harvest-install 'message-x)
+
+(gnus-registry-initialize)
 
 (defun my-process-running-p (name)
   (catch 'proc-running
@@ -286,14 +269,15 @@ NOTICE: ")))
      `(nndoc ,message-id
              (nndoc-address ,(current-buffer))
              (nndoc-article-type mbox))
-     'activate
-     (not    'quit-config)
-     (not    'request-only)
-     '(-1) ; 'select-articles
-     (not    'parameters)
-     0     ; ' number
+     :activate
+     (cons (current-buffer) gnus-current-window-configuration)
+     (not :request-only)
+     '(-1) ; :select-articles
+     (not :parameters)
+     0     ; :number
      )
-    (gnus-summary-refer-article message-id)))
+    (gnus-summary-refer-article message-id)
+    ))
 
 (defun gnus-current-message-id ()
   (with-current-buffer gnus-original-article-buffer
@@ -311,7 +295,7 @@ NOTICE: ")))
   "Report the current or marked mails as spam.
 This moves them into the Spam folder."
   (interactive)
-  (gnus-summary-move-article nil "Spam"))
+  (gnus-summary-move-article nil "[Gmail].Spam"))
 
 (eval-after-load "gnus-sum"
   '(progn
@@ -745,8 +729,8 @@ If all article have been seen, on the subject line of the last article."
 (require 'gnus-cite)
 (require 'mail-settings)
 
-(loop for x in gnus-cite-face-list do
-      (set-face-attribute x nil ':inherit 'dwa/mail-citation))
+;(loop for x in gnus-cite-face-list do
+;      (set-face-attribute x nil ':inherit 'dwa/mail-citation))
 
 ;; Thanks to David Engster
 ;; [[gnus:nntp%2Bnews.gmane.org:gmane.emacs.gnus.general#87vdnimyxd.fsf@randomsample.de][Posting on ding@gnus.org]]

@@ -8,10 +8,11 @@
  '(Info-additional-directory-list
    (quote
     ("~/src/buildbot/master/docs/" "~/Library/Info/python/" "~/Library/Info/c++11/")))
+ '(Info-breadcrumbs-in-header-flag t)
  '(Info-fit-frame-flag nil)
  '(Info-saved-nodes
    (quote
-    ("(elisp)Top" "(org)Top" "(gnus)Top" "(std)Top")))
+    ("(emacs)Top" "(elisp)Top" "(org)Top" "(gnus)Top" "(std)Top")))
  '(Man-header-file-path
    (quote
     ("/usr/include" "/usr/local/include" "/opt/local/include")))
@@ -24,6 +25,8 @@
  '(ad-redefinition-action
    (quote accept)
    nil nil "The default, `warn', Makes a lot of noise for no apparent benefit")
+ '(ansi-color-names-vector
+   [zenburn-bg zenburn-red zenburn-green zenburn-yellow zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg])
  '(backup-directory-alist
    (quote
     (("." . "~/.emacs.d/backups"))))
@@ -32,29 +35,44 @@ Blinking cursor just annoys me")
  '(byte-compile-verbose nil)
  '(c-default-style
    (quote
-    ((java-mode . "java")
+    ((c++-mode . "cc-mode")
+     (java-mode . "java")
      (awk-mode . "awk")
      (other . "bsd"))))
+ '(c-offsets-alist
+   (quote
+    ((inline-open . 0)
+     (substatement-open . 0)
+     (access-label . -3)
+     (arglist-close . 0))))
  '(canlock-password "963afd5a40a33c7f59217100af5a7c1648af74a1")
  '(clang-flags
    (quote
     ("-I" "/Users/dave/src/boost-svn-git" "-I" "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/")))
+ '(color-theme-history-max-length t)
+ '(color-theme-is-cumulative nil)
  '(cursor-type
    (quote box)
    t)
  '(custom-buffer-done-kill t)
+ '(custom-enabled-themes
+   (quote
+    (zenburn-overrides)))
  '(custom-face-default-form
    (quote all))
  '(custom-magic-show
    (quote short))
  '(custom-magic-show-button t)
+ '(custom-safe-themes
+   (quote
+    ("1b7caa779ad718320632954165993f48d9a0418efb59e131d53f3b952f83bde3" "0faff4eae0a8bc28f3f9b9f096b893db78ccc823f73cc34420a629b2cbc6da5d" "864cb146d904312336068803efd75fb965e8e62355e5c6f85dfe3474f51898c0" "b7419fc63a23f84014f0f29dd99a2bb883d7d58e" "a263088a00f531a10f43500d3a782ebbbe7b5092" "e7cc30a240db2b04f082c9a62db0a68d9f841a70" "0988a1666cfff8417b19384adc36d075b739b9a4" default)))
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
+ '(custom-theme-load-path
+   (quote
+    ("~/.emacs.d/el-get/dwamacs/settings" custom-theme-directory t)))
  '(custom-unlispify-tag-names nil)
- '(default-frame-alist
-    (quote
-     ((fullscreen . maximized)
-      (menu-bar-lines . 1)
-      (font . "LucidaMonoEF-14"))))
+ '(debug-on-error nil)
+ '(delete-by-moving-to-trash t)
  '(delete-selection-mode t nil nil "
 Creates normal editor behavior: select a region and begin
 typing, the region is replaced")
@@ -68,9 +86,14 @@ which I now deinstall with relish")
 Added -h so I can read file sizes")
  '(display-time-mode t)
  '(el-get-byte-compile nil)
+ '(el-get-recipe-path
+   (quote
+    ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "~/.emacs.d/el-get/dwamacs/el-get-recipes/emacswiki/" "/Users/dave/.emacs.d/el-get/el-get/recipes/")))
  '(el-get-sources
    (quote
-    ((:name elhome :depends
+    ((:name auto-complete :url "https://github.com/Sarcasm/auto-complete.git")
+     (:name org-s5 :type git :url "http://github.com/sigma/org-s5" :description "S5 Presentations from org-mode files")
+     (:name elhome :depends
             (initsplit))
      (:name ws-trim :type ftp :url "ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el")
      (:name package :url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
@@ -143,8 +166,9 @@ Added -h so I can read file sizes")
             :compile
             ("site-lisp")))))
  '(el-get-standard-packages
-   (quotet
-    ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust")))
+   (quote
+    ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust"))
+   t)
  '(elscreen-buffer-list-enabled t)
  '(elscreen-buffer-to-nickname-alist
    (quote
@@ -196,8 +220,13 @@ added -l so it would take things out of my .bash_profile, like (on boostpro.com)
  '(gdb-max-frames 100 nil nil "
 Increased the number of stack frames displayed from 40")
  '(gdb-show-main t)
+ '(glasses-face
+   (quote dwa/glasses))
+ '(glasses-separate-parentheses-p nil)
+ '(glasses-separator "")
  '(global-auto-revert-mode t nil nil "
 We want our file buffers to stay up-to-date with changes on disk")
+ '(global-ede-mode t)
  '(gravatar-icon-size 50)
  '(gravatar-retrieval-program "wget -q -O '%s' '%s'" nil nil "
 Requires wget, which isn't on the Mac by default.  Someday should
@@ -234,17 +263,30 @@ from macports.")
      ("\\`\\(dwa/\\)?\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil)
      ("\\`\\(dwa/\\)?bcc-" "byte-code-cache-settings.el" nil nil))))
  '(initsplit-pretty-print t)
+ '(irony-compiler-executable "/opt/local/bin/clang++-mp-3.1")
+ '(irony-header-directories
+   (quote
+    ("/Users/dave/src/boost/boost-via-svn/trunk" "/opt/local/include" "/opt/local/Library/Frameworks/Python.framework/Headers")))
+ '(irony-mode-line " Fe")
  '(ispell-program-name "aspell")
+ '(magit-completing-read-function
+   (quote magit-ido-completing-read))
+ '(magit-create-branch-behaviour
+   (quote at-point))
  '(magit-repo-dirs
    (quote
-    ("/Users/dave/src" "/Users/dave/src/bbotpriv-top" "/Users/dave/src/fossbot-top")))
- '(magit-repo-dirs-depth 1)
+    ("/Users/dave/src")))
+ '(magit-repo-dirs-depth 3)
  '(mairix-file-path "~/Library/Data/Indexes")
  '(markdown-command "markdown-extra")
+ '(mf-display-padding-height 46 nil nil "The default value of 45 leaves the titlebar tucked up under the menu bar on OSX Lion
+See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=10449")
+ '(mf-max-width 1920)
  '(muse-project-alist
    (quote
     (("WikiPlanner"
       ("~/plans" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
+ '(next-error-highlight t)
  '(ns-alternate-modifier
    (quote control)
    nil nil "
@@ -253,11 +295,17 @@ Command key.  Oh, well!  I wish I could make right-command work as
 command.")
  '(ns-command-modifier
    (quote meta))
+ '(ns-pop-up-frames nil)
+ '(ns-right-alternate-modifier
+   (quote hyper))
+ '(ns-right-command-modifier
+   (quote super))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
- '(pp^L-^L-string "····································✄····································")
+ '(pp^L-^L-string "····································✄····································
+")
  '(ps-font-family
    (quote Helvetica))
  '(ps-font-info-database
@@ -391,10 +439,11 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    (quote
     (org-remember-handler))
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
- '(rmail-dont-reply-to-names "dave@\\(boost-consulting\\|boostpro\\)\\.com\\|dave\\.abrahams@rcn\\.com\\|boost\\.consulting@gmail\\.com\\|dave\\.boostpro@gmail\\.com\\|Undisclosed-recipients[:;]*")
  '(safe-local-variable-values
    (quote
     ((org-refile-targets
+      (nil :todo . "THEME"))
+     (org-refile-targets
       (nil :todo . "PROJECT"))
      (org-refile-targets
       (org-agenda-files :level . 3))
@@ -437,9 +486,12 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
      (encoding . utf8)
      (folded-file . t))))
  '(scroll-bar-mode nil)
- '(server-mode t nil nil "
-Always run a server so we can open files in existing emacs frames.")
+ '(send-mail-function
+   (quote smtpmail-send-it))
+ '(server-mode nil)
+ '(set-mark-command-repeat-pop t)
  '(show-paren-mode t)
+ '(shr-width nil)
  '(smime-certificate-directory "~/Library/Data/Gnus/Mail/certs/")
  '(smtp-server "smtp.gmail.com")
  '(smtpmail-default-smtp-server "www.boostpro.com")
@@ -450,6 +502,7 @@ Always run a server so we can open files in existing emacs frames.")
     (("www.boostpro.com" 587 "" ""))))
  '(spam-report-gmane-use-article-number nil)
  '(split-height-threshold nil)
+ '(svn-program "/opt/local/bin/svn")
  '(tab-stop-list
    (quote
     (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
@@ -506,35 +559,125 @@ where I don't expect it to be keeping undo history anyway")
    (quote my-weblogger-markdown-mode))
  '(weblogger-server-url "http://cpp-next.com/xmlrpc.php")
  '(weblogger-server-username "dave")
+ '(wg-morph-on nil)
+ '(workgroups-mode t)
  '(x-select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bold
+   ((t
+     (:weight bold :family "LucidaMonoEF"))))
+ '(bold-italic
+   ((t
+     (:inherit bold :slant italic :weight bold))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0"))))
+     (:background "#FFFFC0")))
+   t)
+ '(dwa/glasses
+   ((t
+     (:underline "red" :weight bold))))
  '(font-lock-string-face
    ((((class color)
       (min-colors 88)
       (background light))
      (:background "Beige" :foreground "DarkGreen" :slant italic))))
+ '(lazy-highlight
+   ((t
+     (:background "paleturquoise"))))
  '(rst-level-1-face
    ((t
-     (:background "grey85" :foreground "black"))))
+     (:background "grey85" :foreground "black")))
+   t)
  '(rst-level-2-face
    ((t
-     (:inherit nil :background "grey78" :foreground "black"))))
+     (:inherit nil :background "grey78" :foreground "black")))
+   t)
  '(rst-level-3-face
    ((t
-     (:background "grey71" :foreground "black"))))
+     (:background "grey71" :foreground "black")))
+   t)
  '(rst-level-4-face
    ((t
-     (:background "grey64" :foreground "black"))))
+     (:background "grey64" :foreground "black")))
+   t)
  '(rst-level-5-face
    ((t
-     (:background "grey57" :foreground "black"))))
+     (:background "grey57" :foreground "black")))
+   t)
  '(rst-level-6-face
    ((t
-     (:background "grey50" :foreground "black")))))
+     (:background "grey50" :foreground "black")))
+   t)
+ '(wg-brace-face
+   ((((class color)
+      (background light))
+     (:foreground "#7b8f01"))
+    (((class color)
+      (background dark))
+     (:foreground "light slate blue"))))
+ '(wg-command-face
+   ((((class color)
+      (background light))
+     (:foreground "#80002c"))
+    (((class color)
+      (background dark))
+     (:foreground "aquamarine"))))
+ '(wg-current-workgroup-face
+   ((((class color)
+      (background light))
+     (:foreground "dark blue"))
+    (((class color)
+      (background dark))
+     (:foreground "white"))))
+ '(wg-divider-face
+   ((((class color)
+      (background light))
+     (:foreground "#7b8f01"))
+    (((class color)
+      (background dark))
+     (:foreground "light slate blue"))))
+ '(wg-filename-face
+   ((((class color)
+      (background light))
+     (:foreground "#783106"))
+    (((class color))
+     (:foreground "light sky blue"))))
+ '(wg-frame-face
+   ((((class color)
+      (background light))
+     (:foreground "black"))
+    (((class color)
+      (background dark))
+     (:foreground "white"))))
+ '(wg-message-face
+   ((((class color)
+      (background light))
+     (:foreground "#783106"))
+    (((class color)
+      (background dark))
+     (:foreground "light sky blue"))))
+ '(wg-mode-line-face
+   ((((class color)
+      (background light))
+     (:foreground "#783106"))
+    (((class color)
+      (background dark))
+     (:foreground "light sky blue"))))
+ '(wg-other-workgroup-face
+   ((((class color)
+      (background light))
+     (:foreground "#887767"))
+    (((class color)
+      (background dark))
+     (:foreground "light slate grey"))))
+ '(wg-previous-workgroup-face
+   ((((class color)
+      (background light))
+     (:foreground "#783106"))
+    (((class color)
+      (background dark))
+     (:foreground "light sky blue")))))

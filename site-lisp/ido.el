@@ -2405,9 +2405,9 @@ If cursor is not at the end of the user input, move to end of input."
 
        ((eq method 'alt-file)
 	(ido-record-work-file filename)
-	(setq default-directory ido-current-directory)
-	(ido-record-work-directory)
-	(find-alternate-file filename))
+	(let ((default-directory ido-current-directory))
+          (ido-record-work-directory)
+          (find-alternate-file filename)))
 
        ((memq method '(dired list-directory))
 	(if (equal filename ".")
@@ -2445,12 +2445,12 @@ If cursor is not at the end of the user input, move to end of input."
 
        ((eq method 'write)
 	(ido-record-work-file filename)
-	(setq default-directory ido-current-directory)
-	(setq filename (concat ido-current-directory filename))
-	(ido-record-command 'write-file filename)
-	(add-to-history 'file-name-history filename)
-	(ido-record-work-directory)
-	(write-file filename t))
+        (let ((default-directory ido-current-directory))
+          (setq filename (concat ido-current-directory filename))
+          (ido-record-command 'write-file filename)
+          (add-to-history 'file-name-history filename)
+          (ido-record-work-directory)
+          (write-file filename t)))
 
        ((eq method 'read-only)
 	(ido-record-work-file filename)

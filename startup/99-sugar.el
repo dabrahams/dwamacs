@@ -3,11 +3,45 @@
 ;; all lost in a debugging session.
 ;;
 
+(ignore-errors (server-mode))
+
 (prefer-coding-system 'utf-8)
 
 ;; auto modes
 (add-to-list 'auto-mode-alist
-             '("\\.\\(text\\|mkdn\\|mmd\\|markdown\\)\\'" . markdown-mode))
+             '("\\.\\(text\\|md\\|mkdn\\|mmd\\|markdown\\)\\'" . markdown-mode))
+
+(defun request-feature (feature)
+  (or (require feature nil 'noerror)
+      (and (message "requested feature %s not available" feature) nil)))
+
+(when (request-feature 'workgroups)
+  (workgroups-mode 1)
+  (if (bound-and-true-p wg-prefixed-map)
+      (define-key wg-prefixed-map [(control ?z)] 'wg-switch-to-previous-workgroup)
+    (if (file-readable-p "~/.emacs.d/workgroups")
+        (wg-load "~/.emacs.d/workgroups")))
+
+  (when nil
+  (defadvice ido-visit-buffer (before switch-to-buffers-workgroup
+                                      (buffer method &optional record)
+                                      activate)
+    "If a workgroup is showing BUFFER, switch to it first"
+    (wg-aif (wg-find-buffer (if (bufferp buffer)
+                                (buffer-name buffer)
+                              buffer))
+        (ignore-errors
+          (wg-switch-to-workgroup it))))))
+
+
+;; Keep some very persistent modes out of the mode line display
+(when (request-feature 'diminish)
+  (dolist (m '(workgroups me-minor))
+    (diminish (intern (concat (symbol-name m) "-mode")))))
+
+(defface dwa/glasses
+  '((t :weight bold :underline t))
+  "Face for highlighting capital letters in Camel-case")
 
 ;;;;;;;;;;
 ;; FFAP
@@ -21,33 +55,30 @@
 (remove-hook 'gnus-summary-mode-hook 'ffap-gnus-hook)
 (remove-hook 'gnus-article-mode-hook 'ffap-gnus-hook)
 
-(when (require 'ws-trim nil 'noerror)
-  (global-ws-trim-mode t)
-  (set-default 'ws-trim-level 1)
+(when (request-feature 'ws-trim)
+;  (global-ws-trim-mode t)
+  (set-default 'ws-trim-level 0)
   (setq ws-trim-global-modes '(guess (not message-mode eshell-mode))))
 
 ;; Pretty ^L
-(ignore-errors 
-  (require 'pp-c-l)
+(when (request-feature 'pp-c-l)
   (pretty-control-l-mode))
 
 ;; Page navigation 
-(require 'page-ext)
+(request-feature 'page-ext)
 
 ;; Per-window point
-(ignore-errors
-  (require 'per-window-point)
+(when (request-feature 'per-window-point)
   (pwp-mode))
 
 ;;;;;;;;
 
-(ignore-errors
-  (require 'session)
+(when (request-feature 'session)
   (add-hook 'after-init-hook 'session-initialize))
 
 ;;;;;;;
 
-(when (require 'color-theme nil 'noerror)
+(when (request-feature 'color-theme)
   (define-color-theme
     dwa-dark-theme
     "Dave Abrahams"
@@ -55,7 +86,7 @@
     (color-theme-zenburn)
     (load-theme 'zenburn-overrides))
   (color-theme-initialize)
-  (require 'org-faces nil 'noerror)
+  (request-feature 'org-faces)
   ;; Store away the emacs default theme so I can get back there
   (fset 'color-theme-emacs-default (color-theme-make-snapshot))
   (add-to-list 'color-themes
@@ -63,6 +94,18 @@
   (add-hook 'after-init-hook 'color-theme-select :append)
 ;  (add-hook 'after-init-hook 'dwa-dark-theme :append)
   )
+
+(defun dark ()
+  (interactive)
+  (load-theme 'zenburn)
+  (load-theme 'zenburn-overrides))
+
+(defun light ()
+  (interactive)
+  (when (> emacs-major-version 23)
+    ;; There's a bug in emacs 23 that makes this lose mode line faces
+    (disable-theme 'zenburn-overrides))
+  (disable-theme 'zenburn))
 
 (setq frame-title-format
     '(:eval
@@ -88,10 +131,10 @@
       (put 'debug-on-quit 'customized-value doq))))
 (add-to-list 'kill-emacs-query-functions 'dwa/save-customizations-before-exit)
 
-;(require 'elscreen-buffer-list nil 'noerror)
+;(request-feature 'elscreen-buffer-list)
 
-(require 'frame-bufs nil 'noerror)
-(ignore-errors (frame-bufs-mode t))
+;(request-feature 'frame-bufs)
+;(ignore-errors (frame-bufs-mode t))
 
 ;; Man pages often come out too wide
 (defadvice Man-getpage-in-background
@@ -112,12 +155,56 @@
   (interactive)
   (call-interactively 'toggle-debug-on-quit))
 
+(defun ed () 
+  (interactive)
+  (edebug-defun))
+
+(defun de ()
+  (interactive)
+  (end-of-defun)
+  (backward-sexp)
+  (forward-sexp)
+  (eval-last-sexp nil))
+
+
+
+;;
+;; Avoid putting new stuff in tiny windows, per
+;; [[message://4ED8FAB5.3050306@gmx.at]]
+;;
+(if (not (string-lessp emacs-version "24"))
+ (defun make-small-windows-softly-dedicated ()
+  (walk-window-tree
+   (lambda (window)
+     (cond
+      ((and (> (window-total-size window) 10)
+	    (eq (window-dedicated-p window) 'too-small))
+       (set-window-dedicated-p window nil))
+      ((and (<= (window-total-size window) 10)
+	    (not (window-dedicated-p window)))
+       (set-window-dedicated-p window 'too-small))))))
+ ;; more expensive version for Emacs23 since constructing the window
+ ;; list means one cons cell for each live window on the changed frame
+ ;; [[message://4EF4AD73.6030006@gmx.at]]
+ (defun make-small-windows-softly-dedicated ()
+   (dolist (window (window-list nil 'nomini))
+     (cond
+      ((and (> (window-height window) 10)
+            (eq (window-dedicated-p window) 'too-small))
+       (set-window-dedicated-p window nil))
+      ((and (<= (window-height window) 10)
+            (not (window-dedicated-p window)))
+       (set-window-dedicated-p window 'too-small))))))
+
+(add-hook 'window-configuration-change-hook 'make-small-windows-softly-dedicated)
+
+  
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
 
 ;; Maximize emacs on startup
-(add-hook 'window-setup-hook 
-          (lambda () (modify-frame-parameters nil '((fullscreen . maximized))))
-          t)
+(ignore-errors
+  (require 'maxframe)
+  (add-hook 'window-setup-hook 'maximize-frame t))

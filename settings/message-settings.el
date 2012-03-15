@@ -72,7 +72,8 @@ Removed \"}\" from the allowable characters because I often type that when writi
 Always Bcc: myself")
  '(message-forward-ignored-headers
    (quote
-    ("^Content-Transfer-Encoding:" "^X-Gnus" "^X-" "^Received:" "^User-Agent:" "^References:")))
+    ("^Content-Transfer-Encoding:" "^X-Gnus" "^X-" "^Received:" "^User-Agent:" "^Face:" "^References:")))
+ '(message-forward-show-mml t)
  '(message-mode-hook
    (quote
     ((lambda nil

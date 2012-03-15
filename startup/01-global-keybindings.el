@@ -1,6 +1,6 @@
 ;; Undo built-in annoyances
 (when window-system
-  (global-unset-key [(control z)]))
+  (global-unset-key [(control ?z)]))
 
 ;; Mouse stuff
 (define-key me-minor-mode-map [mouse-9] 'mac-mouse-turn-on-fullscreen)

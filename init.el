@@ -10,6 +10,10 @@
              ""))
 (setq elhome-directory
       (el-get-subdir "dwamacs")
+      ;; If I don't set this during startup, an error can cause it to
+      ;; be set to something that invokes TRAMP whenever I try to
+      ;; switch buffers.
+      default-directory "~"
       bcc-enabled nil
       redisplay-dont-pause t) ;; See [[message://83ipovw2z2.fsf@gnu.org]]
 (load

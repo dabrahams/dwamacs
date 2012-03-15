@@ -11,6 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(calendar-mark-holidays-flag t)
  '(diary-file "~/Documents/Tasks/diary")
+ '(org-adapt-indentation nil)
  '(org-agenda-auto-exclude-function
    (quote org-my-auto-exclude-function))
  '(org-agenda-custom-commands
@@ -100,20 +101,7 @@
          (org-agenda-skip-entry-if
           (quote regexp)
           "\\=.*\\[#C\\]")))))
-     ("L" "Ledger tasks not in Bugzilla" tags "TODO<>{DONE\\|TESTED\\|CLOSED\\|NOTE}&LEVEL=2"
-      ((org-agenda-files
-        (quote
-         ("~/src/ledger/plan/TODO")))
-       (org-agenda-overriding-header "Ledger tasks:")
-       (org-agenda-sorting-strategy
-        (quote
-         (todo-state-up priority-down category-up)))
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote regexp)
-          "#")))))
-     ("r" "Uncategorized items" tags "CATEGORY=\"Inbox\"&LEVEL=2"
+     ("r" "Uncategorized items" tags "CATEGORY=\"Inbox ===>\"&LEVEL=2&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
       ((org-agenda-overriding-header "Uncategorized items")))
      ("V" "Unscheduled work-related tasks" tags "AREA=\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
       ((org-agenda-overriding-header "Unscheduled work-related tasks")
@@ -188,7 +176,7 @@
    (quote
     (agenda-archives)))
  '(org-agenda-window-setup
-   (quote other-window))
+   (quote current-window))
  '(org-archive-location "TODO-archive::")
  '(org-archive-save-context-info
    (quote
@@ -221,6 +209,7 @@
  '(org-cycle-global-at-bob t)
  '(org-deadline-warning-days 14)
  '(org-default-notes-file "~/Documents/Tasks/todo.txt")
+ '(org-default-priority 67)
  '(org-directory "~/Documents/Tasks/")
  '(org-drawers
    (quote
@@ -234,15 +223,19 @@
  '(org-footnote-section nil)
  '(org-habit-completed-glyph 10004)
  '(org-habit-preceding-days 42)
+ '(org-habit-show-habits-only-for-today nil)
  '(org-habit-today-glyph 9483)
  '(org-hide-leading-stars t)
+ '(org-insert-heading-respect-content t)
  '(org-irc-link-to-logs t t)
+ '(org-log-into-drawer t)
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-mobile-files nil)
  '(org-mobile-inbox-for-pull "~/Documents/Tasks/from-mobile.org")
  '(org-modules
    (quote
     (org-id org-info org-habit)))
+ '(org-pretty-entities t)
  '(org-refile-target-verify-function
    (quote dwa/org-verify-refile-target))
  '(org-refile-targets
@@ -251,6 +244,13 @@
      (nil :maxlevel . 2))))
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
+ '(org-special-ctrl-a/e
+   (quote
+    (nil . t)))
+ '(org-speed-commands-user
+   (quote
+    (("+" . org-priority-up)
+     ("-" . org-priority-down))))
  '(org-src-fontify-natively t)
  '(org-tags-column -97)
  '(org-time-clocksum-use-fractional t)
@@ -262,6 +262,7 @@
  '(org-x-backends
    (quote
     (ox-org ox-redmine)))
+ '(org-x-priority-B-silent nil)
  '(org-x-redmine-title-prefix-function
    (quote org-x-redmine-title-prefix))
  '(org-x-redmine-title-prefix-match-function
@@ -858,6 +859,8 @@ end tell" (match-string 1))))
 
   (define-key org-mode-map [(control ?c) tab] 'action-lock-magic-return))
 
+(define-key org-mode-map [(control ?:)] 'org-set-tags)
+
 ;;;_* keybindings
 
 ;;;_ + global
@@ -1007,14 +1010,17 @@ end tell" (match-string 1))))
   (interactive) (org-agenda-todo "CANCELED"))
 
 (define-key org-todo-state-map "d" 'my-org-agenda-todo-done)
-(define-key org-todo-state-map "r" 'my-org-agenda-todo-deferred)
+(define-key org-todo-state-map "f" 'my-org-agenda-todo-deferred)
+(define-key org-todo-state-map "r" 'my-org-agenda-todo-deferred) ;; wiegley
 (define-key org-todo-state-map "y" 'my-org-agenda-todo-someday)
-(define-key org-todo-state-map "g" 'my-org-agenda-todo-delegated)
+(define-key org-todo-state-map "l" 'my-org-agenda-todo-delegated)
+(define-key org-todo-state-map "g" 'my-org-agenda-todo-delegated) ;; wiegley
 (define-key org-todo-state-map "n" 'my-org-agenda-todo-note)
 (define-key org-todo-state-map "s" 'my-org-agenda-todo-started)
 (define-key org-todo-state-map "t" 'my-org-agenda-todo-todo)
 (define-key org-todo-state-map "w" 'my-org-agenda-todo-waiting)
-(define-key org-todo-state-map "x" 'my-org-agenda-todo-canceled)
+(define-key org-todo-state-map "c" 'my-org-agenda-todo-canceled)
+(define-key org-todo-state-map "x" 'my-org-agenda-todo-canceled) ;; wiegley
 
 (define-key org-todo-state-map "z" 'ignore)
 
@@ -1054,6 +1060,51 @@ end tell" (match-string 1))))
 (defadvice org-agenda (after fit-windows-for-agenda activate)
   "Fit the Org Agenda to its buffer."
   (org-fit-agenda-window))
+
+;;; Lifted from [[info:org#Breaking%20down%20tasks][info:org#Breaking down tasks]]
+(defun dwa/org-summary-todo (n-done n-not-done)
+  "Switch entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+(add-hook 'org-after-todo-statistics-hook 'dwa/org-summary-todo)
+
+;;; But what I really want is
+(require 'org-checklist nil 'noerror)
+
+;; see http://thread.gmane.org/gmane.emacs.orgmode/42715
+(add-to-list 'org-checkbox-statistics-hook (function dwa/checkbox-list-complete))
+
+(defun dwa/checkbox-list-complete ()
+  (save-excursion
+    (org-back-to-heading t)
+    (when (looking-at (concat 
+                      "^\\*+[ \t]+" 
+                      org-todo-regexp ;; first match group here
+                      "[ \t].*\\[" "\\(?:" "\\(?2:100%\\)\\|[0-9]+%" 
+                      "\\|" "\\(?3:[0-9]+\\)" "/" "\\(?4:[0-9]+\\)" "\\)" "\\]"))
+          (if (or (match-string 2)
+                  (and (match-string 3)
+                       (equal (match-string 3) (match-string 4))))
+              (org-todo 'done)
+            (org-todo 'todo)))))
+
+;;;###autoload
+(defun jump-to-org-agenda ()
+  (interactive)
+  (let ((buf (get-buffer "*Org Agenda*"))
+        wind)
+    (if buf
+        (if (setq wind (get-buffer-window buf))
+            (when (called-interactively-p 'any)
+              (select-window wind)
+              (org-fit-window-to-buffer))
+          (if (called-interactively-p 'any)
+              (progn
+                (select-window (display-buffer buf t t))
+                (org-fit-window-to-buffer))
+            (with-selected-window (display-buffer buf)
+              (org-fit-window-to-buffer))))
+      (call-interactively 'org-agenda-list))))
 
 (provide 'dot-org-el)
 
