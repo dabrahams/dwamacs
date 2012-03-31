@@ -245,8 +245,7 @@
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
  '(org-special-ctrl-a/e
-   (quote
-    (nil . t)))
+   (quote reversed))
  '(org-speed-commands-user
    (quote
     (("+" . org-priority-up)
