@@ -74,7 +74,7 @@
 Show me unified diffs by default")
  '(ediff-highlight-all-diffs nil nil nil "
 only highlight the selected diff (keeps down gray cruft onscreen)")
- '(ediff-keep-variants t nil nil "
+ '(ediff-keep-variants nil nil nil "
 Any unchanged buffers in the ediff are removed when the session ends. 
 `C-u q' to override when quitting.")
  '(ediff-merge-filename-prefix "")
