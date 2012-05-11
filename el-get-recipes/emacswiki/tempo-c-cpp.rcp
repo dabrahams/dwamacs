@@ -1,4 +1,4 @@
 (:name tempo-c-cpp
 :type emacswiki
 :description "abbrevs for c/c++ programming"
-:website "http://www.emacswiki.org/emacs/download/tempo-c-cpp.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eltempo-c-cpp.el")

@@ -1,4 +1,4 @@
 (:name wordfreq
 :type emacswiki
 :description "Get word's frequency of usage."
-:website "http://www.emacswiki.org/emacs/download/wordfreq.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elwordfreq.el")

@@ -1,4 +1,4 @@
 (:name trash-settings
 :type emacswiki
 :description "Intelligent integration with system trash"
-:website "http://www.emacswiki.org/emacs/download/trash-settings.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eltrash-settings.el")

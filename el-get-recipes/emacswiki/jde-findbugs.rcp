@@ -1,4 +1,4 @@
 (:name jde-findbugs
 :type emacswiki
 :description "Findbugs interface for JDE"
-:website "http://www.emacswiki.org/emacs/download/jde-findbugs.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eljde-findbugs.el")

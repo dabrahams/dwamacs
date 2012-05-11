@@ -1,4 +1,4 @@
 (:name paint
 :type emacswiki
 :description "Makes a Emacs to the Paint Tool"
-:website "http://www.emacswiki.org/emacs/download/paint.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elpaint.el")

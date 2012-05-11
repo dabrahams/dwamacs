@@ -1,4 +1,4 @@
 (:name shell-command-queue
 :type emacswiki
 :description "Queue shell commands for execution"
-:website "http://www.emacswiki.org/emacs/download/shell-command-queue.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elshell-command-queue.el")

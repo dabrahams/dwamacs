@@ -74,6 +74,7 @@ Always Bcc: myself")
    (quote
     ("^Content-Transfer-Encoding:" "^X-Gnus" "^X-" "^Received:" "^User-Agent:" "^Face:" "^References:")))
  '(message-forward-show-mml t)
+ '(message-log-max 1000)
  '(message-mode-hook
    (quote
     ((lambda nil

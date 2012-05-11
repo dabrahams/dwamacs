@@ -1,4 +1,4 @@
 (:name protbuf-by-name
 :type emacswiki
 :description "Extend protbuf.el to allow protecting specific buffer names."
-:website "http://www.emacswiki.org/emacs/download/protbuf-by-name.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elprotbuf-by-name.el")

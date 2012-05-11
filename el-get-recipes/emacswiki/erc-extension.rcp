@@ -1,4 +1,4 @@
 (:name erc-extension
 :type emacswiki
 :description "Some extension for erc"
-:website "http://www.emacswiki.org/emacs/download/erc-extension.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elerc-extension.el")

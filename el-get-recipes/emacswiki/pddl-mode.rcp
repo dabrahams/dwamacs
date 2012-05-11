@@ -1,4 +1,4 @@
 (:name pddl-mode
 :type emacswiki
 :description "A Planning and Domain Definition Language editing mode    -*-coding: iso-8859-1;-*-"
-:website "http://www.emacswiki.org/emacs/download/pddl-mode.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elpddl-mode.el")

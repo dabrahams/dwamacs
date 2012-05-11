@@ -183,6 +183,10 @@
     (time category itags)))
  '(org-attach-method
    (quote mv))
+ '(org-babel-load-languages
+   (quote
+    ((emacs-lisp . t)
+     (sh . t))))
  '(org-capture-templates
    (quote
     (("t" "Task" entry

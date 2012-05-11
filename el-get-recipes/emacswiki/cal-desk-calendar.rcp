@@ -1,4 +1,4 @@
 (:name cal-desk-calendar
 :type emacswiki
 :description "Desk calendar style extensions to Emacs' Calendar/Diary"
-:website "http://www.emacswiki.org/emacs/download/cal-desk-calendar.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elcal-desk-calendar.el")

@@ -1,4 +1,4 @@
 (:name lcomp
 :type emacswiki
 :description "list completion hacks!"
-:website "http://www.emacswiki.org/emacs/download/lcomp.el")
+:website "http://www.emacswiki.org/emacs/download/%s.ellcomp.el")

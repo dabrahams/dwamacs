@@ -1,4 +1,4 @@
 (:name switch-file
 :type emacswiki
 :description "switch from one file to another."
-:website "http://www.emacswiki.org/emacs/download/switch-file.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elswitch-file.el")

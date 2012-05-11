@@ -72,6 +72,7 @@
  ;; If there is more than one, they won't work right.
  '(ediff-custom-diff-options "-u" nil nil "
 Show me unified diffs by default")
+ '(ediff-diff-options "-d")
  '(ediff-highlight-all-diffs nil nil nil "
 only highlight the selected diff (keeps down gray cruft onscreen)")
  '(ediff-keep-variants nil nil nil "

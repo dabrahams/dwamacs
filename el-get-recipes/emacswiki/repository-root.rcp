@@ -1,4 +1,4 @@
 (:name repository-root
 :type emacswiki
 :description "deduce the repository root directory for a given file"
-:website "http://www.emacswiki.org/emacs/download/repository-root.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elrepository-root.el")

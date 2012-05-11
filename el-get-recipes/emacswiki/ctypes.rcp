@@ -1,4 +1,4 @@
 (:name ctypes
 :type emacswiki
 :description "Enhanced Font lock support for custom defined types."
-:website "http://www.emacswiki.org/emacs/download/ctypes.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elctypes.el")

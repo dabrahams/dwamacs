@@ -1,4 +1,4 @@
 (:name diff+20
 :type emacswiki
 :description "Extensions to `diff.el' for Emacs 20 or older."
-:website "http://www.emacswiki.org/emacs/download/diff+20.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eldiff+20.el")

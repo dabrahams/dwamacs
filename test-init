@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+set -x
+
+testdir=/tmp/dtest # `mktemp -d -t dwamacs`
+rm -rf "$testdir"
+mkdir "$testdir"
+cd "$testdir"
+
+HOME="$testdir" emacs2 --no-splash --debug-init -l "/Users/dave/src/dwamacs/dwamacs-install.el"

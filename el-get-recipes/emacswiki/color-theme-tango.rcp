@@ -1,4 +1,4 @@
 (:name color-theme-tango
 :type emacswiki
 :description ""
-:website "http://www.emacswiki.org/emacs/download/color-theme-tango.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elcolor-theme-tango.el")

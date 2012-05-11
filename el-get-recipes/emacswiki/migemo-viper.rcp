@@ -1,4 +1,4 @@
 (:name migemo-viper
 :type emacswiki
 :description "A extension for viper 'f,F,t,T' commands by migemo."
-:website "http://www.emacswiki.org/emacs/download/migemo-viper.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elmigemo-viper.el")

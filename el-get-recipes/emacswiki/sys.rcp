@@ -1,4 +1,4 @@
 (:name sys
 :type emacswiki
 :description "Determine which kind of system Emacs is running."
-:website "http://www.emacswiki.org/emacs/download/sys.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elsys.el")

@@ -1,4 +1,4 @@
 (:name bhl
 :type emacswiki
 :description "From (P)lain text to (H)tml and (L)aTeX."
-:website "http://www.emacswiki.org/emacs/download/bhl.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elbhl.el")

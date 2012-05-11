@@ -1,4 +1,4 @@
 (:name time-ext
 :type emacswiki
 :description "more function for time/date"
-:website "http://www.emacswiki.org/emacs/download/time-ext.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eltime-ext.el")

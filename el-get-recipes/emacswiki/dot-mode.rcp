@@ -1,4 +1,4 @@
 (:name dot-mode
 :type emacswiki
 :description "Minor mode to repeat typing or commands"
-:website "http://www.emacswiki.org/emacs/download/dot-mode.el")
+:website "http://www.emacswiki.org/emacs/download/%s.eldot-mode.el")

@@ -1,4 +1,4 @@
 (:name mule-menu
 :type emacswiki
 :description "Add multiple language support for menubar"
-:website "http://www.emacswiki.org/emacs/download/mule-menu.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elmule-menu.el")

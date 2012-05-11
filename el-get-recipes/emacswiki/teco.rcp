@@ -1,4 +1,4 @@
 (:name teco
 :type emacswiki
 :description "Dale Worley's teco-in-elisp interpreter"
-:website "http://www.emacswiki.org/emacs/download/teco.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elteco.el")

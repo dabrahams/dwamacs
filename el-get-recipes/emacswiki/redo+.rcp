@@ -1,4 +1,4 @@
 (:name redo+
 :type emacswiki
 :description "Redo/undo system for Emacs"
-:website "http://www.emacswiki.org/emacs/download/redo+.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elredo+.el")

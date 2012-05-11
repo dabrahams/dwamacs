@@ -1,4 +1,4 @@
 (:name gob
 :type emacswiki
 :description "A code generator for GObject"
-:website "http://www.emacswiki.org/emacs/download/gob.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elgob.el")

@@ -1,4 +1,4 @@
 (:name less
 :type emacswiki
 :description "less style view mode"
-:website "http://www.emacswiki.org/emacs/download/less.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elless.el")

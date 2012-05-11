@@ -1,4 +1,4 @@
 (:name glimpse
 :type emacswiki
 :description "Interface to glimpse "
-:website "http://www.emacswiki.org/emacs/download/glimpse.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elglimpse.el")

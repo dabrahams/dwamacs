@@ -1,4 +1,4 @@
 (:name auto-async-byte-compile
 :type emacswiki
 :description "Automatically byte-compile when saved"
-:website "http://www.emacswiki.org/emacs/download/auto-async-byte-compile.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elauto-async-byte-compile.el")

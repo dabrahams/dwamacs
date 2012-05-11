@@ -1,4 +1,4 @@
 (:name planner-frame
 :type emacswiki
 :description "Devote a frame to the Planner"
-:website "http://www.emacswiki.org/emacs/download/planner-frame.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elplanner-frame.el")

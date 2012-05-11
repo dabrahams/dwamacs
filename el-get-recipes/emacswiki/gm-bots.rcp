@@ -1,4 +1,4 @@
 (:name gm-bots
 :type emacswiki
 :description "Here you can define new bots used by gm-webbot.el."
-:website "http://www.emacswiki.org/emacs/download/gm-bots.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elgm-bots.el")

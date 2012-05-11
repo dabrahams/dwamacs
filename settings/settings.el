@@ -42,6 +42,7 @@ Blinking cursor just annoys me")
  '(c-offsets-alist
    (quote
     ((inline-open . 0)
+     (inher-intro . 2)
      (substatement-open . 0)
      (access-label . -3)
      (arglist-close . 0))))
@@ -73,9 +74,7 @@ Blinking cursor just annoys me")
  '(custom-unlispify-tag-names nil)
  '(debug-on-error nil)
  '(delete-by-moving-to-trash t)
- '(delete-selection-mode t nil nil "
-Creates normal editor behavior: select a region and begin
-typing, the region is replaced")
+ '(delete-selection-mode t)
  '(diff-default-read-only t nil nil "
 If you don't do this, all the nice navigation stuff is disabled by default.  Who wants to edit diffs by hand, anyway?")
  '(diff-jump-to-old-file t)
@@ -84,6 +83,8 @@ If you don't do this, all the nice navigation stuff is disabled by default.  Who
 which I now deinstall with relish")
  '(dired-listing-switches "-alh" nil nil "
 Added -h so I can read file sizes")
+ '(dired-use-ls-dired
+   (quote unspecified))
  '(display-time-mode t)
  '(el-get-byte-compile nil)
  '(el-get-recipe-path
@@ -91,7 +92,8 @@ Added -h so I can read file sizes")
     ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "~/.emacs.d/el-get/dwamacs/el-get-recipes/emacswiki/" "/Users/dave/.emacs.d/el-get/el-get/recipes/")))
  '(el-get-sources
    (quote
-    ((:name auto-complete :url "https://github.com/Sarcasm/auto-complete.git")
+    ((:name fold-dwim :type http :url "http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el")
+     (:name auto-complete :url "https://github.com/Sarcasm/auto-complete.git")
      (:name org-s5 :type git :url "http://github.com/sigma/org-s5" :description "S5 Presentations from org-mode files")
      (:name elhome :depends
             (initsplit))
@@ -129,18 +131,17 @@ Added -h so I can read file sizes")
      (:name xmlunicode :depends
             (unichars)
             :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
-            (lambda nil
-              (progn
-                (autoload
-                  (quote unicode-character-shortcut-insert)
-                  "xmlunicode" nil t)
-                (autoload
-                  (quote unicode-smart-double-quote)
-                  "xmlunicode" nil t)
-                (setq-default unicode-character-list-file
-                              (concat
-                               (el-get-package-directory "unichars")
-                               "unichars.el")))))
+            (progn
+              (autoload
+                (quote unicode-character-shortcut-insert)
+                "xmlunicode" nil t)
+              (autoload
+                (quote unicode-smart-double-quote)
+                "xmlunicode" nil t)
+              (setq-default unicode-character-list-file
+                            (concat
+                             (el-get-package-directory "unichars")
+                             "unichars.el"))))
      (:name unichars :type http :url "http://nwalsh.com/emacs/xmlchars/unichars.el")
      (:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
      (:name wiegleymacs :type git :url "http://github.com/jwiegley/dot-emacs" :load-path nil)
@@ -430,6 +431,7 @@ command.")
       (line-height . 11.45)
       (space-width . 2.2)
       (avg-char-width . 4.10811)))))
+ '(python-python-command "env python")
  '(remember-annotation-functions
    (quote
     (org-remember-annotation))
@@ -441,7 +443,10 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(safe-local-variable-values
    (quote
-    ((org-refile-targets
+    ((require-final-newline . t)
+     (org-confirm-babel-evaluate)
+     (org-export-babel-evaluate . t)
+     (org-refile-targets
       (nil :todo . "THEME"))
      (org-refile-targets
       (nil :todo . "PROJECT"))
@@ -537,6 +542,9 @@ then sudo on the remote host itself.")
 I never like being nannied by regular browsers either.")
  '(w3m-default-display-inline-images t)
  '(w3m-display-ins-del nil)
+ '(w3m-fill-column -50 nil nil "
+When I use variable-pitch-mode the text tends to run off the right 
+side of the window.  This drastic setting was what I needed to prevent that.")
  '(w3m-use-cookies t)
  '(warning-suppress-types
    (quote
@@ -575,8 +583,7 @@ where I don't expect it to be keeping undo history anyway")
      (:inherit bold :slant italic :weight bold))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0")))
-   t)
+     (:background "#FFFFC0"))))
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))

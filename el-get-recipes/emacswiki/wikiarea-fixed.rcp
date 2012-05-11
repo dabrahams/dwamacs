@@ -1,4 +1,4 @@
 (:name wikiarea-fixed
 :type emacswiki
 :description "Interface to the Emacs Wiki's Elisp area"
-:website "http://www.emacswiki.org/emacs/download/wikiarea-fixed.el")
+:website "http://www.emacswiki.org/emacs/download/%s.elwikiarea-fixed.el")
