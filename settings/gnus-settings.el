@@ -74,6 +74,16 @@
     ((format-time-string "sent.%Y-%m"))))
  '(gnus-message-replyencrypt nil)
  '(gnus-novice-user nil)
+ '(gnus-parameters
+   (quote
+    (("^INBOX"
+      (total-expire . t)
+      (expiry-wait quote immediate)
+      (expiry-target . delete)
+      (display .
+               [or
+                (not reply)
+                (not expire)])))))
  '(gnus-read-active-file nil)
  '(gnus-read-newsrc-file nil)
  '(gnus-refer-article-method
