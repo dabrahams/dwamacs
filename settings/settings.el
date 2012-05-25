@@ -579,7 +579,8 @@ where I don't expect it to be keeping undo history anyway")
      (:weight bold :family "LucidaMonoEF"))))
  '(bold-italic
    ((t
-     (:inherit bold :slant italic :weight bold))))
+     (:inherit
+      (bold italic)))))
  '(diff-refine-change
    ((((background light))
      (:background "#FFFFC0"))))
