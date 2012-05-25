@@ -511,84 +511,84 @@ This has to be on if I want the 'sendlog folder to contain anything
  '(wl-fldmgr-add-complete-with-current-folder-list t)
  '(wl-folder-desktop-name
    #("Messages" 0 8
-     (wl-folder-is-group is-group wl-folder-entity-id 0)))
+     (wl-folder-entity-id 0 wl-folder-is-group is-group)))
  '(wl-folder-notify-deleted t)
  '(wl-folder-petname-alist
    (quote
     (("%INBOX" . "Inbox")
      ("+drafts" . "Drafts")
      (#("%[Gmail]/Sent" 0 13
-        (wl-folder-entity-id 3 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 3))
       . "Sent")
      (#("%inbox:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 58
-        (wl-folder-entity-id 72 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 72))
       . "Inbox")
      (#("%[Gmail]/Trash:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66
-        (wl-folder-entity-id 74 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 74))
       . "Trash")
      (#("%[Gmail]/Star:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65
-        (wl-folder-entity-id 75 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 75))
       . "With a Star")
      (#("%[Gmail]/Sent:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 65
-        (wl-folder-entity-id 76 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 76))
       . "Sent")
      (#("%[Gmail]/Draft:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 66
-        (wl-folder-entity-id 77 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 77))
       . "Draft")
      (#("%[Gmail]/All E-Mails:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 72
-        (wl-folder-entity-id 78 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 78))
       . "All E-Mails")
      (#("%Org-Mode:\"dave.abrahams@gmail.com\"/clear@imap.gmail.com:993!" 0 61
-        (wl-folder-entity-id 79 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 79))
       . "Org-Mode")
      (#("%[Gmail]/Draft" 0 14
-        (wl-folder-entity-id 4 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 4))
       . "Drafts")
      (#("%[Gmail]/Star" 0 13
-        (wl-folder-entity-id 2 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 2))
       . "Flagged")
      ("%Trash" . "Trash")
      (#("%[Gmail]/Starred" 0 16
-        (wl-folder-entity-id 2 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 2))
       . "Important")
      (#("%[Gmail]/Sent Mail" 0 18
-        (wl-folder-entity-id 3 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 3))
       . "Sent")
      (#("%[Gmail]/Drafts" 0 15
-        (wl-folder-entity-id 4 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 4))
       . "Drafts")
      (#("%[Gmail]/All Mail" 0 17
-        (wl-folder-entity-id 6 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 6))
       . "Archive")
      (#("%[Gmail]/Trash" 0 14
-        (wl-folder-entity-id 7 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 7))
       . "Trash")
      (#("%[Gmail]/Spam" 0 13
-        (wl-folder-entity-id 9 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 9))
       . "Spam")
      (#("%INBOX" 0 6
-        (wl-folder-entity-id 1 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 1))
       . "Inbox")
      (#("%[Gmail].Starred" 0 16
-        (wl-folder-entity-id 2 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 2))
       . "Important")
      (#("%[Gmail].Sent Mail" 0 18
-        (wl-folder-entity-id 3 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 3))
       . "Sent")
      (#("%[Gmail].Drafts" 0 15
-        (wl-folder-entity-id 4 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 4))
       . "Drafts")
      (#("%[Gmail].All Mail" 0 17
-        (wl-folder-entity-id 6 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 6))
       . "Archive")
      (#("%[Gmail].Trash" 0 14
-        (wl-folder-entity-id 7 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 7))
       . "Trash")
      (#("%[Gmail].Spam" 0 13
-        (wl-folder-entity-id 9 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 9))
       . "Spam")
      (#("+draft" 0 6
-        (wl-folder-entity-id 10 wl-folder-is-group nil))
+        (wl-folder-is-group nil wl-folder-entity-id 10))
       . "Drafts"))))
  '(wl-folder-process-duplicates-alist
    (quote
