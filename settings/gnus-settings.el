@@ -56,7 +56,7 @@
  '(gnus-generate-tree-function
    (quote gnus-generate-horizontal-tree))
  '(gnus-group-default-list-level 4)
- '(gnus-group-line-format "%S%p%P%5y%5T: %(%B%G%B%)
+ '(gnus-group-line-format "%S%p%P%5uy%5T: %(%B%G%B%)
 ")
  '(gnus-group-mode-hook
    (quote
@@ -535,6 +535,60 @@ This moves them into the Spam folder."
       " ")))
 
 ;;;_ + gnus-article-browse-urls
+;;; Correct message and unread count (http://www.emacswiki.org/emacs/GnusNiftyTricks)
+
+(require 'imap)
+
+(defun gnus-nnimap-count-format (n)
+  (let ((method (or gnus-tmp-method gnus-select-method)))
+  (when (eq (car method) 'nnimap)
+    (let ((counts (nnimap-request-message-counts gnus-tmp-group method)))
+      (if counts (format "%d" (nth n counts)) "?")))))
+
+(defun gnus-user-format-function-t (dummy)
+  (or (gnus-nnimap-count-format 0)
+      gnus-tmp-number-total))
+
+(defun gnus-user-format-function-y (dummy)
+  (or (gnus-nnimap-count-format 1)
+      gnus-tmp-number-of-unread))
+
+(defvar nnimap-message-count-cache-alist nil)
+
+(defun nnimap-message-count-cache-clear ()
+  (setq nnimap-message-count-cache-alist nil))
+
+(defun nnimap-message-count-cache-get (group)
+  (cadr (assoc group nnimap-message-count-cache-alist)))
+
+(defun nnimap-message-count-cache-set (group count)
+  (push (list group count) nnimap-message-count-cache-alist))
+
+(defun nnimap-request-message-counts (group method)
+  (or (nnimap-message-count-cache-get group)
+      (let ((counts (nnimap-fetch-message-counts group method)))
+        (nnimap-message-count-cache-set group counts)
+        counts)))
+
+(defun nnimap-fetch-message-counts (group method)
+  (let ((imap-group (nnimap-decode-gnus-group (car (last (split-string group ":")))))
+        (server (cadr method)))
+    (when (nnimap-possibly-change-group imap-group server)
+      (message "Requesting message count for %s..." group)
+      (with-current-buffer (nnimap-buffer)
+        (let ((response
+               (assoc "MESSAGES"
+                      (assoc "STATUS"
+                             (nnimap-command "STATUS %S (MESSAGES UNSEEN)"
+                                      (utf7-encode imap-group t))))))
+          (message "Requesting message count for %s...done" group)
+          (and response
+               (mapcar #'string-to-number
+                       (list
+                        (nth 1 response) (nth 3 response)))))))))
+
+(add-hook 'gnus-after-getting-new-news-hook 'nnimap-message-count-cache-clear)
+
 
 (defun gnus-article-browse-urls ()
   "Visit a URL from the `gnus-article-buffer' by prompting via a
