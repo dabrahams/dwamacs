@@ -527,7 +527,7 @@ This moves them into the Spam folder."
   (defvar thread)
   (defvar gnus-tmp-level))
 
-(defun gnus-user-format-function-t (header)
+(defun gnus-user-format-function-t-johnw (header)
   (let ((tcount (gnus-summary-number-of-articles-in-thread
 		 (and (boundp 'thread) (car thread)) gnus-tmp-level)))
     (if (> tcount 1)
