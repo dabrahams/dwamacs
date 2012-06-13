@@ -310,13 +310,9 @@ This moves them into the Spam folder."
 (eval-after-load "gnus-sum"
   '(progn
      (define-key gnus-summary-mode-map [?$] 'gmail-report-spam)
+     (define-key gnus-summary-mode-map [(control backspace)] 'gnus-summary-mark-as-expirable)
+     (define-key gnus-summary-mode-map [(shift backspace)] 'gnus-summary-expire-thread)
      (define-key gnus-summary-mode-map [?O ?O] 'gnus-open-article-in-apple-mail)
-     (define-key gnus-summary-mode-map [?B backspace]
-       (function
-        (lambda (arg) (interactive "P")
-          (if (string-match "\\(drafts\\|queue\\)" gnus-newsgroup-name)
-              (gnus-summary-delete-article arg)
-            (gnus-summary-move-article arg "[Gmail].Trash")))))
      (define-key gnus-summary-mode-map [(control ?c) (control ?o)]
        'gnus-article-browse-urls)))
 
