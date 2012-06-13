@@ -73,6 +73,10 @@ Blinking cursor just annoys me")
     ("~/.emacs.d/el-get/dwamacs/settings" custom-theme-directory t)))
  '(custom-unlispify-tag-names nil)
  '(debug-on-error nil)
+ '(default-frame-alist
+    (quote
+     ((vertical-scroll-bars)
+      (font . "Monaco-14"))))
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
  '(diff-default-read-only t nil nil "
