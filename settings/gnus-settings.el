@@ -767,7 +767,8 @@ If all article have been seen, on the subject line of the last article."
     gnus-summary-normal-unread
     gnus-summary-high-read
     gnus-summary-low-read
-    gnus-summary-normal-read))
+    gnus-summary-normal-read
+    gnus-summary-expirable-face))
 
 ;(defvar my-gnus-group-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
 (defvar my-gnus-summary-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
@@ -775,7 +776,16 @@ If all article have been seen, on the subject line of the last article."
 ;(dolist (facename my-gnus-group-faces)
 ;  (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
 (dolist (facename my-gnus-summary-faces)
-  (apply 'set-face-attribute facename nil my-gnus-summary-face-attributes))
+  (when (facep facename)
+    (apply 'set-face-attribute facename nil my-gnus-summary-face-attributes)))
+
+(defface gnus-summary-expirable-face
+  '((((class color) (background dark))
+     (:foreground "grey50" :italic t :strike-through t))
+    (((class color) (background light))
+     (:foreground "grey55" :italic t :strike-through t)))
+  "Face used to highlight articles marked as expirable."
+  :group 'gnus-summary-visual)
 
 ;; prettier summary buffers
 (when window-system
@@ -832,3 +842,11 @@ If all article have been seen, on the subject line of the last article."
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gnus-summary-expirable-face
+   ((t
+     (:foreground "grey55" :strike-through t :slant italic :weight normal :width condensed :family "DejaVu Sans")))))
