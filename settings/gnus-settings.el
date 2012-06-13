@@ -185,9 +185,11 @@ NOTICE: ")))
  '(gnus-treat-mail-gravatar
    (quote head))
  '(gnus-treat-strip-cr t)
- '(gnus-treat-strip-leading-blank-lines t)
+ '(gnus-treat-strip-leading-blank-lines
+   (quote first))
  '(gnus-treat-strip-multiple-blank-lines t)
- '(gnus-treat-strip-trailing-blank-lines t)
+ '(gnus-treat-strip-trailing-blank-lines
+   (quote last))
  '(gnus-tree-minimize-window nil)
  '(gnus-uncacheable-groups "^nnml")
  '(gnus-use-cache t)
