@@ -51,7 +51,7 @@
  '(gnus-duplicate-list-length 100000)
  '(gnus-extra-headers
    (quote
-    (To Cc)))
+    (To Cc Content-Type)))
  '(gnus-gcc-mark-as-read t)
  '(gnus-generate-tree-function
    (quote gnus-generate-horizontal-tree))
@@ -210,7 +210,7 @@ NOTICE: ")))
  '(nnmail-expiry-wait 30)
  '(nnmail-extra-headers
    (quote
-    (To Cc)))
+    (To Cc Content-Type)))
  '(nnmail-scan-directory-mail-source-once t))
 
 ;;;_ + faces
