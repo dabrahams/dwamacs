@@ -116,9 +116,18 @@
     (gnus-score-find-hierarchical)))
  '(gnus-secondary-select-methods
    (quote
-    ((nntp "LocalNNTP"
-           (nntp-address "localhost")
-           (nntp-port-number 9119)))))
+    ((nntp "GigaNews"
+           (nntp-address "text.giganews.com")
+           (nntp-authinfo-user "dabrahams"))
+     (nntp "Gmane"
+           (nntp-address "news.gmane.org"))
+     (nnimap "GMail"
+             (nnimap-address "imap.gmail.com")
+             (nnimap-server-port 993)
+             (nnimap-stream ssl)
+             (nnimap-user "dave.abrahams@gmail.com"))
+     (nntp "Gwene"
+           (nntp-address "news.gwene.org")))))
  '(gnus-select-group-hook
    (quote
     (gnus-group-set-timestamp)))
