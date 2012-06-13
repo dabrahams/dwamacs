@@ -80,8 +80,7 @@
  '(gnus-parameters
    (quote
     (("^INBOX"
-      (total-expire . t)
-      (expiry-wait quote immediate)
+      (expiry-wait . immediate)
       (expiry-target . delete)
       (display .
                [or
@@ -171,6 +170,64 @@ NOTICE: ")))
  '(gnus-subscribe-newsgroup-method
    (quote gnus-subscribe-topics))
  '(gnus-summary-expunge-below -100)
+ '(gnus-summary-highlight
+   (quote
+    (((eq mark gnus-expirable-mark)
+      . dwa/gnus-score-expirable-face)
+     ((eq mark gnus-spam-mark)
+      . spam)
+     ((eq mark gnus-spam-mark)
+      . spam)
+     ((eq mark gnus-canceled-mark)
+      . gnus-summary-cancelled)
+     ((and uncached
+           (> score default-high))
+      . gnus-summary-high-undownloaded)
+     ((and uncached
+           (< score default-low))
+      . gnus-summary-low-undownloaded)
+     (uncached . gnus-summary-normal-undownloaded)
+     ((and
+       (> score default-high)
+       (or
+        (eq mark gnus-dormant-mark)
+        (eq mark gnus-ticked-mark)))
+      . gnus-summary-high-ticked)
+     ((and
+       (< score default-low)
+       (or
+        (eq mark gnus-dormant-mark)
+        (eq mark gnus-ticked-mark)))
+      . gnus-summary-low-ticked)
+     ((or
+       (eq mark gnus-dormant-mark)
+       (eq mark gnus-ticked-mark))
+      . gnus-summary-normal-ticked)
+     ((and
+       (> score default-high)
+       (eq mark gnus-ancient-mark))
+      . gnus-summary-high-ancient)
+     ((and
+       (< score default-low)
+       (eq mark gnus-ancient-mark))
+      . gnus-summary-low-ancient)
+     ((eq mark gnus-ancient-mark)
+      . gnus-summary-normal-ancient)
+     ((and
+       (> score default-high)
+       (eq mark gnus-unread-mark))
+      . gnus-summary-high-unread)
+     ((and
+       (< score default-low)
+       (eq mark gnus-unread-mark))
+      . gnus-summary-low-unread)
+     ((eq mark gnus-unread-mark)
+      . gnus-summary-normal-unread)
+     ((> score default-high)
+      . gnus-summary-high-read)
+     ((< score default-low)
+      . gnus-summary-low-read)
+     (t . gnus-summary-normal-read))))
  '(gnus-summary-line-format "%O%U%R%z%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)		%s
 ")
  '(gnus-suppress-duplicates t)
