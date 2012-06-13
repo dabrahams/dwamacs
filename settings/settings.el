@@ -516,25 +516,6 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
     (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
  '(tool-bar-mode nil nil nil "
 Tool bars take up valuable screen real-estate for icons whose meaning I forget")
- '(tramp-backup-directory-alist
-   (quote
-    (("." . "~/.emacs.d/backups"))))
- '(tramp-default-host "localhost")
- '(tramp-default-proxies-alist
-   (quote
-    (("\\`localhost\\'" nil nil)
-     ("\\`206.217.198.21\\'" nil nil)
-     ("\\`.+\\'" "\\`root\\'" "/ssh:%h:")))
-   nil nil "
-Gets around the common setting that prohibits ssh login as root.
-
-Don't do any proxying for connections to localhost (depends
-on the customization of tramp-default-host to \"localhost\" for simple
-matching), and otherwise, if sudo'ing somewhere, ssh there first and
-then sudo on the remote host itself.")
- '(tramp-remote-path
-   (quote
-    (tramp-default-remote-path "/usr/sbin" "/usr/local/sbin" "/usr/local/bin" "/sbin" "/local/bin" "/local/freeware/bin" "/local/gnu/bin" "/usr/freeware/bin" "/usr/pkg/bin" "/usr/contrib/bin")))
  '(truncate-partial-width-windows nil)
  '(user-mail-address "dave@boostpro.com")
  '(vc-diff-switches "-du")
