@@ -37,6 +37,9 @@
  '(gnus-asynchronous t)
  '(gnus-auto-select-next nil nil nil "
 *** VERY IMPORTANT SETTING ***.  See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=9399")
+ '(gnus-buttonized-mime-types
+   (quote
+    ("multipart/alternative")))
  '(gnus-check-new-newsgroups nil)
  '(gnus-cited-closed-text-button-line-format "...<schnipp %n>...
 ")
