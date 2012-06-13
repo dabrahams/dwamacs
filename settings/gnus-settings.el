@@ -11,14 +11,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(gnus-activate-level 1)
  '(gnus-after-getting-new-news-hook
    (quote
-    (gnus-group-list-groups gnus-display-time-event-handler gnus-score-groups gnus-group-save-newsrc
-                            (lambda nil
-                              (if
-                                  (file-exists-p "/tmp/unread")
-                                  (delete-file "/tmp/unread"))
-                              (display-time-update)))))
+    (gnus-display-time-event-handler gnus-group-save-newsrc nnimap-message-count-cache-clear)))
  '(gnus-agent-expire-all t)
  '(gnus-agent-expire-days 14)
  '(gnus-agent-go-online t)
@@ -64,6 +60,7 @@
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
+ '(gnus-group-use-permanent-levels t)
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-ignored-mime-types
    (quote
@@ -652,8 +649,6 @@ This moves them into the Spam folder."
                (mapcar #'string-to-number
                        (list
                         (nth 1 response) (nth 3 response)))))))))
-
-(add-hook 'gnus-after-getting-new-news-hook 'nnimap-message-count-cache-clear)
 
 ;;;_ + gnus-article-browse-urls
 
