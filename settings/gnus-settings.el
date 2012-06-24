@@ -47,6 +47,7 @@
    (quote gnus-ido-completing-read))
  '(gnus-default-article-saver
    (quote gnus-summary-write-to-file))
+ '(gnus-default-directory "~")
  '(gnus-duplicate-list-length 100000)
  '(gnus-extra-headers
    (quote
