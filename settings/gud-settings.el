@@ -53,6 +53,7 @@
 
 (define-key gud-minor-mode-map [(f5)] 'gud-cont)
 (define-key gud-minor-mode-map [(f11)] 'gud-step)
+(define-key gud-minor-mode-map [(control f11)] 'gud-stepi)
 (define-key gud-minor-mode-map [(f10)] 'gud-next)
 (define-key gud-minor-mode-map [(shift f11)] 'gud-finish)
 (define-key gud-minor-mode-map [(control f10)] 'my-gud-run-to-cursor)
