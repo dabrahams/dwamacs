@@ -268,6 +268,8 @@ from macports.")
      ("\\`\\(dwa/\\)?\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil)
      ("\\`\\(dwa/\\)?bcc-" "byte-code-cache-settings.el" nil nil))))
  '(initsplit-pretty-print t)
+ '(ipa-file-function
+   (quote ipa-get-sidecar-file))
  '(irony-compiler-executable "/opt/local/bin/clang++-mp-3.1")
  '(irony-header-directories
    (quote
