@@ -1,9 +1,10 @@
-(defadvice tramp-cleanup-all-connections (after tramp-reset-default-directories activate)
-  (dolist (b (buffer-list))
-    (with-current-buffer b
-      (when (tramp-tramp-file-p default-directory)
-        (setq default-directory user-emacs-directory)
-        ))))
+;; (require 'tramp-cmds)
+;; (defadvice tramp-cleanup-all-buffers (after tramp-reset-default-directories activate)
+;;   (dolist (b (buffer-list))
+;;     (with-current-buffer b
+;;       (when (tramp-tramp-file-p default-directory)
+;;         (setq default-directory user-emacs-directory)
+;;         ))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
