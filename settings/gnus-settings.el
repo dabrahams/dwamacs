@@ -438,7 +438,7 @@ This moves them into the Spam folder."
        '(article
          (horizontal 1.0
                      (vertical 1.0
-                               (group 35)
+                               (group 10)
                                (summary 1.0 point))
                      (vertical .5 (article 1.0)))))
 
@@ -447,7 +447,7 @@ This moves them into the Spam folder."
        '(summary
          (horizontal 1.0
                      (vertical 1.0
-                               (group 35)
+                               (group 10)
                                (summary 1.0 point))
                      (vertical .5 (article 1.0)))))
 
@@ -455,7 +455,7 @@ This moves them into the Spam folder."
        '(message
          (horizontal 1.0
                      (vertical 1.0
-                               (group 35)
+                               (group 10)
                                (summary 1.0))
                      (vertical .5
                                (message 1.0 point)))))
@@ -464,7 +464,7 @@ This moves them into the Spam folder."
        '(reply
          (horizontal 1.0
                      (vertical 1.0
-                               (group 35)
+                               (group 10)
                                (summary 1.0))
                      (vertical .5
                                (message 1.0 point)
@@ -474,7 +474,7 @@ This moves them into the Spam folder."
        '(reply-yank
          (horizontal 1.0
                      (vertical 1.0
-                               (group 35)
+                               (group 10)
                                (summary 1.0))
                      (vertical .5
                                (message 1.0 point)))))
