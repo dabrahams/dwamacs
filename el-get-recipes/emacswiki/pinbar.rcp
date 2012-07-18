@@ -1,4 +1,0 @@
-(:name pinbar
-:type emacswiki
-:description "Display a pin bar in the header line"
-:website "http://www.emacswiki.org/emacs/download/%s.elpinbar.el")

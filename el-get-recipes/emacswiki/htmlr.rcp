@@ -1,4 +1,0 @@
-(:name htmlr
-:type emacswiki
-:description "HTML rendering in Elisp"
-:website "http://www.emacswiki.org/emacs/download/%s.elhtmlr.el")

@@ -1,4 +1,0 @@
-(:name mutt
-:type emacswiki
-:description "Use Emacs 20 as an external editor for the Mutt mailer"
-:website "http://www.emacswiki.org/emacs/download/%s.elmutt.el")

@@ -1,4 +1,0 @@
-(:name goto-last-change
-:type emacswiki
-:description "Move point through buffer-undo-list positions -*-unibyte: t; coding: iso-8859-1;-*-"
-:website "http://www.emacswiki.org/emacs/download/%s.elgoto-last-change.el")

@@ -1,4 +1,0 @@
-(:name org-mairix
-:type emacswiki
-:description "Support for hooking mairix search into Org for different MUAs"
-:website "http://www.emacswiki.org/emacs/download/%s.elorg-mairix.el")

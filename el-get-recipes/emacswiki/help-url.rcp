@@ -1,4 +1,0 @@
-(:name help-url
-:type emacswiki
-:description "Un module pour se connecter aux aides en lignes de php ou de coldfusion"
-:website "http://www.emacswiki.org/emacs/download/%s.elhelp-url.el")

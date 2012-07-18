@@ -1,4 +1,0 @@
-(:name icicles-mcmd
-:type emacswiki
-:description "Minibuffer commands for Icicles"
-:website "http://www.emacswiki.org/emacs/download/%s.elicicles-mcmd.el")

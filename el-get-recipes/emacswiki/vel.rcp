@@ -1,4 +1,0 @@
-(:name vel
-:type emacswiki
-:description "keyboard/mouse-based "self-scroller""
-:website "http://www.emacswiki.org/emacs/download/%s.elvel.el")

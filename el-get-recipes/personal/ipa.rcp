@@ -1,0 +1,5 @@
+(:name ipa
+:type github
+:description "In-place annotations"
+:pkgname "idomagal/ipa.el"
+:website "http://github.com/idomagal/ipa.el")

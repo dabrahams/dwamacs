@@ -1,4 +1,0 @@
-(:name chinese-menu
-:type emacswiki
-:description "Add chinese menu bar -*- coding: utf-8 -*-"
-:website "http://www.emacswiki.org/emacs/download/%s.elchinese-menu.el")

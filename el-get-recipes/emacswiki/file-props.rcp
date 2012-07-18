@@ -1,4 +1,0 @@
-(:name file-props
-:type emacswiki
-:description "Add file properties to your files"
-:website "http://www.emacswiki.org/emacs/download/%s.elfile-props.el")

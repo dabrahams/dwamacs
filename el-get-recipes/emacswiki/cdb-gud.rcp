@@ -1,4 +1,0 @@
-(:name cdb-gud
-:type emacswiki
-:description "Grand Unified Debugger mode for running CDB"
-:website "http://www.emacswiki.org/emacs/download/%s.elcdb-gud.el")

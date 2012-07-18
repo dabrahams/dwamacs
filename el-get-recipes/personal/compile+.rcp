@@ -1,0 +1,5 @@
+(:name compile+
+:depends compile-
+:type emacswiki
+:description "Extensions to `compile.el'."
+:website "https://raw.github.com/emacsmirror/emacswiki.org/master/compile+.el")

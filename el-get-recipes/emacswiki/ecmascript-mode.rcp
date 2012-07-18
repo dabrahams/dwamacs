@@ -1,4 +1,0 @@
-(:name ecmascript-mode
-:type emacswiki
-:description "major mode for editing ECMAScript code"
-:website "http://www.emacswiki.org/emacs/download/%s.elecmascript-mode.el")

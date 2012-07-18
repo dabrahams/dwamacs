@@ -1,4 +1,0 @@
-(:name smart-operator
-:type emacswiki
-:description "Beautify the operators in codes"
-:website "http://www.emacswiki.org/emacs/download/%s.elsmart-operator.el")

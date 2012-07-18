@@ -1,4 +1,0 @@
-(:name apt-utils
-:type emacswiki
-:description "Emacs interface to APT (Debian package management)"
-:website "http://www.emacswiki.org/emacs/download/%s.elapt-utils.el")

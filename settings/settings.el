@@ -93,7 +93,7 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-recipe-path
    (quote
-    ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "~/.emacs.d/el-get/dwamacs/el-get-recipes/emacswiki/" "/Users/dave/.emacs.d/el-get/el-get/recipes/")))
+    ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "/Users/dave/.emacs.d/el-get/el-get/recipes" "~/.emacs.d/el-get/el-get/recipes/elpa/" "~/.emacs.d/el-get/el-get/recipes/emacswiki/")))
  '(el-get-sources
    (quote
     ((:name fold-dwim :type http :url "http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el")

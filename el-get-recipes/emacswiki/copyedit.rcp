@@ -1,4 +1,0 @@
-(:name copyedit
-:type emacswiki
-:description "tweak editing commands for handling prose."
-:website "http://www.emacswiki.org/emacs/download/%s.elcopyedit.el")

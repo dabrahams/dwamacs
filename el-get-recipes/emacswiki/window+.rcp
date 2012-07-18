@@ -1,4 +1,0 @@
-(:name window+
-:type emacswiki
-:description "Extensions to `window.el'."
-:website "http://www.emacswiki.org/emacs/download/%s.elwindow+.el")

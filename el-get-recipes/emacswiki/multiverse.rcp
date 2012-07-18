@@ -1,4 +1,0 @@
-(:name multiverse
-:type emacswiki
-:description "manage multiple versions of buffers in an Emacs session"
-:website "http://www.emacswiki.org/emacs/download/%s.elmultiverse.el")

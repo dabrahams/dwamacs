@@ -1,0 +1,6 @@
+(:name emacs-edg
+:type github
+:description "Emacs lisp for hacking EDG source code"
+:pkgname "boostpro/emacs-edg"
+:features emacs-edg
+)

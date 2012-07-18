@@ -1,4 +1,0 @@
-(:name wcheck-mode
-:type emacswiki
-:description ""
-:website "http://www.emacswiki.org/emacs/download/%s.elwcheck-mode.el")

@@ -1,4 +1,0 @@
-(:name naf-mode-db-flags
-:type emacswiki
-:description "keyword lists and regexps for font-locking in `naf-mode'"
-:website "http://www.emacswiki.org/emacs/download/%s.elnaf-mode-db-flags.el")

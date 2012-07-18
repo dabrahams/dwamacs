@@ -1,4 +1,0 @@
-(:name unidiff
-:type emacswiki
-:description "editing unified format patches"
-:website "http://www.emacswiki.org/emacs/download/%s.elunidiff.el")

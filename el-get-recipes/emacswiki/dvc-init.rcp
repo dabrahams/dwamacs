@@ -1,4 +1,0 @@
-(:name dvc-init
-:type emacswiki
-:description ""
-:website "http://www.emacswiki.org/emacs/download/%s.eldvc-init.el")

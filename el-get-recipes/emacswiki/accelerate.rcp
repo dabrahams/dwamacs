@@ -1,4 +1,0 @@
-(:name accelerate
-:type emacswiki
-:description "pump numeric arg for auto-repeated interactive commands"
-:website "http://www.emacswiki.org/emacs/download/%s.elaccelerate.el")

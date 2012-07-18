@@ -1,4 +1,0 @@
-(:name qsearch
-:type emacswiki
-:description "simple isearch implemented as a quasimode"
-:website "http://www.emacswiki.org/emacs/download/%s.elqsearch.el")

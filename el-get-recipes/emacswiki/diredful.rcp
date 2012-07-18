@@ -1,4 +1,0 @@
-(:name diredful
-:type emacswiki
-:description "colorful file names in dired buffers"
-:website "http://www.emacswiki.org/emacs/download/%s.eldiredful.el")

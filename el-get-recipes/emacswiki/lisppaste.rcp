@@ -1,4 +1,0 @@
-(:name lisppaste
-:type emacswiki
-:description "Interact with the lisppaste pastebot via XML-RPC."
-:website "http://www.emacswiki.org/emacs/download/%s.ellisppaste.el")
