@@ -288,6 +288,15 @@ NOTICE: ")))
 
 ;;;_ + faces
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gnus-summary-expirable-face
+   ((t
+     (:foreground "grey55" :strike-through t :slant italic :weight normal :width condensed :family "DejaVu Sans")))))
+
 ;;;_* configuration
 
 (require 'gnus)
@@ -857,11 +866,3 @@ If all article have been seen, on the subject line of the last article."
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(gnus-summary-expirable-face
-   ((t
-     (:foreground "grey55" :strike-through t :slant italic :weight normal :width condensed :family "DejaVu Sans")))))
