@@ -863,6 +863,21 @@ If all article have been seen, on the subject line of the last article."
 (add-hook 'gnus-group-prepare-hook 'DE-collapse-group-names)
 (add-hook 'gnus-group-update-group-hook 'DE-collapse-group-names)
 
+;; Queueing messages in Gnus (instead of Postfix) when
+;; disconnected:
+
+;; uncomment to enable
+;; (add-hook 'message-send-hook 'queue-message-if-not-connected)
+
+(defun quickping (host)
+  (= 0 (call-process "/sbin/ping" nil nil nil "-c1" "-W50" "-q" host)))
+
+(defun queue-message-if-not-connected ()
+  (set (make-local-variable 'gnus-agent-queue-mail)
+       (if (quickping "smtp.gmail.com") t 'always)))
+;;
+;;
+
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
