@@ -568,7 +568,8 @@ where I don't expect it to be keeping undo history anyway")
       (bold italic)))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0"))))
+     (:background "#FFFFC0")))
+   t)
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))
