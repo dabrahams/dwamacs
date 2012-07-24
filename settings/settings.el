@@ -83,6 +83,7 @@ Blinking cursor just annoys me")
 If you don't do this, all the nice navigation stuff is disabled by default.  Who wants to edit diffs by hand, anyway?")
  '(diff-jump-to-old-file t)
  '(diff-switches "-du")
+ '(dired-auto-revert-buffer t)
  '(dired-dwim-target t nil nil "This customization replaces John's entire desire for sunrise,
 which I now deinstall with relish")
  '(dired-listing-switches "-alh" nil nil "
