@@ -72,7 +72,6 @@ Blinking cursor just annoys me")
    (quote
     ("~/.emacs.d/el-get/dwamacs/settings" custom-theme-directory t)))
  '(custom-unlispify-tag-names nil)
- '(debug-on-error nil)
  '(default-frame-alist
     (quote
      ((vertical-scroll-bars)
