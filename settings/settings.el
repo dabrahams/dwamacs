@@ -74,8 +74,7 @@ Blinking cursor just annoys me")
  '(custom-unlispify-tag-names nil)
  '(default-frame-alist
     (quote
-     ((vertical-scroll-bars)
-      (font . "Monaco-14"))))
+     ((vertical-scroll-bars))))
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
  '(diff-default-read-only t nil nil "
@@ -91,9 +90,6 @@ Added -h so I can read file sizes")
    (quote unspecified))
  '(display-time-mode t)
  '(el-get-byte-compile nil)
- '(el-get-recipe-path
-   (quote
-    ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "/Users/dave/.emacs.d/el-get/el-get/recipes" "~/.emacs.d/el-get/el-get/recipes/elpa/" "~/.emacs.d/el-get/el-get/recipes/emacswiki/")))
  '(elscreen-buffer-list-enabled t)
  '(elscreen-buffer-to-nickname-alist
    (quote
