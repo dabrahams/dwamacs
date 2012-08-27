@@ -1,0 +1,5 @@
+(:name info+
+:type emacswiki
+:depends (fit-frame misc-fns strings thingatpt+)
+:description "Extensions to `info.el'."
+:website "http://www.emacswiki.org/emacs/InfoPlus")

@@ -1,0 +1,4 @@
+(:name zenburn-theme :type git :url "git@github.com:dabrahams/zenburn-theme.git" :load-path
+        ("themes")
+        :compile
+        ("themes"))

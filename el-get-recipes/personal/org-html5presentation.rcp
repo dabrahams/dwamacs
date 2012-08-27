@@ -1,0 +1,6 @@
+(:name org-html5presentation
+       :type github
+       :description "html5 presentation from org files"
+       :user "twada"
+       :pkgname "org-html5presentation.el"
+       :autoloads t)

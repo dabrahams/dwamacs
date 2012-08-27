@@ -9,7 +9,7 @@
 
 ;; auto modes
 (add-to-list 'auto-mode-alist
-             '("\\.\\(text\\|md\\|mkdn\\|mmd\\|markdown\\)\\'" . markdown-mode))
+             '("\\.\\(text\\|md\\|mkdn?\\|mmd\\|markdown\\)\\'" . markdown-mode))
 
 (defun request-feature (feature)
   (or (require feature nil 'noerror)
@@ -79,12 +79,12 @@
 ;;;;;;;
 
 (when (request-feature 'color-theme)
-  (define-color-theme
-    dwa-dark-theme
-    "Dave Abrahams"
-    "Refinement of zenburn for dark spaces"
-    (color-theme-zenburn)
-    (load-theme 'zenburn-overrides))
+  ;; (define-color-theme
+  ;;   dwa-dark-theme
+  ;;   "Dave Abrahams"
+  ;;   "Refinement of zenburn for dark spaces"
+  ;;   (color-theme-zenburn)
+  ;;   (load-theme 'zenburn-overrides))
   (color-theme-initialize)
   (request-feature 'org-faces)
   ;; Store away the emacs default theme so I can get back there
@@ -198,6 +198,34 @@
 
 (add-hook 'window-configuration-change-hook 'make-small-windows-softly-dedicated)
 
+;; Buffer initialization stuff
+(defcustom my-buffer-initialization-alist
+      '(
+        ("\\.[ih]\\(pp\\|xx\\)?$" . my-begin-cc-header)
+        ("\\.c\\(pp\\|xx\\)$" . my-begin-cc-source)
+        ("\\.\\(jam\\|\\html?\\|sh\\|py\\|rst\\|xml\\)$" . my-copyright)
+        )
+      "A list of pairs (PATTERN . FUNCTION) describing how to initialize an empty buffer whose
+file name matches PATTERN."
+      ':type 'alist
+      )
+
+(defadvice find-file (after my-prepare-code-contents activate)
+  ;; if the file doesn't exist yet and is empty
+  (if (and (equal (buffer-size) 0)
+           (not (file-exists-p (buffer-file-name))))
+
+      ;; try to find an initialization function
+      (let ((initializer
+             (find-if
+              (lambda (pair) (string-match (car pair) (buffer-file-name)))
+              my-buffer-initialization-alist)))
+
+        ;; if found, call it
+        (if initializer
+            (progn (eval (list (cdr initializer)))
+                   (set-buffer-modified-p nil)))
+      )))
   
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]

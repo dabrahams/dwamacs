@@ -1,0 +1,5 @@
+(:name gnus-harvest
+:type github
+:description "Harvest e-mail address from read/written articles"
+:user "jwiegley"
+:pkgname "gnus-harvest")

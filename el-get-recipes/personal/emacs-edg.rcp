@@ -3,4 +3,5 @@
 :description "Emacs lisp for hacking EDG source code"
 :pkgname "boostpro/emacs-edg"
 :features edg
+:depends yasnippet
 )

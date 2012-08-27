@@ -91,19 +91,16 @@
     (current
      (nnregistry)
      (nnir "nnimap:LocalIMAP")
-     (nntp "LocalNNTP"
-           (nntp-address "localhost")
-           (nntp-port-number 9119))
      (nntp "Gmane"
            (nntp-address "news.gmane.org"))
      (nntp "GigaNews"
            (nntp-address "text.giganews.com")
-           (nntp-authinfo-user "dabrahams")))))
+           (nntp-authinfo-user "dabrahams"))
+     (nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119))))
+   nil nil "***** NOTE: NEED TO RESTORE (nnregistry) here")
  '(gnus-refer-thread-use-nnir t)
- '(gnus-registry-ignored-groups
-   (quote
-    (("nntp" t)
-     ("^INBOX" t))))
  '(gnus-safe-html-newsgroups ".")
  '(gnus-save-duplicate-list t)
  '(gnus-save-killed-list nil)
@@ -265,6 +262,29 @@ NOTICE: ")))
  '(gnus-uncacheable-groups "^nnml")
  '(gnus-use-cache t)
  '(gnus-use-trees t)
+ '(gnus-valid-select-methods
+   (quote
+    (("nntp" post address prompt-address physical-address)
+     ("nnspool" post address)
+     ("nnvirtual" post-mail prompt-address virtual)
+     ("nnmbox" mail address respool)
+     ("nnml" post-mail address respool)
+     ("nnmh" mail address respool)
+     ("nndir" post-mail prompt-address physical-address)
+     ("nneething" none address prompt-address physical-address)
+     ("nndoc" none address prompt-address virtual)
+     ("nnbabyl" mail address respool)
+     ("nndraft" post-mail)
+     ("nnfolder" mail address respool)
+     ("nngateway" post-mail address prompt-address physical-address)
+     ("nnweb" none)
+     ("nnrss" none)
+     ("nnagent" post-mail)
+     ("nnimap" post-mail address prompt-address physical-address respool server-marks)
+     ("nnmaildir" mail address respool server-marks)
+     ("nnnil" none)
+     ("nndiary" post-mail respool address)
+     ("nnir" mail virtual))))
  '(gnus-verbose 4)
  '(nnir-hyrex-remove-prefix "~/Library/Data/Gnus/Mail")
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail][/.][^A]\\)")
@@ -349,6 +369,8 @@ NOTICE: ")))
        (criteria . "")
        (server   . "nnimap:LocalIMAP") ))))
 
+(push '((nnimap "imap.gmail.com") denied) gnus-opened-servers)
+
 (define-key global-map [(alt meta ?f)] 'gnus-query)
 
 (defun gnus-goto-article (message-id)
@@ -369,6 +391,8 @@ NOTICE: ")))
      0     ; :number
      )
     (gnus-summary-refer-article message-id)
+;           (and (bound-and-true-p gnus-registry-enabled)
+;            (gnus-try-warping-via-registry))
     ))
 
 (defun gnus-current-message-id ()
@@ -391,7 +415,7 @@ This moves them into the Spam folder."
 
 (eval-after-load "gnus-sum"
   '(progn
-     (define-key gnus-summary-mode-map [?$] 'gmail-report-spam)
+;     (define-key gnus-summary-mode-map [?$] 'gmail-report-spam)
      (define-key gnus-summary-mode-map [(control backspace)] 'gnus-summary-mark-as-expirable)
      (define-key gnus-summary-mode-map [(shift backspace)] 'gnus-summary-expire-thread)
      (define-key gnus-summary-mode-map [?O ?O] 'gnus-open-article-in-apple-mail)

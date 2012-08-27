@@ -1,0 +1,12 @@
+ (:name tramp :type cvs :url ":pserver:anonymous@cvs.savannah.gnu.org:/sources/tramp" :website "http://www.gnu.org/s/tramp/" :build
+        `(("autoconf")
+          ("./configure" ,(concat "--with-emacs=" el-get-emacs)
+           "--with-contrib" ,(concat "--prefix="
+                                     (expand-file-name
+                                      (el-get-package-directory "tramp"))))
+          ("make")
+          ("make"
+           ("install")))
+        :load-path
+        ("share/emacs/site-lisp")
+        :info "share/info" :module "tramp")

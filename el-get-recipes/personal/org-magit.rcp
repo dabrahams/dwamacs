@@ -1,0 +1,1 @@
+ (:name org-magit :type github :user "sigma" :pkgname "org-magit")

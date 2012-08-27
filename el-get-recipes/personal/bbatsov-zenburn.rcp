@@ -1,0 +1,13 @@
+ (:name bbatsov-zenburn :depends
+        (color-theme)
+        :type git :url "https://github.com/bbatsov/zenburn-emacs" :build
+        (let
+            ((default-directory
+               (el-get-package-directory "bbatsov-zenburn")))
+          (mkdir "site-lisp")
+          (copy-file "color-theme-zenburn.el" "site-lisp" t)
+          nil)
+        :load-path
+        ("site-lisp")
+        :compile
+        ("site-lisp"))

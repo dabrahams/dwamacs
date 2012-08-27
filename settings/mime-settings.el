@@ -14,7 +14,7 @@ This should really be the default.  Most MUAs can't decode the split messages!")
 Added image/* to display attached images inline")
  '(mm-discouraged-alternatives
    (quote
-    ("text/html" "text/richtext")))
+    ("text/html" "text/richtext" "image/.*")))
  '(mm-inline-large-images
    (quote resize))
  '(mm-inline-text-html-with-images t)

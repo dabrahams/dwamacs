@@ -27,6 +27,9 @@
    nil nil "The default, `warn', Makes a lot of noise for no apparent benefit")
  '(ansi-color-names-vector
    [zenburn-bg zenburn-red zenburn-green zenburn-yellow zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg])
+ '(auth-sources
+   (quote
+    (macos-keychain-internet macos-keychain-generic "~/.authinfo" "~/.authinfo.gpg" "~/.netrc")))
  '(backup-directory-alist
    (quote
     (("." . "~/.emacs.d/backups"))))
@@ -56,9 +59,6 @@ Blinking cursor just annoys me")
    (quote box)
    t)
  '(custom-buffer-done-kill t)
- '(custom-enabled-themes
-   (quote
-    (zenburn-overrides)))
  '(custom-face-default-form
    (quote all))
  '(custom-magic-show
@@ -94,86 +94,6 @@ Added -h so I can read file sizes")
  '(el-get-recipe-path
    (quote
     ("~/.emacs.d/el-get/dwamacs/el-get-recipes/personal/" "/Users/dave/.emacs.d/el-get/el-get/recipes" "~/.emacs.d/el-get/el-get/recipes/elpa/" "~/.emacs.d/el-get/el-get/recipes/emacswiki/")))
- '(el-get-sources
-   (quote
-    ((:name fold-dwim :type http :url "http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el")
-     (:name auto-complete :url "https://github.com/Sarcasm/auto-complete.git")
-     (:name org-s5 :type git :url "http://github.com/sigma/org-s5" :description "S5 Presentations from org-mode files")
-     (:name elhome :depends
-            (initsplit))
-     (:name ws-trim :type ftp :url "ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el")
-     (:name package :url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
-     (:name wpmail :type git :url "github.com/thomas11/wpmail")
-     (:name info+ :depends
-            (fit-frame misc-fns strings thingatpt+)
-            :website "http://www.emacswiki.org/emacs/InfoPlus")
-     (:name rs-info :type emacsmirror :website "http://lists.gnu.org/archive/html/info-gnus-english/2006-10/msg00081.html" :description "Info enhancements from Reiner Steib, including boxquote")
-     (:name org-mode :url "http://github.com/jwiegley/org-mode")
-     (:name org-html5presentation :type git :url "git://gist.github.com/509761.git")
-     (:name org-magit :type git :url "https://github.com/sigma/org-magit")
-     (:name gnus-harvest :type git :url "git://github.com/jwiegley/gnus-harvest.git")
-     (:name tramp :type cvs :url ":pserver:anonymous@cvs.savannah.gnu.org:/sources/tramp" :website "http://www.gnu.org/s/tramp/" :build
-            (\`
-             (("autoconf")
-              ("./configure"
-               (\,
-                (concat "--with-emacs=" el-get-emacs))
-               "--with-contrib"
-               (\,
-                (concat "--prefix="
-                        (expand-file-name
-                         (el-get-package-directory "tramp")))))
-              ("make")
-              ("make"
-               ("install"))))
-            :load-path
-            ("share/emacs/site-lisp")
-            :info "share/info" :module "tramp")
-     (:name workspaces :type emacswiki)
-     (:name company :type elpa)
-     (:name grep-ed :type emacswiki)
-     (:name xmlunicode :depends
-            (unichars)
-            :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
-            (progn
-              (autoload
-                (quote unicode-character-shortcut-insert)
-                "xmlunicode" nil t)
-              (autoload
-                (quote unicode-smart-double-quote)
-                "xmlunicode" nil t)
-              (setq-default unicode-character-list-file
-                            (concat
-                             (el-get-package-directory "unichars")
-                             "unichars.el"))))
-     (:name unichars :type http :url "http://nwalsh.com/emacs/xmlchars/unichars.el")
-     (:name boxquote :type http :url "http://www.davep.org/emacs/boxquote.el")
-     (:name wiegleymacs :type git :url "http://github.com/jwiegley/dot-emacs" :load-path nil)
-     (:name dwamacs :depends
-            (elhome)
-            :type git :url "git@github.com:dabrahams/dwamacs" :load-path
-            ("." "settings" "startup" "site-lisp"))
-     (:name zenburn-theme :type git :url "git@github.com:dabrahams/zenburn-theme.git" :load-path
-            ("themes")
-            :compile
-            ("themes"))
-     (:name bbatsov-zenburn :depends
-            (color-theme)
-            :type git :url "https://github.com/bbatsov/zenburn-emacs" :build
-            (let
-                ((default-directory
-                   (el-get-package-directory "bbatsov-zenburn")))
-              (mkdir "site-lisp")
-              (copy-file "color-theme-zenburn.el" "site-lisp" t)
-              nil)
-            :load-path
-            ("site-lisp")
-            :compile
-            ("site-lisp")))))
- '(el-get-standard-packages
-   (quote
-    ("color-theme-zenburn" "magit" "color-theme" "semi" "flim" "wanderlust" "apel" "yasnippet" "maxframe" "markdown-mode" "php-mode" "psvn" "nognus" "org-mode" "gravatar" "wl-gravatar" "filladapt" "emacs-w3m" "elhome" "byte-code-cache" "el-get" "browse-kill-ring" "el-get" "initsplit" "wanderlust"))
-   t)
  '(elscreen-buffer-list-enabled t)
  '(elscreen-buffer-to-nickname-alist
    (quote
@@ -554,6 +474,7 @@ where I don't expect it to be keeping undo history anyway")
  '(weblogger-server-url "http://cpp-next.com/xmlrpc.php")
  '(weblogger-server-username "dave")
  '(wg-morph-on nil)
+ '(which-function-mode t)
  '(workgroups-mode t)
  '(x-select-enable-clipboard t))
 (custom-set-faces
@@ -567,8 +488,7 @@ where I don't expect it to be keeping undo history anyway")
       (bold italic)))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0")))
-   t)
+     (:background "#FFFFC0"))))
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))

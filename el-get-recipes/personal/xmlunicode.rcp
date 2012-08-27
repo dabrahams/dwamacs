@@ -1,0 +1,14 @@
+ (:name xmlunicode :depends
+        (unichars)
+        :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
+        (progn
+          (autoload 'unicode-character-insert "xmlunicode" nil t)
+          (autoload 'unicode-smart-double-quote "xmlunicode" nil t)
+          (autoload 'unicode-smart-single-quote "xmlunicode" nil t)
+          (autoload 'unicode-smart-period "xmlunicode" nil t)
+          (autoload 'unicode-character-menu-insert "xmlunicode" nil t)
+          (autoload 'unicode-character-shortcut-insert "xmlunicode" nil t)
+          (setq-default unicode-character-list-file
+                        (concat
+                         (el-get-package-directory "unichars")
+                         "unichars.el"))))

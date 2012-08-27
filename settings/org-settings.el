@@ -224,6 +224,13 @@
  '(org-extend-today-until 6)
  '(org-fast-tag-selection-single-key
    (quote expert))
+ '(org-file-apps
+   (quote
+    (("\\.pptx?\\'" . "open %s")
+     (auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . default))))
  '(org-footnote-section nil)
  '(org-habit-completed-glyph 10004)
  '(org-habit-preceding-days 42)
