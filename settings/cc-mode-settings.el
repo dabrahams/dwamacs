@@ -1,6 +1,7 @@
 ;;
 ;; C/C++
 ;;
+(require 'modal)
 
 (defun my-c-leading-comma-p ()
   (save-excursion
