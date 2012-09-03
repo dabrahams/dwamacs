@@ -333,9 +333,10 @@
 
 ;;(require 'org-crypt)
 (require 'org-devonthink nil 'noerror)
-(require 'org-x)
-(require 'ox-org)
-(require 'ox-redmine)
+(ignore-errors
+  (require 'org-x)
+  (require 'ox-org)
+  (require 'ox-redmine))
 (require 'ob-R)
 (require 'ob-python)
 (require 'ob-emacs-lisp)
