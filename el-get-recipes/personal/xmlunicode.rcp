@@ -4,6 +4,7 @@
         (progn
           (autoload 'unicode-character-insert "xmlunicode" nil t)
           (autoload 'unicode-smart-double-quote "xmlunicode" nil t)
+          (autoload 'unicode-smart-hyphen "xmlunicode" nil t)
           (autoload 'unicode-smart-single-quote "xmlunicode" nil t)
           (autoload 'unicode-smart-period "xmlunicode" nil t)
           (autoload 'unicode-character-menu-insert "xmlunicode" nil t)
