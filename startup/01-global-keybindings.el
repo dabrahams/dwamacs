@@ -216,3 +216,9 @@ so we can watch errors as they come up"
 (define-key lisp-find-map [?g] 'customize-group)
 (define-key lisp-find-map [?s] 'scratch)
 (define-key lisp-find-map [?v] 'find-variable)
+
+;(when (eq system-type 'windows-nt)
+;  (add-to-list 'exec-path "C:/msysgit/bin")
+;  (add-to-list 'exec-path "C:/msysgit/cmd")
+
+;  (setenv "PATH" (mapconcat (lambda (s) (replace-regexp-in-string "/" "\\\\" s)) exec-path ";")))
