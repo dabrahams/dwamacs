@@ -27,9 +27,6 @@
    nil nil "The default, `warn', Makes a lot of noise for no apparent benefit")
  '(ansi-color-names-vector
    [zenburn-bg zenburn-red zenburn-green zenburn-yellow zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg])
- '(auth-sources
-   (quote
-    (macos-keychain-internet macos-keychain-generic "~/.authinfo" "~/.authinfo.gpg" "~/.netrc")))
  '(backup-directory-alist
    (quote
     (("." . "~/.emacs.d/backups"))))
@@ -486,7 +483,8 @@ where I don't expect it to be keeping undo history anyway")
       (bold italic)))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0"))))
+     (:background "#FFFFC0")))
+   t)
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))
