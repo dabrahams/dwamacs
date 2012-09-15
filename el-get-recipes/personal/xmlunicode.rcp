@@ -1,6 +1,7 @@
  (:name xmlunicode :depends
         (unichars)
-        :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" :post-init
+        :type http :url "http://nwalsh.com/emacs/xmlchars/xmlunicode.el" 
+        :prepare
         (progn
           (autoload 'unicode-character-insert "xmlunicode" nil t)
           (autoload 'unicode-smart-double-quote "xmlunicode" nil t)
