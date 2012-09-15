@@ -1,0 +1,5 @@
+(:name jww-haskell-config
+       :description "John Wiegley's haskell configuration"
+       :type github
+       :pkgname "jwiegley/haskell-config"
+       :depends haskell-mode)

@@ -1,0 +1,5 @@
+(:name ede-cmake
+       :website "http://article.gmane.org/gmane.emacs.cedet/5288"
+       :description "New project type for EDE (Emacs Development Environment, see http://cedet.sourceforge.net/ede.shtml) which uses CMake as the underlying build tool."
+       :type bzr
+       :url "lp:~arankine/+junk/ede-cmake")

@@ -1,0 +1,6 @@
+(:name use-package
+       :description "Arrange use of an elisp package"
+       :type github
+       :pkgname "jwiegley/use-package"
+       :prepare (autoload 'use-package "use-package" nil t)
+       )
