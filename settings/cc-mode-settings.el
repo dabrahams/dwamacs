@@ -331,8 +331,9 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)"))
   (interactive)
   
   (if (my-at-preprocessor-directive-p)
-      (progn
-        (move-to-column (- (my-preprocessor-indentation) 1))))
+      (move-to-column 
+       (max (- (match-beginning 2) (line-beginning-position)) 
+            (- (my-preprocessor-indentation) 1))))
   (insert-string "e"))
         
 (defun my-c-namespace-indent (langelem)
