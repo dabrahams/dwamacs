@@ -23,6 +23,7 @@
             "\\([A-Za-z0-9_]+\\)() (in module \\([A-Za-z0-9_.]+\\))" item)
            (format "%s.%s" (match-string 2 item) (match-string 1 item)))))))))
 
+(package-initialize)
 (require 'session-settings)
 
 ;;;_ , gtags
