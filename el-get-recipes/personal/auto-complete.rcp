@@ -1,0 +1,11 @@
+(:name auto-complete
+       :website "http://cx4a.org/software/auto-complete/"
+       :description "The most intelligent auto-completion extension."
+       :type github
+       :pkgname "auto-complete/auto-complete"
+       :build
+       `(
+         (,el-get-emacs "--batch" "-Q" "--eval" ,(format "(mkdir %S t)" "site-lisp"))
+         (,el-get-emacs "--batch" "-Q" "--load" "etc/install.el" "site-lisp"))
+       :load-path ("site-lisp")
+       :depends (popup fuzzy))

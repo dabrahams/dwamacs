@@ -1,5 +1,8 @@
 (defface dwa/org-habit nil "")
 
+;; For some reason the customization keeps getting clobbered
+(setq w3m-command "/opt/local/bin/w3m")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -63,7 +66,7 @@ Blinking cursor just annoys me")
  '(custom-magic-show-button t)
  '(custom-safe-themes
    (quote
-    ("329ee3023d4fe4408174ed5463b4f4903926d499356a5803d10bb8f47a387eb6" "26fb90f317d9788b546389ec5171f2ccd49e86735c1d1a8260100f61005104c3" "9604bae13a3a91860220c39403abb0ed2d793de836b469252c06ec8022820e92" "bb0041c0aa4680b708465c7150ff29fe1cc7a6d69b8b8fc2cd5f57a520d82f70" "2485eaead83db99165857aae3bf31dcaf184f0e286ed7d948383e4fdf8737f50" "4373a5e070ab804ffff5b2b53a12c945f9317c64a07840b8b5fb1be652604d1b" "d1e9809f97e33a8e461e5acefd4c6f54b6075bf0761e1a76c8c3fb9b0d47fe7b" "fb75d2d70e2696134e4bdad6ae10f10dd0c741bf8a2d375bbdcf864314de723e" "1b7caa779ad718320632954165993f48d9a0418efb59e131d53f3b952f83bde3" "0faff4eae0a8bc28f3f9b9f096b893db78ccc823f73cc34420a629b2cbc6da5d" "864cb146d904312336068803efd75fb965e8e62355e5c6f85dfe3474f51898c0" "b7419fc63a23f84014f0f29dd99a2bb883d7d58e" "a263088a00f531a10f43500d3a782ebbbe7b5092" "e7cc30a240db2b04f082c9a62db0a68d9f841a70" "0988a1666cfff8417b19384adc36d075b739b9a4" default)))
+    ("6be0e2efb6bfcdf5df031cded2efcaeb245d4018c9798d7e9b5138e534f0736a" "329ee3023d4fe4408174ed5463b4f4903926d499356a5803d10bb8f47a387eb6" "26fb90f317d9788b546389ec5171f2ccd49e86735c1d1a8260100f61005104c3" "9604bae13a3a91860220c39403abb0ed2d793de836b469252c06ec8022820e92" "bb0041c0aa4680b708465c7150ff29fe1cc7a6d69b8b8fc2cd5f57a520d82f70" "2485eaead83db99165857aae3bf31dcaf184f0e286ed7d948383e4fdf8737f50" "4373a5e070ab804ffff5b2b53a12c945f9317c64a07840b8b5fb1be652604d1b" "d1e9809f97e33a8e461e5acefd4c6f54b6075bf0761e1a76c8c3fb9b0d47fe7b" "fb75d2d70e2696134e4bdad6ae10f10dd0c741bf8a2d375bbdcf864314de723e" "1b7caa779ad718320632954165993f48d9a0418efb59e131d53f3b952f83bde3" "0faff4eae0a8bc28f3f9b9f096b893db78ccc823f73cc34420a629b2cbc6da5d" "864cb146d904312336068803efd75fb965e8e62355e5c6f85dfe3474f51898c0" "b7419fc63a23f84014f0f29dd99a2bb883d7d58e" "a263088a00f531a10f43500d3a782ebbbe7b5092" "e7cc30a240db2b04f082c9a62db0a68d9f841a70" "0988a1666cfff8417b19384adc36d075b739b9a4" default)))
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
  '(custom-theme-load-path
    (quote
@@ -83,6 +86,10 @@ Added -h so I can read file sizes")
  '(dired-use-ls-dired
    (quote unspecified))
  '(display-time-mode t)
+ '(doc-view-resolution 300)
+ '(ede-project-directories
+   (quote
+    ("/tmp" "/Users/dave/src/corp/cree2" "/tmp/myproject/include" "/tmp/myproject/src" "/tmp/myproject" "/Users/dave/src/LLVM/llvm")))
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
@@ -146,7 +153,6 @@ Increased the number of stack frames displayed from 40")
  '(glasses-separator "")
  '(global-auto-revert-mode t nil nil "
 We want our file buffers to stay up-to-date with changes on disk")
- '(global-ede-mode t)
  '(gravatar-icon-size 50)
  '(gravatar-retrieval-program "wget -q -O '%s' '%s'" nil nil "
 Requires wget, which isn't on the Mac by default.  Someday should
@@ -181,7 +187,8 @@ from macports.")
      ("\\`\\(dwa/\\)?\\(wl\\|apel\\|flim\\|semi\\|elmo\\)-" "wl-settings.el" nil nil)
      ("\\`\\(dwa/\\)?yas\\(nippet\\)?\\(-\\|/\\)" "yasnippet-settings.el" nil nil)
      ("\\`\\(dwa/\\)?\\(nn\\|gnus-\\)" "gnus-settings.el" nil nil)
-     ("\\`\\(dwa/\\)?bcc-" "byte-code-cache-settings.el" nil nil))))
+     ("\\`\\(dwa/\\)?bcc-" "byte-code-cache-settings.el" nil nil)
+     ("\\`\\(haskell\\|ghc\\)" "haskell-mode-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(ipa-file-function
    (quote ipa-get-sidecar-file))
@@ -436,9 +443,7 @@ Tool bars take up valuable screen real-estate for icons whose meaning I forget")
  '(truncate-partial-width-windows nil)
  '(user-mail-address "dave@boostpro.com")
  '(vc-diff-switches "-du")
- '(vc-handled-backends
-   (quote
-    (Git)))
+ '(w3m-command "/opt/local/bin/w3m")
  '(w3m-confirm-leaving-secure-page t nil nil "
 I never like being nannied by regular browsers either.")
  '(w3m-default-display-inline-images t)
@@ -484,8 +489,7 @@ where I don't expect it to be keeping undo history anyway")
       (bold italic)))))
  '(diff-refine-change
    ((((background light))
-     (:background "#FFFFC0")))
-   t)
+     (:background "#FFFFC0"))))
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))
@@ -527,76 +531,66 @@ where I don't expect it to be keeping undo history anyway")
      (:foreground "#7b8f01"))
     (((class color)
       (background dark))
-     (:foreground "light slate blue")))
-   t)
+     (:foreground "light slate blue"))))
  '(wg-command-face
    ((((class color)
       (background light))
      (:foreground "#80002c"))
     (((class color)
       (background dark))
-     (:foreground "aquamarine")))
-   t)
+     (:foreground "aquamarine"))))
  '(wg-current-workgroup-face
    ((((class color)
       (background light))
      (:foreground "dark blue"))
     (((class color)
       (background dark))
-     (:foreground "white")))
-   t)
+     (:foreground "white"))))
  '(wg-divider-face
    ((((class color)
       (background light))
      (:foreground "#7b8f01"))
     (((class color)
       (background dark))
-     (:foreground "light slate blue")))
-   t)
+     (:foreground "light slate blue"))))
  '(wg-filename-face
    ((((class color)
       (background light))
      (:foreground "#783106"))
     (((class color))
-     (:foreground "light sky blue")))
-   t)
+     (:foreground "light sky blue"))))
  '(wg-frame-face
    ((((class color)
       (background light))
      (:foreground "black"))
     (((class color)
       (background dark))
-     (:foreground "white")))
-   t)
+     (:foreground "white"))))
  '(wg-message-face
    ((((class color)
       (background light))
      (:foreground "#783106"))
     (((class color)
       (background dark))
-     (:foreground "light sky blue")))
-   t)
+     (:foreground "light sky blue"))))
  '(wg-mode-line-face
    ((((class color)
       (background light))
      (:foreground "#783106"))
     (((class color)
       (background dark))
-     (:foreground "light sky blue")))
-   t)
+     (:foreground "light sky blue"))))
  '(wg-other-workgroup-face
    ((((class color)
       (background light))
      (:foreground "#887767"))
     (((class color)
       (background dark))
-     (:foreground "light slate grey")))
-   t)
+     (:foreground "light slate grey"))))
  '(wg-previous-workgroup-face
    ((((class color)
       (background light))
      (:foreground "#783106"))
     (((class color)
       (background dark))
-     (:foreground "light sky blue")))
-   t))
+     (:foreground "light sky blue")))))

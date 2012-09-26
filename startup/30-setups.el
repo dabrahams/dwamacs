@@ -24,3 +24,25 @@
            (format "%s.%s" (match-string 2 item) (match-string 1 item)))))))))
 
 (require 'session-settings)
+
+;;;_ , gtags
+
+(eval-after-load "gtags"
+  '(progn
+     ;;(diminish 'gtags-mode)
+
+     (require 'anything-gtags)
+
+     (define-key gtags-mode-map "\e," 'anything-gtags-resume)
+     (define-key gtags-mode-map "\e." 'gtags-find-tag)))
+
+(add-hook 'c++-mode-hook 'gtags-mode)
+
+(define-key mode-specific-map [?t ?.] 'gtags-find-rtag)
+(define-key mode-specific-map [?t ?f] 'gtags-find-file)
+(define-key mode-specific-map [?t ?p] 'gtags-parse-file)
+(define-key mode-specific-map [?t ?g] 'gtags-find-with-grep)
+(define-key mode-specific-map [?t ?i] 'gtags-find-with-idutils)
+(define-key mode-specific-map [?t ?s] 'gtags-find-symbol)
+(define-key mode-specific-map [?t ?r] 'gtags-find-rtag)
+(define-key mode-specific-map [?t ?v] 'gtags-visit-rootdir)

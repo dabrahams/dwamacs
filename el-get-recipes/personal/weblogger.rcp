@@ -1,4 +1,5 @@
 (:name weblogger
-:type emacsmirror
+       :type bzr
+       :url "lp:weblogger-el"
 :description "weblogger.el implements Blogger, MetaWeblog and (hopefully soon) the Atom API weblogging APIs."
 :website "https://launchpad.net/weblogger-el")

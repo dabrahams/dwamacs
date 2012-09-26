@@ -3,6 +3,9 @@
 ;; all lost in a debugging session.
 ;;
 
+(when (require 'auto-complete-config nil :no-error)
+  (ac-config-default))
+
 (ignore-errors (server-mode))
 
 (prefer-coding-system 'utf-8)
@@ -33,6 +36,19 @@
         (ignore-errors
           (wg-switch-to-workgroup it))))))
 
+
+;; Flymake
+
+(defun dwa/flymake-setup ()
+  (when (and (request-feature 'use-package)
+             (request-feature 'ghc-flymake)
+             (request-feature 'haskell-font-lock)
+             )            ; jww (2012-09-19): hack!
+    (bind-key "M-?" 'ghc-flymake-display-errors c-mode-base-map))
+  (bind-key "M-p" 'flymake-goto-prev-error c-mode-base-map)
+  (bind-key "M-n" 'flymake-goto-next-error c-mode-base-map))
+
+(add-hook 'c-mode-common-hook 'dwa/flymake-setup)
 
 ;; Keep some very persistent modes out of the mode line display
 (when (request-feature 'diminish)

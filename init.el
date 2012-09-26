@@ -1,6 +1,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; dwamacs initialization ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'find-func)
+(let ((cedet-lisp (file-name-directory (find-library-name "cedet"))))
+  (setq load-path (delete cedet-lisp (delete (directory-file-name cedet-lisp) load-path))))
+(message "load-path: %s" load-path)
+
 (defun el-get-subdir
   (&rest d)
   (mapconcat 'file-name-as-directory

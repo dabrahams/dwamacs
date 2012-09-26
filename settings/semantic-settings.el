@@ -1,3 +1,4 @@
+; (require 'cedet-devel-load)
 (require 'find-func)
 (let ((cedet-lisp (file-name-directory (find-library-name "cedet"))))
   (add-to-list 'load-path (expand-file-name "../../contrib" cedet-lisp))
@@ -19,7 +20,9 @@
 
 (require 'semantic/bovine/el)
 (require 'semantic/canned-configs)
-(semantic-load-enable-excessive-code-helpers)
+(semantic-load-enable-gaudy-code-helpers)
+;; dwa
+; (semantic-load-enable-excessive-code-helpers)
 
 ;; Activate semantic
 (semantic-mode 1)
@@ -32,7 +35,10 @@
 (require 'semantic/decorate/include)
 (require 'semantic/lex-spp)
 (require 'eassist)
-
+(load-library "ede/loaddefs")
+(load-library "srecode/loaddefs")
+(load-library "semantic/loaddefs")
+(load-library "cogre/loaddefs")
 (require 'auto-complete)
 
 
@@ -72,12 +78,14 @@
   )
 (add-hook 'c-mode-common-hook 'alexott/c-mode-cedet-hook)
 
+(require 'cedet-global)
 (when (cedet-gnu-global-version-check t)
   (semanticdb-enable-gnu-global-databases 'c-mode)
   (semanticdb-enable-gnu-global-databases 'c++-mode))
 
-(when (cedet-ectag-version-check t)
-  (semantic-load-enable-primary-ectags-support))
+(ignore-errors 
+  (when (cedet-ectag-version-check t)
+    (semantic-load-enable-primary-ectags-support)))
 
 ;; SRecode
 (global-srecode-minor-mode 1)
@@ -85,6 +93,25 @@
 ;; EDE
 (global-ede-mode 1)
 (ede-enable-generic-projects)
+
+;;; Correct the handling of generic cmake projects in  upstream EDE
+;;;
+;;; CMAKE
+;; (defclass ede-generic-cmake-project (ede-generic-project)
+;;   ((buildfile :initform "CMakeLists.txt")
+;;    )
+;;   "Generic Project for cmake.")
+
+;; (defmethod ede-generic-setup-configuration ((proj ede-generic-cmake-project) config)
+;;   "Setup a configuration for CMake."
+;;   (oset config build-command "cmake")
+;;   (oset config debug-command "gdb ")
+;;   )
+
+;; (ede-generic-new-autoloader "generic-cmake" "CMake"
+;;                             "CMakeLists.txt" 'ede-generic-cmake-project)
+;;;
+
 
 (defun recur-list-files (dir re)
   "Returns list of files in directory matching to given regex"
@@ -183,15 +210,41 @@
 			      :file "~/src/LLVM/llvm/CMakeLists.txt"
                               :include-path 
                               '(
-                                "/include/llvm"
-                                "/include/llvm-c"
-                                "/tools/clang/include/clang"
-                                "/tools/clang/include/clang-c"
+                                "/include"
+                                "/tools/clang/include"
                                )
-			      :local-variables (list
-						(cons 'compile-command 'alexott/gen-cmake-debug-compile-string)
+			      :local-variables '((compile-command . 'alexott/gen-cmake-debug-compile-string)
 						)
 			      )))
+
+
+(when (file-exists-p "~/src/corp/cree/CMakeLists.txt")
+  (setq cree-project
+	(ede-cpp-root-project "cree"
+			      :file "~/src/corp/cree/CMakeLists.txt"
+                              :include-path 
+                              '("/src"
+                                "/include"
+                                "/lib"
+                                "/lib_src"
+                                "/ext/llvm/include"
+                                "/ext/llvm/tools/clang/include"
+                               )
+			      :local-variables '((compile-command . "cd ~/Products/cree && PATH=\"$HOME/Products/LLVM/cree/bin:$PATH\" cmake ~/src/corp/cree -G Ninja && ninja")
+						)
+			      ))
+  (setq cree-llvm-project
+	(ede-cpp-root-project "cree-llvm"
+			      :file "~/src/corp/cree/ext/llvm/CMakeLists.txt"
+                              :include-path 
+                              '("/include"
+                                "/tools/clang/include"
+                               )
+			      :local-variables '((compile-command . "cd ~/Products/LLVM/cree &&  cmake ~/src/corp/cree/ext/llvm && -G Ninja && ninja")
+						)
+			      ))
+  
+)
 
 
 ;; cpp-tests project definition
