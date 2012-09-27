@@ -229,21 +229,11 @@
                                 "/lib_src"
                                 "/ext/llvm/include"
                                 "/ext/llvm/tools/clang/include"
+                                "."
                                )
 			      :local-variables '((compile-command . "cd ~/Products/cree && PATH=\"$HOME/Products/LLVM/cree/bin:$PATH\" cmake ~/src/corp/cree -G Ninja && ninja")
 						)
 			      ))
-  (setq cree-llvm-project
-	(ede-cpp-root-project "cree-llvm"
-			      :file "~/src/corp/cree/ext/llvm/CMakeLists.txt"
-                              :include-path 
-                              '("/include"
-                                "/tools/clang/include"
-                               )
-			      :local-variables '((compile-command . "cd ~/Products/LLVM/cree &&  cmake ~/src/corp/cree/ext/llvm && -G Ninja && ninja")
-						)
-			      ))
-  
 )
 
 
