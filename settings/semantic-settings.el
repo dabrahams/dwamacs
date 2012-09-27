@@ -1,4 +1,3 @@
-; (require 'cedet-devel-load)
 (require 'find-func)
 (let ((cedet-lisp (file-name-directory (find-library-name "cedet"))))
   (add-to-list 'load-path (expand-file-name "../../contrib" cedet-lisp))
@@ -35,10 +34,6 @@
 (require 'semantic/decorate/include)
 (require 'semantic/lex-spp)
 (require 'eassist)
-(load-library "ede/loaddefs")
-(load-library "srecode/loaddefs")
-(load-library "semantic/loaddefs")
-(load-library "cogre/loaddefs")
 (require 'auto-complete)
 
 
@@ -278,3 +273,5 @@
 
 
 ;;; emacs-rc-cedet.el ends here
+(provide 'semantic-settings)
+
