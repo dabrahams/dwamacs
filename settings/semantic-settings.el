@@ -78,6 +78,8 @@
   (semanticdb-enable-gnu-global-databases 'c-mode)
   (semanticdb-enable-gnu-global-databases 'c++-mode))
 
+(semanticdb-enable-cscope-databases :noerror)
+
 (ignore-errors 
   (when (cedet-ectag-version-check t)
     (semantic-load-enable-primary-ectags-support)))
@@ -226,7 +228,23 @@
                                 "/ext/llvm/tools/clang/include"
                                 "."
                                )
+                              :spp-table '(("LLVM_DELETED_FUNCTION".""))
 			      :local-variables '((compile-command . "cd ~/Products/cree && PATH=\"$HOME/Products/LLVM/cree/bin:$PATH\" cmake ~/src/corp/cree -G Ninja && ninja")
+						)
+			      ))
+)
+
+(when (file-exists-p "~/src/llvm/abi/CMakeLists.txt")
+  (setq abi-project
+	(ede-cpp-root-project "abi"
+			      :file "~/src/llvm/abi/CMakeLists.txt"
+                              :include-path 
+                              '("/include"
+                                "/tools/clang/include"
+                                "."
+                               )
+                              :spp-table '(("LLVM_DELETED_FUNCTION".""))
+			      :local-variables '((compile-command . "cd ~/Products/abi && cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang ~/src/LLVM/abi -G Ninja && ninja")
 						)
 			      ))
 )
@@ -274,4 +292,3 @@
 
 ;;; emacs-rc-cedet.el ends here
 (provide 'semantic-settings)
-
