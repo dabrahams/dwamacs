@@ -196,6 +196,8 @@ from macports.")
     ("/Users/dave/src/boost/boost-via-svn/trunk" "/opt/local/include" "/opt/local/Library/Frameworks/Python.framework/Headers")))
  '(irony-mode-line " Fe")
  '(ispell-program-name "aspell")
+ '(mac-option-modifier
+   (quote alt))
  '(magit-completing-read-function
    (quote magit-ido-completing-read))
  '(magit-create-branch-behaviour
