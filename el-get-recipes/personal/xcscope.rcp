@@ -1,0 +1,7 @@
+(:name xcscope
+       :description "Cscope interface for (X)Emacs"
+       :type github
+       :pkgname "To1ne/xcscope"
+       :features xcscope
+       :post-init (eval-after-load 'xcscope `(add-to-list 'exec-path ,(expand-file-name ".")))
+       )
