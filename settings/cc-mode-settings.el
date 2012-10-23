@@ -539,10 +539,7 @@ starts."
   (setq parens-require-spaces nil)
 )
 
-(add-hook 'idl-mode-hook 'my-c-mode-hook)
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-(add-hook 'c++-mode-hook 'my-c-mode-hook)
-(add-hook 'java-mode-hook 'my-c-mode-hook)
+(add-hook 'c-mode-common-hook 'my-c-mode-hook)
 
 ;; Since pretty much all my .h files are actually C++ headers, use c++-mode instead of
 ;; c-mode for these files.
