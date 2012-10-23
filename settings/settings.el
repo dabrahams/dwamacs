@@ -86,6 +86,7 @@ Added -h so I can read file sizes")
  '(dired-use-ls-dired
    (quote unspecified))
  '(display-time-mode t)
+ '(doc-view-continuous t)
  '(doc-view-resolution 300)
  '(el-get-byte-compile nil)
  '(el-get-sources
