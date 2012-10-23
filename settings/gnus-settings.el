@@ -246,6 +246,7 @@ NOTICE: ")))
 ")
  '(gnus-treat-date-lapsed
    (quote head))
+ '(gnus-treat-display-smileys nil)
  '(gnus-treat-from-gravatar
    (quote head))
  '(gnus-treat-hide-citation t)
