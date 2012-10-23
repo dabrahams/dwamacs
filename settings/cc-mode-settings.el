@@ -537,6 +537,7 @@ starts."
   (local-set-key [?,] 'my-c-electric-comma)
   (make-local-variable 'parens-require-spaces)
   (setq parens-require-spaces nil)
+  (gtags-mode 1)
 )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-hook)
