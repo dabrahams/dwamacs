@@ -87,9 +87,6 @@ Added -h so I can read file sizes")
    (quote unspecified))
  '(display-time-mode t)
  '(doc-view-resolution 300)
- '(ede-project-directories
-   (quote
-    ("/tmp" "/Users/dave/src/corp/cree2" "/tmp/myproject/include" "/tmp/myproject/src" "/tmp/myproject" "/Users/dave/src/LLVM/llvm")))
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
