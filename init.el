@@ -13,8 +13,8 @@
               (list (if (boundp 'user-emacs-directory) user-emacs-directory "~/.emacs.d/") "el-get")
               d)
              ""))
-(setq elhome-directory
-      (el-get-subdir "dwamacs")
+(setq elhome-directory (el-get-subdir "dwamacs")
+      user-site-lisp-directory (expand-file-name "site-lisp" elhome-directory)
       ;; If I don't set this during startup, an error can cause it to
       ;; be set to something that invokes TRAMP whenever I try to
       ;; switch buffers.
