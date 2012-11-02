@@ -1,7 +1,7 @@
 (defface dwa/org-habit nil "")
 
 ;; For some reason the customization keeps getting clobbered
-(setq w3m-command "/opt/local/bin/w3m")
+;;(setq w3m-command "/opt/local/bin/w3m")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -443,7 +443,6 @@ Tool bars take up valuable screen real-estate for icons whose meaning I forget")
  '(truncate-partial-width-windows nil)
  '(user-mail-address "dave@boostpro.com")
  '(vc-diff-switches "-du")
- '(w3m-command "/opt/local/bin/w3m")
  '(w3m-confirm-leaving-secure-page t nil nil "
 I never like being nannied by regular browsers either.")
  '(w3m-default-display-inline-images t)
