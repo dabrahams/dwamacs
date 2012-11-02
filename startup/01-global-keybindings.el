@@ -183,7 +183,7 @@ so we can watch errors as they come up"
 (define-key me-minor-mode-map [(control ?h) ?M] 'man)
 
 ;;; Need this to make dired-jump work from `C-x C-j'
-(add-hook 'dired-load-hook (lambda () (require 'dired-x)))
+(require 'dired-x)
 
 (defun dwa/dired-copy-full-path-as-kill ()
   (interactive) 
