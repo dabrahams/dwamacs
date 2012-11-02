@@ -74,36 +74,6 @@
 
 (setq my-initials "dwa")
 
-(defun boost-copyright ()
-  "Return the appropriate boost copyright for the current user and year"
-  (concat "Copyright " (user-full-name) " " (number-to-string (nth 5 (decode-time)))
-          ". Distributed under the Boost\n\
-Software License, Version 1.0. (See accompanying\n\
-file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)"))
-      
-(defun fluid-copyright ()
-  "Return the appropriate FluidObjects copyright for the current user and year"
-  (concat "Copyright FluidObjects Software " (number-to-string (nth 5 (decode-time)))
-          ". All rights reserved."))
-
-(defun my-split-filename (filename)
-  "split a FILENAME string into a (basename . extension) pair"
-  (let* ((fname filename)
-
-         (prefix
-          (if (string-match "\\(.*\\)\\(\\..*\\)" fname)
-              (substring fname 0 (match-end 1))
-            fname))
-         (extension
-          (if (match-beginning 2)
-              (substring fname (+ 1 (match-beginning 2)))
-            nil)))
-    (cons prefix extension)
-  ))
-
-(defun my-split-current-filename ()
-  (my-split-filename (file-name-nondirectory (buffer-file-name))))
-
 (defun my-include-guard (path-elts)
   "Compute the appropriate #include guard based on the current buffer's name and the given path elements"
   (let* ((split-name (my-split-current-filename))
@@ -119,18 +89,6 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)"))
       (number-to-string (nth 5 time))
       (number-to-string (nth 4 time))
       (number-to-string (nth 3 time)) extension))))
-                  
-(defun my-split-path (path)
-  (let ((result nil) (elt nil))
-    (while (and path
-                (not (equal (setq elt (file-name-nondirectory path)) "")))
-      (setq result (cons elt result))
-      (setq path (file-name-directory path))
-      (setq path (and path (directory-file-name path))))
-    result))
-
-(defun my-path-elts ()
-  (subseq (my-split-path (buffer-file-name)) 0 -1))
 
 (defcustom my-namespace-roots
       '(("boost". boost-copyright) ("fluid" . fluid-copyright))
@@ -139,6 +97,7 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)"))
       ':type 'alist )
 
 (defun my-prepare-source ()
+  (require 'code-settings)
   (let* ((all-path-elts (my-path-elts))
     
          ;; prune off the head of path-elts up to the last occurrence
