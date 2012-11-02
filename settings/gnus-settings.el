@@ -115,18 +115,9 @@
     (gnus-score-find-hierarchical)))
  '(gnus-secondary-select-methods
    (quote
-    ((nntp "GigaNews"
-           (nntp-address "text.giganews.com")
-           (nntp-authinfo-user "dabrahams"))
-     (nntp "Gmane"
-           (nntp-address "news.gmane.org"))
-     (nnimap "GMail"
-             (nnimap-address "imap.gmail.com")
-             (nnimap-server-port 993)
-             (nnimap-stream ssl)
-             (nnimap-user "dave.abrahams@gmail.com"))
-     (nntp "Gwene"
-           (nntp-address "news.gwene.org")))))
+    ((nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119)))))
  '(gnus-select-group-hook
    (quote
     (gnus-group-set-timestamp)))
@@ -235,6 +226,10 @@ NOTICE: ")))
  '(gnus-suspend-gnus-hook
    (quote
     (gnus-group-save-newsrc)))
+ '(gnus-sync-backend "~/Dropbox/Secure/gnus-sync-backend.gpg")
+ '(gnus-sync-global-vars
+   (quote
+    (gnus-newsrc-last-checked-date gnus-newsrc-alist gnus-server-alist gnus-topic-topology)))
  '(gnus-thread-hide-subtree
    (quote
     (not gnus-article-unread-p)))
