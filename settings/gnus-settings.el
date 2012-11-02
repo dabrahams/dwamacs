@@ -48,6 +48,7 @@
  '(gnus-default-article-saver
    (quote gnus-summary-write-to-file))
  '(gnus-default-directory "~")
+ '(gnus-directory "~/Library/Data/Gnus/News/")
  '(gnus-duplicate-list-length 100000)
  '(gnus-extra-headers
    (quote
@@ -62,6 +63,7 @@
    (quote
     (gnus-topic-mode gnus-agent-mode)))
  '(gnus-group-use-permanent-levels t)
+ '(gnus-home-directory "~/Library/Data/Gnus/")
  '(gnus-ignored-from-addresses "^david.abrahams@rcn.com\\|dave@boost\\(-consulting\\|pro\\).com$")
  '(gnus-ignored-mime-types
    (quote
