@@ -19,12 +19,16 @@
        :description (message-fetch-field "subject")))
     t))
 
+(defun dwa/index-all-mail ()
+  (start-process "doveadm-index" nil "/usr/local/bin/doveadm" "-vvv" "index" "[Gmail].All Mail"))
+  
 (defun org-message-buffer-store-link ()
   (require 'org)
   (let ((org-store-link-functions '(org-message-store-link)))
     (call-interactively 'org-store-link)))
 
 (add-hook 'org-store-link-functions 'org-message-store-link)
+(add-hook 'org-store-link-functions 'dwa/index-all-mail)
 (add-hook 'message-sent-hook 'org-message-buffer-store-link)
 
 (defun dwa/message-send-rename ()
