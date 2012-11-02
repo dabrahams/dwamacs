@@ -149,6 +149,7 @@ Increased the number of stack frames displayed from 40")
    (quote dwa/glasses))
  '(glasses-separate-parentheses-p nil)
  '(glasses-separator "")
+ '(global-auto-complete-mode t)
  '(global-auto-revert-mode t nil nil "
 We want our file buffers to stay up-to-date with changes on disk")
  '(gravatar-icon-size 50)
