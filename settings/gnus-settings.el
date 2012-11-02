@@ -819,7 +819,7 @@ If all article have been seen, on the subject line of the last article."
     gnus-summary-expirable-face))
 
 ;(defvar my-gnus-group-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
-(defvar my-gnus-summary-face-attributes '(:family "DejaVu Sans" :weight normal :width condensed))
+(defvar my-gnus-summary-face-attributes '(:family "Avenir Next" :weight bold :width normal))
 
 ;(dolist (facename my-gnus-group-faces)
 ;  (apply 'set-face-attribute facename nil my-gnus-group-face-attributes))
