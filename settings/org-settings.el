@@ -245,6 +245,8 @@
  '(org-habit-show-habits-only-for-today nil)
  '(org-habit-today-glyph 9483)
  '(org-hide-leading-stars t)
+ '(org-id-link-to-org-use-id
+   (quote create-if-interactive))
  '(org-insert-heading-respect-content t)
  '(org-irc-link-to-logs t t)
  '(org-log-into-drawer t)

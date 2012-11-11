@@ -899,6 +899,37 @@ If all article have been seen, on the subject line of the last article."
 ;;
 ;;
 
+(defun dwa/gnus-store-link ()
+  "Store a link to a message-id in Gnus."
+  (when (eq major-mode 'gnus-summary-mode)
+    (save-window-excursion (gnus-summary-display-article
+                            (gnus-summary-article-number))))
+  (when (memq major-mode '(gnus-summary-mode gnus-article-mode))
+      (with-current-buffer gnus-original-article-buffer
+        (nnheader-narrow-to-headers)
+        (let* ((message-id (message-fetch-field "message-id"))
+               (subject (rfc2047-decode-string (message-fetch-field "subject")))
+               (from (rfc2047-decode-string (message-fetch-field "from")))
+               (date-sent (message-fetch-field "date"))
+               (link (concat
+                      "message://" (substring message-id 1 -1)))
+               (desc (replace-regexp-in-string 
+                      "^\\(Re\\|Fwd\\): " "" subject)))
+          
+          (org-store-link-props :type "message" :date date-sent
+			    :from from
+                            :subject 
+                            (replace-regexp-in-string "^\\(Re\\|Fwd\\|FW\\): " ""
+                                               subject)
+                            :message-id message-id
+			    :link link)
+          (apply 'org-store-link-props
+                 (append org-store-link-plist
+                         (list :description (org-email-link-description))))
+          link))))
+
+(add-hook 'org-store-link-functions 'dwa/gnus-store-link)
+
 (provide 'dot-gnus-el)
 
 ;;; .gnus.el ends here
