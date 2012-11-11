@@ -501,6 +501,15 @@ starts."
 
 (add-hook 'c-mode-common-hook 'my-c-mode-hook)
 
+(defadvice flymake-create-temp-inplace (before dwa/check-headers (file-name prefix) activate)
+  (save-match-data
+    (when (string-match "\\.h\\(pp\\|xx\\)$" file-name)
+      (ad-set-arg 
+       0
+       (concat (substring file-name 0 (match-beginning 0))
+               ".c"
+               (substring file-name (match-beginning 1)))))))
+
 ;; Since pretty much all my .h files are actually C++ headers, use c++-mode instead of
 ;; c-mode for these files.
 (setq auto-mode-alist
