@@ -229,7 +229,7 @@ NOTICE: ")))
  '(gnus-sync-backend "~/Dropbox/Secure/gnus-sync-backend.gpg")
  '(gnus-sync-global-vars
    (quote
-    (gnus-newsrc-last-checked-date gnus-newsrc-alist gnus-server-alist gnus-topic-topology)))
+    (gnus-newsrc-last-checked-date gnus-newsrc-alist gnus-server-alist gnus-topic-topology gnus-topic-alist)))
  '(gnus-thread-hide-subtree
    (quote
     (not gnus-article-unread-p)))
