@@ -260,7 +260,8 @@
  '(org-speed-commands-user
    (quote
     (("+" . org-priority-up)
-     ("-" . org-priority-down))))
+     ("-" . org-priority-down)
+     (":" . org-set-tags))))
  '(org-src-fontify-natively t)
  '(org-tags-column -97)
  '(org-time-clocksum-use-fractional t)
