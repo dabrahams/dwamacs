@@ -64,7 +64,7 @@ context of its thread"
          (message-id (car thread-location))
          (folder-name (dwa:wl-thread-root-folder (cdr thread-location)))
          (message-id-no-brackets (org-remove-angle-brackets message-id))
-         (link (org-make-link "wl:" folder-name "#" message-id-no-brackets))
+         (link (concat "wl:" folder-name "#" message-id-no-brackets))
              )
         (org-store-link-props :type "wl" :from (std11-field-body "From") :to (std11-field-body "To")
                               :subject (std11-field-body "Subject") :message-id message-id
@@ -86,7 +86,7 @@ context of its thread"
              (message-id (car thread-location))
              (folder-name (dwa:wl-thread-root-folder (cdr thread-location)))
              (message-id-no-brackets (org-remove-angle-brackets message-id))
-             (link (org-make-link "wl:" folder-name "#" message-id-no-brackets))
+             (link (concat "wl:" folder-name "#" message-id-no-brackets))
              )
         (org-add-link-props :link link)
         (setq ad-return-value link)
