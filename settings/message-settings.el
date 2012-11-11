@@ -15,7 +15,7 @@
       (message-narrow-to-headers)
       (org-store-link-props
        :type "message"
-       :link (org-make-link "message://" (substring (message-fetch-field "message-id" t) 1 -1))
+       :link (concat "message://" (substring (message-fetch-field "message-id" t) 1 -1))
        :description (message-fetch-field "subject")))
     t))
 
