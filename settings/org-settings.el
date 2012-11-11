@@ -195,6 +195,14 @@
   SCHEDULED: %t
   :PROPERTIES:
   :ID:       %(shell-command-to-string \"uuidgen\")  :CREATED:  %U
+  :END:" :prepend t)
+     ("m" "Message" entry
+      (file+headline "~/Documents/Tasks/todo.txt" "Inbox")
+      "* TODO %?Message %:subject
+  SCHEDULED: %t
+  :PROPERTIES:
+  :MESSAGE:  %a
+  :ID:       %(shell-command-to-string \"uuidgen\")  :CREATED:  %U
   :END:" :prepend t))))
  '(org-clock-idle-time 10)
  '(org-clock-in-resume t)
