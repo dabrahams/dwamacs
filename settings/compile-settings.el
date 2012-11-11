@@ -24,3 +24,17 @@
               (setq hl-line-sticky-flag t)
               (hl-line-mode nil)
               (hl-line-mode t))))
+
+(defun cmake-project-filename ()
+  (let ((filename (match-string-no-properties 1)))
+    (save-match-data
+      (with-temp-buffer
+        (insert-file-contents-literally "cmake_install.cmake")
+        (goto-char (point-min))
+        (re-search-forward "Install script for directory: \\(.+\\)")
+        (cons filename (match-string-no-properties 1))))))
+
+(push 'cmake compilation-error-regexp-alist)
+(push '(cmake "^\\(?:CMake Error at \\|  \\)\\(.+?\\):\\([0-9]+\\) ([A-Za-z_][A-Za-z0-9_]*)"
+              (cmake-project-filename) 2)
+      compilation-error-regexp-alist-alist)
