@@ -12,7 +12,7 @@
 (defun org-message-store-link ()
   (when (eq major-mode 'message-mode)
     (save-restriction
-      (nnheader-narrow-to-headers)
+      (message-narrow-to-headers)
       (org-store-link-props
        :type "message"
        :link (org-make-link "message://" (substring (message-fetch-field "message-id" t) 1 -1))
