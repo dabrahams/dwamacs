@@ -141,7 +141,7 @@ NOTICE: ")))
    t)
  '(gnus-spam-process-destinations
    (quote
-    (("^\\(\\(nnimap\\+\\)?LocalIMAP:\\)?[^+]*$" "[Gmail].Spam"))))
+    (("^\\(\\(nnimap\\+\\)?LocalIMAP:\\)?[^+]*$" "[Gmail]/Spam"))))
  '(gnus-spam-process-newsgroups
    (quote
     (("^\\(\\(nntp\\+\\)?LocalNNTP:\\)?gmane\\."
@@ -409,7 +409,7 @@ NOTICE: ")))
   "Report the current or marked mails as spam.
 This moves them into the Spam folder."
   (interactive)
-  (gnus-summary-move-article nil "[Gmail].Spam"))
+  (gnus-summary-move-article nil "[Gmail]/Spam"))
 
 (eval-after-load "gnus-sum"
   '(progn
