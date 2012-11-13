@@ -127,7 +127,8 @@
             (nnimap-address "localhost")
             (nnimap-user "dave")
             (nnimap-server-port 9143)
-            (nnimap-stream network))))
+            (nnimap-stream shell)
+            (nnimap-shell-program "/opt/local/libexec/dovecot/imap"))))
  '(gnus-signature-separator
    (quote
     ("^-- $" "^-- *$" "^_____+$" "^-----+?
