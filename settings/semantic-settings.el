@@ -1,3 +1,4 @@
+(when nil
 (require 'find-func)
 (let ((cedet-lisp (file-name-directory (find-library-name "cedet"))))
   (add-to-list 'load-path (expand-file-name "../../contrib" cedet-lisp))
@@ -292,3 +293,4 @@
 
 ;;; emacs-rc-cedet.el ends here
 (provide 'semantic-settings)
+)
