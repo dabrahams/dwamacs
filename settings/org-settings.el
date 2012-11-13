@@ -302,6 +302,15 @@
     (t
      (:family "DejaVu Sans Mono")))
    t)
+ '(org-document-title
+   ((((class color)
+      (background light))
+     (:foreground "midnight blue" :weight bold :height 2.0 :family "Helvetica"))
+    (((class color)
+      (background dark))
+     (:foreground "pale turquoise" :weight bold :height 2.0 :family "Helvetica"))
+    (t
+     (:weight bold))))
  '(org-habit-alert-face
    ((((background light dark))
      (:inherit dwa/org-habit :background "#f5f946"))))
