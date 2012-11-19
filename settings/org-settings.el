@@ -208,7 +208,7 @@
  '(org-clock-in-resume t)
  '(org-clock-in-switch-to-state "STARTED")
  '(org-clock-into-drawer "LOGBOOK")
- '(org-clock-modeline-total
+ '(org-clock-mode-line-total
    (quote current))
  '(org-clock-out-remove-zero-time-clocks t)
  '(org-clock-out-switch-to-state nil)
