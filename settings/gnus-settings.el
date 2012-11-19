@@ -83,7 +83,12 @@
       (display .
                [or
                 (not reply)
-                (not expire)])))))
+                (not expire)]))
+     ("gmane\\.mail\\.imap\\.isync\\.devel"
+      (to-address . "isync-devel@lists.sourceforge.net"))))
+   nil nil "
+The GMane group for isync-devel doesn't seem to forward my messages, 
+so I always post directly to the mailing list.")
  '(gnus-read-active-file nil)
  '(gnus-read-newsrc-file nil)
  '(gnus-refer-article-method
