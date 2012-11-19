@@ -3,8 +3,12 @@
 ;; all lost in a debugging session.
 ;;
 
+(require 'use-package)
+
 (when (require 'auto-complete-config nil :no-error)
-  (ac-config-default))
+  (ac-config-default)
+  (define-key ac-mode-map (kbd "C-c h") 'ac-last-quick-help)
+  (define-key ac-mode-map (kbd "C-c H") 'ac-last-help))
 
 (ignore-errors (server-mode))
 
@@ -248,7 +252,48 @@ file name matches PATTERN."
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
 (add-hook 'dired-mode-hook 'gnus-dired-mode)
 
+;; --- importing JW stuff
+
+(use-package gtags
+  :commands gtags-mode
+  :diminish gtags-mode
+  :config
+  (progn
+    (defun my-gtags-or-semantic-find-tag ()
+      (interactive)
+      (if (and (fboundp 'semantic-active-p)
+               (funcall #'semantic-active-p))
+          (call-interactively #'semantic-complete-jump)
+        (call-interactively #'gtags-find-tag)))
+
+    (add-hook 'after-change-major-mode-hook (lambda () (gtags-mode t)))
+
+    (bind-key "M-." 'my-gtags-or-semantic-find-tag gtags-mode-map)
+
+    (bind-key "C-c t ." 'gtags-find-rtag)
+    (bind-key "C-c t f" 'gtags-find-file)
+    (bind-key "C-c t p" 'gtags-parse-file)
+    (bind-key "C-c t g" 'gtags-find-with-grep)
+    (bind-key "C-c t i" 'gtags-find-with-idutils)
+    (bind-key "C-c t s" 'gtags-find-symbol)
+    (bind-key "C-c t r" 'gtags-find-rtag)
+    (bind-key "C-c t v" 'gtags-visit-rootdir)
+
+    (bind-key "<mouse-2>" 'gtags-find-tag-from-here gtags-mode-map)
+
+    (use-package helm-gtags
+      :bind ("M-T" . helm-gtags-select)
+      :config
+      (bind-key "M-," 'helm-gtags-resume gtags-mode-map))))
+
+
+;; ---
+
 ;; Maximize emacs on startup
 (ignore-errors
   (require 'maxframe)
   (add-hook 'window-setup-hook 'maximize-frame t))
+
+;; ---
+
+
