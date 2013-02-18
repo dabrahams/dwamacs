@@ -300,11 +300,11 @@ NOTICE: ")))
 ")
  '(nnir-swish++-configuration-file "~/Library/Data/Gnus/Mail/swish++.conf")
  '(nnir-swish++-remove-prefix "~/Library/Data/Gnus/Mail/")
- '(nnir-swish-e-index-file "~/Library/Data/Gnus/Mail/index.swish-e")
- '(nnir-swish-e-index-files
+ '(nnir-swish-e-additional-switches
    (quote
-    ("~/Library/Data/Gnus/Mail/index.swish-e")))
- '(nnir-swish-e-remove-prefix "~/Library/Data/Gnus/Mail/")
+    ("-c" "/Users/dave/Library/Data/Gnus/swish-e.conf")))
+ '(nnir-swish-e-index-file "/Users/dave/Library/Data/Gnus/index.swish-e")
+ '(nnir-swish-e-remove-prefix "/opt/local/var/spool/news/")
  '(nnmail-crosspost nil)
  '(nnmail-expiry-wait 30)
  '(nnmail-extra-headers
