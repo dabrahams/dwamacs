@@ -236,6 +236,11 @@ command.")
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(pp^L-^L-string "····································✄····································
 ")
+ '(proof-electric-terminator-enable t)
+ '(proof-shell-fiddle-frames nil nil nil "John says, \"I was able to get the default \"three windows mode\"
+for Proof General working reliably by customizing this\"")
+ '(proof-splash-enable nil)
+ '(proof-three-window-enable nil)
  '(ps-font-family
    (quote Helvetica))
  '(ps-font-info-database

@@ -286,6 +286,17 @@ file name matches PATTERN."
       :config
       (bind-key "M-," 'helm-gtags-resume gtags-mode-map))))
 
+(use-package proof-site
+  :load-path "el-get/dwamacs/site-lisp/ProofGeneral/generic/"
+  :config
+  (progn
+    (eval-after-load "coq"
+      '(bind-key "M-RET" 'proof-goto-point coq-mode-map))
+
+    (defadvice proof-electric-terminator
+      (after insert-newline-after-terminator activate)
+      (open-line 1)
+      (indent-according-to-mode))))
 
 ;; ---
 
