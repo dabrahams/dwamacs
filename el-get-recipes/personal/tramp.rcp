@@ -1,4 +1,8 @@
- (:name tramp :type cvs :url ":pserver:anonymous@cvs.savannah.gnu.org:/sources/tramp" :website "http://www.gnu.org/s/tramp/" :build
+ (:name tramp
+        :type git
+        :url "git://git.savannah.gnu.org/tramp.git" 
+        :website "http://www.gnu.org/s/tramp/" 
+        :build
         `(("autoconf")
           ("./configure" ,(concat "--with-emacs=" el-get-emacs)
            "--with-contrib" ,(concat "--prefix="
