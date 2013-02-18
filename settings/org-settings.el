@@ -351,12 +351,8 @@
 (require 'org)
 (require 'org-agenda)
 
-;;(require 'org-crypt)
-(require 'org-devonthink nil 'noerror)
-(ignore-errors
-  (require 'org-x)
-  (require 'ox-org)
-  (require 'ox-redmine))
+(request-feature 'org-x)
+(request-feature 'ox-org)
 (require 'ob-R)
 (require 'ob-python)
 (require 'ob-emacs-lisp)
