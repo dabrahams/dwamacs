@@ -85,7 +85,11 @@
                 (not reply)
                 (not expire)]))
      ("gmane\\.mail\\.imap\\.isync\\.devel"
-      (to-address . "isync-devel@lists.sourceforge.net"))))
+      (to-address . "isync-devel@lists.sourceforge.net"))
+     ("gmane\\.comp\\.programming\\.tools\\.ryppl\\.devel "
+      (to-address . "ryppl-dev@googlegroups.com"))
+     ("gmane\\.comp\\.file-systems\\.zero-install\\.devel"
+      (to-address . "zero-install-devel@lists.sourceforge.net"))))
    nil nil "
 The GMane group for isync-devel doesn't seem to forward my messages, 
 so I always post directly to the mailing list.")
