@@ -162,7 +162,7 @@ from macports.")
  '(gravatar-size 48)
  '(hl-line-sticky-flag nil)
  '(ido-enable-flex-matching t)
- '(ido-everywhere t)
+ '(ido-everywhere nil)
  '(ido-gather-virtual-filenames
    (quote
     (ido-gather-recent-files ido-gather-git-project-files)))
