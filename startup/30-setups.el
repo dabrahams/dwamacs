@@ -28,6 +28,7 @@
 
 ;;;_ , gtags
 
+(when nil
 (eval-after-load "gtags"
   '(progn
      ;;(diminish 'gtags-mode)
@@ -35,7 +36,7 @@
      (require 'anything-gtags)
 
      (define-key gtags-mode-map "\e," 'anything-gtags-resume)
-     (define-key gtags-mode-map "\e." 'gtags-find-tag)))
+     (define-key gtags-mode-map "\e." 'gtags-find-tag))))
 
 (add-hook 'c++-mode-hook 'gtags-mode)
 
