@@ -75,6 +75,7 @@ Blinking cursor just annoys me")
  '(custom-unlispify-tag-names nil)
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
+ '(diary-file "~/Documents/Tasks/diary")
  '(diff-default-read-only t nil nil "
 If you don't do this, all the nice navigation stuff is disabled by default.  Who wants to edit diffs by hand, anyway?")
  '(diff-jump-to-old-file t)
