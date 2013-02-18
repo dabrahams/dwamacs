@@ -286,6 +286,10 @@ file name matches PATTERN."
       :config
       (bind-key "M-," 'helm-gtags-resume gtags-mode-map))))
 
+
+(add-hook 'emacs-lisp-mode-hook 
+          (lambda () (add-hook 'after-save-hook 'check-parens nil t)))
+
 (use-package proof-site
   :load-path "el-get/dwamacs/site-lisp/ProofGeneral/generic/"
   :config
