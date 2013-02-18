@@ -55,6 +55,7 @@ Blinking cursor just annoys me")
     ("-I" "/Users/dave/src/boost-svn-git" "-I" "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/")))
  '(color-theme-history-max-length t)
  '(color-theme-is-cumulative nil)
+ '(coq-unicode-tokens-enable t)
  '(cursor-type
    (quote box)
    t)
