@@ -571,6 +571,8 @@ This can be 0 for immediate, or a floating point value.")
     (goto-char end)
     end-time))
 
+(setq org-done-keywords '("done" "cancelled"))
+
 (defun org-my-archive-done-tasks ()
   (interactive)
   (save-excursion
@@ -621,16 +623,12 @@ This can be 0 for immediate, or a floating point value.")
 
 (defun org-archive-done-tasks ()
   (interactive)
+  (require 'ox-org)
   (save-excursion
-    (goto-char (point-min))
-    (while (re-search-forward "\* \\(DONE\\|CANCELED\\) " nil t)
-      (if (save-restriction
-            (save-excursion
-              (org-x-narrow-to-entry)
-              (search-forward ":LOGBOOK:" nil t)))
-          (forward-line)
+    (goto-char (point-max))
+    (while (re-search-backward "^\*+ \\(DONE\\|CANCELED\\) " nil t)
         (org-archive-subtree)
-        (goto-char (line-beginning-position))))))
+        (goto-char (line-end-position)))))
 
 (defun org-sort-all ()
   (interactive)
