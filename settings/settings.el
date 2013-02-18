@@ -789,12 +789,6 @@ where I don't expect it to be keeping undo history anyway")
  '(lazy-highlight
    ((t
      (:background "paleturquoise"))))
- '(rst-level-1-face
-   ((t
-     (:background "grey85" :foreground "black")))
-   t)
- '(rst-level-2-face
-   ((t
  '(org-document-title
    ((((class color)
       (background light))
@@ -838,6 +832,12 @@ where I don't expect it to be keeping undo history anyway")
       (min-colors 88)
       (background light))
      (:foreground "Brown"))))
+ '(rst-level-1-face
+   ((t
+     (:background "grey85" :foreground "black")))
+   t)
+ '(rst-level-2-face
+   ((t
      (:inherit nil :background "grey78" :foreground "black")))
    t)
  '(rst-level-3-face
