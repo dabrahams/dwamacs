@@ -296,6 +296,8 @@ NOTICE: ")))
  '(nnir-namazu-index-directory "~/Library/Data/Gnus/Mail/namazu")
  '(nnir-namazu-remove-prefix "~/Library/Data/Gnus/Mail")
  '(nnir-notmuch-remove-prefix "~/Library/Data/Gnus/Mail")
+ '(nnir-summary-line-format "%O%U%R%z%Z %g%~(form my-align-gnus-summary)@%B%&user-date;: %(%f%~(form my-align-gnus-subject)@%)		%s
+")
  '(nnir-swish++-configuration-file "~/Library/Data/Gnus/Mail/swish++.conf")
  '(nnir-swish++-remove-prefix "~/Library/Data/Gnus/Mail/")
  '(nnir-swish-e-index-file "~/Library/Data/Gnus/Mail/index.swish-e")
