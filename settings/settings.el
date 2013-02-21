@@ -36,19 +36,16 @@
  '(blink-cursor-mode nil nil nil "
 Blinking cursor just annoys me")
  '(byte-compile-verbose nil)
+ '(c-backspace-function
+   (quote backward-delete-char))
  '(c-default-style
    (quote
-    ((c++-mode . "cc-mode")
+    ((c-mode . "dwa")
+     (c++-mode . "dwa")
      (java-mode . "java")
      (awk-mode . "awk")
-     (other . "bsd"))))
- '(c-offsets-alist
-   (quote
-    ((inline-open . 0)
-     (inher-intro . 2)
-     (substatement-open . 0)
-     (access-label . -3)
-     (arglist-close . 0))))
+     (other . "dwa"))))
+ '(calendar-mark-holidays-flag t)
  '(canlock-password "963afd5a40a33c7f59217100af5a7c1648af74a1")
  '(clang-flags
    (quote

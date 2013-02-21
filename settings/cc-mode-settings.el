@@ -446,40 +446,40 @@ starts."
   (delete-region (car (my-selection)) (cdr (my-selection)))
   (c-indent-command)
   )
-  
+
+(c-add-style 
+ "dwa" '("bsd"
+         (c-basic-offset . 4)
+         (c-backslash-max-column . 200)
+         (c-offsets-alist
+       ;; Add 2 spaces of indentation when the open brace is on a line by itself
+       (innamespace . my-c-namespace-indent)
+
+       ;; indent solo opening braces to the same indentation as the line on
+       ;; which the namespace starts
+       (namespace-open . my-c-namespace-open-indent)
+
+       ;; I don't know why this is required, but recent cc-modes seem
+       ;; to need it to get my namespace indenting right.
+       (defun-block-intro . my-c-defun-block-intro-indent)
+
+       ;; indent access labels public/private/protected by 1 space, as
+       ;; in 'M'. I kinda like that.
+       (access-label . -3)
+       
+       ;;fixup template indentation
+       (template-args-cont 
+        . (my-lineup-more-template-args
+           my-lineup-template-close
+           my-lineup-first-template-args
+           +))
+
+       (inher-intro . 2)
+       (arglist-close . 0)
+
+       )))
+
 (defun my-c-mode-hook ()
-  (setq c-default-style "bsd"
-        c-backspace-function 'backward-delete-char
-        c-basic-offset 4
-        c-tab-always-indent t)
-
-  ;; Add 2 spaces of indentation when the open brace is on a line by itself
-  (c-set-offset 'innamespace 'my-c-namespace-indent)
-  
-  ;; indent solo opening braces to the same indentation as the line on
-  ;; which the namespace starts
-  (c-set-offset 'namespace-open 'my-c-namespace-open-indent)
-
-  ;; I don't know why this is required, but recent cc-modes seem to
-  ;; need it to get my namespace indenting right.
-  (c-set-offset 'defun-block-intro 'my-c-defun-block-intro-indent)
-  
-  ;; indent access labels public/private/protected by 1 space, as in 'M'. I
-  ;; kinda like that.
-  (c-set-offset 'access-label -3)
-
-
-  ;;
-  ;;fixup template indentation
-  ;;
-  (c-set-offset 'template-args-cont
-                (quote
-                 (my-lineup-more-template-args
-                  my-lineup-template-close
-                  my-lineup-first-template-args
-                  +)))
-  
-  (set-variable 'c-backslash-max-column 200)
   
   (require 'code-settings)
   (my-code-mode-hook)
