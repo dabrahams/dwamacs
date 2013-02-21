@@ -915,7 +915,7 @@ end tell" (match-string 1))))
       (save-excursion
         (insert subject))
       (when body
-        (flet ((trim-string (str)
+        (cl-flet ((trim-string (str)
                             (replace-regexp-in-string
                              "\\(\\`[[:space:]\n]*\\|[[:space:]\n]*\\'\\)" ""
                              str)))

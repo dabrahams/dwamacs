@@ -97,7 +97,7 @@
 (defun my-erc-growl (title message)
   "Shows a message through the growl notification system using
  `growlnotify-command` as the program."
-  (flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
+  (cl-flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
     (let* ((process (start-process "growlnotify" nil
                                    growlnotify-command
                                    (encfn title)

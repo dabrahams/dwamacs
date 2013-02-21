@@ -3,7 +3,7 @@
 
 ;; load compile-, but first make sure it doesn't stomp on zenburn's
 ;; color choices
-(flet ((x-color-defined-p))
+(cl-flet ((x-color-defined-p))
   (fmakunbound 'x-color-defined-p)
   (require 'compile- nil 'noerror))
 

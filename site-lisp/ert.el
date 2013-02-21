@@ -1237,7 +1237,7 @@ Also changes the counters in STATS to match."
          (results (ert--stats-test-results stats))
          (old-test (aref tests pos))
          (map (ert--stats-test-map stats)))
-    (flet ((update (d)
+    (cl-flet ((update (d)
              (if (ert-test-result-expected-p (aref tests pos)
                                              (aref results pos))
                  (etypecase (aref results pos)
