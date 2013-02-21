@@ -12,6 +12,9 @@
    (quote
     ("~/Library/Info/python/" "~/Library/Info/c++11/")))
  '(Info-breadcrumbs-in-header-flag t)
+ '(Info-default-directory-list
+   (quote
+    ("/Users/xin/midway/emacs-mac-port/build/share/info/" "/Applications/Emacs.app/Contents/Resources/info" "/usr/share/info/")))
  '(Info-fit-frame-flag nil)
  '(Info-saved-nodes
    (quote
