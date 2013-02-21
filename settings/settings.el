@@ -10,7 +10,7 @@
  ;; If there is more than one, they won't work right.
  '(Info-additional-directory-list
    (quote
-    ("~/src/buildbot/master/docs/" "~/Library/Info/python/" "~/Library/Info/c++11/")))
+    ("~/Library/Info/python/" "~/Library/Info/c++11/")))
  '(Info-breadcrumbs-in-header-flag t)
  '(Info-fit-frame-flag nil)
  '(Info-saved-nodes
