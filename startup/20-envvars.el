@@ -18,5 +18,6 @@
             (dolist (dir exec-path path)
               (add-to-list 'path (file-name-as-directory dir) :append)))))
 
-  (osx-plist-update-environment))
+  (when (file-exists-p "~/.MacOSX/Environment.plist")
+    (osx-plist-update-environment)))
 
