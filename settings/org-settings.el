@@ -442,7 +442,7 @@ To use this function, add it to `org-agenda-finalize-hook':
 (add-hook 'org-finalize-agenda-hook 'org-agenda-add-overlays)
 
 (defun org-my-message-open (message-id)
-  (gnus-goto-article
+  (gnus-refer-article
    (gnus-string-remove-all-properties (substring message-id 2))))
 
 ;;(defun org-my-message-open (message-id)
