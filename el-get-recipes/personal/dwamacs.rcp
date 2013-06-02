@@ -1,4 +1,5 @@
  (:name dwamacs :depends
         (elhome)
-        :type git :url "git@github.com:dabrahams/dwamacs" :load-path
+        :type git :url "git@github.com:dabrahams/dwamacs" 
+        :load-path
         ("." "settings" "startup" "site-lisp"))

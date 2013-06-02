@@ -45,7 +45,7 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)"))
 (defun my-code-mode-hook ()
   (font-lock-mode t)
   (show-paren-mode t)
-  (local-set-key [return] 'newline-and-indent)
+  (local-set-key [(shift return)] 'newline-and-indent)
   (local-set-key [(control return)] 'newline)
   (local-set-key [( control ?\( )] 'my-matching-paren)
   

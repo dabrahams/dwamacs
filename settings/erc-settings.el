@@ -8,7 +8,7 @@
                (string= (frame-parameter frame 'name) "Chat"))
          frame-bufs-assoc-rules)))
 
-(add-hook 'erc-mode-hook 'frame-bufs-enforce-rules)
+;; (add-hook 'erc-mode-hook 'frame-bufs-enforce-rules)
 
 ;;;###autoload
 (autoload 'dwa/irc "erc" "" t)

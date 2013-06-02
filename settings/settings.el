@@ -48,14 +48,15 @@ Blinking cursor just annoys me")
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "dwa"))))
- '(calendar-mark-holidays-flag t)
  '(canlock-password "963afd5a40a33c7f59217100af5a7c1648af74a1")
  '(clang-flags
    (quote
     ("-I" "/Users/dave/src/boost-svn-git" "-I" "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/")))
  '(color-theme-history-max-length t)
  '(color-theme-is-cumulative nil)
+ '(column-number-mode nil)
  '(coq-unicode-tokens-enable t)
+ '(create-lockfiles nil)
  '(cursor-type
    (quote box)
    t)
@@ -67,7 +68,7 @@ Blinking cursor just annoys me")
  '(custom-magic-show-button t)
  '(custom-safe-themes
    (quote
-    ("d7e021fb20767633bbabc55caa0ba0ebf09e14d6f1e25e105b073a60922ccfb5" "4ce6246e997a7d5ccc3fe3c53d76c612513f988ef36c41dedb91f7c625d9300b" "6be0e2efb6bfcdf5df031cded2efcaeb245d4018c9798d7e9b5138e534f0736a" "ba0380b2213842f54345de57b1065deb610fcc2176ab65846c3d80ee7ca0a8f7" "b06f914a0125006cf3d4e413a42a95d77a21ef54a512b8ea683f2cc4bcd45772" "ec33995fd55b0d78405f207232c6fb86c9f101f8bac5f0f969a42bfe6bad3355" "bf330ec6af1dbb8aed2e19c07b8f5e61c63dd4fed041551717205b471c9f823a" "af2f95f810c2642aa039b5b11ddb309fbd42f5e5d6c032d68a49fad18dc0c968" "dea61a12a79fac7f0aa23784d2f11f10d351925904a27913af301fc769a436d7" "479b343f577693cb162aabfffb32c20dd78ad31eaee4e622764c55409ef38722" "a50de17cacd11e23e3f917fb47a634345937937255870e332beeddb73254e6f3" "5fa3b591d2fae9bd1a250a7ebe09c46ede99e131040754cf92a679208827d9d4" "329ee3023d4fe4408174ed5463b4f4903926d499356a5803d10bb8f47a387eb6" "26fb90f317d9788b546389ec5171f2ccd49e86735c1d1a8260100f61005104c3" "9604bae13a3a91860220c39403abb0ed2d793de836b469252c06ec8022820e92" "bb0041c0aa4680b708465c7150ff29fe1cc7a6d69b8b8fc2cd5f57a520d82f70" "2485eaead83db99165857aae3bf31dcaf184f0e286ed7d948383e4fdf8737f50" "4373a5e070ab804ffff5b2b53a12c945f9317c64a07840b8b5fb1be652604d1b" "d1e9809f97e33a8e461e5acefd4c6f54b6075bf0761e1a76c8c3fb9b0d47fe7b" "fb75d2d70e2696134e4bdad6ae10f10dd0c741bf8a2d375bbdcf864314de723e" "1b7caa779ad718320632954165993f48d9a0418efb59e131d53f3b952f83bde3" "0faff4eae0a8bc28f3f9b9f096b893db78ccc823f73cc34420a629b2cbc6da5d" "864cb146d904312336068803efd75fb965e8e62355e5c6f85dfe3474f51898c0" "b7419fc63a23f84014f0f29dd99a2bb883d7d58e" "a263088a00f531a10f43500d3a782ebbbe7b5092" "e7cc30a240db2b04f082c9a62db0a68d9f841a70" "0988a1666cfff8417b19384adc36d075b739b9a4" default)))
+    ("b75cb5c678c1129f92140dba07155675bb26250f28df59f714707b3eb162f92b" "f10d561ff8739114cc013ad05167e56618c054fb618dc8e866675fd55955ad21" "d7e021fb20767633bbabc55caa0ba0ebf09e14d6f1e25e105b073a60922ccfb5" "4ce6246e997a7d5ccc3fe3c53d76c612513f988ef36c41dedb91f7c625d9300b" "6be0e2efb6bfcdf5df031cded2efcaeb245d4018c9798d7e9b5138e534f0736a" "ba0380b2213842f54345de57b1065deb610fcc2176ab65846c3d80ee7ca0a8f7" "b06f914a0125006cf3d4e413a42a95d77a21ef54a512b8ea683f2cc4bcd45772" "ec33995fd55b0d78405f207232c6fb86c9f101f8bac5f0f969a42bfe6bad3355" "bf330ec6af1dbb8aed2e19c07b8f5e61c63dd4fed041551717205b471c9f823a" "af2f95f810c2642aa039b5b11ddb309fbd42f5e5d6c032d68a49fad18dc0c968" "dea61a12a79fac7f0aa23784d2f11f10d351925904a27913af301fc769a436d7" "479b343f577693cb162aabfffb32c20dd78ad31eaee4e622764c55409ef38722" "a50de17cacd11e23e3f917fb47a634345937937255870e332beeddb73254e6f3" "5fa3b591d2fae9bd1a250a7ebe09c46ede99e131040754cf92a679208827d9d4" "329ee3023d4fe4408174ed5463b4f4903926d499356a5803d10bb8f47a387eb6" "26fb90f317d9788b546389ec5171f2ccd49e86735c1d1a8260100f61005104c3" "9604bae13a3a91860220c39403abb0ed2d793de836b469252c06ec8022820e92" "bb0041c0aa4680b708465c7150ff29fe1cc7a6d69b8b8fc2cd5f57a520d82f70" "2485eaead83db99165857aae3bf31dcaf184f0e286ed7d948383e4fdf8737f50" "4373a5e070ab804ffff5b2b53a12c945f9317c64a07840b8b5fb1be652604d1b" "d1e9809f97e33a8e461e5acefd4c6f54b6075bf0761e1a76c8c3fb9b0d47fe7b" "fb75d2d70e2696134e4bdad6ae10f10dd0c741bf8a2d375bbdcf864314de723e" "1b7caa779ad718320632954165993f48d9a0418efb59e131d53f3b952f83bde3" "0faff4eae0a8bc28f3f9b9f096b893db78ccc823f73cc34420a629b2cbc6da5d" "864cb146d904312336068803efd75fb965e8e62355e5c6f85dfe3474f51898c0" "b7419fc63a23f84014f0f29dd99a2bb883d7d58e" "a263088a00f531a10f43500d3a782ebbbe7b5092" "e7cc30a240db2b04f082c9a62db0a68d9f841a70" "0988a1666cfff8417b19384adc36d075b739b9a4" default)))
  '(custom-theme-directory "~/.emacs.d/el-get/dwamacs/settings")
  '(custom-theme-load-path
    (quote
@@ -75,7 +76,6 @@ Blinking cursor just annoys me")
  '(custom-unlispify-tag-names nil)
  '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
- '(diary-file "~/Documents/Tasks/diary")
  '(diff-default-read-only t nil nil "
 If you don't do this, all the nice navigation stuff is disabled by default.  Who wants to edit diffs by hand, anyway?")
  '(diff-jump-to-old-file t)
@@ -93,9 +93,53 @@ Added -h so I can read file sizes")
  '(el-get-byte-compile nil)
  '(el-get-sources
    (quote
-    ((:name dwamacs :depends
-            (elhome)
-            :type git :url "http://github.com/dabrahams/dwamacs"))))
+    ((:name gtags :type http :url "http://cvs.savannah.gnu.org/viewvc/*checkout*/global/global/gtags.el" :description "gtags facility for Emacs" :website "http://www.gnu.org/software/global/" :commands gtags-mode :diminish gtags-mode :after
+            (progn
+              (defun my-gtags-or-semantic-find-tag nil
+                (interactive)
+                (if
+                    (and
+                     (fboundp
+                      (quote semantic-active-p))
+                     (funcall
+                      (function semantic-active-p)))
+                    (call-interactively
+                     (function semantic-complete-jump))
+                  (call-interactively
+                   (function gtags-find-tag))))
+              (add-hook
+               (quote after-change-major-mode-hook)
+               (lambda nil
+                 (gtags-mode t)))
+              (bind-key "M-."
+                        (quote my-gtags-or-semantic-find-tag)
+                        gtags-mode-map)
+              (bind-key "C-c t ."
+                        (quote gtags-find-rtag))
+              (bind-key "C-c t f"
+                        (quote gtags-find-file))
+              (bind-key "C-c t p"
+                        (quote gtags-parse-file))
+              (bind-key "C-c t g"
+                        (quote gtags-find-with-grep))
+              (bind-key "C-c t i"
+                        (quote gtags-find-with-idutils))
+              (bind-key "C-c t s"
+                        (quote gtags-find-symbol))
+              (bind-key "C-c t r"
+                        (quote gtags-find-rtag))
+              (bind-key "C-c t v"
+                        (quote gtags-visit-rootdir))
+              (bind-key "<mouse-2>"
+                        (quote gtags-find-tag-from-here)
+                        gtags-mode-map)
+              (use-package helm-gtags :bind
+                           ("M-T" . helm-gtags-select)
+                           :config
+                           (bind-key "M-,"
+                                     (quote helm-gtags-resume)
+                                     gtags-mode-map)))
+            :symbol gtags))))
  '(elscreen-buffer-list-enabled t)
  '(elscreen-buffer-to-nickname-alist
    (quote
@@ -231,283 +275,6 @@ command.")
    (quote hyper))
  '(ns-right-command-modifier
    (quote super))
- '(org-adapt-indentation nil)
- '(org-agenda-auto-exclude-function
-   (quote org-my-auto-exclude-function))
- '(org-agenda-custom-commands
-   (quote
-    (("E" "Errands (next 3 days)" tags "Errand&TODO<>\"DONE\"&TODO<>\"CANCELED\"&STYLE<>\"habit\"&SCHEDULED<\"<+3d>\""
-      ((org-agenda-overriding-header "Errands (next 3 days)")))
-     ("A" "Priority #A tasks" agenda ""
-      ((org-agenda-ndays 1)
-       (org-agenda-overriding-header "Today's priority #A tasks: ")
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote notregexp)
-          "\\=.*\\[#A\\]")))))
-     ("b" "Priority #A and #B tasks" agenda ""
-      ((org-agenda-ndays 1)
-       (org-agenda-overriding-header "Today's priority #A and #B tasks: ")
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote regexp)
-          "\\=.*\\[#C\\]")))))
-     ("w" "Waiting/delegated tasks" tags "TODO=\"WAITING\"|TODO=\"DELEGATED\""
-      ((org-agenda-overriding-header "Waiting/delegated tasks:")
-       (org-agenda-sorting-strategy
-        (quote
-         (todo-state-up priority-down category-up)))))
-     ("p" "Unprioritized tasks" tags "AREA<>\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT\\|DEFERRED\\|SOMEDAY}"
-      ((org-agenda-files
-        (quote
-         ("~/Documents/Tasks/todo.txt")))
-       (org-agenda-overriding-header "Unprioritized tasks: ")
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote regexp)
-          "\\=.*\\[#[A-Z]\\]")))))
-     ("u" "Unscheduled tasks" tags "AREA<>\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
-      ((org-agenda-files
-        (quote
-         ("~/Documents/Tasks/todo.txt")))
-       (org-agenda-overriding-header "Unscheduled tasks: ")
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote scheduled)
-          (quote deadline)
-          (quote timestamp)
-          (quote regexp)
-          "\\* \\(DEFERRED\\|SOMEDAY\\)")))
-       (org-agenda-sorting-strategy
-        (quote
-         (priority-down)))))
-     ("U" "Deferred tasks" tags "TODO=\"DEFERRED\""
-      ((org-agenda-files
-        (quote
-         ("~/Documents/Tasks/todo.txt")))
-       (org-agenda-overriding-header "Deferred tasks:")))
-     ("Y" "Someday tasks" tags "TODO=\"SOMEDAY\""
-      ((org-agenda-overriding-header "Someday tasks:")))
-     ("G" "Ledger tasks (all)" alltodo ""
-      ((org-agenda-files
-        (quote
-         ("~/src/ledger/plan/TODO")))
-       (org-agenda-overriding-header "Ledger tasks:")
-       (org-agenda-sorting-strategy
-        (quote
-         (todo-state-up priority-down category-up)))))
-     ("N" "Ledger tasks (all, alphabetical)" alltodo ""
-      ((org-agenda-files
-        (quote
-         ("~/src/ledger/plan/TODO")))
-       (org-agenda-overriding-header "Ledger tasks, alphabetical:")
-       (org-agenda-sorting-strategy
-        (quote
-         (alpha-up)))))
-     ("l" "Ledger tasks" tags-todo "TODO<>{SOMEDAY\\|DEFERRED}"
-      ((org-agenda-files
-        (quote
-         ("~/src/ledger/plan/TODO")))
-       (org-agenda-overriding-header "Ledger tasks:")
-       (org-agenda-sorting-strategy
-        (quote
-         (todo-state-up priority-down category-up)))
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote regexp)
-          "\\=.*\\[#C\\]")))))
-     ("r" "Uncategorized items" tags "CATEGORY=\"Inbox ===>\"&LEVEL=2&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
-      ((org-agenda-overriding-header "Uncategorized items")))
-     ("V" "Unscheduled work-related tasks" tags "AREA=\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
-      ((org-agenda-overriding-header "Unscheduled work-related tasks")
-       (org-agenda-files
-        (quote
-         ("~/Documents/Tasks/todo.txt")))
-       (org-agenda-sorting-strategy
-        (quote
-         (category-up)))
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote scheduled)
-          (quote deadline)
-          (quote timestamp)
-          (quote regexp)
-          "\\* \\(DEFERRED\\|SOMEDAY\\)")))))
-     ("W" "Work-related tasks" tags "AREA=\"Work\"&TODO<>\"\"&TODO<>{DONE\\|CANCELED\\|NOTE\\|PROJECT}"
-      ((org-agenda-overriding-header "Work-related tasks")
-       (org-agenda-files
-        (quote
-         ("~/Documents/Tasks/todo.txt")))
-       (org-agenda-sorting-strategy
-        (quote
-         (category-up priority-down todo-state-up alpha-up)))
-       (org-agenda-skip-function
-        (quote
-         (org-agenda-skip-entry-if
-          (quote regexp)
-          "\\* \\(DEFERRED\\|SOMEDAY\\)"))))))))
- '(org-agenda-deadline-leaders
-   (quote
-    ("D: " "D%d: ")))
- '(org-agenda-deadline-relative-text "D%d: ")
- '(org-agenda-deadline-text "D: ")
- '(org-agenda-default-appointment-duration 60)
- '(org-agenda-files
-   (quote
-    ("~/Documents/Tasks/todo.txt")))
- '(org-agenda-follow-indirect t)
- '(org-agenda-fontify-priorities t)
- '(org-agenda-include-diary t)
- '(org-agenda-ndays 1)
- '(org-agenda-persistent-filter t)
- '(org-agenda-prefix-format
-   (quote
-    ((agenda . "  %-11:c%?-12t% s")
-     (timeline . "  % s")
-     (todo . "  %-11:c")
-     (tags . "  %-11:c"))))
- '(org-agenda-restore-windows-after-quit t)
- '(org-agenda-scheduled-leaders
-   (quote
-    ("" "S%d: ")))
- '(org-agenda-scheduled-relative-text "S%d: ")
- '(org-agenda-scheduled-text "")
- '(org-agenda-show-all-dates t)
- '(org-agenda-skip-deadline-if-done t)
- '(org-agenda-skip-scheduled-if-deadline-is-shown t)
- '(org-agenda-skip-scheduled-if-done t)
- '(org-agenda-skip-unavailable-files t)
- '(org-agenda-sorting-strategy
-   (quote
-    ((agenda habit-down time-up todo-state-up priority-down category-keep)
-     (todo priority-down category-keep)
-     (tags priority-down category-keep)
-     (search category-keep))))
- '(org-agenda-start-on-weekday nil)
- '(org-agenda-start-with-follow-mode t)
- '(org-agenda-tags-column -80)
- '(org-agenda-text-search-extra-files
-   (quote
-    (agenda-archives)))
- '(org-agenda-window-setup
-   (quote current-window))
- '(org-archive-location "TODO-archive::")
- '(org-archive-save-context-info
-   (quote
-    (time category itags)))
- '(org-attach-method
-   (quote mv))
- '(org-babel-load-languages
-   (quote
-    ((emacs-lisp . t)
-     (sh . t))))
- '(org-capture-templates
-   (quote
-    (("t" "Task" entry
-      (file+headline "~/Documents/Tasks/todo.txt" "Inbox")
-      "* TODO %?
-  SCHEDULED: %t
-  :PROPERTIES:
-  :ID:       %(shell-command-to-string \"uuidgen\")  :CREATED:  %U
-  :END:" :prepend t)
-     ("m" "Message" entry
-      (file+headline "~/Documents/Tasks/todo.txt" "Inbox")
-      "* TODO %?Message %:subject
-  SCHEDULED: %t
-  :PROPERTIES:
-  :MESSAGE:  %a
-  :ID:       %(shell-command-to-string \"uuidgen\")  :CREATED:  %U
-  :END:" :prepend t))))
- '(org-clock-idle-time 10)
- '(org-clock-in-resume t)
- '(org-clock-in-switch-to-state "STARTED")
- '(org-clock-into-drawer "LOGBOOK")
- '(org-clock-mode-line-total
-   (quote current))
- '(org-clock-out-remove-zero-time-clocks t)
- '(org-clock-out-switch-to-state nil)
- '(org-clock-persist
-   (quote history))
- '(org-completion-use-ido t)
- '(org-confirm-elisp-link-function nil)
- '(org-confirm-shell-link-function nil)
- '(org-crypt-disable-auto-save nil)
- '(org-cycle-global-at-bob t)
- '(org-deadline-warning-days 14)
- '(org-default-notes-file "~/Documents/Tasks/todo.txt")
- '(org-default-priority 67)
- '(org-directory "~/Documents/Tasks/")
- '(org-drawers
-   (quote
-    ("PROPERTIES" "CLOCK" "LOGBOOK" "OUT")))
- '(org-edit-src-content-indentation 0)
- '(org-enforce-todo-dependencies t)
- '(org-export-babel-evaluate nil)
- '(org-extend-today-until 6)
- '(org-fast-tag-selection-single-key
-   (quote expert))
- '(org-file-apps
-   (quote
-    (("\\.pptx?\\'" . "open %s")
-     (auto-mode . emacs)
-     ("\\.mm\\'" . default)
-     ("\\.x?html?\\'" . default)
-     ("\\.pdf\\'" . default))))
- '(org-footnote-section nil)
- '(org-habit-completed-glyph 10004)
- '(org-habit-preceding-days 42)
- '(org-habit-show-habits-only-for-today nil)
- '(org-habit-today-glyph 9483)
- '(org-hide-leading-stars t)
- '(org-id-link-to-org-use-id
-   (quote create-if-interactive))
- '(org-insert-heading-respect-content t)
- '(org-irc-link-to-logs t t)
- '(org-log-into-drawer t)
- '(org-mobile-directory "~/Dropbox/MobileOrg")
- '(org-mobile-files nil)
- '(org-mobile-inbox-for-pull "~/Documents/Tasks/from-mobile.org")
- '(org-modules
-   (quote
-    (org-id org-info org-habit)))
- '(org-pretty-entities t)
- '(org-refile-target-verify-function
-   (quote dwa/org-verify-refile-target))
- '(org-refile-targets
-   (quote
-    ((nil :todo . "PROJECT")
-     (nil :maxlevel . 2))))
- '(org-return-follows-link t)
- '(org-reverse-note-order t)
- '(org-special-ctrl-a/e
-   (quote reversed))
- '(org-speed-commands-user
-   (quote
-    (("+" . org-priority-up)
-     ("-" . org-priority-down)
-     (":" . org-set-tags))))
- '(org-src-fontify-natively t)
- '(org-tags-column -97)
- '(org-time-clocksum-use-fractional t)
- '(org-todo-repeat-to-state "TODO")
- '(org-use-property-inheritance
-   (quote
-    ("AREA")))
- '(org-use-speed-commands t)
- '(org-x-backends
-   (quote
-    (ox-org ox-redmine)))
- '(org-x-priority-B-silent nil)
- '(org-x-redmine-title-prefix-function
-   (quote org-x-redmine-title-prefix))
- '(org-x-redmine-title-prefix-match-function
-   (quote org-x-redmine-title-prefix-match))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
@@ -656,7 +423,27 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(safe-local-variable-values
    (quote
-    ((cmake-command . "cd ~/Products/clang-refactor && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/clang-refactor")
+    ((tab-always-indent)
+     (ac-clang-cflags "-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-Ilib/AST" "-I/Users/dave/build/s-Debug/src/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT")
+     (whitespace-style face lines indentation:space)
+     (whitespace-mode)
+     (whitespace-style tabs)
+     (whitespace-style indentation:space)
+     (whitespace-style face indentation:space)
+     (ac-clang-cflags quote
+                      ("-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-I/Users/dave/src/s/include" "-I/Users/dave/src/s-llvm/include" "-I/Users/dave/build/s-Debug/build/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/s/lib/AST" "-I/Users/dave/build/s-Debug/src/s/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/lib/clang/3.3/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-MMD" "-MT"))
+     (ac-clang-cflags quote
+                      ("-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-I/Users/dave/src/s/include" "-I/Users/dave/build/s-Debug/build/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/s/lib/AST" "-I/Users/dave/build/s-Debug/src/s/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT"))
+     (ac-clang-cflags quote
+                      ("-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-I/Users/dave/build/s-Debug/build/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/s/lib/AST" "-I/Users/dave/build/s-Debug/src/s/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT"))
+     (ac-clang-cflags quote
+                      ("-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-I/Users/dave/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT"))
+     (whitespace-style face lines indentation:tab)
+     (ac-clang-cflags quote
+                      ("-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-Ilib/AST" "-I/Users/dave/build/s-Debug/src/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT"))
+     (ac-clang-flags . "-DNDEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fvisibility-inlines-hidden -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions -g -Ilib/AST -I/Users/dave/build/s-Debug/src/shiny/lib/AST -I/Users/dave/build/s-Debug/src/shiny/include -I/Users/dave/build/s-Debug/build/llvm/include -I/Users/dave/build/s-Debug/src/llvm/include -I/Users/dave/build/s-Debug/build/llvm/tools/clang/include -I/Users/dave/build/s-Debug/src/llvm/tools/clang/include -MMD -MT")
+     (ac-clang-flags . "-I/Users/dave/src/s/include -I/Users/dave/src/s-llvm/include")
+     (cmake-command . "cd ~/Products/clang-refactor && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/clang-refactor")
      (cmake-command . "cd ~/Products/abi && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/LLVM/abi")
      (require-final-newline . t)
      (org-confirm-babel-evaluate)
@@ -781,12 +568,6 @@ where I don't expect it to be keeping undo history anyway")
  '(dwa/glasses
    ((t
      (:underline "red" :weight bold))))
- '(dwa/org-habit
-   ((((background dark))
-     (:foreground "#3f3f3f" :family "DejaVu Sans Mono"))
-    (t
-     (:family "DejaVu Sans Mono")))
-   t)
  '(font-lock-string-face
    ((((class color)
       (min-colors 88)
@@ -795,73 +576,84 @@ where I don't expect it to be keeping undo history anyway")
  '(lazy-highlight
    ((t
      (:background "paleturquoise"))))
- '(org-document-title
-   ((((class color)
-      (background light))
-     (:foreground "midnight blue" :weight bold :height 2.0 :family "Helvetica"))
-    (((class color)
-      (background dark))
-     (:foreground "pale turquoise" :weight bold :height 2.0 :family "Helvetica"))
-    (t
-     (:weight bold))))
- '(org-habit-alert-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#f5f946"))))
- '(org-habit-alert-future-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#fafca9"))))
- '(org-habit-clear-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#8270f9"))))
- '(org-habit-clear-future-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#d6e4fc"))))
- '(org-habit-overdue-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#f9372d"))))
- '(org-habit-overdue-future-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#fc9590"))))
- '(org-habit-ready-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#4df946"))))
- '(org-habit-ready-future-face
-   ((((background light dark))
-     (:inherit dwa/org-habit :background "#acfca9"))))
- '(org-scheduled
-   ((((class color)
-      (min-colors 88)
-      (background light))
-     nil)))
- '(org-upcoming-deadline
-   ((((class color)
-      (min-colors 88)
-      (background light))
-     (:foreground "Brown"))))
+ '(rst-adornment
+   ((t
+     (:inherit
+      (font-lock-keyword-face fixed-pitch))))
+   t)
+ '(rst-directive
+   ((t
+     (:inherit
+      (font-lock-builtin-face fixed-pitch))))
+   t)
+ '(rst-level-1
+   ((((background light))
+     (:inherit fixed-pitch :background "grey85"))
+    (((background dark))
+     (:inherit fixed-pitch :background "grey15")))
+   t)
  '(rst-level-1-face
    ((t
      (:background "grey85" :foreground "black")))
+   t)
+ '(rst-level-2
+   ((((background light))
+     (:inherit rst-level-1 :background "grey78"))
+    (((background dark))
+     (:inherit rst-level-1 :background "grey22")))
    t)
  '(rst-level-2-face
    ((t
      (:inherit nil :background "grey78" :foreground "black")))
    t)
+ '(rst-level-3
+   ((((background light))
+     (:inherit rst-level-2 :background "grey71"))
+    (((background dark))
+     (:inherit rst-level-2 :background "grey29")))
+   t)
  '(rst-level-3-face
    ((t
      (:background "grey71" :foreground "black")))
+   t)
+ '(rst-level-4
+   ((((background light))
+     (:inherit rst-level-3 :background "grey64"))
+    (((background dark))
+     (:inherit rst-level-3 :background "grey36")))
    t)
  '(rst-level-4-face
    ((t
      (:background "grey64" :foreground "black")))
    t)
+ '(rst-level-5
+   ((((background light))
+     (:inherit rst-level-4 :background "grey57"))
+    (((background dark))
+     (:inherit rst-level-4 :background "grey43")))
+   t)
  '(rst-level-5-face
    ((t
      (:background "grey57" :foreground "black")))
+   t)
+ '(rst-level-6
+   ((((background light))
+     (:inherit rst-level-5 :background "grey50"))
+    (((background dark))
+     (:inherit rst-level-5 :background "grey50")))
    t)
  '(rst-level-6-face
    ((t
      (:background "grey50" :foreground "black")))
    t)
+ '(rst-literal
+   ((t
+     (:inherit
+      (font-lock-string-face fixed-pitch))))
+   t)
+ '(variable-pitch
+   ((t
+     (:family "Myriad Set"))))
  '(wg-brace-face
    ((((class color)
       (background light))
