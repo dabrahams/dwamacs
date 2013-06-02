@@ -11,7 +11,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(gnus-activate-level 1)
  '(gnus-after-getting-new-news-hook
    (quote
     (gnus-display-time-event-handler gnus-group-save-newsrc)))
@@ -326,11 +325,13 @@ NOTICE: ")))
 ;;;_* configuration
 
 (require 'gnus)
-(require 'gnus-harvest)
+(require 'use-package)
+
+(use-package gnus-harvest
+  :init (gnus-harvest-install 'message-x))
+
 (require 'starttls)
 (require 'pgg)
-
-(gnus-harvest-install 'message-x)
 
 (gnus-registry-initialize)
 

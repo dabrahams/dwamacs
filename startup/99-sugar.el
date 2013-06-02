@@ -5,6 +5,12 @@
 
 (require 'use-package)
 
+(use-package sticky-windows
+  :bind (("C-x 0" . sticky-window-delete-window)
+         ( "C-x 1" . sticky-window-delete-other-windows)
+         ( "C-x 9" . sticky-window-keep-window-visible)))
+
+
 (when (require 'auto-complete-config nil :no-error)
   (ac-config-default)
   (define-key ac-mode-map (kbd "C-c h") 'ac-last-quick-help)
@@ -254,17 +260,18 @@ file name matches PATTERN."
 
 ;; --- importing JW stuff
 
+(defun my-gtags-or-semantic-find-tag ()
+  (interactive)
+  (if (and (fboundp 'semantic-active-p)
+           (funcall #'semantic-active-p))
+      (call-interactively #'semantic-complete-jump)
+    (call-interactively #'gtags-find-tag)))
+
 (use-package gtags
   :commands gtags-mode
   :diminish gtags-mode
   :config
   (progn
-    (defun my-gtags-or-semantic-find-tag ()
-      (interactive)
-      (if (and (fboundp 'semantic-active-p)
-               (funcall #'semantic-active-p))
-          (call-interactively #'semantic-complete-jump)
-        (call-interactively #'gtags-find-tag)))
 
     (add-hook 'after-change-major-mode-hook (lambda () (gtags-mode t)))
 
@@ -302,6 +309,14 @@ file name matches PATTERN."
       (open-line 1)
       (indent-according-to-mode))))
 
+(use-package findr
+  :commands (findr-search findr-query-replace findr-find-files))
+
+(defun report-upstream-emacs-bug ()
+  (interactive)
+  (let ((features (remq 'mac features))) 
+    (call-interactively 'report-emacs-bug)))
+
 ;; ---
 
 ;; Maximize emacs on startup
@@ -310,5 +325,19 @@ file name matches PATTERN."
   (add-hook 'window-setup-hook 'maximize-frame t))
 
 ;; ---
+
+(use-package magit
+  :init (setq magit-mode-hook 'turn-on-magit-svn))
+
+;; ---
+(defun ac-clang-cc-mode-setup ()
+  ;; (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
+  (setq ac-sources '(ac-source-clang-async))
+  (ac-clang-launch-completion-process))
+
+(use-package auto-complete-clang-async
+  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
 
 
