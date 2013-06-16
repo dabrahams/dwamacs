@@ -83,3 +83,8 @@
  *[Ee]rror\\|\[0-9]?\\(?:[^0-9\n]\\|$\\)\\|[0-9][0-9][0-9]\\)"
      1 (2 . 4) (3 . 5) (6 . 7))
       compilation-error-regexp-alist-alist)
+
+;; Destructively update compilation-error-regexp-alist-alist to make
+;; all "Included from" lines in GCC error messages be merely INFO
+;; instead of WARNINGs so compilation-next-error doesn't stop there.
+(setcar (cddr (cdddr (assoc 'gcc-include compilation-error-regexp-alist-alist))) 0)
