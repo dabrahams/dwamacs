@@ -423,14 +423,23 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(safe-local-variable-values
    (quote
+<<<<<<< HEAD
     ((tab-always-indent t)
      (tab-always-indent)
+=======
+    ((tab-always-indent)
+>>>>>>> 12ef025486c7166c328338000f18e80a088418b5
      (whitespace-style face lines indentation:space)
      (whitespace-mode)
      (whitespace-style tabs)
      (whitespace-style indentation:space)
      (whitespace-style face indentation:space)
      (whitespace-style face lines indentation:tab)
+<<<<<<< HEAD
+=======
+     (cmake-command . "cd ~/Products/clang-refactor && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/clang-refactor")
+     (cmake-command . "cd ~/Products/abi && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/LLVM/abi")
+>>>>>>> 12ef025486c7166c328338000f18e80a088418b5
      (require-final-newline . t)
      (org-confirm-babel-evaluate)
      (org-export-babel-evaluate . t)
