@@ -253,6 +253,21 @@ file name matches PATTERN."
                    (set-buffer-modified-p nil)))
       )))
   
+(defun my-code-mode-hook ()
+  (font-lock-mode t)
+  (show-paren-mode t)
+  (local-set-key [(return)] 'newline-and-indent)
+  (local-set-key [(shift return)] 'newline-and-indent)
+  (local-set-key [(control return)] 'newline)
+  (local-set-key [( control ?\( )] 'my-matching-paren)
+  
+  ;; Try to make completion case sensitive in code buffers.
+  (make-local-variable 'dabbrev-case-fold-search)
+  (setq dabbrev-case-fold-search nil)
+  )
+
+(add-hook 'prog-mode-hook 'my-code-mode-hook)
+
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
@@ -340,4 +355,10 @@ file name matches PATTERN."
   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
   (global-auto-complete-mode t))
 
+;; automatic pairing and formatting
 
+;; Note: these must be enabled in the right order to get the
+;; appropriate effect!
+(electric-indent-mode t)
+(electric-layout-mode t)
+(electric-pair-mode t)
