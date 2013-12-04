@@ -2,6 +2,7 @@
 ;; C/C++
 ;;
 (require 'modal)
+(require 'dwa-c++)
 
 (defun my-c-leading-comma-p ()
   (save-excursion
@@ -488,6 +489,7 @@ starts."
   (local-set-key [?\M-{] 'my-electric-braces)
   (local-set-key [(control ?{)] 'my-empty-braces)
   (local-set-key [(meta \`)] 'my-cpp-toggle-src-hdr)
+  (local-set-key [(control tab)] 'my-cpp-toggle-src-hdr)
   (local-set-key [?#] 'my-electric-pound)
   (local-set-key [?<] 'my-electric-pound-<)
   (local-set-key [?>] 'my-c-electric-gt)

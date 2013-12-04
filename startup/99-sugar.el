@@ -357,6 +357,17 @@ file name matches PATTERN."
   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
   (global-auto-complete-mode t))
 
+;; ---
+(defun ac-clang-cc-mode-setup ()
+  ;; (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
+  (setq ac-sources '(ac-source-clang-async))
+  (ac-clang-launch-completion-process))
+
+(use-package auto-complete-clang-async
+  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+
 ;; automatic pairing and formatting
 
 ;; Note: these must be enabled in the right order to get the

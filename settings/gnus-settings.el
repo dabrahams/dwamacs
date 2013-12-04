@@ -99,15 +99,14 @@ so I always post directly to the mailing list.")
     (current
      (nnregistry)
      (nnir "nnimap:LocalIMAP")
+     (nntp "LocalNNTP"
+           (nntp-address "localhost")
+           (nntp-port-number 9119))
      (nntp "Gmane"
            (nntp-address "news.gmane.org"))
      (nntp "GigaNews"
            (nntp-address "text.giganews.com")
-           (nntp-authinfo-user "dabrahams"))
-     (nntp "LocalNNTP"
-           (nntp-address "localhost")
-           (nntp-port-number 9119))))
-   nil nil "***** NOTE: NEED TO RESTORE (nnregistry) here")
+           (nntp-authinfo-user "dabrahams")))))
  '(gnus-refer-thread-use-nnir t)
  '(gnus-safe-html-newsgroups ".")
  '(gnus-save-duplicate-list t)
@@ -266,29 +265,6 @@ NOTICE: ")))
  '(gnus-uncacheable-groups "^nnml")
  '(gnus-use-cache t)
  '(gnus-use-trees t)
- '(gnus-valid-select-methods
-   (quote
-    (("nntp" post address prompt-address physical-address)
-     ("nnspool" post address)
-     ("nnvirtual" post-mail prompt-address virtual)
-     ("nnmbox" mail address respool)
-     ("nnml" post-mail address respool)
-     ("nnmh" mail address respool)
-     ("nndir" post-mail prompt-address physical-address)
-     ("nneething" none address prompt-address physical-address)
-     ("nndoc" none address prompt-address virtual)
-     ("nnbabyl" mail address respool)
-     ("nndraft" post-mail)
-     ("nnfolder" mail address respool)
-     ("nngateway" post-mail address prompt-address physical-address)
-     ("nnweb" none)
-     ("nnrss" none)
-     ("nnagent" post-mail)
-     ("nnimap" post-mail address prompt-address physical-address respool server-marks)
-     ("nnmaildir" mail address respool server-marks)
-     ("nnnil" none)
-     ("nndiary" post-mail respool address)
-     ("nnir" mail virtual))))
  '(gnus-verbose 4)
  '(nnir-hyrex-remove-prefix "~/Library/Data/Gnus/Mail")
  '(nnir-ignored-newsgroups "^\"\\([^[]\\|\\[Gmail][/.][^A]\\)")
@@ -380,26 +356,60 @@ NOTICE: ")))
 
 (define-key global-map [(alt meta ?f)] 'gnus-query)
 
-(defun gnus-goto-article (message-id)
+;; ==== gnus-refer-article ====
+;;
+;; We'll need to create a dummy group from which we can use
+;; gnus-summary-refer-article.  An nndoc group almost works for that
+;; purpose, but nndoc is a non-virtual backend, and warping (which
+;; gnus-summary-refer-article needs in order to find the article) only
+;; works in virtual groups.  Therefore, we derive a new virtual
+;; backend from nndoc and use that instead.  The backend is called
+;; MessageID rather than something starting with `nn' to improve the
+;; appearance of the modeline in the resulting summary and article
+;; buffers.
+(require 'nndoc)
+(nnoo-declare MessageID nndoc)
+(gnus-declare-backend "MessageID" 'virtual)
+;; Use nndoc functions for just about everything.
+(nnoo-import MessageID (nndoc))
+;; define the one method that nnoo-import won't grab for us
+(deffoo MessageID-request-group (group &optional server dont-check info)
+  (nndoc-request-group group server dont-check info))
+(provide 'MessageID)
+
+(defun gnus-refer-article (message-id)
+  "Open a group containing the article with the given MESSAGE-ID."
+  (interactive "sMessage-ID: ")
   (with-temp-buffer
+    ;; Prepare a dummy article
     (erase-buffer)
-    ;; Insert dummy article
-    (insert (format "From nobody Tue Sep 13 22:05:34 2011\n\n"))
-    (gnus-group-read-ephemeral-group
-     message-id
-     `(nndoc ,message-id
-             (nndoc-address ,(current-buffer))
-             (nndoc-article-type mbox))
-     :activate
-     (cons (current-buffer) gnus-current-window-configuration)
-     (not :request-only)
-     '(-1) ; :select-articles
-     (not :parameters)
-     0     ; :number
-     )
+    (insert "From nobody Tue Sep 13 22:05:34 2011\n\n")
+
+    ;; Prepare pretty modelines for summary and article buffers
+    (let ((gnus-summary-mode-line-format "Found %G")
+          (gnus-article-mode-line-format 
+           ;; Group names just get in the way here, especially the abbreviated ones
+           (if (string-match "%[gG]" gnus-article-mode-line-format)
+                (concat (substring gnus-article-mode-line-format 0 (match-beginning 0))
+                        (substring gnus-article-mode-line-format (match-end 0)))
+              gnus-article-mode-line-format)
+          ))
+      
+      ;; Build an ephemeral group containing the dummy article (hidden)
+      (gnus-group-read-ephemeral-group
+       message-id
+       `(MessageID ,message-id
+                   (nndoc-address ,(current-buffer))
+                   (nndoc-article-type mbox))
+       :activate
+       (cons (current-buffer) gnus-current-window-configuration)
+       (not :request-only)
+       '(-1) ; :select-articles
+       (not :parameters)
+       0     ; :number
+       ))
+    ;; Fetch the desired article
     (gnus-summary-refer-article message-id)
-;           (and (bound-and-true-p gnus-registry-enabled)
-;            (gnus-try-warping-via-registry))
     ))
 
 (defun gnus-current-message-id ()

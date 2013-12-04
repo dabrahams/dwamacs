@@ -3,7 +3,11 @@
 
 (custom-theme-set-variables
  'system-type-darwin
- '(default-frame-alist (quote ((font . "Monaco-15") (menu-bar-lines . 1) (fullscreen . maximized) (tool-bar-lines . 0) (vertical-scroll-bars)))))
+ '(default-frame-alist (quote ((font . "Monaco-12") (menu-bar-lines . 1) (fullscreen . maximized) (tool-bar-lines . 0) (vertical-scroll-bars)))))
+
+(custom-theme-set-faces
+ 'system-type-darwin
+ '(fixed-pitch ((t (:family "Monaco")))))
 
 (custom-theme-set-faces
  'system-type-darwin
