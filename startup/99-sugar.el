@@ -345,21 +345,6 @@ file name matches PATTERN."
 
 (use-package magit
   :init (setq magit-mode-hook 'turn-on-magit-svn))
-<<<<<<< HEAD
-=======
-
-;; ---
-(defun ac-clang-cc-mode-setup ()
-  ;; (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
-  (setq ac-sources '(ac-source-clang-async))
-  (ac-clang-launch-completion-process))
-
-(use-package auto-complete-clang-async
-  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
-
->>>>>>> 12ef025486c7166c328338000f18e80a088418b5
 
 ;; ---
 (defun ac-clang-cc-mode-setup ()

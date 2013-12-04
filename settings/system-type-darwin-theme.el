@@ -8,12 +8,5 @@
 (custom-theme-set-faces
  'system-type-darwin
  '(fixed-pitch ((t (:family "Monaco")))))
-<<<<<<< HEAD
-
-(custom-theme-set-faces
- 'system-type-darwin
- '(fixed-pitch ((t (:family "Monaco")))))
-=======
->>>>>>> 12ef025486c7166c328338000f18e80a088418b5
 
 (provide-theme 'system-type-darwin)
