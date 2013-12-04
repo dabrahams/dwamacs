@@ -24,6 +24,9 @@
 (add-to-list 'auto-mode-alist
              '("\\.\\(text\\|md\\|mkdn?\\|mmd\\|markdown\\)\\'" . markdown-mode))
 
+(add-to-list 'auto-mode-alist
+             '("\\.mm\\'" . objc-mode))
+
 (defun request-feature (feature)
   (or (require feature nil 'noerror)
       (and (message "requested feature %s not available" feature) nil)))
