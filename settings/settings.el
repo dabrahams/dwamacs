@@ -423,7 +423,8 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(safe-local-variable-values
    (quote
-    ((tab-always-indent)
+    ((ac-clang-cflags "-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-Ilib/AST" "-I/Users/dave/build/s-Debug/src/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT")
+     (tab-always-indent)
      (whitespace-style face lines indentation:space)
      (whitespace-mode)
      (whitespace-style tabs)

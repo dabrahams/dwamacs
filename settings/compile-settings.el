@@ -88,3 +88,12 @@
 ;; all "Included from" lines in GCC error messages be merely INFO
 ;; instead of WARNINGs so compilation-next-error doesn't stop there.
 (setcar (cddr (cdddr (assoc 'gcc-include compilation-error-regexp-alist-alist))) 0)
+
+;; Handle colorized output.  See
+;; http://stackoverflow.com/questions/13397737/ansi-coloring-in-compilation-mode
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
