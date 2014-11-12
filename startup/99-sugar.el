@@ -31,23 +31,17 @@
   (or (require feature nil 'noerror)
       (and (message "requested feature %s not available" feature) nil)))
 
-(when (request-feature 'workgroups)
-  (workgroups-mode 1)
-  (if (bound-and-true-p wg-prefixed-map)
-      (define-key wg-prefixed-map [(control ?z)] 'wg-switch-to-previous-workgroup)
-    (if (file-readable-p "~/.emacs.d/workgroups")
-        (wg-load "~/.emacs.d/workgroups")))
+(use-package diminish)
 
-  (when nil
-  (defadvice ido-visit-buffer (before switch-to-buffers-workgroup
-                                      (buffer method &optional record)
-                                      activate)
-    "If a workgroup is showing BUFFER, switch to it first"
-    (wg-aif (wg-find-buffer (if (bufferp buffer)
-                                (buffer-name buffer)
-                              buffer))
-        (ignore-errors
-          (wg-switch-to-workgroup it))))))
+(use-package workgroups
+  :diminish workgroups-mode
+  :init
+  (progn
+    (workgroups-mode 1)
+    (if (bound-and-true-p wg-prefixed-map)
+	(define-key wg-prefixed-map [(control ?z)] 'wg-switch-to-previous-workgroup)
+      (if (file-readable-p "~/.emacs.d/workgroups")
+	  (wg-load "~/.emacs.d/workgroups")))))
 
 
 ;; Flymake
@@ -61,11 +55,6 @@
 ;;   (bind-key "M-p" 'flymake-goto-prev-error c-mode-base-map)
 ;;   (bind-key "M-n" 'flymake-goto-next-error c-mode-base-map))
 ;; (add-hook 'c-mode-common-hook 'dwa/flymake-setup)
-
-;; Keep some very persistent modes out of the mode line display
-(when (request-feature 'diminish)
-  (dolist (m '(workgroups me-minor))
-    (diminish (intern (concat (symbol-name m) "-mode")))))
 
 (defface dwa/glasses
   '((t :weight bold :underline t))
@@ -353,25 +342,17 @@ file name matches PATTERN."
   (ac-clang-launch-completion-process))
 
 (use-package auto-complete-clang-async
-  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
-
-;; ---
-(defun ac-clang-cc-mode-setup ()
-  ;; (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
-  (setq ac-sources '(ac-source-clang-async))
-  (ac-clang-launch-completion-process))
-
-(use-package auto-complete-clang-async
-  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
+  :init (progn
+	  (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
+	  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+	  (global-auto-complete-mode t)))
 
 ;; automatic pairing and formatting
 
 ;; Note: these must be enabled in the right order to get the
 ;; appropriate effect!
-(electric-indent-mode t)
-(electric-layout-mode t)
-(electric-pair-mode t)
+(when (fboundp 'electric-indent-mode)
+  (electric-indent-mode t)
+  (electric-layout-mode t)
+  (electric-pair-mode t))
+
