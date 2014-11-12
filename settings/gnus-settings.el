@@ -359,23 +359,9 @@ NOTICE: ")))
 ;; ==== gnus-refer-article ====
 ;;
 ;; We'll need to create a dummy group from which we can use
-;; gnus-summary-refer-article.  An nndoc group almost works for that
-;; purpose, but nndoc is a non-virtual backend, and warping (which
-;; gnus-summary-refer-article needs in order to find the article) only
-;; works in virtual groups.  Therefore, we derive a new virtual
-;; backend from nndoc and use that instead.  The backend is called
-;; MessageID rather than something starting with `nn' to improve the
-;; appearance of the modeline in the resulting summary and article
-;; buffers.
+;; gnus-summary-refer-article.  An nndoc group works for that
+;; purpose
 (require 'nndoc)
-(nnoo-declare MessageID nndoc)
-(gnus-declare-backend "MessageID" 'virtual)
-;; Use nndoc functions for just about everything.
-(nnoo-import MessageID (nndoc))
-;; define the one method that nnoo-import won't grab for us
-(deffoo MessageID-request-group (group &optional server dont-check info)
-  (nndoc-request-group group server dont-check info))
-(provide 'MessageID)
 
 (defun gnus-refer-article (message-id)
   "Open a group containing the article with the given MESSAGE-ID."
@@ -398,7 +384,7 @@ NOTICE: ")))
       ;; Build an ephemeral group containing the dummy article (hidden)
       (gnus-group-read-ephemeral-group
        message-id
-       `(MessageID ,message-id
+       `(nndoc ,message-id
                    (nndoc-address ,(current-buffer))
                    (nndoc-article-type mbox))
        :activate

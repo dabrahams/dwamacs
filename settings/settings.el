@@ -424,7 +424,6 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
  '(safe-local-variable-values
    (quote
     ((tab-always-indent t)
-     (tab-always-indent)
      (whitespace-style face lines indentation:space)
      (whitespace-mode)
      (whitespace-style tabs)

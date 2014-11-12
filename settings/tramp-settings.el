@@ -29,4 +29,4 @@ matching), and otherwise, if sudo'ing somewhere, ssh there first and
 then sudo on the remote host itself.")
  '(tramp-remote-path
    (quote
-    (tramp-default-remote-path "/usr/sbin" "/usr/local/sbin" "/usr/local/bin" "/sbin" "/local/bin" "/local/freeware/bin" "/local/gnu/bin" "/usr/freeware/bin" "/usr/pkg/bin" "/usr/contrib/bin"))))
+    (tramp-default-remote-path tramp-own-remote-path "/usr/sbin" "/usr/local/sbin" "/usr/local/bin" "/sbin" "/local/bin" "/local/freeware/bin" "/local/gnu/bin" "/usr/freeware/bin" "/usr/pkg/bin" "/usr/contrib/bin"))))

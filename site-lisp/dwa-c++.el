@@ -38,7 +38,8 @@ If point is in a .h file, switch to its corresponding .cpp file."
                   )
                  ))
             
-            (if other-file (find-file other-file)))))))
+            (when other-file 
+              (funcall (if (> arg 1) 'find-file-other-window 'find-file) other-file)))))))
 
 
 (provide 'dwa-c++)
