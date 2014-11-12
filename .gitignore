@@ -2,3 +2,5 @@
 /startup/10-passwd.el
 .DS_Store
 
+
+startup/999-apple.el

@@ -24,6 +24,9 @@
 (add-to-list 'auto-mode-alist
              '("\\.\\(text\\|md\\|mkdn?\\|mmd\\|markdown\\)\\'" . markdown-mode))
 
+(add-to-list 'auto-mode-alist
+             '("\\.mm\\'" . objc-mode))
+
 (defun request-feature (feature)
   (or (require feature nil 'noerror)
       (and (message "requested feature %s not available" feature) nil)))
@@ -49,16 +52,15 @@
 
 ;; Flymake
 
-(defun dwa/flymake-setup ()
-  (when (and (request-feature 'use-package)
-             (request-feature 'ghc-flymake)
-             (request-feature 'haskell-font-lock)
-             )            ; jww (2012-09-19): hack!
-    (bind-key "M-?" 'ghc-flymake-display-errors c-mode-base-map))
-  (bind-key "M-p" 'flymake-goto-prev-error c-mode-base-map)
-  (bind-key "M-n" 'flymake-goto-next-error c-mode-base-map))
-
-(add-hook 'c-mode-common-hook 'dwa/flymake-setup)
+;; (defun dwa/flymake-setup ()
+;;   (when (and (request-feature 'use-package)
+;;              (request-feature 'ghc-flymake)
+;;              (request-feature 'haskell-font-lock)
+;;              )            ; jww (2012-09-19): hack!
+;;     (bind-key "M-?" 'ghc-flymake-display-errors c-mode-base-map))
+;;   (bind-key "M-p" 'flymake-goto-prev-error c-mode-base-map)
+;;   (bind-key "M-n" 'flymake-goto-next-error c-mode-base-map))
+;; (add-hook 'c-mode-common-hook 'dwa/flymake-setup)
 
 ;; Keep some very persistent modes out of the mode line display
 (when (request-feature 'diminish)
@@ -253,6 +255,21 @@ file name matches PATTERN."
                    (set-buffer-modified-p nil)))
       )))
   
+(defun my-code-mode-hook ()
+  (font-lock-mode t)
+  (show-paren-mode t)
+  (local-set-key [(return)] 'newline-and-indent)
+  (local-set-key [(shift return)] 'newline-and-indent)
+  (local-set-key [(control return)] 'newline)
+  (local-set-key [( control ?\( )] 'my-matching-paren)
+  
+  ;; Try to make completion case sensitive in code buffers.
+  (make-local-variable 'dabbrev-case-fold-search)
+  (setq dabbrev-case-fold-search nil)
+  )
+
+(add-hook 'prog-mode-hook 'my-code-mode-hook)
+
 ;; Makes `C-c RET C-a' send the current file as an attachment in dired
 ;; [[message://m2vcukdcsu.fsf@gmail.com]]
 (autoload 'gnus-dired-mode "gnus-dired" nil t)
@@ -340,4 +357,21 @@ file name matches PATTERN."
   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
   (global-auto-complete-mode t))
 
+;; ---
+(defun ac-clang-cc-mode-setup ()
+  ;; (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
+  (setq ac-sources '(ac-source-clang-async))
+  (ac-clang-launch-completion-process))
 
+(use-package auto-complete-clang-async
+  :init (add-hook 'c-mode-common-hook 'ac-clang-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+
+;; automatic pairing and formatting
+
+;; Note: these must be enabled in the right order to get the
+;; appropriate effect!
+(electric-indent-mode t)
+(electric-layout-mode t)
+(electric-pair-mode t)

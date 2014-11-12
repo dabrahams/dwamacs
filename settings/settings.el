@@ -14,7 +14,7 @@
  '(Info-breadcrumbs-in-header-flag t)
  '(Info-default-directory-list
    (quote
-    ("/Users/xin/midway/emacs-mac-port/build/share/info/" "/Applications/Emacs.app/Contents/Resources/info" "/usr/share/info/")))
+    ("/Users/xin/midway/emacs-mac-port/build/share/info/" "/Applications/Emacs.app/Contents/Resources/info" "/opt/local/share/info/" "/usr/share/info/")))
  '(Info-fit-frame-flag nil)
  '(Info-saved-nodes
    (quote
@@ -423,16 +423,13 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
    nil nil "As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner.html.  Note: remember-append-to-file is checked in the default.")
  '(safe-local-variable-values
    (quote
-    ((ac-clang-cflags "-DNDEBUG" "-D__STDC_CONSTANT_MACROS" "-D__STDC_FORMAT_MACROS" "-D__STDC_LIMIT_MACROS" "-fvisibility-inlines-hidden" "-std=c++11" "-stdlib=libc++" "-fno-rtti" "-fno-exceptions" "-g" "-Ilib/AST" "-I/Users/dave/build/s-Debug/src/shiny/lib/AST" "-I/Users/dave/build/s-Debug/src/shiny/include" "-I/Users/dave/build/s-Debug/build/llvm/include" "-I/Users/dave/build/s-Debug/src/llvm/include" "-I/Users/dave/build/s-Debug/build/llvm/tools/clang/include" "-I/Users/dave/build/s-Debug/src/llvm/tools/clang/include" "-MMD" "-MT")
-     (tab-always-indent)
+    ((tab-always-indent t)
      (whitespace-style face lines indentation:space)
      (whitespace-mode)
      (whitespace-style tabs)
      (whitespace-style indentation:space)
      (whitespace-style face indentation:space)
      (whitespace-style face lines indentation:tab)
-     (cmake-command . "cd ~/Products/clang-refactor && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/clang-refactor")
-     (cmake-command . "cd ~/Products/abi && cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ~/src/LLVM/abi")
      (require-final-newline . t)
      (org-confirm-babel-evaluate)
      (org-export-babel-evaluate . t)
@@ -491,7 +488,7 @@ As prescribed by http://www.newartisans.com/2007/08/using-org-mode-as-a-day-plan
  '(smtp-server "smtp.gmail.com")
  '(smtpmail-default-smtp-server "www.boostpro.com")
  '(smtpmail-local-domain "boostpro.com")
- '(smtpmail-smtp-service 587 t)
+ '(smtpmail-smtp-service 587)
  '(smtpmail-starttls-credentials
    (quote
     (("www.boostpro.com" 587 "" ""))))
@@ -506,15 +503,6 @@ Tool bars take up valuable screen real-estate for icons whose meaning I forget")
  '(truncate-partial-width-windows nil)
  '(user-mail-address "dave@boostpro.com")
  '(vc-diff-switches "-du")
- '(w3m-command "w3m")
- '(w3m-confirm-leaving-secure-page t nil nil "
-I never like being nannied by regular browsers either.")
- '(w3m-default-display-inline-images t)
- '(w3m-display-ins-del nil)
- '(w3m-fill-column -50 nil nil "
-When I use variable-pitch-mode the text tends to run off the right 
-side of the window.  This drastic setting was what I needed to prevent that.")
- '(w3m-use-cookies t)
  '(warning-suppress-types
    (quote
     ((\(undo\ discard-info\))))

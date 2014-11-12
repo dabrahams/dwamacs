@@ -1,5 +1,0 @@
-#name : :SOURCE: ... :END:
-# --
-#+begin_src ${1:sh} :results output
-$0
-#+end_src
